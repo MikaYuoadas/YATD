@@ -1,0 +1,14 @@
+# Sources compilées #
+#####################
+
+*.dll
+*.exe
+*.so
+*.o
+YATD
+
+# fichiers OS #
+###############
+
+Desktop.ini
+Thumbs.db
