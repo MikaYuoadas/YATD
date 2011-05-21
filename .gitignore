@@ -12,3 +12,9 @@ YATD
 
 Desktop.ini
 Thumbs.db
+
+# Makefiles #
+#############
+
+Makefile
+*.pro
