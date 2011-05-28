@@ -22,32 +22,32 @@ Render::Render() : QGraphicsScene()
                 switch (num){
                     case NORTH:
                     case SOUTH:
-                        path = "../sprites/ground/grass.jpg";
+                        path = "../sprites/ground/trail_NS.jpg";
                         break;
                     case EAST:
                     case WEST:
-                        path = "../sprites/ground/grass.jpg";
+                        path = "../sprites/ground/trail_EW.jpg";
                         break;
                     case NE:
                     case SW:
-                        path = "../sprites/ground/grass.jpg";
+                        path = "../sprites/ground/trail_NE-SW.jpg";
                         break;
                     case SE:
                     case NW:
-                        path = "../sprites/ground/grass.jpg";
+                        path = "../sprites/ground/trail_NW-SE.jpg";
                         break;
                     case GOAL:
-                        path = "../sprites/ground/grass.jpg";
+                        path = "../sprites/ground/goal.png";
                         break;
                     case DIRT:
-                        path = "../sprites/ground/grass.jpg";
+                        path = "../sprites/ground/dirt.png";
                         break;
                     default:
                         path = "../sprites/ground/grass.jpg";
                         break;
                 }
                 if (num > 10 && num < 32)
-                    path = "../sprites/ground/grass.jpg";
+                    path = "../sprites/ground/start.png";
                 tiles.insert(num, QPixmap(path));
             }
         }
