@@ -20,8 +20,8 @@ Render::Render() : QGraphicsScene()
             if (!tiles.contains(num)) {
                 QString path;
                 switch (num){
-                    case NORD:
-                    case SUD:
+                    case NORTH:
+                    case SOUTH:
                         path = "../sprites/ground/grass.jpg";
                         break;
                     case EAST:
@@ -29,11 +29,11 @@ Render::Render() : QGraphicsScene()
                         path = "../sprites/ground/grass.jpg";
                         break;
                     case NE:
-                    case SO:
+                    case SW:
                         path = "../sprites/ground/grass.jpg";
                         break;
                     case SE:
-                    case NO:
+                    case NW:
                         path = "../sprites/ground/grass.jpg";
                         break;
                     case GOAL:

@@ -14,14 +14,14 @@
 enum move {FLY, CRAWL};
 
 #define FREE 0
-#define NORD 1
-#define SUD 2
+#define NORTH 1
+#define SOUTH 2
 #define EAST 4
 #define NE 5
 #define SE 6
 #define WEST 8
-#define NO 9
-#define SO 10
+#define NW 9
+#define SW 10
 #define GOAL 32
 #define DIRT 64
 
