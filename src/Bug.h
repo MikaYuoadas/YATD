@@ -21,6 +21,6 @@ class Bug : public QGraphicsItem
     public:
         Bug(double x, double y, double s, double health, double res, double start_angle, double init_speed, move type);
         QRectF boundingRect() const;
-        hit(double dmg);
+        bool hit(double dmg);
 };
 #endif

@@ -3,8 +3,8 @@
 #include "Bug.h"
 #include "define.h"
 
-Bug::Bug(double x, double y, double s, double start_angle, double init_speed, move type) :
-    size(s), angle(start_angle), speed(init_speed), moveType(type)
+Bug::Bug(double x, double y, double s, double health, double res, double start_angle, double init_speed, move type) :
+    size(s), hp(health), resist(res), angle(start_angle), speed(init_speed), moveType(type)
 {
     setRotation(start_angle);
     setPos(x, y);
@@ -25,9 +25,10 @@ void Bug::advance(int step)
 
 bool Bug::hit(double dmg)
 {
-    hp -= max(0, dmg - resist);
-    if (hp == 0)
-        return True;
-    else
-        return False;
+    hp -= dmg - resist;
+    if (hp <= 0) {
+        hp = 0;
+        return true;
+    } else
+        return false;
 }
