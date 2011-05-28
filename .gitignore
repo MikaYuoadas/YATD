@@ -6,12 +6,18 @@
 *.so
 *.o
 YATD
+src/src
 
 # fichiers OS #
 ###############
 
 Desktop.ini
 Thumbs.db
+
+# VIM #
+#######
+
+*.swp
 
 # Makefiles #
 #############
