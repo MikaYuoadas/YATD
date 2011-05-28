@@ -6,13 +6,15 @@
 #include <QPushButton>
 #include <QLabel>
 #include <QLCDNumber>
+#include <QString>
 
 class UI : public QWidget
 {
+    Q_OBJECT
+
     private:
         QGroupBox *tower;
         QGroupBox *stats;
-        QPushButton *start;
         QPushButton *sell;
         QPushButton *upg;
         QLabel * wave;
@@ -22,6 +24,10 @@ class UI : public QWidget
         QLCDNumber * life;
 
     public:
+        QPushButton *start;
         UI(QWidget * parent);
+
+    public slots:
+        void setWaveName(QString name);
 };
 #endif

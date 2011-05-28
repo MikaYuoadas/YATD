@@ -17,7 +17,7 @@ UI::UI(QWidget * parent) : QWidget(parent)
     sell->setGeometry(105, 150, 75, 20);
 
     wave = new QLabel("Wave text here", this);
-    wave->move(0, 5);
+    wave->setGeometry(0, 5, UI_WIDTH, 20);
     cred_txt = new QLabel("Crédits :", this);
     cred_txt->move(0, 65);
     life_txt = new QLabel("Vies :", this);
@@ -29,4 +29,9 @@ UI::UI(QWidget * parent) : QWidget(parent)
     life = new QLCDNumber(this);
     life->setSegmentStyle(QLCDNumber::Flat);
     life->move(135, 95);
+}
+
+void UI::setWaveName(QString name)
+{
+    wave->setText(name);
 }

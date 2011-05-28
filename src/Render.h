@@ -11,6 +11,8 @@
 
 class Render : public QGraphicsScene
 {
+    Q_OBJECT
+
     private:
         int map[ROW][COLUMN];
         QHash<int, QPixmap> tiles;
@@ -19,5 +21,11 @@ class Render : public QGraphicsScene
         Render();
         ~Render();
         void drawBackground(QPainter *painter, const QRectF & rect);
+
+    public slots:
+        void nextWave();
+
+    signals:
+        void newWaveName(QString name);
 };
 #endif

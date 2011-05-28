@@ -5,6 +5,7 @@
 #include <QPainter>
 #include <QTextCodec>
 #include <QTimer>
+#include <QString>
 
 #include "define.h"
 #include "Render.h"
@@ -30,9 +31,6 @@ int main(int argc, char *argv[])
     render.setSceneRect(0, 0, WIDTH, HEIGHT);
     render.setItemIndexMethod(QGraphicsScene::NoIndex);
 
-    Ant ant(0, 100, 3, 0);
-    render.addItem(&ant);
-
     QGraphicsView view(&render, &window);
     view.setGeometry(0, 0, WIDTH + 4, HEIGHT + 4);
 
@@ -44,6 +42,9 @@ int main(int argc, char *argv[])
     QTimer timer;
     QObject::connect(&timer, SIGNAL(timeout()), &render, SLOT(advance()));
     timer.start(TIMER_INT);
+
+    QObject::connect(ui.start, SIGNAL(clicked()), &render, SLOT(nextWave()));
+    QObject::connect(&render, SIGNAL(newWaveName(QString)), &ui, SLOT(setWaveName(QString)));
 
     window.show();
     return app.exec();

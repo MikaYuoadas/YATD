@@ -5,11 +5,12 @@
 
 #include "Render.h"
 #include "define.h"
+#include "Ant.h"
 
 Render::Render() : QGraphicsScene()
 {
     QFile file("../map/map_1");
-    !file.open(QIODevice::ReadOnly | QIODevice::Text);
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
 
     QTextStream in(&file);
     for (int i = 0; i < ROW && !in.atEnd(); i++) {
@@ -65,4 +66,22 @@ void Render::drawBackground(QPainter *painter, const QRectF & rect)
         for(int j = 0; j < COLUMN; j++) {
             painter->drawPixmap(j * SQUARE_SIZE, i * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE, tiles[map[i][j]]);
         }
+}
+
+void Render::nextWave()
+{
+    Ant * ant = new Ant(0, 100, 3, 0);
+    addItem(ant);
+    QFile file("../map/waves_1");
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
+
+    QTextStream in(&file);
+    if (!in.atEnd()) {
+        QStringList line = in.readLine().split(";", QString::SkipEmptyParts);
+        if (line.size() >= 2) {
+            emit newWaveName(line.at(0));
+            QStringList params = line.at(1).split(":", QString::SkipEmptyParts);
+        }
+    }
+    file.close();
 }
