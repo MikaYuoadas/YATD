@@ -22,3 +22,12 @@ void Bug::advance(int step)
         return;
     moveBy(cos(angle) * speed * BASE_SPEED, sin(angle) * speed * BASE_SPEED);
 }
+
+bool Bug::hit(double dmg)
+{
+    hp -= max(0, dmg - resist);
+    if (hp == 0)
+        return True;
+    else
+        return False;
+}

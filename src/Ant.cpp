@@ -2,7 +2,7 @@
 #include "define.h"
 
 Ant::Ant(double x, double y, double s, double start_angle) :
-    Bug(x, y, s, start_angle, 2 + s / 2, CRAWL)
+    Bug(x, y, s, 5 * s * s, s * s, start_angle, 2 + s / 2, CRAWL)
 {
 }
 

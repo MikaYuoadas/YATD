@@ -12,12 +12,15 @@ class Bug : public QGraphicsItem
         void advance(int step);
 
     private:
+        double hp;
+        double resist;
         double angle;
         double speed;
         move moveType;
 
     public:
-        Bug(double x, double y, double s,double start_angle, double init_speed, move type);
+        Bug(double x, double y, double s, double health, double res, double start_angle, double init_speed, move type);
         QRectF boundingRect() const;
+        hit(double dmg);
 };
 #endif
