@@ -1,5 +1,6 @@
 #ifndef Ui
 #define Ui
+
 #include <QWidget>
 #include <QGroupBox>
 #include <QPushButton>
@@ -19,6 +20,7 @@ class UI : public QWidget
         QLabel * life_txt;
         QLCDNumber * cred;
         QLCDNumber * life;
+
     public:
         UI(QWidget * parent);
 };

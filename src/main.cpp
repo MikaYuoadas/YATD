@@ -1,9 +1,16 @@
-#include <QMainWindow>
 #include <QApplication>
+#include <QGraphicsView>
+#include <QMainWindow>
+#include <QObject>
+#include <QPainter>
 #include <QTextCodec>
+#include <QTimer>
+
 #include "define.h"
 #include "Render.h"
 #include "UI.h"
+
+#include "Ant.h"
 
 int main(int argc, char *argv[])
 {
@@ -14,12 +21,29 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
 
     QMainWindow window;
-    window.setFixedSize(WIDTH + 20 + UI_WIDTH, HEIGHT);
+    window.setFixedSize(WIDTH + 24 + UI_WIDTH, HEIGHT + 4);
 
-    Render render(&window);
-    render.setGeometry(0, 0, WIDTH, HEIGHT);
     UI ui(&window);
     ui.setGeometry(WIDTH + 10, 0, UI_WIDTH, HEIGHT);
+
+    Render render;
+    render.setSceneRect(0, 0, WIDTH, HEIGHT);
+    render.setItemIndexMethod(QGraphicsScene::NoIndex);
+
+    Ant ant(0, 100, 3, 0);
+    render.addItem(&ant);
+
+    QGraphicsView view(&render, &window);
+    view.setGeometry(0, 0, WIDTH + 4, HEIGHT + 4);
+
+    view.setRenderHint(QPainter::Antialiasing);
+    view.setCacheMode(QGraphicsView::CacheBackground);
+    view.setViewportUpdateMode(QGraphicsView::BoundingRectViewportUpdate);
+    view.setDragMode(QGraphicsView::NoDrag);
+
+    QTimer timer;
+    QObject::connect(&timer, SIGNAL(timeout()), &render, SLOT(advance()));
+    timer.start(TIMER_INT);
 
     window.show();
     return app.exec();
