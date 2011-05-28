@@ -22,5 +22,6 @@ Thumbs.db
 # Makefiles #
 #############
 
+moc_*
 Makefile
 *.pro
