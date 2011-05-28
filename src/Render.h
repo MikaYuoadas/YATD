@@ -12,7 +12,7 @@
 class Render : public QGraphicsScene
 {
     private:
-        int map[COLUMN][ROW];
+        int map[ROW][COLUMN];
         QHash<int, QPixmap> tiles;
 
     public:

@@ -12,9 +12,9 @@ Render::Render() : QGraphicsScene()
     !file.open(QIODevice::ReadOnly | QIODevice::Text);
 
     QTextStream in(&file);
-    for (int i = 0; i < COLUMN && !in.atEnd(); i++) {
-        QStringList line = in.readLine().split(" ");
-        for (int j = 0; j < ROW && j < line.size(); j++) {
+    for (int i = 0; i < ROW && !in.atEnd(); i++) {
+        QStringList line = in.readLine().split(" ", QString::SkipEmptyParts);
+        for (int j = 0; j < COLUMN && j < line.size(); j++) {
             int num = line.at(j).toInt();
             map[i][j] = num;
             if (!tiles.contains(num)) {
@@ -61,8 +61,8 @@ Render::~Render()
 
 void Render::drawBackground(QPainter *painter, const QRectF & rect)
 {
-    for(int i = 0; i < COLUMN; i++)
-        for(int j = 0; j < ROW; j++) {
-            painter->drawPixmap(i * SQUARE_SIZE, j * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE, tiles[map[i][j]]);
+    for(int i = 0; i < ROW; i++)
+        for(int j = 0; j < COLUMN; j++) {
+            painter->drawPixmap(j * SQUARE_SIZE, i * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE, tiles[map[i][j]]);
         }
 }
