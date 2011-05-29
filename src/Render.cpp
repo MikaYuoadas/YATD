@@ -2,12 +2,14 @@
 #include <QFile>
 #include <QString>
 #include <QTextStream>
+#include <QObject>
+#include <cmath>
 
 #include "Render.h"
 #include "define.h"
 #include "Ant.h"
 
-Render::Render() : QGraphicsScene()
+Render::Render() : QGraphicsScene(), bugNumber(0), bugSize(1)
 {
     QFile file("../map/map_1");
     file.open(QIODevice::ReadOnly | QIODevice::Text);
@@ -54,6 +56,8 @@ Render::Render() : QGraphicsScene()
         }
     }
     file.close();
+
+    QObject::connect(&waveTimer, SIGNAL(timeout()), this, SLOT(nextBug()));
 }
 
 Render::~Render()
@@ -70,8 +74,6 @@ void Render::drawBackground(QPainter *painter, const QRectF & rect)
 
 void Render::nextWave()
 {
-    Ant * ant = new Ant(0, 100, 3, 0);
-    addItem(ant);
     QFile file("../map/waves_1");
     file.open(QIODevice::ReadOnly | QIODevice::Text);
 
@@ -81,7 +83,20 @@ void Render::nextWave()
         if (line.size() >= 2) {
             emit newWaveName(line.at(0));
             QStringList params = line.at(1).split(":", QString::SkipEmptyParts);
+            bugSize = params.at(1).toInt();
+            bugNumber = params.at(2).toInt();
+            waveTimer.start(params.at(3).toInt() * TIMER_INT);
         }
     }
     file.close();
+}
+
+void Render::nextBug()
+{
+    if (bugNumber > 0) {
+        Ant * ant = new Ant(0, 100, bugSize, 0);
+        addItem(ant);
+        bugNumber -= 1;
+    } else
+        waveTimer.stop();
 }
