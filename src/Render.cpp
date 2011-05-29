@@ -66,8 +66,8 @@ Render::~Render()
 
 void Render::drawBackground(QPainter *painter, const QRectF & rect)
 {
-    for(int i = 0; i < ROW; i++)
-        for(int j = 0; j < COLUMN; j++) {
+    for(int i = round(rect.y() / SQUARE_SIZE); i < round((rect.y() + rect.height()) / SQUARE_SIZE); i++)
+        for(int j = round(rect.y() / SQUARE_SIZE); j < round((rect.x() + rect.width()) / SQUARE_SIZE); j++) {
             painter->drawPixmap(j * SQUARE_SIZE, i * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE, tiles[map[i][j]]);
         }
 }
