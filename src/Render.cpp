@@ -9,7 +9,7 @@
 #include "define.h"
 #include "Ant.h"
 
-Render::Render() : QGraphicsScene(), bugNumber(0), bugSize(1)
+Render::Render() : QGraphicsScene(), start_angle(0), bugNumber(0), bugSize(1)
 {
     QFile file("../map/map_1");
     file.open(QIODevice::ReadOnly | QIODevice::Text);
@@ -49,8 +49,36 @@ Render::Render() : QGraphicsScene(), bugNumber(0), bugSize(1)
                         path = "../sprites/ground/grass.jpg";
                         break;
                 }
-                if (num > 10 && num < 32)
+                if (num > 10 && num < 32) {
                     path = "../sprites/ground/start.png";
+                    start = new QPoint((j + 0.5) * SQUARE_SIZE, (i + 0.5) * SQUARE_SIZE);
+                    switch (num - 16){
+                        case NORTH:
+                            start_angle = -90;
+                            break;
+                        case SOUTH:
+                            start_angle = 90;
+                            break;
+                        case EAST:
+                            start_angle = 0;
+                            break;
+                        case WEST:
+                            start_angle = 180;
+                            break;
+                        case NE:
+                            start_angle = -45;
+                            break;
+                        case SW:
+                            start_angle = 135;
+                            break;
+                        case SE:
+                            start_angle = 45;
+                            break;
+                        case NW:
+                            start_angle = -135;
+                            break;
+                    }
+                }
                 tiles.insert(num, QPixmap(path));
             }
         }
@@ -94,7 +122,7 @@ void Render::nextWave()
 void Render::nextBug()
 {
     if (bugNumber > 0) {
-        Ant * ant = new Ant(0, 100, bugSize, 0);
+        Ant * ant = new Ant(start->x(), start->y(), bugSize, start_angle);
         addItem(ant);
         bugNumber -= 1;
     } else
