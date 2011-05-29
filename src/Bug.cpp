@@ -4,7 +4,7 @@
 #include "define.h"
 
 Bug::Bug(double x, double y, double s, double health, double res, double start_angle, double init_speed, move type) :
-    size(s), hp(health), resist(res), angle(start_angle), speed(init_speed), moveType(type), frame(0)
+    size(s), frame(0), hp(health), resist(res), angle(start_angle), speed(init_speed), moveType(type)
 {
     setRotation(start_angle);
     setPos(x, y);
