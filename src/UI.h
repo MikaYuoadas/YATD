@@ -13,10 +13,14 @@ class UI : public QWidget
     Q_OBJECT
 
     private:
-        QGroupBox *tower;
-        QGroupBox *stats;
-        QPushButton *sell;
-        QPushButton *upg;
+        QGroupBox * tower;
+        QGroupBox * stats;
+        QPushButton * sell;
+        QPushButton * upg;
+        QPushButton * water;
+        QPushButton * sling;
+        QPushButton * bowling;
+        QPushButton * paintball;
         QLabel * wave;
         QLabel * cred_txt;
         QLabel * life_txt;

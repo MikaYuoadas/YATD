@@ -17,6 +17,15 @@ UI::UI(QWidget * parent) : QWidget(parent)
     sell = new QPushButton("Vendre", stats);
     sell->setGeometry(105, 150, 75, 20);
 
+    water = new QPushButton("Eau", tower);
+    water->setGeometry(10, 25, (UI_WIDTH - 30)/2, 65);
+    sling = new QPushButton("Pierres", tower);
+    sling->setGeometry((UI_WIDTH - 30)/2 + 20, 25, (UI_WIDTH - 30)/2, 65);
+    bowling = new QPushButton("Pétanque", tower);
+    bowling->setGeometry(10, 100, (UI_WIDTH - 30)/2, 65);
+    paintball = new QPushButton("Paintball", tower);
+    paintball->setGeometry((UI_WIDTH - 30)/2 + 20, 100, (UI_WIDTH - 30)/2, 65);
+
     wave = new QLabel("Wave text here", this);
     wave->setGeometry(0, 5, UI_WIDTH, 20);
     cred_txt = new QLabel("Crédits :", this);
