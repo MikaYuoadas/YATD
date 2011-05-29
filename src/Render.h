@@ -25,6 +25,7 @@ class Render : public QGraphicsScene
         int bugNumber;
         int bugSize;
         int map[ROW][COLUMN];
+        QPoint goalSquare;
         QHash<int, QPixmap> tiles;
         void addBug(Bug * bug);
 
@@ -33,13 +34,16 @@ class Render : public QGraphicsScene
         ~Render();
         void drawBackground(QPainter *painter, const QRectF & rect);
         QPoint square(QGraphicsItem & item);
+        QPoint goal();
         double getAngle(QPoint & current);
 
     public slots:
         void nextWave();
         void nextBug();
+        void bugFinish(Bug * bug);
 
     signals:
         void newWaveName(QString name);
+        void loseLife();
 };
 #endif

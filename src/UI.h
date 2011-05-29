@@ -30,5 +30,6 @@ class UI : public QWidget
     public slots:
         void setWaveName(QString name);
         void addCred();
+        void loseLife();
 };
 #endif

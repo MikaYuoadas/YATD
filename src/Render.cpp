@@ -42,6 +42,7 @@ Render::Render() : QGraphicsScene(), start_angle(0), bugNumber(0), bugSize(1)
                         break;
                     case GOAL:
                         path = "../sprites/ground/goal.png";
+                        goalSquare = QPoint(j, i);
                         break;
                     case DIRT:
                         path = "../sprites/ground/dirt.png";
@@ -130,6 +131,7 @@ void Render::nextBug()
     if (bugNumber > 0) {
         Ant * ant = new Ant(start->x(), start->y(), bugSize, start_angle);
         addBug(ant);
+        QObject::connect(ant, SIGNAL(goalReached(Bug*)), this, SLOT(bugFinish(Bug*)));
         bugNumber -= 1;
     } else
         waveTimer.stop();
@@ -140,6 +142,11 @@ QPoint Render::square(QGraphicsItem & item)
     int x = floor(item.x() / SQUARE_SIZE);
     int y = floor(item.y() / SQUARE_SIZE);
     return QPoint(x, y);
+}
+
+QPoint Render::goal()
+{
+    return goalSquare;
 }
 
 double Render::getAngle(QPoint & current)
@@ -172,4 +179,12 @@ double Render::getAngle(QPoint & current)
             break;
     }
     return angle;
+}
+
+void Render::bugFinish(Bug * bug)
+{
+    bug->disconnect();
+    emit loseLife();
+    removeItem(bug);
+    bug->deleteLater();
 }

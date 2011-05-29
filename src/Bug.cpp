@@ -29,6 +29,10 @@ void Bug::advance(int step)
         angle = parent->getAngle(currentSquare);
         setRotation(angle);
     }
+    if (currentSquare == parent->goal())
+    {
+        emit goalReached(this);
+    }
 }
 
 QPainterPath Bug::shape() const

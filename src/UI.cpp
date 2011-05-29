@@ -43,3 +43,9 @@ void UI::addCred()
 {
     cred->display(cred->intValue() + 1);
 }
+
+void UI::loseLife()
+{
+    life->display(life->intValue() - 1);
+    //TODO : défaite si life <= 0
+}

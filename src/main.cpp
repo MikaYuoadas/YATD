@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
 
     QObject::connect(ui.start, SIGNAL(clicked()), &render, SLOT(nextWave()));
     QObject::connect(&render, SIGNAL(newWaveName(QString)), &ui, SLOT(setWaveName(QString)));
+    QObject::connect(&render, SIGNAL(loseLife()), &ui, SLOT(loseLife()));
 
     window.show();
     return app.exec();

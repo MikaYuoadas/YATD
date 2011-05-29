@@ -1,7 +1,7 @@
 #ifndef BUG
 #define BUG
 
-#include <QGraphicsItem>
+#include <QGraphicsObject>
 #include <QPainterPath>
 #include <QPoint>
 
@@ -10,8 +10,10 @@
 
 class Render;
 
-class Bug : public QGraphicsItem
+class Bug : public QGraphicsObject
 {
+    Q_OBJECT
+
     protected:
         double size;
         int frame;
@@ -31,5 +33,8 @@ class Bug : public QGraphicsItem
         QRectF boundingRect() const;
         QPainterPath shape() const;
         bool hit(double dmg);
+
+    signals:
+        void goalReached(Bug * bug);
 };
 #endif
