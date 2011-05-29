@@ -11,8 +11,6 @@
 #include "Render.h"
 #include "UI.h"
 
-#include "Ant.h"
-
 int main(int argc, char *argv[])
 {
     QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
