@@ -1,4 +1,5 @@
 #include <QString>
+
 #include "UI.h"
 #include "define.h"
 
@@ -26,12 +27,19 @@ UI::UI(QWidget * parent) : QWidget(parent)
     cred = new QLCDNumber(this);
     cred->setSegmentStyle(QLCDNumber::Flat);
     cred->move(135, 65);
+    cred->display(START_CRED);
     life = new QLCDNumber(this);
     life->setSegmentStyle(QLCDNumber::Flat);
     life->move(135, 95);
+    life->display(START_LIFE);
 }
 
 void UI::setWaveName(QString name)
 {
     wave->setText(name);
+}
+
+void UI::addCred()
+{
+    cred->display(cred->intValue() + 1);
 }
