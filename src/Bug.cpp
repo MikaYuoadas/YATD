@@ -4,7 +4,7 @@
 #include "define.h"
 
 Bug::Bug(double x, double y, double s, double health, double res, double start_angle, double init_speed, move type) :
-    size(s), hp(health), resist(res), angle(start_angle), speed(init_speed), moveType(type)
+    size(s), hp(health), resist(res), angle(start_angle), speed(init_speed), moveType(type), frame(0)
 {
     setRotation(start_angle);
     setPos(x, y);
@@ -20,6 +20,7 @@ void Bug::advance(int step)
 {
     if (!step)
         return;
+    frame += 1;
     moveBy(cos(angle) * speed * BASE_SPEED, sin(angle) * speed * BASE_SPEED);
 }
 

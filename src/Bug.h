@@ -9,6 +9,7 @@ class Bug : public QGraphicsItem
 {
     protected:
         double size;
+        int frame;
         void advance(int step);
 
     private:
