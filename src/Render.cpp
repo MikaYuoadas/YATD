@@ -3,6 +3,7 @@
 #include <QString>
 #include <QTextStream>
 #include <QObject>
+#include <QList>
 #include <cmath>
 
 #include "Render.h"
@@ -92,6 +93,11 @@ Render::~Render()
 {
 }
 
+void Render::addBug(Bug * bug) {
+    QGraphicsScene::addItem(bug);
+    bug->parent = this;
+}
+
 void Render::drawBackground(QPainter *painter, const QRectF & rect)
 {
     for(int i = round(rect.y() / SQUARE_SIZE); i < round((rect.y() + rect.height()) / SQUARE_SIZE); i++)
@@ -123,8 +129,47 @@ void Render::nextBug()
 {
     if (bugNumber > 0) {
         Ant * ant = new Ant(start->x(), start->y(), bugSize, start_angle);
-        addItem(ant);
+        addBug(ant);
         bugNumber -= 1;
     } else
         waveTimer.stop();
+}
+
+QPoint Render::square(QGraphicsItem & item)
+{
+    int x = floor(item.x() / SQUARE_SIZE);
+    int y = floor(item.y() / SQUARE_SIZE);
+    return QPoint(x, y);
+}
+
+double Render::getAngle(QPoint & current)
+{
+    double angle = 0;
+    switch (map[current.y()][current.x()]) {
+        case NORTH:
+            angle = -90;
+            break;
+        case SOUTH:
+            angle = 90;
+            break;
+        case EAST:
+            angle = 0;
+            break;
+        case WEST:
+            angle = 180;
+            break;
+        case NE:
+            angle = -45;
+            break;
+        case SW:
+            angle = 135;
+            break;
+        case SE:
+            angle = 45;
+            break;
+        case NW:
+            angle = -135;
+            break;
+    }
+    return angle;
 }

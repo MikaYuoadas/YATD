@@ -1,7 +1,7 @@
 #ifndef RENDER
 #define RENDER
 
-#include <QGraphicsItemGroup>
+#include <QGraphicsItem>
 #include <QGraphicsScene>
 #include <QPainter>
 #include <QPixmap>
@@ -10,6 +10,9 @@
 #include <QPoint>
 
 #include "define.h"
+#include "Bug.h"
+
+class Bug;
 
 class Render : public QGraphicsScene
 {
@@ -23,11 +26,14 @@ class Render : public QGraphicsScene
         int bugSize;
         int map[ROW][COLUMN];
         QHash<int, QPixmap> tiles;
+        void addBug(Bug * bug);
 
     public:
         Render();
         ~Render();
         void drawBackground(QPainter *painter, const QRectF & rect);
+        QPoint square(QGraphicsItem & item);
+        double getAngle(QPoint & current);
 
     public slots:
         void nextWave();
