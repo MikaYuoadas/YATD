@@ -1,6 +1,5 @@
 #include <QGraphicsPixmapItem>
 #include <QFile>
-#include <QString>
 #include <QTextStream>
 #include <QObject>
 #include <QList>
@@ -8,9 +7,9 @@
 
 #include "Render.h"
 #include "define.h"
-#include "Ant.h"
+#include "Hatchery.h"
 
-Render::Render() : QGraphicsScene(), start_angle(0), waveNumber(1), bugNumber(0), bugSize(1)
+Render::Render() : QGraphicsScene(), start_angle(0), waveNumber(1)
 {
     QFile file("../map/map_1");
     file.open(QIODevice::ReadOnly | QIODevice::Text);
@@ -87,6 +86,9 @@ Render::Render() : QGraphicsScene(), start_angle(0), waveNumber(1), bugNumber(0)
     }
     file.close();
 
+    wave = new QStringList();
+    b1 = new Hatchery(start->x(), start->y(), start_angle);
+
     QObject::connect(&waveTimer, SIGNAL(timeout()), this, SLOT(nextBug()));
 }
 
@@ -116,26 +118,40 @@ void Render::nextWave()
     if (!in.atEnd()) {
         QStringList line;
         for (int i = 0; i < waveNumber; i++)
-            line = in.readLine().split(";", QString::SkipEmptyParts);
+            line = in.readLine().split(';', QString::SkipEmptyParts);
         if (line.size() >= 2) {
             emit newWaveName(line.at(0));
-            QStringList params = line.at(1).split(":", QString::SkipEmptyParts);
-            bugSize = params.at(1).toInt();
-            bugNumber = params.at(2).toInt();
-            waveTimer.start(params.at(3).toInt() * TIMER_INT);
+            line.removeFirst();
+            waveTimer.start(line.at(0).split(':').at(3).toInt() * TIMER_INT);
+            for (int i = 0; i < line.size(); i++)
+                wave->append(line.at(i).split(':', QString::SkipEmptyParts));
         }
+        waveNumber += 1;
     }
     file.close();
 }
 
 void Render::nextBug()
 {
-    if (bugNumber > 0) {
-        Ant * ant = new Ant(start->x(), start->y(), bugSize, start_angle);
-        addBug(ant);
-        QObject::connect(ant, SIGNAL(goalReached(Bug*)), this, SLOT(bugFinish(Bug*)));
-        QObject::connect(ant, SIGNAL(dead(Bug*)), this, SLOT(bugKilled(Bug*)));
-        bugNumber -= 1;
+    if (wave->size() > 0) {
+        Bug * bug = b1->spawnBug(wave->at(0), wave->at(1).toDouble());
+        addBug(bug);
+        QObject::connect(bug, SIGNAL(goalReached(Bug*)), this, SLOT(bugFinish(Bug*)));
+        QObject::connect(bug, SIGNAL(dead(Bug*)), this, SLOT(bugKilled(Bug*)));
+        int bugNumber = wave->at(2).toInt() - 1;
+        if (bugNumber == 0) {
+            waveTimer.stop();
+            wave->removeFirst();
+            wave->removeFirst();
+            wave->removeFirst();
+            wave->removeFirst();
+            if (!wave->isEmpty())
+                waveTimer.start(wave->at(3).toInt() * TIMER_INT);
+            else
+                waveTimer.stop();
+        }
+        else
+            wave->replace(2, QString::number(bugNumber));
     } else
         waveTimer.stop();
 }

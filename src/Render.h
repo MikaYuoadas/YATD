@@ -8,11 +8,13 @@
 #include <QHash>
 #include <QTimer>
 #include <QPoint>
+#include <QStringList>
 
 #include "define.h"
-#include "Bug.h"
+#include "Hatchery.h"
 
 class Bug;
+class Hatchery;
 
 class Render : public QGraphicsScene
 {
@@ -23,12 +25,12 @@ class Render : public QGraphicsScene
         QPoint * start;
         double start_angle;
         int waveNumber;
-        int bugNumber;
-        int bugSize;
+        QStringList * wave;
         int map[ROW][COLUMN];
         QPoint goalSquare;
         QHash<int, QPixmap> tiles;
         void addBug(Bug * bug);
+        Hatchery * b1;
 
     public:
         Render();
