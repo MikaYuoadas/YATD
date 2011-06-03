@@ -10,7 +10,7 @@
 #define TIMER_INT 20
 #define BASE_SIZE 24
 #define BASE_SPEED SQUARE_SIZE * TIMER_INT / 1000
-#define START_CRED 10
+#define START_CRED 30
 #define START_LIFE 10
 #define PI 3.141593
 
