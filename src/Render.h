@@ -41,9 +41,11 @@ class Render : public QGraphicsScene
         void nextWave();
         void nextBug();
         void bugFinish(Bug * bug);
+        void bugKilled(Bug * bug);
 
     signals:
         void newWaveName(QString name);
         void loseLife();
+        void getCred();
 };
 #endif

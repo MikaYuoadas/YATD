@@ -132,6 +132,7 @@ void Render::nextBug()
         Ant * ant = new Ant(start->x(), start->y(), bugSize, start_angle);
         addBug(ant);
         QObject::connect(ant, SIGNAL(goalReached(Bug*)), this, SLOT(bugFinish(Bug*)));
+        QObject::connect(ant, SIGNAL(dead(Bug*)), this, SLOT(bugKilled(Bug*)));
         bugNumber -= 1;
     } else
         waveTimer.stop();
@@ -185,6 +186,14 @@ void Render::bugFinish(Bug * bug)
 {
     bug->disconnect();
     emit loseLife();
+    removeItem(bug);
+    bug->deleteLater();
+}
+
+void Render::bugKilled(Bug * bug)
+{
+    bug->disconnect();
+    emit getCred();
     removeItem(bug);
     bug->deleteLater();
 }

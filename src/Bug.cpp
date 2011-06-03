@@ -43,12 +43,9 @@ QPainterPath Bug::shape() const
     return path;
 }
 
-bool Bug::hit(double dmg)
+void Bug::hit(double dmg)
 {
     hp -= dmg - resist;
-    if (hp <= 0) {
-        hp = 0;
-        return true;
-    } else
-        return false;
+    if (hp <= 0)
+        emit dead(this);
 }

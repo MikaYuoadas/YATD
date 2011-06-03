@@ -32,9 +32,10 @@ class Bug : public QGraphicsObject
         Bug(double x, double y, double s, double health, double res, double start_angle, double init_speed, move type);
         QRectF boundingRect() const;
         QPainterPath shape() const;
-        bool hit(double dmg);
+        void hit(double dmg);
 
     signals:
+        void dead(Bug * bug);
         void goalReached(Bug * bug);
 };
 #endif
