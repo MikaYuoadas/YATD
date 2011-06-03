@@ -7,6 +7,10 @@ Ant::Ant(double x, double y, double s, double start_angle) :
     image[0] = new QImage("../sprites/insects/fourmi1.png", "png");
     image[1] = new QImage("../sprites/insects/fourmi2.png", "png");
     image[2] = new QImage("../sprites/insects/fourmi3.png", "png");
+    timer = new QTimer();
+    timer->setSingleShot(true);
+    timer->setInterval(5000);
+    QObject::connect(timer, SIGNAL(timeout()), this, SLOT(slowDown()));
 }
 
 Ant::~Ant()
@@ -33,4 +37,17 @@ void Ant::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidg
     double tsize = (BASE_SIZE * size);
     painter->drawImage(QRectF(-tsize/2, -tsize/2, tsize, tsize), *pic);
     painter->drawEllipse(QRectF(-tsize/2 + 5, -tsize/2 + 5, tsize - 10, tsize - 10));
+}
+
+void Ant::hit(double dmg)
+{
+    Bug::hit(dmg);
+    if (!timer->isActive())
+        speed *= 1.5;
+    timer->start();
+}
+
+void Ant::slowDown()
+{
+    speed /= 1.5;
 }

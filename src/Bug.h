@@ -18,12 +18,12 @@ class Bug : public QGraphicsObject
         double size;
         int frame;
         void advance(int step);
+        double speed;
 
     private:
         double hp;
         double resist;
         double angle;
-        double speed;
         move moveType;
         QPoint lastSquare;
 
