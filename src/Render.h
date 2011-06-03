@@ -22,6 +22,7 @@ class Render : public QGraphicsScene
         QTimer waveTimer;
         QPoint * start;
         double start_angle;
+        int waveNumber;
         int bugNumber;
         int bugSize;
         int map[ROW][COLUMN];

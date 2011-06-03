@@ -10,7 +10,7 @@
 #include "define.h"
 #include "Ant.h"
 
-Render::Render() : QGraphicsScene(), start_angle(0), bugNumber(0), bugSize(1)
+Render::Render() : QGraphicsScene(), start_angle(0), waveNumber(1), bugNumber(0), bugSize(1)
 {
     QFile file("../map/map_1");
     file.open(QIODevice::ReadOnly | QIODevice::Text);
@@ -114,7 +114,9 @@ void Render::nextWave()
 
     QTextStream in(&file);
     if (!in.atEnd()) {
-        QStringList line = in.readLine().split(";", QString::SkipEmptyParts);
+        QStringList line;
+        for (int i = 0; i < waveNumber; i++)
+            line = in.readLine().split(";", QString::SkipEmptyParts);
         if (line.size() >= 2) {
             emit newWaveName(line.at(0));
             QStringList params = line.at(1).split(":", QString::SkipEmptyParts);
