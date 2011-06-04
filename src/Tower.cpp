@@ -1,8 +1,8 @@
 #include "Tower.h"
 #include "define.h"
 
-Tower::Tower(QPointF buildPos, QString type) :
-    level(1), pos(buildPos)
+Tower::Tower(QPointF buildPos, QString typeTower) :
+    level(1), pos(buildPos), type(typeTower), parent(NULL)
 {
     if (type == "water") {
         firerate = 4.5;
@@ -47,7 +47,7 @@ void Tower::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
 
 void Tower::fire()
 {
-    // search target
-    Projectile * missile = new Projectile(pos, pos, 100);
+    Bug * target = parent->getTarget(pos, range);
+    Projectile * missile = NULL;
     emit projectile(missile);
 }

@@ -8,6 +8,9 @@
 #include <QString>
 
 #include "Projectile.h"
+#include "Render.h"
+
+class Render;
 
 class Tower : public QGraphicsObject
 {
@@ -21,9 +24,11 @@ class Tower : public QGraphicsObject
         double firerate;
         QTimer * timer;
         QPointF pos;
+        QString type;
 
     public:
-        Tower(QPointF buildPos, QString type);
+        Render * parent;
+        Tower(QPointF buildPos, QString typeTower);
         QRectF boundingRect() const;
         void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 

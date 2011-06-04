@@ -2,6 +2,7 @@
 #define RENDER
 
 #include <QGraphicsItem>
+#include <QList>
 #include <QGraphicsScene>
 #include <QGraphicsSceneMouseEvent>
 #include <QPainter>
@@ -17,6 +18,7 @@
 
 class Bug;
 class Hatchery;
+class Tower;
 
 class Render : public QGraphicsScene
 {
@@ -35,6 +37,7 @@ class Render : public QGraphicsScene
         void addBug(Bug * bug);
         Hatchery * b1;
         QString tower2build;
+        QList<Bug *> bugs;
 
     public:
         Render();
@@ -44,6 +47,7 @@ class Render : public QGraphicsScene
         QPoint goal();
         double getAngle(QPoint & current);
         void mousePressEvent(QGraphicsSceneMouseEvent * mouseEvent);
+        Bug * getTarget(QPointF pos, double range);
 
     public slots:
         void nextWave();

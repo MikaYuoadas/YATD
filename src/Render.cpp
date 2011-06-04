@@ -9,7 +9,7 @@
 #include "define.h"
 #include "Hatchery.h"
 
-Render::Render() : QGraphicsScene(), start_angle(0), waveNumber(1), tower2build(QString("none"))
+Render::Render() : QGraphicsScene(), start_angle(0), waveNumber(1), tower2build(QString("none")), bugs(QList<Bug *>())
 {
     QFile file("../map/map_1");
     file.open(QIODevice::ReadOnly | QIODevice::Text);
@@ -103,6 +103,7 @@ Render::~Render()
 void Render::addBug(Bug * bug) {
     QGraphicsScene::addItem(bug);
     bug->parent = this;
+    bugs.append(bug);
 }
 
 void Render::drawBackground(QPainter *painter, const QRectF & rect)
@@ -206,6 +207,7 @@ double Render::getAngle(QPoint & current)
 
 void Render::bugFinish(Bug * bug)
 {
+    bugs.removeAll(bug);
     bug->disconnect();
     emit loseLife();
     removeItem(bug);
@@ -214,6 +216,7 @@ void Render::bugFinish(Bug * bug)
 
 void Render::bugKilled(Bug * bug)
 {
+    bugs.removeAll(bug);
     bug->disconnect();
     emit getCred();
     removeItem(bug);
@@ -231,6 +234,7 @@ void Render::mousePressEvent(QGraphicsSceneMouseEvent * mouseEvent)
     if (tower2build != "none" && towers[pos.y()][pos.x()] == FREE) {
         towers[pos.y()][pos.x()] == BLOCK;
         Tower * tower = new Tower(rpos, tower2build);
+        tower->parent = this;
         addItem(tower);
         tower2build = "none";
     }
@@ -244,4 +248,18 @@ void Render::towerBought(QString type)
 void Render::addProjectile(Projectile * missile)
 {
     addItem(missile);
+}
+
+Bug * Render::getTarget(QPointF pos, double range)
+{
+    Bug * bug = NULL;
+    for (int i = 0; i < bugs.size(); i++) {
+        double x = bugs.at(i)->x();
+        double y = bugs.at(i)->y();
+        if (sqrt(pow(2, x - pos.x()) + pow(2, y - pos.y())) <= range) {
+            bug = bugs.at(i);
+            break;
+        }
+    }
+    return bug;
 }
