@@ -3,7 +3,7 @@
 #include "Bug.h"
 #include "define.h"
 
-Bug::Bug(double x, double y, double s, double health, double res, double start_angle, double init_speed, move type) :
+Bug::Bug(double x, double y, double s, double health, double res, double start_angle, double init_speed, short int type) :
     size(s), frame(0), speed(init_speed), hp(health), resist(res), angle(start_angle), moveType(type),
     lastSquare(QPoint(floor(x / SQUARE_SIZE), floor(y /SQUARE_SIZE)))
 {

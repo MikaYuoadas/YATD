@@ -19,7 +19,8 @@
 #define PAINTBALL_PRICE 12
 #define BOWLING_PRICE 15
 
-enum move {FLY, CRAWL};
+#define FLY 1
+#define CRAWL 2
 
 #define FREE 0
 #define NORTH 1

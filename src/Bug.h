@@ -24,12 +24,12 @@ class Bug : public QGraphicsObject
         double hp;
         double resist;
         double angle;
-        move moveType;
+        short int moveType;
         QPoint lastSquare;
 
     public:
         Render * parent;
-        Bug(double x, double y, double s, double health, double res, double start_angle, double init_speed, move type);
+        Bug(double x, double y, double s, double health, double res, double start_angle, double init_speed, short int type);
         QRectF boundingRect() const;
         QPainterPath shape() const;
         void hit(double dmg);
