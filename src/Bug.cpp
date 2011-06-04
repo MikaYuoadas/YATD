@@ -14,7 +14,7 @@ Bug::Bug(double x, double y, double s, double health, double res, double start_a
 QRectF Bug::boundingRect() const
 {
     double tsize = (BASE_SIZE * size) + 2;
-    return QRectF( -tsize/2, -tsize/2, tsize, tsize);
+    return QRectF(-tsize/2, -tsize/2, tsize, tsize);
 }
 
 void Bug::advance(int step)
