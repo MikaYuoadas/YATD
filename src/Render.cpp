@@ -256,7 +256,7 @@ Bug * Render::getTarget(QPointF pos, double range)
     for (int i = 0; i < bugs.size(); i++) {
         double x = bugs.at(i)->x();
         double y = bugs.at(i)->y();
-        if (sqrt(pow(2, x - pos.x()) + pow(2, y - pos.y())) <= range) {
+        if (sqrt(pow(2, x - pos.x()) + pow(2, y - pos.y())) <= range * SQUARE_SIZE) {
             bug = bugs.at(i);
             break;
         }
