@@ -3,6 +3,7 @@
 
 #include <QGraphicsItem>
 #include <QGraphicsScene>
+#include <QGraphicsSceneMouseEvent>
 #include <QPainter>
 #include <QPixmap>
 #include <QHash>
@@ -31,6 +32,7 @@ class Render : public QGraphicsScene
         QHash<int, QPixmap> tiles;
         void addBug(Bug * bug);
         Hatchery * b1;
+        QString tower2build;
 
     public:
         Render();
@@ -39,10 +41,12 @@ class Render : public QGraphicsScene
         QPoint square(QGraphicsItem & item);
         QPoint goal();
         double getAngle(QPoint & current);
+        void mousePressEvent(QGraphicsSceneMouseEvent * mouseEvent);
 
     public slots:
         void nextWave();
         void nextBug();
+        void towerBought(QString type);
         void bugFinish(Bug * bug);
         void bugKilled(Bug * bug);
 

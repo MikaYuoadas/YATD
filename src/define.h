@@ -13,6 +13,11 @@
 #define START_CRED 30
 #define START_LIFE 10
 #define PI 3.141593
+#define TOWER_SIZE 28
+#define WATER_PRICE 8
+#define SLINGSHOT_PRICE 12
+#define PAINTBALL_PRICE 12
+#define BOWLING_PRICE 15
 
 enum move {FLY, CRAWL};
 

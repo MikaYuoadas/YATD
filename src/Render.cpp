@@ -9,7 +9,7 @@
 #include "define.h"
 #include "Hatchery.h"
 
-Render::Render() : QGraphicsScene(), start_angle(0), waveNumber(1)
+Render::Render() : QGraphicsScene(), start_angle(0), waveNumber(1), tower2build(QString("none"))
 {
     QFile file("../map/map_1");
     file.open(QIODevice::ReadOnly | QIODevice::Text);
@@ -214,4 +214,17 @@ void Render::bugKilled(Bug * bug)
     emit getCred();
     removeItem(bug);
     bug->deleteLater();
+}
+
+void Render::mousePressEvent(QGraphicsSceneMouseEvent * mouseEvent)
+{
+    if (tower2build != "none") {
+        QPointF rpos = mouseEvent->scenePos();
+        QPoint pos((int) (rpos.x() / SQUARE_SIZE), (int) (rpos.y() / SQUARE_SIZE));
+    }
+}
+
+void Render::towerBought(QString type)
+{
+    tower2build = type;
 }

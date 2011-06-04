@@ -35,5 +35,14 @@ class UI : public QWidget
         void setWaveName(QString name);
         void addCred();
         void loseLife();
+        void startWave();
+        void buyWaterTower();
+        void buySlingshotTower();
+        void buyPaintballTower();
+        void buyBowlingTower();
+
+    signals:
+        void buyTower(QString type);
+        void nextWave();
 };
 #endif

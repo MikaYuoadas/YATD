@@ -12,6 +12,7 @@ UI::UI(QWidget * parent) : QWidget(parent)
 
     start = new QPushButton("Lancer la vague suivante", this);
     start->setGeometry(10, 30, 180, 25);
+    QObject::connect(start, SIGNAL(clicked()), this, SLOT(startWave()));
     upg = new QPushButton("Améliorer", stats);
     upg->setGeometry(20, 150, 75, 20);
     sell = new QPushButton("Vendre", stats);
@@ -19,12 +20,16 @@ UI::UI(QWidget * parent) : QWidget(parent)
 
     water = new QPushButton("Eau", tower);
     water->setGeometry(10, 25, (UI_WIDTH - 30)/2, 65);
+    QObject::connect(water, SIGNAL(clicked()), this, SLOT(buyWaterTower()));
     sling = new QPushButton("Pierres", tower);
     sling->setGeometry((UI_WIDTH - 30)/2 + 20, 25, (UI_WIDTH - 30)/2, 65);
+    QObject::connect(sling, SIGNAL(clicked()), this, SLOT(buySlingshotTower()));
     bowling = new QPushButton("Pétanque", tower);
     bowling->setGeometry(10, 100, (UI_WIDTH - 30)/2, 65);
+    QObject::connect(bowling, SIGNAL(clicked()), this, SLOT(buyBowlingTower()));
     paintball = new QPushButton("Paintball", tower);
     paintball->setGeometry((UI_WIDTH - 30)/2 + 20, 100, (UI_WIDTH - 30)/2, 65);
+    QObject::connect(paintball, SIGNAL(clicked()), this, SLOT(buyPaintballTower()));
 
     wave = new QLabel("Wave text here", this);
     wave->setGeometry(0, 5, UI_WIDTH, 20);
@@ -43,6 +48,11 @@ UI::UI(QWidget * parent) : QWidget(parent)
     life->display(START_LIFE);
 }
 
+void UI::startWave()
+{
+    emit nextWave();
+}
+
 void UI::setWaveName(QString name)
 {
     wave->setText(name);
@@ -57,4 +67,36 @@ void UI::loseLife()
 {
     life->display(life->intValue() - 1);
     //TODO : défaite si life <= 0
+}
+
+void UI::buyWaterTower()
+{
+    if (cred->intValue() >= WATER_PRICE) {
+        cred->display(cred->intValue() - WATER_PRICE);
+        emit buyTower(QString("water"));
+    }
+}
+
+void UI::buySlingshotTower()
+{
+    if (cred->intValue() >= SLINGSHOT_PRICE) {
+        cred->display(cred->intValue() - SLINGSHOT_PRICE);
+        emit buyTower(QString("slingshot"));
+    }
+}
+
+void UI::buyPaintballTower()
+{
+    if (cred->intValue() >= PAINTBALL_PRICE) {
+        cred->display(cred->intValue() - PAINTBALL_PRICE);
+        emit buyTower(QString("paintball"));
+    }
+}
+
+void UI::buyBowlingTower()
+{
+    if (cred->intValue() >= BOWLING_PRICE) {
+        cred->display(cred->intValue() - BOWLING_PRICE);
+        emit buyTower(QString("bowling"));
+    }
 }

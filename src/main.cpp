@@ -41,7 +41,8 @@ int main(int argc, char *argv[])
     QObject::connect(&timer, SIGNAL(timeout()), &render, SLOT(advance()));
     timer.start(TIMER_INT);
 
-    QObject::connect(ui.start, SIGNAL(clicked()), &render, SLOT(nextWave()));
+    QObject::connect(&ui, SIGNAL(nextWave()), &render, SLOT(nextWave()));
+    QObject::connect(&ui, SIGNAL(buyTower(QString)), &render, SLOT(towerBought(QString)));
     QObject::connect(&render, SIGNAL(newWaveName(QString)), &ui, SLOT(setWaveName(QString)));
     QObject::connect(&render, SIGNAL(loseLife()), &ui, SLOT(loseLife()));
     QObject::connect(&render, SIGNAL(getCred()), &ui, SLOT(addCred()));
