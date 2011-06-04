@@ -5,24 +5,25 @@ Tower::Tower(QPointF buildPos, QString typeTower) :
     level(1), pos(buildPos), type(typeTower), parent(NULL)
 {
     if (type == "water") {
+        price = 4;
         firerate = 4.5;
         range = 2.5;
         target = CRAWL & FLY;
         color = Qt::cyan;
-    }
-    if (type == "slingshot") {
+    } else if (type == "slingshot") {
+        price = 6;
         firerate = 1.0;
         range = 3.5;
         target = FLY;
         color = Qt::yellow;
-    }
-    if (type == "paintball") {
+    } else if (type == "paintball") {
+        price = 6;
         firerate = 2;
         range = 4.5;
         target = CRAWL & FLY;
         color = Qt::darkRed;
-    }
-    if (type == "bowling") {
+    } else if (type == "bowling") {
+        price = 7.5;
         firerate = 0.5;
         range = 4;
         target = CRAWL;
@@ -58,6 +59,11 @@ double Tower::getRange()
 short int Tower::getLvl()
 {
     return level;
+}
+
+float Tower::getPrice()
+{
+    return price;
 }
 
 double Tower::getFirerate()

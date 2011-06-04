@@ -52,9 +52,11 @@ class UI : public QWidget
         void buyPaintballTower();
         void buyBowlingTower();
         void selectTower(Tower * tower);
+        void sellSelectedTower();
 
     signals:
         void buyTower(QString type);
         void nextWave();
+        void towerSold(Tower * tower);
 };
 #endif

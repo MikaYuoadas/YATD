@@ -18,6 +18,7 @@ class Tower : public QGraphicsObject
 
     private:
         short int level;
+        float price;
         QColor color;
         short int target;
         double range;
@@ -35,6 +36,7 @@ class Tower : public QGraphicsObject
         double getRange();
         short int getLvl();
         double getFirerate();
+        float getPrice();
 
     public slots:
         void fire();

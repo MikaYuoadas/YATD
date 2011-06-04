@@ -43,6 +43,8 @@ int main(int argc, char *argv[])
 
     QObject::connect(&ui, SIGNAL(nextWave()), &render, SLOT(nextWave()));
     QObject::connect(&ui, SIGNAL(buyTower(QString)), &render, SLOT(towerBought(QString)));
+    QObject::connect(&ui, SIGNAL(towerSold(Tower *)), &render, SLOT(destroyTower(Tower *)));
+
     QObject::connect(&render, SIGNAL(newWaveName(QString)), &ui, SLOT(setWaveName(QString)));
     QObject::connect(&render, SIGNAL(loseLife()), &ui, SLOT(loseLife()));
     QObject::connect(&render, SIGNAL(getCred()), &ui, SLOT(addCred()));

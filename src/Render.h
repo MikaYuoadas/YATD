@@ -56,6 +56,7 @@ class Render : public QGraphicsScene
         void bugFinish(Bug * bug);
         void bugKilled(Bug * bug);
         void addProjectile(Projectile * missile);
+        void destroyTower(Tower * tower);
 
     signals:
         void newWaveName(QString name);

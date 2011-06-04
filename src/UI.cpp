@@ -17,7 +17,9 @@ UI::UI(QWidget * parent) : QWidget(parent), selected(NULL)
     upg->setGeometry(20, 150, 75, 20);
     sell = new QPushButton("Vendre", stats);
     sell->setGeometry(105, 150, 75, 20);
+    QObject::connect(sell, SIGNAL(clicked()), this, SLOT(sellSelectedTower()));
 
+    // Tower shop
     water = new QPushButton("Eau", tower);
     water->setGeometry(10, 25, (UI_WIDTH - 30)/2, 65);
     QObject::connect(water, SIGNAL(clicked()), this, SLOT(buyWaterTower()));
@@ -128,4 +130,14 @@ void UI::selectTower(Tower * tower)
     t_lvl->setText(QString().setNum(tower->getLvl()));
     t_range->setText(QString().setNum(tower->getRange()));
     t_firerate->setText(QString().setNum(tower->getFirerate()));
+}
+
+void UI::sellSelectedTower()
+{
+    cred->display(cred->intValue() + (int) selected->getPrice());
+    emit towerSold(selected);
+    t_name->setText("");
+    t_lvl->setText("");
+    t_range->setText("");
+    t_firerate->setText("");
 }

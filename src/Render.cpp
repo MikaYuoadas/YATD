@@ -263,3 +263,10 @@ Bug * Render::getTarget(QPointF pos, double range)
     }
     return bug;
 }
+
+void Render::destroyTower(Tower * tower)
+{
+    tower->disconnect();
+    removeItem(tower);
+    tower->deleteLater();
+}
