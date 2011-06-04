@@ -18,6 +18,7 @@
 #define SLINGSHOT_PRICE 12
 #define PAINTBALL_PRICE 12
 #define BOWLING_PRICE 15
+#define PROJECTILE_SIZE 10
 
 #define FLY 1
 #define CRAWL 2
@@ -33,5 +34,7 @@
 #define SW 10
 #define GOAL 32
 #define DIRT 64
+
+#define BLOCK 13
 
 #endif

@@ -20,6 +20,10 @@ Render::Render() : QGraphicsScene(), start_angle(0), waveNumber(1), tower2build(
         for (int j = 0; j < COLUMN && j < line.size(); j++) {
             int num = line.at(j).toInt();
             map[i][j] = num;
+            if (num != FREE)
+                towers[i][j] = BLOCK;
+            else
+                towers[i][j] = FREE;
             if (!tiles.contains(num)) {
                 QString path;
                 switch (num){
@@ -218,13 +222,26 @@ void Render::bugKilled(Bug * bug)
 
 void Render::mousePressEvent(QGraphicsSceneMouseEvent * mouseEvent)
 {
-    if (tower2build != "none") {
-        QPointF rpos = mouseEvent->scenePos();
-        QPoint pos((int) (rpos.x() / SQUARE_SIZE), (int) (rpos.y() / SQUARE_SIZE));
+    QPointF rpos = mouseEvent->scenePos();
+    int x = (int) (rpos.x() / SQUARE_SIZE);
+    int y = (int) (rpos.y() / SQUARE_SIZE);
+    QPoint pos(x, y);
+    rpos.rx() = (x + 0.5) * SQUARE_SIZE;
+    rpos.ry() = (y + 0.5) * SQUARE_SIZE;
+    if (tower2build != "none" && towers[pos.y()][pos.x()] == FREE) {
+        towers[pos.y()][pos.x()] == BLOCK;
+        Tower * tower = new Tower(rpos, tower2build);
+        addItem(tower);
+        tower2build = "none";
     }
 }
 
 void Render::towerBought(QString type)
 {
     tower2build = type;
+}
+
+void Render::addProjectile(Projectile * missile)
+{
+    addItem(missile);
 }

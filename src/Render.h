@@ -13,6 +13,7 @@
 
 #include "define.h"
 #include "Hatchery.h"
+#include "Tower.h"
 
 class Bug;
 class Hatchery;
@@ -28,6 +29,7 @@ class Render : public QGraphicsScene
         int waveNumber;
         QStringList * wave;
         int map[ROW][COLUMN];
+        int towers[ROW][COLUMN];
         QPoint goalSquare;
         QHash<int, QPixmap> tiles;
         void addBug(Bug * bug);
@@ -49,6 +51,7 @@ class Render : public QGraphicsScene
         void towerBought(QString type);
         void bugFinish(Bug * bug);
         void bugKilled(Bug * bug);
+        void addProjectile(Projectile * missile);
 
     signals:
         void newWaveName(QString name);
