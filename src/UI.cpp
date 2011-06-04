@@ -3,7 +3,7 @@
 #include "UI.h"
 #include "define.h"
 
-UI::UI(QWidget * parent) : QWidget(parent)
+UI::UI(QWidget * parent) : QWidget(parent), selected(NULL)
 {
     tower = new QGroupBox("Créer une défense", this);
     tower->setGeometry(0, 120, UI_WIDTH, 180);
@@ -31,6 +31,26 @@ UI::UI(QWidget * parent) : QWidget(parent)
     paintball->setGeometry((UI_WIDTH - 30)/2 + 20, 100, (UI_WIDTH - 30)/2, 65);
     QObject::connect(paintball, SIGNAL(clicked()), this, SLOT(buyPaintballTower()));
 
+    //Tower Stat
+    name = new QLabel("type de la tour : ", stats);
+    name->setGeometry(5, 15, 100, 20);
+    lvl = new QLabel("niveau : ", stats);
+    lvl->setGeometry(5, 40, 100, 20);
+    range = new QLabel("portée : ", stats);
+    range->setGeometry(5, 65, 100, 20);
+    firerate = new QLabel("cadence de tir : ", stats);
+    firerate->setGeometry(5, 90, 100, 20);
+
+    t_name = new QLabel("test", stats);
+    t_name->setGeometry(130, 15, 100, 20);
+    t_lvl = new QLabel("test", stats);
+    t_lvl->setGeometry(130, 40, 100, 20);
+    t_range = new QLabel("test", stats);
+    t_range->setGeometry(130, 65, 100, 20);
+    t_firerate = new QLabel("test", stats);
+    t_firerate->setGeometry(130, 90, 100, 20);
+
+    // Game Stats display
     wave = new QLabel("Wave text here", this);
     wave->setGeometry(0, 5, UI_WIDTH, 20);
     cred_txt = new QLabel("Crédits :", this);
@@ -99,4 +119,13 @@ void UI::buyBowlingTower()
         cred->display(cred->intValue() - BOWLING_PRICE);
         emit buyTower(QString("bowling"));
     }
+}
+
+void UI::selectTower(Tower * tower)
+{
+    selected = tower;
+    t_name->setText(tower->getType());
+    t_lvl->setText(QString().setNum(tower->getLvl()));
+    t_range->setText(QString().setNum(tower->getRange()));
+    t_firerate->setText(QString().setNum(tower->getFirerate()));
 }

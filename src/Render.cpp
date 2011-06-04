@@ -20,10 +20,7 @@ Render::Render() : QGraphicsScene(), start_angle(0), waveNumber(1), tower2build(
         for (int j = 0; j < COLUMN && j < line.size(); j++) {
             int num = line.at(j).toInt();
             map[i][j] = num;
-            if (num != FREE)
-                towers[i][j] = BLOCK;
-            else
-                towers[i][j] = FREE;
+            towers[i][j] = NULL;
             if (!tiles.contains(num)) {
                 QString path;
                 switch (num){
@@ -231,12 +228,15 @@ void Render::mousePressEvent(QGraphicsSceneMouseEvent * mouseEvent)
     QPoint pos(x, y);
     rpos.rx() = (x + 0.5) * SQUARE_SIZE;
     rpos.ry() = (y + 0.5) * SQUARE_SIZE;
-    if (tower2build != "none" && towers[pos.y()][pos.x()] == FREE) {
-        towers[pos.y()][pos.x()] == BLOCK;
+    if (tower2build != "none" && map[pos.y()][pos.x()] == FREE && towers[pos.y()][pos.x()] == NULL) {
         Tower * tower = new Tower(rpos, tower2build);
+        towers[pos.y()][pos.x()] = tower;
         tower->parent = this;
         addItem(tower);
         tower2build = "none";
+    } else if (towers[pos.y()][pos.x()] != NULL) {
+        Tower * tower = towers[pos.y()][pos.x()];
+        emit selectTower(tower);
     }
 }
 

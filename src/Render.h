@@ -31,7 +31,7 @@ class Render : public QGraphicsScene
         int waveNumber;
         QStringList * wave;
         int map[ROW][COLUMN];
-        int towers[ROW][COLUMN];
+        Tower * towers[ROW][COLUMN];
         QPoint goalSquare;
         QHash<int, QPixmap> tiles;
         void addBug(Bug * bug);
@@ -61,5 +61,6 @@ class Render : public QGraphicsScene
         void newWaveName(QString name);
         void loseLife();
         void getCred();
+        void selectTower(Tower * tower);
 };
 #endif

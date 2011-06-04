@@ -46,6 +46,7 @@ int main(int argc, char *argv[])
     QObject::connect(&render, SIGNAL(newWaveName(QString)), &ui, SLOT(setWaveName(QString)));
     QObject::connect(&render, SIGNAL(loseLife()), &ui, SLOT(loseLife()));
     QObject::connect(&render, SIGNAL(getCred()), &ui, SLOT(addCred()));
+    QObject::connect(&render, SIGNAL(selectTower(Tower *)), &ui, SLOT(selectTower(Tower *)));
 
     window.show();
     return app.exec();

@@ -31,6 +31,10 @@ class Tower : public QGraphicsObject
         Tower(QPointF buildPos, QString typeTower);
         QRectF boundingRect() const;
         void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+        QString getType();
+        double getRange();
+        short int getLvl();
+        double getFirerate();
 
     public slots:
         void fire();

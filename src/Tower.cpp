@@ -45,6 +45,26 @@ void Tower::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
     painter->drawEllipse(QRect(-TOWER_SIZE / 2, - TOWER_SIZE / 2, TOWER_SIZE, TOWER_SIZE));
 }
 
+QString Tower::getType()
+{
+    return type;
+}
+
+double Tower::getRange()
+{
+    return range;
+}
+
+short int Tower::getLvl()
+{
+    return level;
+}
+
+double Tower::getFirerate()
+{
+    return firerate;
+}
+
 void Tower::fire()
 {
     Bug * target = parent->getTarget(pos, range);

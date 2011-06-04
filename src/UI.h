@@ -8,6 +8,8 @@
 #include <QLCDNumber>
 #include <QString>
 
+#include "Tower.h"
+
 class UI : public QWidget
 {
     Q_OBJECT
@@ -21,11 +23,20 @@ class UI : public QWidget
         QPushButton * sling;
         QPushButton * bowling;
         QPushButton * paintball;
+        QLabel * name;
+        QLabel * lvl;
+        QLabel * range;
+        QLabel * firerate;
+        QLabel * t_name;
+        QLabel * t_lvl;
+        QLabel * t_range;
+        QLabel * t_firerate;
         QLabel * wave;
         QLabel * cred_txt;
         QLabel * life_txt;
         QLCDNumber * cred;
         QLCDNumber * life;
+        Tower * selected;
 
     public:
         QPushButton *start;
@@ -40,6 +51,7 @@ class UI : public QWidget
         void buySlingshotTower();
         void buyPaintballTower();
         void buyBowlingTower();
+        void selectTower(Tower * tower);
 
     signals:
         void buyTower(QString type);
