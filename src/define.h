@@ -20,6 +20,11 @@
 #define BOWLING_PRICE 15
 #define PROJECTILE_SIZE 10
 
+#define WATER_SPEED 40
+#define STONE_SPEED 25
+#define PAINTBALL_SPEED 30
+#define BOWLING_SPEED 20
+
 #define FLY 1
 #define CRAWL 2
 
