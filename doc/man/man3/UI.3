@@ -1,0 +1,143 @@
+.TH "UI" 3 "Mon Jun 6 2011" "Version 0.9" "YATD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UI \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Connecteurs publics"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetWaveName\fP (QString name)"
+.br
+.ti -1c
+.RI "void \fBaddCred\fP ()"
+.br
+.ti -1c
+.RI "void \fBloseLife\fP ()"
+.br
+.ti -1c
+.RI "void \fBstartWave\fP ()"
+.br
+.ti -1c
+.RI "void \fBbuyWaterTower\fP ()"
+.br
+.ti -1c
+.RI "void \fBbuySlingshotTower\fP ()"
+.br
+.ti -1c
+.RI "void \fBbuyPaintballTower\fP ()"
+.br
+.ti -1c
+.RI "void \fBbuyBowlingTower\fP ()"
+.br
+.ti -1c
+.RI "void \fBselectTower\fP (\fBTower\fP *tower)"
+.br
+.ti -1c
+.RI "void \fBsellSelectedTower\fP ()"
+.br
+.in -1c
+.SS "Signaux"
+
+.in +1c
+.ti -1c
+.RI "void \fBbuyTower\fP (QString type)"
+.br
+.ti -1c
+.RI "void \fBnextWave\fP ()"
+.br
+.ti -1c
+.RI "void \fBtowerSold\fP (\fBTower\fP *tower)"
+.br
+.in -1c
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBUI\fP (QWidget *parent)"
+.br
+.in -1c
+.SS "Champs de données"
+
+.in +1c
+.ti -1c
+.RI "QPushButton * \fBstart\fP"
+.br
+.in -1c
+.SS "Attributs privés"
+
+.in +1c
+.ti -1c
+.RI "QGroupBox * \fBtower\fP"
+.br
+.ti -1c
+.RI "QGroupBox * \fBstats\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBsell\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBupg\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBwater\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBsling\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBbowling\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBpaintball\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBname\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBlvl\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBrange\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBfirerate\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBt_name\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBt_lvl\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBt_range\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBt_firerate\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBwave\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBcred_txt\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBlife_txt\fP"
+.br
+.ti -1c
+.RI "QLCDNumber * \fBcred\fP"
+.br
+.ti -1c
+.RI "QLCDNumber * \fBlife\fP"
+.br
+.ti -1c
+.RI "\fBTower\fP * \fBselected\fP"
+.br
+.in -1c
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour YATD à partir du code source.

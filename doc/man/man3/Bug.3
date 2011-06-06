@@ -1,0 +1,197 @@
+.TH "Bug" 3 "Mon Jun 6 2011" "Version 0.9" "YATD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Bug \- 
+.PP
+Classe abstraite dont héritent les ennemis.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Bug.h>\fP
+.PP
+Dérivée par \fBAnt\fP, \fBMosquito\fP, \fBRoach\fP, et \fBWasp\fP.
+.SS "Signaux"
+
+.in +1c
+.ti -1c
+.RI "void \fBdead\fP (\fBBug\fP *bug)"
+.br
+.RI "\fISignal de mort de l'insecte. \fP"
+.ti -1c
+.RI "void \fBgoalReached\fP (\fBBug\fP *bug)"
+.br
+.RI "\fISignal d'arrivé. \fP"
+.in -1c
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBBug\fP (double x, double y, double s, double health, double res, double start_angle, double init_speed, short int type)"
+.br
+.RI "\fIConstructeur de \fBBug\fP. \fP"
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const "
+.br
+.RI "\fISurcharge de la fonction boudingRect() hérité de QGraphicsObject. \fP"
+.ti -1c
+.RI "QPainterPath \fBshape\fP () const "
+.br
+.RI "\fISurcharge de la fonction \fBshape()\fP hérité de QGraphicsObject. \fP"
+.ti -1c
+.RI "void \fBhit\fP (double dmg)"
+.br
+.RI "\fIInfliger des dégats à l'insecte. \fP"
+.in -1c
+.SS "Champs de données"
+
+.in +1c
+.ti -1c
+.RI "\fBRender\fP * \fBparent\fP"
+.br
+.RI "\fIL'objet \fBRender\fP parent de l'insecte. \fP"
+.in -1c
+.SS "Fonctions membres protégées"
+
+.in +1c
+.ti -1c
+.RI "void \fBadvance\fP (int step)"
+.br
+.RI "\fIImplémentation de la fonction virtuelle pure \fBadvance()\fP héritée de QGGaphicsObject. \fP"
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "double \fBsize\fP"
+.br
+.RI "\fITaille. \fP"
+.ti -1c
+.RI "int \fBframe\fP"
+.br
+.RI "\fICompteur de frame. \fP"
+.ti -1c
+.RI "double \fBspeed\fP"
+.br
+.RI "\fIVitesse de base. \fP"
+.in -1c
+.SS "Attributs privés"
+
+.in +1c
+.ti -1c
+.RI "double \fBhp\fP"
+.br
+.RI "\fIPoint de vie. \fP"
+.ti -1c
+.RI "double \fBresist\fP"
+.br
+.RI "\fIRésistance. \fP"
+.ti -1c
+.RI "double \fBangle\fP"
+.br
+.RI "\fIAngle des déplacements. \fP"
+.ti -1c
+.RI "short int \fBmoveType\fP"
+.br
+.RI "\fIType de déplacement. \fP"
+.ti -1c
+.RI "QPoint \fBlastSquare\fP"
+.br
+.RI "\fICase d'origine. \fP"
+.in -1c
+.SH "Description détaillée"
+.PP 
+Cette classe définie les actions de base commune à tous les insectes (l'affichage, la vie et les déplacements entre autres). 
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Bug::Bug (doublex, doubley, doubles, doublehealth, doubleres, doublestart_angle, doubleinit_speed, short inttype)"La classe \fBBug\fP étant abstraite, le constructeur sera toujours appelé par ses classes filles (\fBWasp\fP, \fBAnt\fP, \fBMosquito\fP, \fBRoach\fP) avec les bons paramètres. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIx\fP Un double correspondant à l'abscisse du point de départ des insectes. 
+.br
+\fIy\fP Un double correspondant à l'ordonnée du point de départ des insectes. 
+.br
+\fIs\fP La taille de l'insecte à créer. 
+.br
+\fIhealth\fP Un double donnant la vitalité initiale de l'insecte. 
+.br
+\fIres\fP Un double donnant la résistance aux dégats de l'insecte. 
+.br
+\fIstart_angle\fP L'angle vers lequel fait face le départ des insectes. 
+.br
+\fIinit_speed\fP La vitesse initiale de l'insecte. 
+.br
+\fItype\fP Prends une des valeurs prédéfinies FLY ou CRAWL correspondant au type de déplacement de l'insecte. 
+.RE
+.PP
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "void Bug::advance (intstep)\fC [protected]\fP"Implémentation de la fonction virtuelle pure \fBadvance()\fP héritée de QGGaphicsObject. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIstep\fP La fonction est appelé deux fois automatiquement par QT à chaque update(), une fois avec 0 comme paramètre puis une fois avec 1. 
+.RE
+.PP
+
+.SS "QRectF Bug::boundingRect () const"Fonction appelé automatiquement par QT pour savoir s'il doit ou non réafficher l'insecte. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+Un objet QRectF correspondant au rectangle englobant l'ensemble du dessin de l'insecte. 
+.RE
+.PP
+
+.SS "void Bug::dead (\fBBug\fP *bug)\fC [signal]\fP"Signal émit lorsque l'insecte est tué. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIbug\fP Un pointeur vers l'insecte qui vient de mourir. 
+.RE
+.PP
+
+.SS "void Bug::goalReached (\fBBug\fP *bug)\fC [signal]\fP"Signal émit par l'insecte lorsqu'il atteint son but. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIbug\fP Un pointeur vers l'insecte. 
+.RE
+.PP
+
+.SS "void Bug::hit (doubledmg)"Fonction pouvant être appelée pour infliger des dégats à l'insecte (par exemple par les projectiles des tours). 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIdmg\fP Un double correspondant au point de dégat à infliger (avant réduction par la résistance de l'insecte). 
+.RE
+.PP
+
+.PP
+Réimplémentée dans \fBAnt\fP.
+.SS "QPainterPath Bug::shape () const"Fonction utilisé par QT pour traiter les collisions entre objets graphiques. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+Un object QPainterPath correspondant au contour de collision de l'insecte. 
+.RE
+.PP
+
+.SH "Documentation des champs"
+.PP 
+.SS "double \fBBug::angle\fP\fC [private]\fP"Angle dans lequel l'insecte se déplace. 
+.SS "int \fBBug::frame\fP\fC [protected]\fP"Compteur d'image utilisé pour afficher successivement chaque image des animations. 
+.SS "double \fBBug::hp\fP\fC [private]\fP"La vitalité de l'insecte, quand elle atteint 0, l'insecte meurt et le joueur gagne 1 crédit. 
+.SS "QPoint \fBBug::lastSquare\fP\fC [private]\fP"Dernière case visité par l'insecte. Elle est utilisé dans la détection de changement de case. 
+.SS "short int \fBBug::moveType\fP\fC [private]\fP"Peut prendre les valeurs prédéfinies FLY ou CRAWL. 
+.SS "\fBRender\fP* \fBBug::parent\fP"Quand on ajoute un insecte à l'objet \fBRender\fP par la méthode addBug(), cet attribut est automatiquement initialisé. 
+.SS "double \fBBug::resist\fP\fC [private]\fP"La résistance aux dégats de l'insecte. 
+.SS "double \fBBug::size\fP\fC [protected]\fP"La taille de l'insecte, influe à la fois sur la taille de la représentation graphique et sur les caractéristiques de l'insecte.' 
+.SS "double \fBBug::speed\fP\fC [protected]\fP"La vitesse en case/seconde à laquelle se déplace l'insecte. 
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour YATD à partir du code source.

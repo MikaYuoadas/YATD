@@ -1,0 +1,53 @@
+.TH "Projectile" 3 "Mon Jun 6 2011" "Version 0.9" "YATD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Projectile \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dérivée par \fBWater\fP.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBProjectile\fP (QPointF start, QPointF destination, double init_speed, double damage)"
+.br
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const "
+.br
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *painter, QColor color)"
+.br
+.in -1c
+.SS "Fonctions membres protégées"
+
+.in +1c
+.ti -1c
+.RI "void \fBadvance\fP (int step)"
+.br
+.in -1c
+.SS "Attributs privés"
+
+.in +1c
+.ti -1c
+.RI "QPointF \fBdest\fP"
+.br
+.ti -1c
+.RI "double \fBspeed\fP"
+.br
+.ti -1c
+.RI "double \fBdmg\fP"
+.br
+.ti -1c
+.RI "double \fBmaxrange\fP"
+.br
+.ti -1c
+.RI "double \fBtravelled\fP"
+.br
+.in -1c
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour YATD à partir du code source.

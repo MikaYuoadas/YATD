@@ -1,0 +1,179 @@
+\hypertarget{classMosquito}{
+\section{Référence de la classe Mosquito}
+\label{classMosquito}\index{Mosquito@{Mosquito}}
+}
+Graphe d'héritage de Mosquito:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMosquito}
+\end{center}
+\end{figure}
+\subsection*{Signaux}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBug_ab7379f5a0172e2d536e20f3f29915e02}{dead} (\hyperlink{classBug}{Bug} $\ast$bug)
+\begin{DoxyCompactList}\small\item\em Signal de mort de l'insecte. \end{DoxyCompactList}\item 
+void \hyperlink{classBug_a33f90dffa55e1dce80dc2416c75a53c8}{goalReached} (\hyperlink{classBug}{Bug} $\ast$bug)
+\begin{DoxyCompactList}\small\item\em Signal d'arrivé. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMosquito_ad7755ed5b7cd5ed184c5cfb2d4f0785d}{
+{\bfseries Mosquito} (double x, double y, double s, double start\_\-angle)}
+\label{classMosquito_ad7755ed5b7cd5ed184c5cfb2d4f0785d}
+
+\item 
+\hypertarget{classMosquito_a306ab9aefce1f42ae5d46746a018c845}{
+void {\bfseries paint} (QPainter $\ast$painter, const QStyleOptionGraphicsItem $\ast$option, QWidget $\ast$widget)}
+\label{classMosquito_a306ab9aefce1f42ae5d46746a018c845}
+
+\item 
+QRectF \hyperlink{classBug_a9b39c25361faad07b1bf2dd927d09dab}{boundingRect} () const 
+\begin{DoxyCompactList}\small\item\em Surcharge de la fonction boudingRect() hérité de QGraphicsObject. \end{DoxyCompactList}\item 
+QPainterPath \hyperlink{classBug_a587a36d3145c2b4dba6c689af22c65ac}{shape} () const 
+\begin{DoxyCompactList}\small\item\em Surcharge de la fonction \hyperlink{classBug_a587a36d3145c2b4dba6c689af22c65ac}{shape()} hérité de QGraphicsObject. \end{DoxyCompactList}\item 
+void \hyperlink{classBug_a63402c05b5ba3fb034e41f1ced0e4b9f}{hit} (double dmg)
+\begin{DoxyCompactList}\small\item\em Infliger des dégats à l'insecte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRender}{Render} $\ast$ \hyperlink{classBug_a7a93aae4e4b7a215c94ff85d0bd6e26d}{parent}
+\begin{DoxyCompactList}\small\item\em L'objet \hyperlink{classRender}{Render} parent de l'insecte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBug_a8e0ea03e85c9324a13328da60e5c52ee}{advance} (int step)
+\begin{DoxyCompactList}\small\item\em Implémentation de la fonction virtuelle pure \hyperlink{classBug_a8e0ea03e85c9324a13328da60e5c52ee}{advance()} héritée de QGGaphicsObject. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classBug_a27a0f0b84d15525e409955509e6e3c42}{size}
+\begin{DoxyCompactList}\small\item\em Taille. \end{DoxyCompactList}\item 
+int \hyperlink{classBug_ad7e3597cf049f1051be94fcaf2fd3598}{frame}
+\begin{DoxyCompactList}\small\item\em Compteur de frame. \end{DoxyCompactList}\item 
+double \hyperlink{classBug_a13b95fbf23748ea853b01bfd0b0e7fc8}{speed}
+\begin{DoxyCompactList}\small\item\em Vitesse de base. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMosquito_a8c451b0473a7d48ee0ed7de9627f46cb}{
+QImage $\ast$ {\bfseries image} \mbox{[}2\mbox{]}}
+\label{classMosquito_a8c451b0473a7d48ee0ed7de9627f46cb}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classBug_a8e0ea03e85c9324a13328da60e5c52ee}{
+\index{Mosquito@{Mosquito}!advance@{advance}}
+\index{advance@{advance}!Mosquito@{Mosquito}}
+\subsubsection[{advance}]{\setlength{\rightskip}{0pt plus 5cm}void Bug::advance (
+\begin{DoxyParamCaption}
+\item[{int}]{step}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, inherited\mbox{]}}}}
+\label{classBug_a8e0ea03e85c9324a13328da60e5c52ee}
+Implémentation de la fonction virtuelle pure \hyperlink{classBug_a8e0ea03e85c9324a13328da60e5c52ee}{advance()} héritée de QGGaphicsObject. 
+\begin{DoxyParams}{Paramètres}
+{\em step} & La fonction est appelé deux fois automatiquement par QT à chaque update(), une fois avec 0 comme paramètre puis une fois avec 1. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBug_a9b39c25361faad07b1bf2dd927d09dab}{
+\index{Mosquito@{Mosquito}!boundingRect@{boundingRect}}
+\index{boundingRect@{boundingRect}!Mosquito@{Mosquito}}
+\subsubsection[{boundingRect}]{\setlength{\rightskip}{0pt plus 5cm}QRectF Bug::boundingRect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inherited\mbox{]}}}}
+\label{classBug_a9b39c25361faad07b1bf2dd927d09dab}
+Fonction appelé automatiquement par QT pour savoir s'il doit ou non réafficher l'insecte. \begin{DoxyReturn}{Renvoie}
+Un objet QRectF correspondant au rectangle englobant l'ensemble du dessin de l'insecte. 
+\end{DoxyReturn}
+\hypertarget{classBug_ab7379f5a0172e2d536e20f3f29915e02}{
+\index{Mosquito@{Mosquito}!dead@{dead}}
+\index{dead@{dead}!Mosquito@{Mosquito}}
+\subsubsection[{dead}]{\setlength{\rightskip}{0pt plus 5cm}void Bug::dead (
+\begin{DoxyParamCaption}
+\item[{{\bf Bug} $\ast$}]{bug}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}signal, inherited\mbox{]}}}}
+\label{classBug_ab7379f5a0172e2d536e20f3f29915e02}
+Signal émit lorsque l'insecte est tué. 
+\begin{DoxyParams}{Paramètres}
+{\em bug} & Un pointeur vers l'insecte qui vient de mourir. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBug_a33f90dffa55e1dce80dc2416c75a53c8}{
+\index{Mosquito@{Mosquito}!goalReached@{goalReached}}
+\index{goalReached@{goalReached}!Mosquito@{Mosquito}}
+\subsubsection[{goalReached}]{\setlength{\rightskip}{0pt plus 5cm}void Bug::goalReached (
+\begin{DoxyParamCaption}
+\item[{{\bf Bug} $\ast$}]{bug}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}signal, inherited\mbox{]}}}}
+\label{classBug_a33f90dffa55e1dce80dc2416c75a53c8}
+Signal émit par l'insecte lorsqu'il atteint son but. 
+\begin{DoxyParams}{Paramètres}
+{\em bug} & Un pointeur vers l'insecte. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBug_a63402c05b5ba3fb034e41f1ced0e4b9f}{
+\index{Mosquito@{Mosquito}!hit@{hit}}
+\index{hit@{hit}!Mosquito@{Mosquito}}
+\subsubsection[{hit}]{\setlength{\rightskip}{0pt plus 5cm}void Bug::hit (
+\begin{DoxyParamCaption}
+\item[{double}]{dmg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inherited\mbox{]}}}}
+\label{classBug_a63402c05b5ba3fb034e41f1ced0e4b9f}
+Fonction pouvant être appelée pour infliger des dégats à l'insecte (par exemple par les projectiles des tours). 
+\begin{DoxyParams}{Paramètres}
+{\em dmg} & Un double correspondant au point de dégat à infliger (avant réduction par la résistance de l'insecte). \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée dans \hyperlink{classAnt_a64b0e0e7d2605c1a5a0906587ab70920}{Ant}.
+
+\hypertarget{classBug_a587a36d3145c2b4dba6c689af22c65ac}{
+\index{Mosquito@{Mosquito}!shape@{shape}}
+\index{shape@{shape}!Mosquito@{Mosquito}}
+\subsubsection[{shape}]{\setlength{\rightskip}{0pt plus 5cm}QPainterPath Bug::shape (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inherited\mbox{]}}}}
+\label{classBug_a587a36d3145c2b4dba6c689af22c65ac}
+Fonction utilisé par QT pour traiter les collisions entre objets graphiques. \begin{DoxyReturn}{Renvoie}
+Un object QPainterPath correspondant au contour de collision de l'insecte. 
+\end{DoxyReturn}
+
+
+\subsection{Documentation des champs}
+\hypertarget{classBug_ad7e3597cf049f1051be94fcaf2fd3598}{
+\index{Mosquito@{Mosquito}!frame@{frame}}
+\index{frame@{frame}!Mosquito@{Mosquito}}
+\subsubsection[{frame}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Bug::frame}\hspace{0.3cm}{\ttfamily  \mbox{[}protected, inherited\mbox{]}}}}
+\label{classBug_ad7e3597cf049f1051be94fcaf2fd3598}
+Compteur d'image utilisé pour afficher successivement chaque image des animations. \hypertarget{classBug_a7a93aae4e4b7a215c94ff85d0bd6e26d}{
+\index{Mosquito@{Mosquito}!parent@{parent}}
+\index{parent@{parent}!Mosquito@{Mosquito}}
+\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Render}$\ast$ {\bf Bug::parent}\hspace{0.3cm}{\ttfamily  \mbox{[}inherited\mbox{]}}}}
+\label{classBug_a7a93aae4e4b7a215c94ff85d0bd6e26d}
+Quand on ajoute un insecte à l'objet \hyperlink{classRender}{Render} par la méthode addBug(), cet attribut est automatiquement initialisé. \hypertarget{classBug_a27a0f0b84d15525e409955509e6e3c42}{
+\index{Mosquito@{Mosquito}!size@{size}}
+\index{size@{size}!Mosquito@{Mosquito}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf Bug::size}\hspace{0.3cm}{\ttfamily  \mbox{[}protected, inherited\mbox{]}}}}
+\label{classBug_a27a0f0b84d15525e409955509e6e3c42}
+La taille de l'insecte, influe à la fois sur la taille de la représentation graphique et sur les caractéristiques de l'insecte.' \hypertarget{classBug_a13b95fbf23748ea853b01bfd0b0e7fc8}{
+\index{Mosquito@{Mosquito}!speed@{speed}}
+\index{speed@{speed}!Mosquito@{Mosquito}}
+\subsubsection[{speed}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf Bug::speed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected, inherited\mbox{]}}}}
+\label{classBug_a13b95fbf23748ea853b01bfd0b0e7fc8}
+La vitesse en case/seconde à laquelle se déplace l'insecte. 
+
+La documentation de cette classe a été générée à partir des fichiers suivants :\begin{DoxyCompactItemize}
+\item 
+src/Mosquito.h\item 
+src/Mosquito.cpp\end{DoxyCompactItemize}

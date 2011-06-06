@@ -1,0 +1,122 @@
+.TH "Render" 3 "Mon Jun 6 2011" "Version 0.9" "YATD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Render \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Connecteurs publics"
+
+.in +1c
+.ti -1c
+.RI "void \fBnextWave\fP ()"
+.br
+.ti -1c
+.RI "void \fBnextBug\fP ()"
+.br
+.ti -1c
+.RI "void \fBtowerBought\fP (QString type)"
+.br
+.ti -1c
+.RI "void \fBbugFinish\fP (\fBBug\fP *bug)"
+.br
+.ti -1c
+.RI "void \fBbugKilled\fP (\fBBug\fP *bug)"
+.br
+.ti -1c
+.RI "void \fBaddProjectile\fP (\fBProjectile\fP *missile)"
+.br
+.ti -1c
+.RI "void \fBdestroyTower\fP (\fBTower\fP *tower)"
+.br
+.in -1c
+.SS "Signaux"
+
+.in +1c
+.ti -1c
+.RI "void \fBnewWaveName\fP (QString name)"
+.br
+.ti -1c
+.RI "void \fBloseLife\fP ()"
+.br
+.ti -1c
+.RI "void \fBgetCred\fP ()"
+.br
+.ti -1c
+.RI "void \fBselectTower\fP (\fBTower\fP *tower)"
+.br
+.in -1c
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "void \fBdrawBackground\fP (QPainter *painter, const QRectF &rect)"
+.br
+.ti -1c
+.RI "QPoint \fBsquare\fP (QGraphicsItem &item)"
+.br
+.ti -1c
+.RI "QPoint \fBgoal\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetAngle\fP (QPoint &current)"
+.br
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *mouseEvent)"
+.br
+.ti -1c
+.RI "\fBBug\fP * \fBgetTarget\fP (QPointF pos, double range)"
+.br
+.in -1c
+.SS "Fonctions membres privées"
+
+.in +1c
+.ti -1c
+.RI "void \fBaddBug\fP (\fBBug\fP *bug)"
+.br
+.in -1c
+.SS "Attributs privés"
+
+.in +1c
+.ti -1c
+.RI "QTimer \fBwaveTimer\fP"
+.br
+.ti -1c
+.RI "QPoint * \fBstart\fP"
+.br
+.ti -1c
+.RI "double \fBstart_angle\fP"
+.br
+.ti -1c
+.RI "int \fBwaveNumber\fP"
+.br
+.ti -1c
+.RI "QStringList * \fBwave\fP"
+.br
+.ti -1c
+.RI "int \fBmap\fP [ROW][COLUMN]"
+.br
+.ti -1c
+.RI "\fBTower\fP * \fBtowers\fP [ROW][COLUMN]"
+.br
+.ti -1c
+.RI "QPoint \fBgoalSquare\fP"
+.br
+.ti -1c
+.RI "QHash< int, QPixmap > \fBtiles\fP"
+.br
+.ti -1c
+.RI "\fBHatchery\fP * \fBb1\fP"
+.br
+.ti -1c
+.RI "QString \fBtower2build\fP"
+.br
+.ti -1c
+.RI "QList< \fBBug\fP * > \fBbugs\fP"
+.br
+.in -1c
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour YATD à partir du code source.

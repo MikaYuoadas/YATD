@@ -1,0 +1,176 @@
+\hypertarget{classRender}{
+\section{Référence de la classe Render}
+\label{classRender}\index{Render@{Render}}
+}
+\subsection*{Connecteurs publics}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classRender_a3252d02e9509f342bc96129b4b10b415}{
+void {\bfseries nextWave} ()}
+\label{classRender_a3252d02e9509f342bc96129b4b10b415}
+
+\item 
+\hypertarget{classRender_a9413625fc472b4b7806f3a0d615d6ea9}{
+void {\bfseries nextBug} ()}
+\label{classRender_a9413625fc472b4b7806f3a0d615d6ea9}
+
+\item 
+\hypertarget{classRender_a8e2eccb2fc3914198b8939bf0625c955}{
+void {\bfseries towerBought} (QString type)}
+\label{classRender_a8e2eccb2fc3914198b8939bf0625c955}
+
+\item 
+\hypertarget{classRender_aeeddbbe27102625cc2d5234fa0be523a}{
+void {\bfseries bugFinish} (\hyperlink{classBug}{Bug} $\ast$bug)}
+\label{classRender_aeeddbbe27102625cc2d5234fa0be523a}
+
+\item 
+\hypertarget{classRender_a940007358a139d0b30e002929d24f770}{
+void {\bfseries bugKilled} (\hyperlink{classBug}{Bug} $\ast$bug)}
+\label{classRender_a940007358a139d0b30e002929d24f770}
+
+\item 
+\hypertarget{classRender_a3b5bb3705131ca57252398e0f6a9e3e5}{
+void {\bfseries addProjectile} (\hyperlink{classProjectile}{Projectile} $\ast$missile)}
+\label{classRender_a3b5bb3705131ca57252398e0f6a9e3e5}
+
+\item 
+\hypertarget{classRender_a20678c257926bfff635fded745e11f4a}{
+void {\bfseries destroyTower} (\hyperlink{classTower}{Tower} $\ast$tower)}
+\label{classRender_a20678c257926bfff635fded745e11f4a}
+
+\end{DoxyCompactItemize}
+\subsection*{Signaux}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classRender_a916c15ab4b31cc0f34d9d53b89b89ac0}{
+void {\bfseries newWaveName} (QString name)}
+\label{classRender_a916c15ab4b31cc0f34d9d53b89b89ac0}
+
+\item 
+\hypertarget{classRender_ad88f7f01a7b9fafa756221707d590a78}{
+void {\bfseries loseLife} ()}
+\label{classRender_ad88f7f01a7b9fafa756221707d590a78}
+
+\item 
+\hypertarget{classRender_acd71f1c6c9d67dff3627da4ff6a4c9b8}{
+void {\bfseries getCred} ()}
+\label{classRender_acd71f1c6c9d67dff3627da4ff6a4c9b8}
+
+\item 
+\hypertarget{classRender_a126c4b49e93103a751f66359d8e63171}{
+void {\bfseries selectTower} (\hyperlink{classTower}{Tower} $\ast$tower)}
+\label{classRender_a126c4b49e93103a751f66359d8e63171}
+
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classRender_aae10ca06c2755038752a2a007727f0ca}{
+void {\bfseries drawBackground} (QPainter $\ast$painter, const QRectF \&rect)}
+\label{classRender_aae10ca06c2755038752a2a007727f0ca}
+
+\item 
+\hypertarget{classRender_a1291eebbb0647502fc90d058bc22e7a3}{
+QPoint {\bfseries square} (QGraphicsItem \&item)}
+\label{classRender_a1291eebbb0647502fc90d058bc22e7a3}
+
+\item 
+\hypertarget{classRender_afd1f727c1514ca01ad1cefbf4992497b}{
+QPoint {\bfseries goal} ()}
+\label{classRender_afd1f727c1514ca01ad1cefbf4992497b}
+
+\item 
+\hypertarget{classRender_a696f385b556f15a7420293a055734e4d}{
+double {\bfseries getAngle} (QPoint \&current)}
+\label{classRender_a696f385b556f15a7420293a055734e4d}
+
+\item 
+\hypertarget{classRender_a899ce19de8a01bb4bc01653cd8761357}{
+void {\bfseries mousePressEvent} (QGraphicsSceneMouseEvent $\ast$mouseEvent)}
+\label{classRender_a899ce19de8a01bb4bc01653cd8761357}
+
+\item 
+\hypertarget{classRender_a3cb540a53c73c9febbee2e4b11ea1077}{
+\hyperlink{classBug}{Bug} $\ast$ {\bfseries getTarget} (QPointF pos, double range)}
+\label{classRender_a3cb540a53c73c9febbee2e4b11ea1077}
+
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classRender_a4a1fed13f76997e45e90dd39d622d33e}{
+void {\bfseries addBug} (\hyperlink{classBug}{Bug} $\ast$bug)}
+\label{classRender_a4a1fed13f76997e45e90dd39d622d33e}
+
+\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classRender_a6351bb3de99ef093995785788c1d218e}{
+QTimer {\bfseries waveTimer}}
+\label{classRender_a6351bb3de99ef093995785788c1d218e}
+
+\item 
+\hypertarget{classRender_afa2c3b6d106bf91639ddf351d7d3315e}{
+QPoint $\ast$ {\bfseries start}}
+\label{classRender_afa2c3b6d106bf91639ddf351d7d3315e}
+
+\item 
+\hypertarget{classRender_ab66f1b35519a6e9d6fe14e75a6973680}{
+double {\bfseries start\_\-angle}}
+\label{classRender_ab66f1b35519a6e9d6fe14e75a6973680}
+
+\item 
+\hypertarget{classRender_a682e96907f3d52f710df4e9c2a5e9d07}{
+int {\bfseries waveNumber}}
+\label{classRender_a682e96907f3d52f710df4e9c2a5e9d07}
+
+\item 
+\hypertarget{classRender_a6b5e2349a706152d4763d22b995e9237}{
+QStringList $\ast$ {\bfseries wave}}
+\label{classRender_a6b5e2349a706152d4763d22b995e9237}
+
+\item 
+\hypertarget{classRender_a9c7793879c5007b8cae3a9c2885d283f}{
+int {\bfseries map} \mbox{[}ROW\mbox{]}\mbox{[}COLUMN\mbox{]}}
+\label{classRender_a9c7793879c5007b8cae3a9c2885d283f}
+
+\item 
+\hypertarget{classRender_a7b01b65692570fe6dec24d0a5c1aa178}{
+\hyperlink{classTower}{Tower} $\ast$ {\bfseries towers} \mbox{[}ROW\mbox{]}\mbox{[}COLUMN\mbox{]}}
+\label{classRender_a7b01b65692570fe6dec24d0a5c1aa178}
+
+\item 
+\hypertarget{classRender_a08247005a2c595988f8a0ab14a8b1ad9}{
+QPoint {\bfseries goalSquare}}
+\label{classRender_a08247005a2c595988f8a0ab14a8b1ad9}
+
+\item 
+\hypertarget{classRender_aaa10cde2c7a766914312f85d7c7eb25c}{
+QHash$<$ int, QPixmap $>$ {\bfseries tiles}}
+\label{classRender_aaa10cde2c7a766914312f85d7c7eb25c}
+
+\item 
+\hypertarget{classRender_ac6b86ad92172fefa5b9a56b31e9055d3}{
+\hyperlink{classHatchery}{Hatchery} $\ast$ {\bfseries b1}}
+\label{classRender_ac6b86ad92172fefa5b9a56b31e9055d3}
+
+\item 
+\hypertarget{classRender_ae8f2c323913fe8b89e0e7f443ef41ae0}{
+QString {\bfseries tower2build}}
+\label{classRender_ae8f2c323913fe8b89e0e7f443ef41ae0}
+
+\item 
+\hypertarget{classRender_a3d5b29479d129b61c6ad8f3eec2f1f76}{
+QList$<$ \hyperlink{classBug}{Bug} $\ast$ $>$ {\bfseries bugs}}
+\label{classRender_a3d5b29479d129b61c6ad8f3eec2f1f76}
+
+\end{DoxyCompactItemize}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants :\begin{DoxyCompactItemize}
+\item 
+src/Render.h\item 
+src/moc\_\-Render.cpp\item 
+src/Render.cpp\end{DoxyCompactItemize}

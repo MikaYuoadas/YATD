@@ -1,0 +1,92 @@
+.TH "Tower" 3 "Mon Jun 6 2011" "Version 0.9" "YATD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Tower \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Connecteurs publics"
+
+.in +1c
+.ti -1c
+.RI "void \fBfire\fP ()"
+.br
+.in -1c
+.SS "Signaux"
+
+.in +1c
+.ti -1c
+.RI "void \fBprojectile\fP (\fBProjectile\fP *missile)"
+.br
+.in -1c
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBTower\fP (QPointF buildPos, QString typeTower)"
+.br
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const "
+.br
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)"
+.br
+.ti -1c
+.RI "QString \fBgetType\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetRange\fP ()"
+.br
+.ti -1c
+.RI "short int \fBgetLvl\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetFirerate\fP ()"
+.br
+.ti -1c
+.RI "float \fBgetPrice\fP ()"
+.br
+.in -1c
+.SS "Champs de données"
+
+.in +1c
+.ti -1c
+.RI "\fBRender\fP * \fBparent\fP"
+.br
+.in -1c
+.SS "Attributs privés"
+
+.in +1c
+.ti -1c
+.RI "short int \fBlevel\fP"
+.br
+.ti -1c
+.RI "float \fBprice\fP"
+.br
+.ti -1c
+.RI "QColor \fBcolor\fP"
+.br
+.ti -1c
+.RI "short int \fBtarget\fP"
+.br
+.ti -1c
+.RI "double \fBrange\fP"
+.br
+.ti -1c
+.RI "double \fBfirerate\fP"
+.br
+.ti -1c
+.RI "QTimer * \fBtimer\fP"
+.br
+.ti -1c
+.RI "QPointF \fBpos\fP"
+.br
+.ti -1c
+.RI "QString \fBtype\fP"
+.br
+.in -1c
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour YATD à partir du code source.
