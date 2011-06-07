@@ -4,8 +4,12 @@
 Wasp::Wasp(double x, double y, double s, double start_angle) :
     Bug(x, y, s, 7 * s * s, 4 * s * s, start_angle, 3, FLY)
 {
-    image[0] = new QImage("../sprites/insects/guepe1.png");
-    image[1] = new QImage("../sprites/insects/guepe2.png");
+    QImage tmp[2];
+    tmp[0] = QImage("../sprites/insects/guepe1.png");
+    tmp[1] = QImage("../sprites/insects/guepe2.png");
+    int tsize = BASE_SIZE * size;
+    image[0] = new QImage(tmp[0].scaled(tsize, tsize, Qt::KeepAspectRatio));
+    image[1] = new QImage(tmp[1].scaled(tsize, tsize, Qt::KeepAspectRatio));
 }
 
 Wasp::~Wasp()

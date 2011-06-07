@@ -4,9 +4,14 @@
 Roach::Roach(double x, double y, double s, double start_angle) :
     Bug(x, y, s, 10 * s * s, 5 * s * s, start_angle, 2, CRAWL)
 {
-    image[0] = new QImage("../sprites/insects/cafard1.png");
-    image[1] = new QImage("../sprites/insects/cafard2.png");
-    image[2] = new QImage("../sprites/insects/cafard3.png");
+    QImage tmp[3];
+    tmp[0] = QImage("../sprites/insects/cafard1.png");
+    tmp[1] = QImage("../sprites/insects/cafard2.png");
+    tmp[2] = QImage("../sprites/insects/cafard3.png");
+    int tsize = BASE_SIZE * size;
+    image[0] = new QImage(tmp[0].scaled(tsize, tsize, Qt::KeepAspectRatio));
+    image[1] = new QImage(tmp[1].scaled(tsize, tsize, Qt::KeepAspectRatio));
+    image[2] = new QImage(tmp[2].scaled(tsize, tsize, Qt::KeepAspectRatio));
 }
 
 Roach::~Roach()
