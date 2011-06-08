@@ -71,58 +71,57 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;Tower.h&quot;</span>
 <a name="l00012"></a>00012 
-<a name="l00013"></a><a class="code" href="classUI.html">00013</a> <span class="keyword">class </span><a class="code" href="classUI.html">UI</a> : <span class="keyword">public</span> QWidget
-<a name="l00014"></a>00014 {
-<a name="l00015"></a>00015     Q_OBJECT
-<a name="l00016"></a>00016 
-<a name="l00017"></a>00017     <span class="keyword">private</span>:
-<a name="l00018"></a>00018         QGroupBox * tower;
-<a name="l00019"></a>00019         QGroupBox * stats;
-<a name="l00020"></a>00020         QPushButton * sell;
-<a name="l00021"></a>00021         QPushButton * upg;
-<a name="l00022"></a>00022         QPushButton * water;
-<a name="l00023"></a>00023         QPushButton * sling;
-<a name="l00024"></a>00024         QPushButton * bowling;
-<a name="l00025"></a>00025         QPushButton * paintball;
-<a name="l00026"></a>00026         QLabel * name;
-<a name="l00027"></a>00027         QLabel * lvl;
-<a name="l00028"></a>00028         QLabel * range;
-<a name="l00029"></a>00029         QLabel * firerate;
-<a name="l00030"></a>00030         QLabel * t_name;
-<a name="l00031"></a>00031         QLabel * t_lvl;
-<a name="l00032"></a>00032         QLabel * t_range;
-<a name="l00033"></a>00033         QLabel * t_firerate;
-<a name="l00034"></a>00034         QLabel * wave;
-<a name="l00035"></a>00035         QLabel * cred_txt;
-<a name="l00036"></a>00036         QLabel * life_txt;
-<a name="l00037"></a>00037         QLCDNumber * cred;
-<a name="l00038"></a>00038         QLCDNumber * life;
-<a name="l00039"></a>00039         <a class="code" href="classTower.html" title="Classe représentant toutes les défenses.">Tower</a> * selected;
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041     <span class="keyword">public</span>:
-<a name="l00042"></a>00042         QPushButton *start;
-<a name="l00043"></a>00043         <a class="code" href="classUI.html">UI</a>(QWidget * parent);
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045     <span class="keyword">public</span> slots:
-<a name="l00046"></a>00046         <span class="keywordtype">void</span> setWaveName(QString name);
-<a name="l00047"></a>00047         <span class="keywordtype">void</span> addCred();
-<a name="l00048"></a>00048         <span class="keywordtype">void</span> loseLife();
-<a name="l00049"></a>00049         <span class="keywordtype">void</span> startWave();
-<a name="l00050"></a>00050         <span class="keywordtype">void</span> buyWaterTower();
-<a name="l00051"></a>00051         <span class="keywordtype">void</span> buySlingshotTower();
-<a name="l00052"></a>00052         <span class="keywordtype">void</span> buyPaintballTower();
-<a name="l00053"></a>00053         <span class="keywordtype">void</span> buyBowlingTower();
-<a name="l00054"></a>00054         <span class="keywordtype">void</span> selectTower(<a class="code" href="classTower.html" title="Classe représentant toutes les défenses.">Tower</a> * tower);
-<a name="l00055"></a>00055         <span class="keywordtype">void</span> sellSelectedTower();
-<a name="l00056"></a>00056         <span class="keywordtype">void</span> upgradeSelectedTower();
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058     signals:
-<a name="l00059"></a>00059         <span class="keywordtype">void</span> buyTower(QString type);
-<a name="l00060"></a>00060         <span class="keywordtype">void</span> nextWave();
-<a name="l00061"></a>00061         <span class="keywordtype">void</span> towerSold(<a class="code" href="classTower.html" title="Classe représentant toutes les défenses.">Tower</a> * tower);
-<a name="l00062"></a>00062         <span class="keywordtype">void</span> defeat();
-<a name="l00063"></a>00063 };
-<a name="l00064"></a>00064 <span class="preprocessor">#endif</span>
+<a name="l00017"></a><a class="code" href="classUI.html">00017</a> <span class="keyword">class </span><a class="code" href="classUI.html" title="Classe de l&#39;interface graphique.">UI</a> : <span class="keyword">public</span> QWidget
+<a name="l00018"></a>00018 {
+<a name="l00019"></a>00019     Q_OBJECT
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021     <span class="keyword">private</span>:
+<a name="l00022"></a><a class="code" href="classUI.html#a352f80a494c8d3c1723f1248438ea912">00022</a>         QGroupBox * <a class="code" href="classUI.html#a352f80a494c8d3c1723f1248438ea912" title="Regroupe les éléments du magasin de défenses.">tower</a>;       
+<a name="l00023"></a><a class="code" href="classUI.html#a04ffefe0b9ef54d2ebc76595b00bb900">00023</a>         QGroupBox * <a class="code" href="classUI.html#a04ffefe0b9ef54d2ebc76595b00bb900" title="Regroupe les éléments ayant attrait à la défense sélectionnée.">stats</a>;       
+<a name="l00024"></a><a class="code" href="classUI.html#a4e35fb65ac2aa948adb7f7b9eb94d5c2">00024</a>         QPushButton * <a class="code" href="classUI.html#a4e35fb65ac2aa948adb7f7b9eb94d5c2" title="Le bouton pour vendre la tour sélectionnée.">sell</a>;      
+<a name="l00025"></a><a class="code" href="classUI.html#abf5a7181f1e80c8873cfae97be8e8b4f">00025</a>         QPushButton * <a class="code" href="classUI.html#abf5a7181f1e80c8873cfae97be8e8b4f" title="Le bouton pour améliorer la tour sélectionnée.">upg</a>;       
+<a name="l00026"></a><a class="code" href="classUI.html#aaa5e1351929c7da7d4ae82ddbc31c77b">00026</a>         QPushButton * <a class="code" href="classUI.html#aaa5e1351929c7da7d4ae82ddbc31c77b" title="Le bouton pour acheter un pistolet à eau.">water</a>;     
+<a name="l00027"></a><a class="code" href="classUI.html#af645e28743002610e25ce8542dcb1a8e">00027</a>         QPushButton * <a class="code" href="classUI.html#af645e28743002610e25ce8542dcb1a8e" title="Le bouton pour acheter un lance-pierre.">sling</a>;     
+<a name="l00028"></a><a class="code" href="classUI.html#a8279bd03cdee4ab01f04152f2ea7a906">00028</a>         QPushButton * <a class="code" href="classUI.html#a8279bd03cdee4ab01f04152f2ea7a906" title="Le bouton pour engager un joueur de pétanque.">bowling</a>;   
+<a name="l00029"></a><a class="code" href="classUI.html#a39fd06f53449fb6382de26d280be2e5f">00029</a>         QPushButton * <a class="code" href="classUI.html#a39fd06f53449fb6382de26d280be2e5f" title="Le bouton pour acheter un Paintball.">paintball</a>; 
+<a name="l00030"></a><a class="code" href="classUI.html#a81ae571ef0c2c3044c1a5271887f5936">00030</a>         QLabel * <a class="code" href="classUI.html#a81ae571ef0c2c3044c1a5271887f5936" title="Le texte &#39;Type : &#39;.">name</a>;           
+<a name="l00031"></a><a class="code" href="classUI.html#a92e0870069d6ca6cd8b6dba91ec3702d">00031</a>         QLabel * <a class="code" href="classUI.html#a92e0870069d6ca6cd8b6dba91ec3702d" title="Le texte &#39;Niveau : &#39;.">lvl</a>;            
+<a name="l00032"></a><a class="code" href="classUI.html#aacb7c02b6a962b8adc8a7d4b6ffc1553">00032</a>         QLabel * <a class="code" href="classUI.html#aacb7c02b6a962b8adc8a7d4b6ffc1553" title="Le texte &#39;portée : &#39;.">range</a>;          
+<a name="l00033"></a><a class="code" href="classUI.html#a58bde2e8f6ca9d8f2fa32affefa02045">00033</a>         QLabel * <a class="code" href="classUI.html#a58bde2e8f6ca9d8f2fa32affefa02045" title="Le texte &#39;cadence : &#39;.">firerate</a>;       
+<a name="l00034"></a><a class="code" href="classUI.html#a161fc86882aacdd0577fc8e65ae7b9a5">00034</a>         QLabel * <a class="code" href="classUI.html#a161fc86882aacdd0577fc8e65ae7b9a5" title="Le type de la tour sélectionnée.">t_name</a>;         
+<a name="l00035"></a><a class="code" href="classUI.html#ad249255ec54bc26253e0c215852a8eac">00035</a>         QLabel * <a class="code" href="classUI.html#ad249255ec54bc26253e0c215852a8eac" title="Le niveau de la tour sélectionnée.">t_lvl</a>;          
+<a name="l00036"></a><a class="code" href="classUI.html#a46e8137a64e79962e0ba633d4feb341f">00036</a>         QLabel * <a class="code" href="classUI.html#a46e8137a64e79962e0ba633d4feb341f" title="La portée de la tour sélectionnée.">t_range</a>;        
+<a name="l00037"></a><a class="code" href="classUI.html#aad8e7e7def9708c2b6e6511abb548b6d">00037</a>         QLabel * <a class="code" href="classUI.html#aad8e7e7def9708c2b6e6511abb548b6d" title="La cadence de tir de la tour sélectionnée.">t_firerate</a>;     
+<a name="l00038"></a><a class="code" href="classUI.html#a3f735d7d737b15dad131baf43b58eb17">00038</a>         QLabel * <a class="code" href="classUI.html#a3f735d7d737b15dad131baf43b58eb17" title="le nom de la vague en cours.">wave</a>;           
+<a name="l00039"></a><a class="code" href="classUI.html#a931c707005030131187d786b0966fc22">00039</a>         QLabel * <a class="code" href="classUI.html#a931c707005030131187d786b0966fc22" title="Le texte &#39;crédits : &#39;.">cred_txt</a>;       
+<a name="l00040"></a><a class="code" href="classUI.html#a2f7c3ea7fc4e840270e989b0e68ec82b">00040</a>         QLabel * <a class="code" href="classUI.html#a2f7c3ea7fc4e840270e989b0e68ec82b" title="Le texte &#39;vie : &#39;.">life_txt</a>;       
+<a name="l00041"></a><a class="code" href="classUI.html#a1e6f0b63d2e4cb88476541452f81bd64">00041</a>         QLCDNumber * <a class="code" href="classUI.html#a1e6f0b63d2e4cb88476541452f81bd64" title="L&#39;affciheur de crédits restants.">cred</a>;       
+<a name="l00042"></a><a class="code" href="classUI.html#a19d84baf49aecab7730ae12609b83be7">00042</a>         QLCDNumber * <a class="code" href="classUI.html#a19d84baf49aecab7730ae12609b83be7" title="L&#39;afficheur de vie restantes.">life</a>;       
+<a name="l00043"></a><a class="code" href="classUI.html#af4edf19be15102c7aefb0e682c72c475">00043</a>         <a class="code" href="classTower.html" title="Classe représentant toutes les défenses.">Tower</a> * <a class="code" href="classUI.html#af4edf19be15102c7aefb0e682c72c475" title="Un pointeur vers la tour sélectionnée actuellement.">selected</a>;        
+<a name="l00045"></a>00045     <span class="keyword">public</span>:
+<a name="l00046"></a><a class="code" href="classUI.html#a02df204852b5bbb75015490337b1da5f">00046</a>         QPushButton *<a class="code" href="classUI.html#a02df204852b5bbb75015490337b1da5f" title="Le bouton pour lancer la vague suivante.">start</a>;      
+<a name="l00051"></a>00051         <a class="code" href="classUI.html#a983ff4bdfc1543f6ea015c21526d70b6" title="Constructeur de UI.">UI</a>(QWidget * parent);
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053     <span class="keyword">public</span> slots:
+<a name="l00059"></a>00059         <span class="keywordtype">void</span> <a class="code" href="classUI.html#a59dd7970680cae33350521f15e986259" title="Changement de vague.">setWaveName</a>(QString <a class="code" href="classUI.html#a81ae571ef0c2c3044c1a5271887f5936" title="Le texte &#39;Type : &#39;.">name</a>);
+<a name="l00063"></a>00063         <span class="keywordtype">void</span> <a class="code" href="classUI.html#a00578d0269bf64abf71beb8b3e00a62b" title="Gain d&#39;un crédit.">addCred</a>();
+<a name="l00067"></a>00067         <span class="keywordtype">void</span> <a class="code" href="classUI.html#aea04048a2f3ab79ea3492c4f5e2e2c8d" title="Perte de vie.">loseLife</a>();
+<a name="l00071"></a>00071         <span class="keywordtype">void</span> <a class="code" href="classUI.html#adca7adc8d262fe82ce9eb3950b334416" title="Vague suivante.">startWave</a>();
+<a name="l00076"></a>00076         <span class="keywordtype">void</span> <a class="code" href="classUI.html#a2dbc930f722c8acdf2c59a01a2760576" title="Achat d&#39;une défense &quot;pistolet à eau&quot;.">buyWaterTower</a>();
+<a name="l00081"></a>00081         <span class="keywordtype">void</span> <a class="code" href="classUI.html#a64d35e18b3b5b896caa69830190c1751" title="Achat d&#39;une défense &quot;lance-pierres&quot;.">buySlingshotTower</a>();
+<a name="l00086"></a>00086         <span class="keywordtype">void</span> <a class="code" href="classUI.html#a098f1fd7e42c754f82e6d68aba33cbd1" title="Achat d&#39;une défense &quot;paintball&quot;.">buyPaintballTower</a>();
+<a name="l00091"></a>00091         <span class="keywordtype">void</span> <a class="code" href="classUI.html#ad9cc9c903122ceca1d750555ec95dda7" title="Achat d&#39;une défense &quot;pétanque&quot;.">buyBowlingTower</a>();
+<a name="l00097"></a>00097         <span class="keywordtype">void</span> <a class="code" href="classUI.html#acc2450574743936721ad9d77b055d6d5" title="Sélection d&#39;une tour.">selectTower</a>(<a class="code" href="classTower.html" title="Classe représentant toutes les défenses.">Tower</a> * <a class="code" href="classUI.html#a352f80a494c8d3c1723f1248438ea912" title="Regroupe les éléments du magasin de défenses.">tower</a>);
+<a name="l00102"></a>00102         <span class="keywordtype">void</span> <a class="code" href="classUI.html#ad3666cc06e62117ba0ad65a1c3e6f1e5" title="Vente de la tour sélectionnée.">sellSelectedTower</a>();
+<a name="l00107"></a>00107         <span class="keywordtype">void</span> <a class="code" href="classUI.html#a27f41a4f11f20308275dcb7638d25461" title="Amélioration de la défense sélectionnée.">upgradeSelectedTower</a>();
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109     signals:
+<a name="l00114"></a>00114         <span class="keywordtype">void</span> <a class="code" href="classUI.html#aff34760681ad834d325122691afc8454" title="Achat d&#39;une tour.">buyTower</a>(QString type);
+<a name="l00118"></a>00118         <span class="keywordtype">void</span> <a class="code" href="classUI.html#a63ad3c5f5b04203406c224ed01f50ddb" title="Vague suivante.">nextWave</a>();
+<a name="l00123"></a>00123         <span class="keywordtype">void</span> <a class="code" href="classUI.html#a9c3ac46b4d04af5455a74f1034b44f26" title="Vente d&#39;une défense.">towerSold</a>(<a class="code" href="classTower.html" title="Classe représentant toutes les défenses.">Tower</a> * <a class="code" href="classUI.html#a352f80a494c8d3c1723f1248438ea912" title="Regroupe les éléments du magasin de défenses.">tower</a>);
+<a name="l00127"></a>00127         <span class="keywordtype">void</span> <a class="code" href="classUI.html#a6d4de01a54d50dfeb43e2b9d9af81dda" title="Signal de défaite.">defeat</a>();
+<a name="l00128"></a>00128 };
+<a name="l00129"></a>00129 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->

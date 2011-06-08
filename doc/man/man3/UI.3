@@ -3,45 +3,61 @@
 .nh
 .SH NAME
 UI \- 
+.PP
+Classe de l'interface graphique.  
+
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <UI.h>\fP
 .SS "Connecteurs publics"
 
 .in +1c
 .ti -1c
-.RI "void \fBsetWaveName\fP (QString name)"
+.RI "void \fBsetWaveName\fP (QString \fBname\fP)"
 .br
+.RI "\fIChangement de vague. \fP"
 .ti -1c
 .RI "void \fBaddCred\fP ()"
 .br
+.RI "\fIGain d'un crédit. \fP"
 .ti -1c
 .RI "void \fBloseLife\fP ()"
 .br
+.RI "\fIPerte de vie. \fP"
 .ti -1c
 .RI "void \fBstartWave\fP ()"
 .br
+.RI "\fIVague suivante. \fP"
 .ti -1c
 .RI "void \fBbuyWaterTower\fP ()"
 .br
+.RI "\fIAchat d'une défense 'pistolet à eau'. \fP"
 .ti -1c
 .RI "void \fBbuySlingshotTower\fP ()"
 .br
+.RI "\fIAchat d'une défense 'lance-pierres'. \fP"
 .ti -1c
 .RI "void \fBbuyPaintballTower\fP ()"
 .br
+.RI "\fIAchat d'une défense 'paintball'. \fP"
 .ti -1c
 .RI "void \fBbuyBowlingTower\fP ()"
 .br
+.RI "\fIAchat d'une défense 'pétanque'. \fP"
 .ti -1c
-.RI "void \fBselectTower\fP (\fBTower\fP *tower)"
+.RI "void \fBselectTower\fP (\fBTower\fP *\fBtower\fP)"
 .br
+.RI "\fISélection d'une tour. \fP"
 .ti -1c
 .RI "void \fBsellSelectedTower\fP ()"
 .br
+.RI "\fIVente de la tour sélectionnée. \fP"
 .ti -1c
 .RI "void \fBupgradeSelectedTower\fP ()"
 .br
+.RI "\fIAmélioration de la défense sélectionnée. \fP"
 .in -1c
 .SS "Signaux"
 
@@ -49,15 +65,19 @@ UI \-
 .ti -1c
 .RI "void \fBbuyTower\fP (QString type)"
 .br
+.RI "\fIAchat d'une tour. \fP"
 .ti -1c
 .RI "void \fBnextWave\fP ()"
 .br
+.RI "\fIVague suivante. \fP"
 .ti -1c
-.RI "void \fBtowerSold\fP (\fBTower\fP *tower)"
+.RI "void \fBtowerSold\fP (\fBTower\fP *\fBtower\fP)"
 .br
+.RI "\fIVente d'une défense. \fP"
 .ti -1c
 .RI "void \fBdefeat\fP ()"
 .br
+.RI "\fISignal de défaite. \fP"
 .in -1c
 .SS "Fonctions membres publiques"
 
@@ -65,6 +85,7 @@ UI \-
 .ti -1c
 .RI "\fBUI\fP (QWidget *parent)"
 .br
+.RI "\fIConstructeur de \fBUI\fP. \fP"
 .in -1c
 .SS "Champs de données"
 
@@ -72,6 +93,7 @@ UI \-
 .ti -1c
 .RI "QPushButton * \fBstart\fP"
 .br
+.RI "\fILe bouton pour lancer la vague suivante. \fP"
 .in -1c
 .SS "Attributs privés"
 
@@ -79,70 +101,175 @@ UI \-
 .ti -1c
 .RI "QGroupBox * \fBtower\fP"
 .br
+.RI "\fIRegroupe les éléments du magasin de défenses. \fP"
 .ti -1c
 .RI "QGroupBox * \fBstats\fP"
 .br
+.RI "\fIRegroupe les éléments ayant attrait à la défense sélectionnée. \fP"
 .ti -1c
 .RI "QPushButton * \fBsell\fP"
 .br
+.RI "\fILe bouton pour vendre la tour sélectionnée. \fP"
 .ti -1c
 .RI "QPushButton * \fBupg\fP"
 .br
+.RI "\fILe bouton pour améliorer la tour sélectionnée. \fP"
 .ti -1c
 .RI "QPushButton * \fBwater\fP"
 .br
+.RI "\fILe bouton pour acheter un pistolet à eau. \fP"
 .ti -1c
 .RI "QPushButton * \fBsling\fP"
 .br
+.RI "\fILe bouton pour acheter un lance-pierre. \fP"
 .ti -1c
 .RI "QPushButton * \fBbowling\fP"
 .br
+.RI "\fILe bouton pour engager un joueur de pétanque. \fP"
 .ti -1c
 .RI "QPushButton * \fBpaintball\fP"
 .br
+.RI "\fILe bouton pour acheter un Paintball. \fP"
 .ti -1c
 .RI "QLabel * \fBname\fP"
 .br
+.RI "\fILe texte 'Type : '. \fP"
 .ti -1c
 .RI "QLabel * \fBlvl\fP"
 .br
+.RI "\fILe texte 'Niveau : '. \fP"
 .ti -1c
 .RI "QLabel * \fBrange\fP"
 .br
+.RI "\fILe texte 'portée : '. \fP"
 .ti -1c
 .RI "QLabel * \fBfirerate\fP"
 .br
+.RI "\fILe texte 'cadence : '. \fP"
 .ti -1c
 .RI "QLabel * \fBt_name\fP"
 .br
+.RI "\fILe type de la tour sélectionnée. \fP"
 .ti -1c
 .RI "QLabel * \fBt_lvl\fP"
 .br
+.RI "\fILe niveau de la tour sélectionnée. \fP"
 .ti -1c
 .RI "QLabel * \fBt_range\fP"
 .br
+.RI "\fILa portée de la tour sélectionnée. \fP"
 .ti -1c
 .RI "QLabel * \fBt_firerate\fP"
 .br
+.RI "\fILa cadence de tir de la tour sélectionnée. \fP"
 .ti -1c
 .RI "QLabel * \fBwave\fP"
 .br
+.RI "\fIle nom de la vague en cours. \fP"
 .ti -1c
 .RI "QLabel * \fBcred_txt\fP"
 .br
+.RI "\fILe texte 'crédits : '. \fP"
 .ti -1c
 .RI "QLabel * \fBlife_txt\fP"
 .br
+.RI "\fILe texte 'vie : '. \fP"
 .ti -1c
 .RI "QLCDNumber * \fBcred\fP"
 .br
+.RI "\fIL'affciheur de crédits restants. \fP"
 .ti -1c
 .RI "QLCDNumber * \fBlife\fP"
 .br
+.RI "\fIL'afficheur de vie restantes. \fP"
 .ti -1c
 .RI "\fBTower\fP * \fBselected\fP"
 .br
+.RI "\fIUn pointeur vers la tour sélectionnée actuellement. \fP"
 .in -1c
+.SH "Description détaillée"
+.PP 
+Gère l'ensemble des éléments de l'interface graphique affichée à droite. 
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "UI::UI (QWidget *parent)"initialise l'interface utilisateur. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIparent\fP Le widge parent de l'UI. 
+.RE
+.PP
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "void UI::addCred ()\fC [slot]\fP"Incrémente de 1 les crédit du joueur. 
+.SS "void UI::buyBowlingTower ()\fC [slot]\fP"Vérifie si le joueur possède suffisament de crédit puis décompte le prix. 
+.SS "void UI::buyPaintballTower ()\fC [slot]\fP"Vérifie si le joueur possède suffisament de crédit puis décompte le prix. 
+.SS "void UI::buySlingshotTower ()\fC [slot]\fP"Vérifie si le joueur possède suffisament de crédit puis décompte le prix. 
+.SS "void UI::buyTower (QStringtype)\fC [signal]\fP"Indique au \fBRender\fP de placer la défense achetée. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fItype\fP Le type de la défense achetée. 
+.RE
+.PP
+
+.SS "void UI::buyWaterTower ()\fC [slot]\fP"Vérifie si le joueur possède suffisament de crédit puis décompte le prix. 
+.SS "void UI::defeat ()\fC [signal]\fP"Indique au programme de stopper le jeu. 
+.SS "void UI::loseLife ()\fC [slot]\fP"Décrémente de 1 le total de vies du joueur. 
+.SS "void UI::nextWave ()\fC [signal]\fP"Indique au \fBRender\fP de lancer la vague suivante. 
+.SS "void UI::selectTower (\fBTower\fP *tower)\fC [slot]\fP"Affiche les caractérisque de la défense sélectionnée. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fItower\fP Un pointeur vers la nouvelle défense sélectionnée. 
+.RE
+.PP
+
+.SS "void UI::sellSelectedTower ()\fC [slot]\fP"Reçoit le signal du bouton 'Vendre' et recrédite le joueur du moitié du prix de la défense. 
+.SS "void UI::setWaveName (QStringname)\fC [slot]\fP"Change le nom de la vague courante. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIname\fP Le nom de la nouvelle vague. 
+.RE
+.PP
+
+.SS "void UI::startWave ()\fC [slot]\fP"Reçoit le signal du bouton 'lancer la vague suivante'. 
+.SS "void UI::towerSold (\fBTower\fP *tower)\fC [signal]\fP"Indique au \fBRender\fP de détruire une défense vendue. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fItower\fP Un pointeur vers la défense à détruire. 
+.RE
+.PP
+
+.SS "void UI::upgradeSelectedTower ()\fC [slot]\fP"Reçoit le signal du bouton 'améliorer' et améliore la tour si les crédits sont suffisants. 
+.SH "Documentation des champs"
+.PP 
+.SS "QPushButton* \fBUI::bowling\fP\fC [private]\fP"
+.SS "QLCDNumber* \fBUI::cred\fP\fC [private]\fP"
+.SS "QLabel* \fBUI::cred_txt\fP\fC [private]\fP"
+.SS "QLabel* \fBUI::firerate\fP\fC [private]\fP"
+.SS "QLCDNumber* \fBUI::life\fP\fC [private]\fP"
+.SS "QLabel* \fBUI::life_txt\fP\fC [private]\fP"
+.SS "QLabel* \fBUI::lvl\fP\fC [private]\fP"
+.SS "QLabel* \fBUI::name\fP\fC [private]\fP"
+.SS "QPushButton* \fBUI::paintball\fP\fC [private]\fP"
+.SS "QLabel* \fBUI::range\fP\fC [private]\fP"
+.SS "\fBTower\fP* \fBUI::selected\fP\fC [private]\fP"
+.SS "QPushButton* \fBUI::sell\fP\fC [private]\fP"
+.SS "QPushButton* \fBUI::sling\fP\fC [private]\fP"
+.SS "QPushButton* \fBUI::start\fP"
+.SS "QGroupBox* \fBUI::stats\fP\fC [private]\fP"
+.SS "QLabel* \fBUI::t_firerate\fP\fC [private]\fP"
+.SS "QLabel* \fBUI::t_lvl\fP\fC [private]\fP"
+.SS "QLabel* \fBUI::t_name\fP\fC [private]\fP"
+.SS "QLabel* \fBUI::t_range\fP\fC [private]\fP"
+.SS "QGroupBox* \fBUI::tower\fP\fC [private]\fP"
+.SS "QPushButton* \fBUI::upg\fP\fC [private]\fP"
+.SS "QPushButton* \fBUI::water\fP\fC [private]\fP"
+.SS "QLabel* \fBUI::wave\fP\fC [private]\fP"
 
 .SH "Auteur"
 .PP 

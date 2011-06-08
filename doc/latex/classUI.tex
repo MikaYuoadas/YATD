@@ -2,216 +2,404 @@
 \section{Référence de la classe UI}
 \label{classUI}\index{UI@{UI}}
 }
+
+
+Classe de l'interface graphique.  
+
+
+
+
+{\ttfamily \#include $<$UI.h$>$}
+
 \subsection*{Connecteurs publics}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classUI_a59dd7970680cae33350521f15e986259}{
-void {\bfseries setWaveName} (QString name)}
-\label{classUI_a59dd7970680cae33350521f15e986259}
-
-\item 
-\hypertarget{classUI_a00578d0269bf64abf71beb8b3e00a62b}{
-void {\bfseries addCred} ()}
-\label{classUI_a00578d0269bf64abf71beb8b3e00a62b}
-
-\item 
-\hypertarget{classUI_aea04048a2f3ab79ea3492c4f5e2e2c8d}{
-void {\bfseries loseLife} ()}
-\label{classUI_aea04048a2f3ab79ea3492c4f5e2e2c8d}
-
-\item 
-\hypertarget{classUI_adca7adc8d262fe82ce9eb3950b334416}{
-void {\bfseries startWave} ()}
-\label{classUI_adca7adc8d262fe82ce9eb3950b334416}
-
-\item 
-\hypertarget{classUI_a2dbc930f722c8acdf2c59a01a2760576}{
-void {\bfseries buyWaterTower} ()}
-\label{classUI_a2dbc930f722c8acdf2c59a01a2760576}
-
-\item 
-\hypertarget{classUI_a64d35e18b3b5b896caa69830190c1751}{
-void {\bfseries buySlingshotTower} ()}
-\label{classUI_a64d35e18b3b5b896caa69830190c1751}
-
-\item 
-\hypertarget{classUI_a098f1fd7e42c754f82e6d68aba33cbd1}{
-void {\bfseries buyPaintballTower} ()}
-\label{classUI_a098f1fd7e42c754f82e6d68aba33cbd1}
-
-\item 
-\hypertarget{classUI_ad9cc9c903122ceca1d750555ec95dda7}{
-void {\bfseries buyBowlingTower} ()}
-\label{classUI_ad9cc9c903122ceca1d750555ec95dda7}
-
-\item 
-\hypertarget{classUI_acc2450574743936721ad9d77b055d6d5}{
-void {\bfseries selectTower} (\hyperlink{classTower}{Tower} $\ast$tower)}
-\label{classUI_acc2450574743936721ad9d77b055d6d5}
-
-\item 
-\hypertarget{classUI_ad3666cc06e62117ba0ad65a1c3e6f1e5}{
-void {\bfseries sellSelectedTower} ()}
-\label{classUI_ad3666cc06e62117ba0ad65a1c3e6f1e5}
-
-\item 
-\hypertarget{classUI_a27f41a4f11f20308275dcb7638d25461}{
-void {\bfseries upgradeSelectedTower} ()}
-\label{classUI_a27f41a4f11f20308275dcb7638d25461}
-
-\end{DoxyCompactItemize}
+void \hyperlink{classUI_a59dd7970680cae33350521f15e986259}{setWaveName} (QString \hyperlink{classUI_a81ae571ef0c2c3044c1a5271887f5936}{name})
+\begin{DoxyCompactList}\small\item\em Changement de vague. \end{DoxyCompactList}\item 
+void \hyperlink{classUI_a00578d0269bf64abf71beb8b3e00a62b}{addCred} ()
+\begin{DoxyCompactList}\small\item\em Gain d'un crédit. \end{DoxyCompactList}\item 
+void \hyperlink{classUI_aea04048a2f3ab79ea3492c4f5e2e2c8d}{loseLife} ()
+\begin{DoxyCompactList}\small\item\em Perte de vie. \end{DoxyCompactList}\item 
+void \hyperlink{classUI_adca7adc8d262fe82ce9eb3950b334416}{startWave} ()
+\begin{DoxyCompactList}\small\item\em Vague suivante. \end{DoxyCompactList}\item 
+void \hyperlink{classUI_a2dbc930f722c8acdf2c59a01a2760576}{buyWaterTower} ()
+\begin{DoxyCompactList}\small\item\em Achat d'une défense \char`\"{}pistolet à eau\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{classUI_a64d35e18b3b5b896caa69830190c1751}{buySlingshotTower} ()
+\begin{DoxyCompactList}\small\item\em Achat d'une défense \char`\"{}lance-\/pierres\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{classUI_a098f1fd7e42c754f82e6d68aba33cbd1}{buyPaintballTower} ()
+\begin{DoxyCompactList}\small\item\em Achat d'une défense \char`\"{}paintball\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{classUI_ad9cc9c903122ceca1d750555ec95dda7}{buyBowlingTower} ()
+\begin{DoxyCompactList}\small\item\em Achat d'une défense \char`\"{}pétanque\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{classUI_acc2450574743936721ad9d77b055d6d5}{selectTower} (\hyperlink{classTower}{Tower} $\ast$\hyperlink{classUI_a352f80a494c8d3c1723f1248438ea912}{tower})
+\begin{DoxyCompactList}\small\item\em Sélection d'une tour. \end{DoxyCompactList}\item 
+void \hyperlink{classUI_ad3666cc06e62117ba0ad65a1c3e6f1e5}{sellSelectedTower} ()
+\begin{DoxyCompactList}\small\item\em Vente de la tour sélectionnée. \end{DoxyCompactList}\item 
+void \hyperlink{classUI_a27f41a4f11f20308275dcb7638d25461}{upgradeSelectedTower} ()
+\begin{DoxyCompactList}\small\item\em Amélioration de la défense sélectionnée. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Signaux}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classUI_aff34760681ad834d325122691afc8454}{
-void {\bfseries buyTower} (QString type)}
-\label{classUI_aff34760681ad834d325122691afc8454}
-
-\item 
-\hypertarget{classUI_a63ad3c5f5b04203406c224ed01f50ddb}{
-void {\bfseries nextWave} ()}
-\label{classUI_a63ad3c5f5b04203406c224ed01f50ddb}
-
-\item 
-\hypertarget{classUI_a9c3ac46b4d04af5455a74f1034b44f26}{
-void {\bfseries towerSold} (\hyperlink{classTower}{Tower} $\ast$tower)}
-\label{classUI_a9c3ac46b4d04af5455a74f1034b44f26}
-
-\item 
-\hypertarget{classUI_a6d4de01a54d50dfeb43e2b9d9af81dda}{
-void {\bfseries defeat} ()}
-\label{classUI_a6d4de01a54d50dfeb43e2b9d9af81dda}
-
-\end{DoxyCompactItemize}
+void \hyperlink{classUI_aff34760681ad834d325122691afc8454}{buyTower} (QString type)
+\begin{DoxyCompactList}\small\item\em Achat d'une tour. \end{DoxyCompactList}\item 
+void \hyperlink{classUI_a63ad3c5f5b04203406c224ed01f50ddb}{nextWave} ()
+\begin{DoxyCompactList}\small\item\em Vague suivante. \end{DoxyCompactList}\item 
+void \hyperlink{classUI_a9c3ac46b4d04af5455a74f1034b44f26}{towerSold} (\hyperlink{classTower}{Tower} $\ast$\hyperlink{classUI_a352f80a494c8d3c1723f1248438ea912}{tower})
+\begin{DoxyCompactList}\small\item\em Vente d'une défense. \end{DoxyCompactList}\item 
+void \hyperlink{classUI_a6d4de01a54d50dfeb43e2b9d9af81dda}{defeat} ()
+\begin{DoxyCompactList}\small\item\em Signal de défaite. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classUI_a983ff4bdfc1543f6ea015c21526d70b6}{
-{\bfseries UI} (QWidget $\ast$parent)}
-\label{classUI_a983ff4bdfc1543f6ea015c21526d70b6}
-
-\end{DoxyCompactItemize}
+\hyperlink{classUI_a983ff4bdfc1543f6ea015c21526d70b6}{UI} (QWidget $\ast$parent)
+\begin{DoxyCompactList}\small\item\em Constructeur de \hyperlink{classUI}{UI}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Champs de données}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classUI_a02df204852b5bbb75015490337b1da5f}{
-QPushButton $\ast$ {\bfseries start}}
-\label{classUI_a02df204852b5bbb75015490337b1da5f}
-
-\end{DoxyCompactItemize}
+QPushButton $\ast$ \hyperlink{classUI_a02df204852b5bbb75015490337b1da5f}{start}
+\begin{DoxyCompactList}\small\item\em Le bouton pour lancer la vague suivante. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Attributs privés}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classUI_a352f80a494c8d3c1723f1248438ea912}{
-QGroupBox $\ast$ {\bfseries tower}}
-\label{classUI_a352f80a494c8d3c1723f1248438ea912}
+QGroupBox $\ast$ \hyperlink{classUI_a352f80a494c8d3c1723f1248438ea912}{tower}
+\begin{DoxyCompactList}\small\item\em Regroupe les éléments du magasin de défenses. \end{DoxyCompactList}\item 
+QGroupBox $\ast$ \hyperlink{classUI_a04ffefe0b9ef54d2ebc76595b00bb900}{stats}
+\begin{DoxyCompactList}\small\item\em Regroupe les éléments ayant attrait à la défense sélectionnée. \end{DoxyCompactList}\item 
+QPushButton $\ast$ \hyperlink{classUI_a4e35fb65ac2aa948adb7f7b9eb94d5c2}{sell}
+\begin{DoxyCompactList}\small\item\em Le bouton pour vendre la tour sélectionnée. \end{DoxyCompactList}\item 
+QPushButton $\ast$ \hyperlink{classUI_abf5a7181f1e80c8873cfae97be8e8b4f}{upg}
+\begin{DoxyCompactList}\small\item\em Le bouton pour améliorer la tour sélectionnée. \end{DoxyCompactList}\item 
+QPushButton $\ast$ \hyperlink{classUI_aaa5e1351929c7da7d4ae82ddbc31c77b}{water}
+\begin{DoxyCompactList}\small\item\em Le bouton pour acheter un pistolet à eau. \end{DoxyCompactList}\item 
+QPushButton $\ast$ \hyperlink{classUI_af645e28743002610e25ce8542dcb1a8e}{sling}
+\begin{DoxyCompactList}\small\item\em Le bouton pour acheter un lance-\/pierre. \end{DoxyCompactList}\item 
+QPushButton $\ast$ \hyperlink{classUI_a8279bd03cdee4ab01f04152f2ea7a906}{bowling}
+\begin{DoxyCompactList}\small\item\em Le bouton pour engager un joueur de pétanque. \end{DoxyCompactList}\item 
+QPushButton $\ast$ \hyperlink{classUI_a39fd06f53449fb6382de26d280be2e5f}{paintball}
+\begin{DoxyCompactList}\small\item\em Le bouton pour acheter un Paintball. \end{DoxyCompactList}\item 
+QLabel $\ast$ \hyperlink{classUI_a81ae571ef0c2c3044c1a5271887f5936}{name}
+\begin{DoxyCompactList}\small\item\em Le texte 'Type : '. \end{DoxyCompactList}\item 
+QLabel $\ast$ \hyperlink{classUI_a92e0870069d6ca6cd8b6dba91ec3702d}{lvl}
+\begin{DoxyCompactList}\small\item\em Le texte 'Niveau : '. \end{DoxyCompactList}\item 
+QLabel $\ast$ \hyperlink{classUI_aacb7c02b6a962b8adc8a7d4b6ffc1553}{range}
+\begin{DoxyCompactList}\small\item\em Le texte 'portée : '. \end{DoxyCompactList}\item 
+QLabel $\ast$ \hyperlink{classUI_a58bde2e8f6ca9d8f2fa32affefa02045}{firerate}
+\begin{DoxyCompactList}\small\item\em Le texte 'cadence : '. \end{DoxyCompactList}\item 
+QLabel $\ast$ \hyperlink{classUI_a161fc86882aacdd0577fc8e65ae7b9a5}{t\_\-name}
+\begin{DoxyCompactList}\small\item\em Le type de la tour sélectionnée. \end{DoxyCompactList}\item 
+QLabel $\ast$ \hyperlink{classUI_ad249255ec54bc26253e0c215852a8eac}{t\_\-lvl}
+\begin{DoxyCompactList}\small\item\em Le niveau de la tour sélectionnée. \end{DoxyCompactList}\item 
+QLabel $\ast$ \hyperlink{classUI_a46e8137a64e79962e0ba633d4feb341f}{t\_\-range}
+\begin{DoxyCompactList}\small\item\em La portée de la tour sélectionnée. \end{DoxyCompactList}\item 
+QLabel $\ast$ \hyperlink{classUI_aad8e7e7def9708c2b6e6511abb548b6d}{t\_\-firerate}
+\begin{DoxyCompactList}\small\item\em La cadence de tir de la tour sélectionnée. \end{DoxyCompactList}\item 
+QLabel $\ast$ \hyperlink{classUI_a3f735d7d737b15dad131baf43b58eb17}{wave}
+\begin{DoxyCompactList}\small\item\em le nom de la vague en cours. \end{DoxyCompactList}\item 
+QLabel $\ast$ \hyperlink{classUI_a931c707005030131187d786b0966fc22}{cred\_\-txt}
+\begin{DoxyCompactList}\small\item\em Le texte 'crédits : '. \end{DoxyCompactList}\item 
+QLabel $\ast$ \hyperlink{classUI_a2f7c3ea7fc4e840270e989b0e68ec82b}{life\_\-txt}
+\begin{DoxyCompactList}\small\item\em Le texte 'vie : '. \end{DoxyCompactList}\item 
+QLCDNumber $\ast$ \hyperlink{classUI_a1e6f0b63d2e4cb88476541452f81bd64}{cred}
+\begin{DoxyCompactList}\small\item\em L'affciheur de crédits restants. \end{DoxyCompactList}\item 
+QLCDNumber $\ast$ \hyperlink{classUI_a19d84baf49aecab7730ae12609b83be7}{life}
+\begin{DoxyCompactList}\small\item\em L'afficheur de vie restantes. \end{DoxyCompactList}\item 
+\hyperlink{classTower}{Tower} $\ast$ \hyperlink{classUI_af4edf19be15102c7aefb0e682c72c475}{selected}
+\begin{DoxyCompactList}\small\item\em Un pointeur vers la tour sélectionnée actuellement. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\item 
-\hypertarget{classUI_a04ffefe0b9ef54d2ebc76595b00bb900}{
-QGroupBox $\ast$ {\bfseries stats}}
-\label{classUI_a04ffefe0b9ef54d2ebc76595b00bb900}
 
-\item 
-\hypertarget{classUI_a4e35fb65ac2aa948adb7f7b9eb94d5c2}{
-QPushButton $\ast$ {\bfseries sell}}
-\label{classUI_a4e35fb65ac2aa948adb7f7b9eb94d5c2}
+\subsection{Description détaillée}
+Gère l'ensemble des éléments de l'interface graphique affichée à droite. 
 
-\item 
-\hypertarget{classUI_abf5a7181f1e80c8873cfae97be8e8b4f}{
-QPushButton $\ast$ {\bfseries upg}}
-\label{classUI_abf5a7181f1e80c8873cfae97be8e8b4f}
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classUI_a983ff4bdfc1543f6ea015c21526d70b6}{
+\index{UI@{UI}!UI@{UI}}
+\index{UI@{UI}!UI@{UI}}
+\subsubsection[{UI}]{\setlength{\rightskip}{0pt plus 5cm}UI::UI (
+\begin{DoxyParamCaption}
+\item[{QWidget $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}}
+\label{classUI_a983ff4bdfc1543f6ea015c21526d70b6}
+initialise l'interface utilisateur. 
+\begin{DoxyParams}{Paramètres}
+{\em parent} & Le widge parent de l'UI. \\
+\hline
+\end{DoxyParams}
 
-\item 
-\hypertarget{classUI_aaa5e1351929c7da7d4ae82ddbc31c77b}{
-QPushButton $\ast$ {\bfseries water}}
-\label{classUI_aaa5e1351929c7da7d4ae82ddbc31c77b}
 
-\item 
-\hypertarget{classUI_af645e28743002610e25ce8542dcb1a8e}{
-QPushButton $\ast$ {\bfseries sling}}
-\label{classUI_af645e28743002610e25ce8542dcb1a8e}
+\subsection{Documentation des fonctions membres}
+\hypertarget{classUI_a00578d0269bf64abf71beb8b3e00a62b}{
+\index{UI@{UI}!addCred@{addCred}}
+\index{addCred@{addCred}!UI@{UI}}
+\subsubsection[{addCred}]{\setlength{\rightskip}{0pt plus 5cm}void UI::addCred (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classUI_a00578d0269bf64abf71beb8b3e00a62b}
+Incrémente de 1 les crédit du joueur. \hypertarget{classUI_ad9cc9c903122ceca1d750555ec95dda7}{
+\index{UI@{UI}!buyBowlingTower@{buyBowlingTower}}
+\index{buyBowlingTower@{buyBowlingTower}!UI@{UI}}
+\subsubsection[{buyBowlingTower}]{\setlength{\rightskip}{0pt plus 5cm}void UI::buyBowlingTower (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classUI_ad9cc9c903122ceca1d750555ec95dda7}
+Vérifie si le joueur possède suffisament de crédit puis décompte le prix. \hypertarget{classUI_a098f1fd7e42c754f82e6d68aba33cbd1}{
+\index{UI@{UI}!buyPaintballTower@{buyPaintballTower}}
+\index{buyPaintballTower@{buyPaintballTower}!UI@{UI}}
+\subsubsection[{buyPaintballTower}]{\setlength{\rightskip}{0pt plus 5cm}void UI::buyPaintballTower (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classUI_a098f1fd7e42c754f82e6d68aba33cbd1}
+Vérifie si le joueur possède suffisament de crédit puis décompte le prix. \hypertarget{classUI_a64d35e18b3b5b896caa69830190c1751}{
+\index{UI@{UI}!buySlingshotTower@{buySlingshotTower}}
+\index{buySlingshotTower@{buySlingshotTower}!UI@{UI}}
+\subsubsection[{buySlingshotTower}]{\setlength{\rightskip}{0pt plus 5cm}void UI::buySlingshotTower (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classUI_a64d35e18b3b5b896caa69830190c1751}
+Vérifie si le joueur possède suffisament de crédit puis décompte le prix. \hypertarget{classUI_aff34760681ad834d325122691afc8454}{
+\index{UI@{UI}!buyTower@{buyTower}}
+\index{buyTower@{buyTower}!UI@{UI}}
+\subsubsection[{buyTower}]{\setlength{\rightskip}{0pt plus 5cm}void UI::buyTower (
+\begin{DoxyParamCaption}
+\item[{QString}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}signal\mbox{]}}}}
+\label{classUI_aff34760681ad834d325122691afc8454}
+Indique au \hyperlink{classRender}{Render} de placer la défense achetée. 
+\begin{DoxyParams}{Paramètres}
+{\em type} & Le type de la défense achetée. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classUI_a2dbc930f722c8acdf2c59a01a2760576}{
+\index{UI@{UI}!buyWaterTower@{buyWaterTower}}
+\index{buyWaterTower@{buyWaterTower}!UI@{UI}}
+\subsubsection[{buyWaterTower}]{\setlength{\rightskip}{0pt plus 5cm}void UI::buyWaterTower (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classUI_a2dbc930f722c8acdf2c59a01a2760576}
+Vérifie si le joueur possède suffisament de crédit puis décompte le prix. \hypertarget{classUI_a6d4de01a54d50dfeb43e2b9d9af81dda}{
+\index{UI@{UI}!defeat@{defeat}}
+\index{defeat@{defeat}!UI@{UI}}
+\subsubsection[{defeat}]{\setlength{\rightskip}{0pt plus 5cm}void UI::defeat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}signal\mbox{]}}}}
+\label{classUI_a6d4de01a54d50dfeb43e2b9d9af81dda}
+Indique au programme de stopper le jeu. \hypertarget{classUI_aea04048a2f3ab79ea3492c4f5e2e2c8d}{
+\index{UI@{UI}!loseLife@{loseLife}}
+\index{loseLife@{loseLife}!UI@{UI}}
+\subsubsection[{loseLife}]{\setlength{\rightskip}{0pt plus 5cm}void UI::loseLife (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classUI_aea04048a2f3ab79ea3492c4f5e2e2c8d}
+Décrémente de 1 le total de vies du joueur. \hypertarget{classUI_a63ad3c5f5b04203406c224ed01f50ddb}{
+\index{UI@{UI}!nextWave@{nextWave}}
+\index{nextWave@{nextWave}!UI@{UI}}
+\subsubsection[{nextWave}]{\setlength{\rightskip}{0pt plus 5cm}void UI::nextWave (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}signal\mbox{]}}}}
+\label{classUI_a63ad3c5f5b04203406c224ed01f50ddb}
+Indique au \hyperlink{classRender}{Render} de lancer la vague suivante. \hypertarget{classUI_acc2450574743936721ad9d77b055d6d5}{
+\index{UI@{UI}!selectTower@{selectTower}}
+\index{selectTower@{selectTower}!UI@{UI}}
+\subsubsection[{selectTower}]{\setlength{\rightskip}{0pt plus 5cm}void UI::selectTower (
+\begin{DoxyParamCaption}
+\item[{{\bf Tower} $\ast$}]{tower}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classUI_acc2450574743936721ad9d77b055d6d5}
+Affiche les caractérisque de la défense sélectionnée. 
+\begin{DoxyParams}{Paramètres}
+{\em tower} & Un pointeur vers la nouvelle défense sélectionnée. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classUI_ad3666cc06e62117ba0ad65a1c3e6f1e5}{
+\index{UI@{UI}!sellSelectedTower@{sellSelectedTower}}
+\index{sellSelectedTower@{sellSelectedTower}!UI@{UI}}
+\subsubsection[{sellSelectedTower}]{\setlength{\rightskip}{0pt plus 5cm}void UI::sellSelectedTower (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classUI_ad3666cc06e62117ba0ad65a1c3e6f1e5}
+Reçoit le signal du bouton \char`\"{}Vendre\char`\"{} et recrédite le joueur du moitié du prix de la défense. \hypertarget{classUI_a59dd7970680cae33350521f15e986259}{
+\index{UI@{UI}!setWaveName@{setWaveName}}
+\index{setWaveName@{setWaveName}!UI@{UI}}
+\subsubsection[{setWaveName}]{\setlength{\rightskip}{0pt plus 5cm}void UI::setWaveName (
+\begin{DoxyParamCaption}
+\item[{QString}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classUI_a59dd7970680cae33350521f15e986259}
+Change le nom de la vague courante. 
+\begin{DoxyParams}{Paramètres}
+{\em name} & Le nom de la nouvelle vague. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classUI_adca7adc8d262fe82ce9eb3950b334416}{
+\index{UI@{UI}!startWave@{startWave}}
+\index{startWave@{startWave}!UI@{UI}}
+\subsubsection[{startWave}]{\setlength{\rightskip}{0pt plus 5cm}void UI::startWave (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classUI_adca7adc8d262fe82ce9eb3950b334416}
+Reçoit le signal du bouton \char`\"{}lancer la vague suivante\char`\"{}. \hypertarget{classUI_a9c3ac46b4d04af5455a74f1034b44f26}{
+\index{UI@{UI}!towerSold@{towerSold}}
+\index{towerSold@{towerSold}!UI@{UI}}
+\subsubsection[{towerSold}]{\setlength{\rightskip}{0pt plus 5cm}void UI::towerSold (
+\begin{DoxyParamCaption}
+\item[{{\bf Tower} $\ast$}]{tower}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}signal\mbox{]}}}}
+\label{classUI_a9c3ac46b4d04af5455a74f1034b44f26}
+Indique au \hyperlink{classRender}{Render} de détruire une défense vendue. 
+\begin{DoxyParams}{Paramètres}
+{\em tower} & Un pointeur vers la défense à détruire. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classUI_a27f41a4f11f20308275dcb7638d25461}{
+\index{UI@{UI}!upgradeSelectedTower@{upgradeSelectedTower}}
+\index{upgradeSelectedTower@{upgradeSelectedTower}!UI@{UI}}
+\subsubsection[{upgradeSelectedTower}]{\setlength{\rightskip}{0pt plus 5cm}void UI::upgradeSelectedTower (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classUI_a27f41a4f11f20308275dcb7638d25461}
+Reçoit le signal du bouton \char`\"{}améliorer\char`\"{} et améliore la tour si les crédits sont suffisants. 
 
-\item 
+\subsection{Documentation des champs}
 \hypertarget{classUI_a8279bd03cdee4ab01f04152f2ea7a906}{
-QPushButton $\ast$ {\bfseries bowling}}
+\index{UI@{UI}!bowling@{bowling}}
+\index{bowling@{bowling}!UI@{UI}}
+\subsubsection[{bowling}]{\setlength{\rightskip}{0pt plus 5cm}QPushButton$\ast$ {\bf UI::bowling}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
 \label{classUI_a8279bd03cdee4ab01f04152f2ea7a906}
-
-\item 
-\hypertarget{classUI_a39fd06f53449fb6382de26d280be2e5f}{
-QPushButton $\ast$ {\bfseries paintball}}
-\label{classUI_a39fd06f53449fb6382de26d280be2e5f}
-
-\item 
-\hypertarget{classUI_a81ae571ef0c2c3044c1a5271887f5936}{
-QLabel $\ast$ {\bfseries name}}
-\label{classUI_a81ae571ef0c2c3044c1a5271887f5936}
-
-\item 
-\hypertarget{classUI_a92e0870069d6ca6cd8b6dba91ec3702d}{
-QLabel $\ast$ {\bfseries lvl}}
-\label{classUI_a92e0870069d6ca6cd8b6dba91ec3702d}
-
-\item 
-\hypertarget{classUI_aacb7c02b6a962b8adc8a7d4b6ffc1553}{
-QLabel $\ast$ {\bfseries range}}
-\label{classUI_aacb7c02b6a962b8adc8a7d4b6ffc1553}
-
-\item 
-\hypertarget{classUI_a58bde2e8f6ca9d8f2fa32affefa02045}{
-QLabel $\ast$ {\bfseries firerate}}
-\label{classUI_a58bde2e8f6ca9d8f2fa32affefa02045}
-
-\item 
-\hypertarget{classUI_a161fc86882aacdd0577fc8e65ae7b9a5}{
-QLabel $\ast$ {\bfseries t\_\-name}}
-\label{classUI_a161fc86882aacdd0577fc8e65ae7b9a5}
-
-\item 
-\hypertarget{classUI_ad249255ec54bc26253e0c215852a8eac}{
-QLabel $\ast$ {\bfseries t\_\-lvl}}
-\label{classUI_ad249255ec54bc26253e0c215852a8eac}
-
-\item 
-\hypertarget{classUI_a46e8137a64e79962e0ba633d4feb341f}{
-QLabel $\ast$ {\bfseries t\_\-range}}
-\label{classUI_a46e8137a64e79962e0ba633d4feb341f}
-
-\item 
-\hypertarget{classUI_aad8e7e7def9708c2b6e6511abb548b6d}{
-QLabel $\ast$ {\bfseries t\_\-firerate}}
-\label{classUI_aad8e7e7def9708c2b6e6511abb548b6d}
-
-\item 
-\hypertarget{classUI_a3f735d7d737b15dad131baf43b58eb17}{
-QLabel $\ast$ {\bfseries wave}}
-\label{classUI_a3f735d7d737b15dad131baf43b58eb17}
-
-\item 
-\hypertarget{classUI_a931c707005030131187d786b0966fc22}{
-QLabel $\ast$ {\bfseries cred\_\-txt}}
-\label{classUI_a931c707005030131187d786b0966fc22}
-
-\item 
-\hypertarget{classUI_a2f7c3ea7fc4e840270e989b0e68ec82b}{
-QLabel $\ast$ {\bfseries life\_\-txt}}
-\label{classUI_a2f7c3ea7fc4e840270e989b0e68ec82b}
-
-\item 
 \hypertarget{classUI_a1e6f0b63d2e4cb88476541452f81bd64}{
-QLCDNumber $\ast$ {\bfseries cred}}
+\index{UI@{UI}!cred@{cred}}
+\index{cred@{cred}!UI@{UI}}
+\subsubsection[{cred}]{\setlength{\rightskip}{0pt plus 5cm}QLCDNumber$\ast$ {\bf UI::cred}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
 \label{classUI_a1e6f0b63d2e4cb88476541452f81bd64}
-
-\item 
+\hypertarget{classUI_a931c707005030131187d786b0966fc22}{
+\index{UI@{UI}!cred\_\-txt@{cred\_\-txt}}
+\index{cred\_\-txt@{cred\_\-txt}!UI@{UI}}
+\subsubsection[{cred\_\-txt}]{\setlength{\rightskip}{0pt plus 5cm}QLabel$\ast$ {\bf UI::cred\_\-txt}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_a931c707005030131187d786b0966fc22}
+\hypertarget{classUI_a58bde2e8f6ca9d8f2fa32affefa02045}{
+\index{UI@{UI}!firerate@{firerate}}
+\index{firerate@{firerate}!UI@{UI}}
+\subsubsection[{firerate}]{\setlength{\rightskip}{0pt plus 5cm}QLabel$\ast$ {\bf UI::firerate}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_a58bde2e8f6ca9d8f2fa32affefa02045}
 \hypertarget{classUI_a19d84baf49aecab7730ae12609b83be7}{
-QLCDNumber $\ast$ {\bfseries life}}
+\index{UI@{UI}!life@{life}}
+\index{life@{life}!UI@{UI}}
+\subsubsection[{life}]{\setlength{\rightskip}{0pt plus 5cm}QLCDNumber$\ast$ {\bf UI::life}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
 \label{classUI_a19d84baf49aecab7730ae12609b83be7}
-
-\item 
+\hypertarget{classUI_a2f7c3ea7fc4e840270e989b0e68ec82b}{
+\index{UI@{UI}!life\_\-txt@{life\_\-txt}}
+\index{life\_\-txt@{life\_\-txt}!UI@{UI}}
+\subsubsection[{life\_\-txt}]{\setlength{\rightskip}{0pt plus 5cm}QLabel$\ast$ {\bf UI::life\_\-txt}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_a2f7c3ea7fc4e840270e989b0e68ec82b}
+\hypertarget{classUI_a92e0870069d6ca6cd8b6dba91ec3702d}{
+\index{UI@{UI}!lvl@{lvl}}
+\index{lvl@{lvl}!UI@{UI}}
+\subsubsection[{lvl}]{\setlength{\rightskip}{0pt plus 5cm}QLabel$\ast$ {\bf UI::lvl}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_a92e0870069d6ca6cd8b6dba91ec3702d}
+\hypertarget{classUI_a81ae571ef0c2c3044c1a5271887f5936}{
+\index{UI@{UI}!name@{name}}
+\index{name@{name}!UI@{UI}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}QLabel$\ast$ {\bf UI::name}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_a81ae571ef0c2c3044c1a5271887f5936}
+\hypertarget{classUI_a39fd06f53449fb6382de26d280be2e5f}{
+\index{UI@{UI}!paintball@{paintball}}
+\index{paintball@{paintball}!UI@{UI}}
+\subsubsection[{paintball}]{\setlength{\rightskip}{0pt plus 5cm}QPushButton$\ast$ {\bf UI::paintball}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_a39fd06f53449fb6382de26d280be2e5f}
+\hypertarget{classUI_aacb7c02b6a962b8adc8a7d4b6ffc1553}{
+\index{UI@{UI}!range@{range}}
+\index{range@{range}!UI@{UI}}
+\subsubsection[{range}]{\setlength{\rightskip}{0pt plus 5cm}QLabel$\ast$ {\bf UI::range}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_aacb7c02b6a962b8adc8a7d4b6ffc1553}
 \hypertarget{classUI_af4edf19be15102c7aefb0e682c72c475}{
-\hyperlink{classTower}{Tower} $\ast$ {\bfseries selected}}
+\index{UI@{UI}!selected@{selected}}
+\index{selected@{selected}!UI@{UI}}
+\subsubsection[{selected}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower}$\ast$ {\bf UI::selected}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
 \label{classUI_af4edf19be15102c7aefb0e682c72c475}
-
-\end{DoxyCompactItemize}
+\hypertarget{classUI_a4e35fb65ac2aa948adb7f7b9eb94d5c2}{
+\index{UI@{UI}!sell@{sell}}
+\index{sell@{sell}!UI@{UI}}
+\subsubsection[{sell}]{\setlength{\rightskip}{0pt plus 5cm}QPushButton$\ast$ {\bf UI::sell}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_a4e35fb65ac2aa948adb7f7b9eb94d5c2}
+\hypertarget{classUI_af645e28743002610e25ce8542dcb1a8e}{
+\index{UI@{UI}!sling@{sling}}
+\index{sling@{sling}!UI@{UI}}
+\subsubsection[{sling}]{\setlength{\rightskip}{0pt plus 5cm}QPushButton$\ast$ {\bf UI::sling}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_af645e28743002610e25ce8542dcb1a8e}
+\hypertarget{classUI_a02df204852b5bbb75015490337b1da5f}{
+\index{UI@{UI}!start@{start}}
+\index{start@{start}!UI@{UI}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}QPushButton$\ast$ {\bf UI::start}}}
+\label{classUI_a02df204852b5bbb75015490337b1da5f}
+\hypertarget{classUI_a04ffefe0b9ef54d2ebc76595b00bb900}{
+\index{UI@{UI}!stats@{stats}}
+\index{stats@{stats}!UI@{UI}}
+\subsubsection[{stats}]{\setlength{\rightskip}{0pt plus 5cm}QGroupBox$\ast$ {\bf UI::stats}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_a04ffefe0b9ef54d2ebc76595b00bb900}
+\hypertarget{classUI_aad8e7e7def9708c2b6e6511abb548b6d}{
+\index{UI@{UI}!t\_\-firerate@{t\_\-firerate}}
+\index{t\_\-firerate@{t\_\-firerate}!UI@{UI}}
+\subsubsection[{t\_\-firerate}]{\setlength{\rightskip}{0pt plus 5cm}QLabel$\ast$ {\bf UI::t\_\-firerate}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_aad8e7e7def9708c2b6e6511abb548b6d}
+\hypertarget{classUI_ad249255ec54bc26253e0c215852a8eac}{
+\index{UI@{UI}!t\_\-lvl@{t\_\-lvl}}
+\index{t\_\-lvl@{t\_\-lvl}!UI@{UI}}
+\subsubsection[{t\_\-lvl}]{\setlength{\rightskip}{0pt plus 5cm}QLabel$\ast$ {\bf UI::t\_\-lvl}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_ad249255ec54bc26253e0c215852a8eac}
+\hypertarget{classUI_a161fc86882aacdd0577fc8e65ae7b9a5}{
+\index{UI@{UI}!t\_\-name@{t\_\-name}}
+\index{t\_\-name@{t\_\-name}!UI@{UI}}
+\subsubsection[{t\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}QLabel$\ast$ {\bf UI::t\_\-name}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_a161fc86882aacdd0577fc8e65ae7b9a5}
+\hypertarget{classUI_a46e8137a64e79962e0ba633d4feb341f}{
+\index{UI@{UI}!t\_\-range@{t\_\-range}}
+\index{t\_\-range@{t\_\-range}!UI@{UI}}
+\subsubsection[{t\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}QLabel$\ast$ {\bf UI::t\_\-range}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_a46e8137a64e79962e0ba633d4feb341f}
+\hypertarget{classUI_a352f80a494c8d3c1723f1248438ea912}{
+\index{UI@{UI}!tower@{tower}}
+\index{tower@{tower}!UI@{UI}}
+\subsubsection[{tower}]{\setlength{\rightskip}{0pt plus 5cm}QGroupBox$\ast$ {\bf UI::tower}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_a352f80a494c8d3c1723f1248438ea912}
+\hypertarget{classUI_abf5a7181f1e80c8873cfae97be8e8b4f}{
+\index{UI@{UI}!upg@{upg}}
+\index{upg@{upg}!UI@{UI}}
+\subsubsection[{upg}]{\setlength{\rightskip}{0pt plus 5cm}QPushButton$\ast$ {\bf UI::upg}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_abf5a7181f1e80c8873cfae97be8e8b4f}
+\hypertarget{classUI_aaa5e1351929c7da7d4ae82ddbc31c77b}{
+\index{UI@{UI}!water@{water}}
+\index{water@{water}!UI@{UI}}
+\subsubsection[{water}]{\setlength{\rightskip}{0pt plus 5cm}QPushButton$\ast$ {\bf UI::water}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_aaa5e1351929c7da7d4ae82ddbc31c77b}
+\hypertarget{classUI_a3f735d7d737b15dad131baf43b58eb17}{
+\index{UI@{UI}!wave@{wave}}
+\index{wave@{wave}!UI@{UI}}
+\subsubsection[{wave}]{\setlength{\rightskip}{0pt plus 5cm}QLabel$\ast$ {\bf UI::wave}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_a3f735d7d737b15dad131baf43b58eb17}
 
 
 La documentation de cette classe a été générée à partir des fichiers suivants :\begin{DoxyCompactItemize}
