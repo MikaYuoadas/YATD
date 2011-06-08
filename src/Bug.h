@@ -68,6 +68,11 @@ class Bug : public QGraphicsObject
          * @param dmg Un double correspondant au point de dégat à infliger (avant réduction par la résistance de l'insecte).
          */
         void hit(double dmg);
+        /**
+         * Permet d'accéder à la valeur moveType de l'insecte.
+         * @return la valeur prédéfinie FLY ou CRAWL.
+         */
+        short int getMoveType();
 
     signals:
         /**

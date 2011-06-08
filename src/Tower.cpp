@@ -11,7 +11,7 @@ Tower::Tower(QPointF buildPos, QString typeTower) :
         price = 4;
         firerate = 4.5;
         range = 2.5;
-        target = CRAWL & FLY;
+        targetType = CRAWL | FLY;
         color = Qt::cyan;
     } else if (type == "slingshot") {
         upg1 = 25;
@@ -19,7 +19,7 @@ Tower::Tower(QPointF buildPos, QString typeTower) :
         price = 6;
         firerate = 1.0;
         range = 3.5;
-        target = FLY;
+        targetType = FLY;
         color = Qt::yellow;
     } else if (type == "paintball") {
         upg1 = 25;
@@ -27,7 +27,7 @@ Tower::Tower(QPointF buildPos, QString typeTower) :
         price = 6;
         firerate = 2;
         range = 4.5;
-        target = CRAWL & FLY;
+        targetType = CRAWL | FLY;
         color = Qt::darkRed;
     } else if (type == "bowling") {
         upg1 = 40;
@@ -35,7 +35,7 @@ Tower::Tower(QPointF buildPos, QString typeTower) :
         price = 7.5;
         firerate = 0.5;
         range = 4;
-        target = CRAWL;
+        targetType = CRAWL;
         color = Qt::darkGray;
     }
     timer = new QTimer();
@@ -90,7 +90,7 @@ double Tower::getFirerate()
 
 void Tower::fire()
 {
-    Bug * target = parent->getTarget(pos, range);
+    Bug * target = parent->getTarget(pos, range, targetType);
     if (target != NULL) {
         Projectile * missile = NULL;
         if (type == "water") {

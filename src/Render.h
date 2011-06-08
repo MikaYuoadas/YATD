@@ -48,7 +48,7 @@ class Render : public QGraphicsScene
         QPoint goal();
         double getAngle(QPoint & current);
         void mousePressEvent(QGraphicsSceneMouseEvent * mouseEvent);
-        Bug * getTarget(QPointF pos, double range);
+        Bug * getTarget(QPointF pos, double range, short int targetType);
 
     public slots:
         void nextWave();

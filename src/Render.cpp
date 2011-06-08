@@ -252,13 +252,14 @@ void Render::addProjectile(Projectile * missile)
     addItem(missile);
 }
 
-Bug * Render::getTarget(QPointF pos, double range)
+Bug * Render::getTarget(QPointF pos, double range, short int targetType)
 {
     Bug * bug = NULL;
     for (int i = 0; i < bugs.size(); i++) {
         double x = bugs.at(i)->x();
         double y = bugs.at(i)->y();
-        if (sqrt(pow(x - pos.x(), 2) + pow(y - pos.y(), 2)) <= range * SQUARE_SIZE) {
+        short int move = bugs.at(i)->getMoveType();
+        if (sqrt(pow(x - pos.x(), 2) + pow(y - pos.y(), 2)) <= range * SQUARE_SIZE and move & targetType) {
             bug = bugs.at(i);
             break;
         }

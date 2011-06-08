@@ -49,3 +49,8 @@ void Bug::hit(double dmg)
     if (hp <= 0)
         emit dead(this);
 }
+
+short int Bug::getMoveType()
+{
+    return moveType;
+}

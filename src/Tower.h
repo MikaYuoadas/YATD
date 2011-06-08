@@ -23,7 +23,7 @@ class Tower : public QGraphicsObject
         float upg1;
         float upg2;
         QColor color;
-        short int target;
+        short int targetType;
         double range;
         double firerate;
         QTimer * timer;
