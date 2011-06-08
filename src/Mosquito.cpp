@@ -5,8 +5,8 @@ Mosquito::Mosquito(double x, double y, double s, double start_angle) :
     Bug(x, y, s, 7 * s * s, 4 * s * s, start_angle, 3, FLY)
 {
     QImage temp[2];
-    temp[0] = QImage("../sprites/insects/moustiquevolant1.png");
-    temp[1] = QImage("../sprites/insects/moustiquevolant2.png");
+    temp[0] = QImage("./sprites/insects/moustiquevolant1.png");
+    temp[1] = QImage("./sprites/insects/moustiquevolant2.png");
     int tsize = BASE_SIZE * size;
     image[0] = new QImage(temp[0].scaled(tsize, tsize, Qt::KeepAspectRatio));
     image[1] = new QImage(temp[1].scaled(tsize, tsize, Qt::KeepAspectRatio));

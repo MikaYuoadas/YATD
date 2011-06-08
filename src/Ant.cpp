@@ -5,9 +5,9 @@ Ant::Ant(double x, double y, double s, double start_angle) :
     Bug(x, y, s, 5 * s * s, s * s, start_angle, 2 + s / 2, CRAWL)
 {
     QImage tmp[3];
-    tmp[0] = QImage("../sprites/insects/fourmi1.png", "png");
-    tmp[1] = QImage("../sprites/insects/fourmi2.png", "png");
-    tmp[2] = QImage("../sprites/insects/fourmi3.png", "png");
+    tmp[0] = QImage("./sprites/insects/fourmi1.png", "png");
+    tmp[1] = QImage("./sprites/insects/fourmi2.png", "png");
+    tmp[2] = QImage("./sprites/insects/fourmi3.png", "png");
     int tsize = BASE_SIZE * size;
     image[0] = new QImage(tmp[0].scaled(tsize, tsize, Qt::KeepAspectRatio));
     image[1] = new QImage(tmp[1].scaled(tsize, tsize, Qt::KeepAspectRatio));

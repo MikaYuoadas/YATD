@@ -11,7 +11,7 @@
 
 Render::Render() : QGraphicsScene(), start_angle(0), waveNumber(1), tower2build(QString("none")), bugs(QList<Bug *>())
 {
-    QFile file("../map/map_1");
+    QFile file("./map/map_1");
     file.open(QIODevice::ReadOnly | QIODevice::Text);
 
     QTextStream in(&file);
@@ -26,33 +26,33 @@ Render::Render() : QGraphicsScene(), start_angle(0), waveNumber(1), tower2build(
                 switch (num){
                     case NORTH:
                     case SOUTH:
-                        path = "../sprites/ground/trail_NS.jpg";
+                        path = "./sprites/ground/trail_NS.jpg";
                         break;
                     case EAST:
                     case WEST:
-                        path = "../sprites/ground/trail_EW.jpg";
+                        path = "./sprites/ground/trail_EW.jpg";
                         break;
                     case NE:
                     case SW:
-                        path = "../sprites/ground/trail_NE-SW.jpg";
+                        path = "./sprites/ground/trail_NE-SW.jpg";
                         break;
                     case SE:
                     case NW:
-                        path = "../sprites/ground/trail_NW-SE.jpg";
+                        path = "./sprites/ground/trail_NW-SE.jpg";
                         break;
                     case GOAL:
-                        path = "../sprites/ground/goal.png";
+                        path = "./sprites/ground/goal.png";
                         goalSquare = QPoint(j, i);
                         break;
                     case DIRT:
-                        path = "../sprites/ground/dirt.png";
+                        path = "./sprites/ground/dirt.png";
                         break;
                     default:
-                        path = "../sprites/ground/grass.jpg";
+                        path = "./sprites/ground/grass.jpg";
                         break;
                 }
                 if (num > 10 && num < 32) {
-                    path = "../sprites/ground/start.png";
+                    path = "./sprites/ground/start.png";
                     start = new QPoint((j + 0.5) * SQUARE_SIZE, (i + 0.5) * SQUARE_SIZE);
                     switch (num - 16){
                         case NORTH:
@@ -113,7 +113,7 @@ void Render::drawBackground(QPainter *painter, const QRectF & rect)
 
 void Render::nextWave()
 {
-    QFile file("../map/waves_1");
+    QFile file("./map/waves_1");
     file.open(QIODevice::ReadOnly | QIODevice::Text);
 
     QTextStream in(&file);
