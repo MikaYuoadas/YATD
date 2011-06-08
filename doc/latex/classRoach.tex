@@ -2,6 +2,15 @@
 \section{Référence de la classe Roach}
 \label{classRoach}\index{Roach@{Roach}}
 }
+
+
+Classe représentant un cafard.  
+
+
+
+
+{\ttfamily \#include $<$Roach.h$>$}
+
 Graphe d'héritage de Roach:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -18,16 +27,12 @@ void \hyperlink{classBug_a33f90dffa55e1dce80dc2416c75a53c8}{goalReached} (\hyper
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classRoach_af12999aec092cc5dc1afb0c3f85ee353}{
-{\bfseries Roach} (double x, double y, double s, double start\_\-angle)}
-\label{classRoach_af12999aec092cc5dc1afb0c3f85ee353}
-
-\item 
-\hypertarget{classRoach_a13a922274476d77e17405cbe199ce691}{
-void {\bfseries paint} (QPainter $\ast$painter, const QStyleOptionGraphicsItem $\ast$option, QWidget $\ast$widget)}
-\label{classRoach_a13a922274476d77e17405cbe199ce691}
-
-\item 
+\hyperlink{classRoach_af12999aec092cc5dc1afb0c3f85ee353}{Roach} (double x, double y, double s, double start\_\-angle)
+\begin{DoxyCompactList}\small\item\em Constructeur de \hyperlink{classRoach}{Roach}. \end{DoxyCompactList}\item 
+\hyperlink{classRoach_afc9000ffd6eb13d7280afbe0ef494f4f}{$\sim$Roach} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \hyperlink{classRoach}{Roach}. \end{DoxyCompactList}\item 
+void \hyperlink{classRoach_a13a922274476d77e17405cbe199ce691}{paint} (QPainter $\ast$painter, const QStyleOptionGraphicsItem $\ast$option, QWidget $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Surcharge de la méthode virtuelle pure \hyperlink{classRoach_a13a922274476d77e17405cbe199ce691}{paint()} héritée de QGraphicsObject. \end{DoxyCompactList}\item 
 QRectF \hyperlink{classBug_a9b39c25361faad07b1bf2dd927d09dab}{boundingRect} () const 
 \begin{DoxyCompactList}\small\item\em Surcharge de la fonction boudingRect() hérité de QGraphicsObject. \end{DoxyCompactList}\item 
 QPainterPath \hyperlink{classBug_a587a36d3145c2b4dba6c689af22c65ac}{shape} () const 
@@ -58,12 +63,36 @@ double \hyperlink{classBug_a13b95fbf23748ea853b01bfd0b0e7fc8}{speed}
 \subsection*{Attributs privés}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classRoach_afe6b72503197eb2bacafda9df317b96f}{
-QImage $\ast$ {\bfseries image} \mbox{[}3\mbox{]}}
-\label{classRoach_afe6b72503197eb2bacafda9df317b96f}
+QImage $\ast$ \hyperlink{classRoach_afe6b72503197eb2bacafda9df317b96f}{image} \mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em Cache d'images. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\end{DoxyCompactItemize}
 
+\subsection{Description détaillée}
+Définie les caractéristiques spécifiques aux cafards, comme leur graphisme, leur type de déplacement (CRAWL)... 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classRoach_af12999aec092cc5dc1afb0c3f85ee353}{
+\index{Roach@{Roach}!Roach@{Roach}}
+\index{Roach@{Roach}!Roach@{Roach}}
+\subsubsection[{Roach}]{\setlength{\rightskip}{0pt plus 5cm}Roach::Roach (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{s, }
+\item[{double}]{start\_\-angle}
+\end{DoxyParamCaption}
+)}}
+\label{classRoach_af12999aec092cc5dc1afb0c3f85ee353}
+Appelle le constructeur de \hyperlink{classBug}{Bug} avec les paramètres correspondants aux caractéristiques d'un cafard. \hypertarget{classRoach_afc9000ffd6eb13d7280afbe0ef494f4f}{
+\index{Roach@{Roach}!$\sim$Roach@{$\sim$Roach}}
+\index{$\sim$Roach@{$\sim$Roach}!Roach@{Roach}}
+\subsubsection[{$\sim$Roach}]{\setlength{\rightskip}{0pt plus 5cm}Roach::$\sim$Roach (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classRoach_afc9000ffd6eb13d7280afbe0ef494f4f}
+Désalloue la mémoire correctement. 
 
 \subsection{Documentation des fonctions membres}
 \hypertarget{classBug_a8e0ea03e85c9324a13328da60e5c52ee}{
@@ -150,7 +179,18 @@ Fonction pouvant être appelée pour infliger des dégats à l'insecte (par exem
 
 Réimplémentée dans \hyperlink{classAnt_a64b0e0e7d2605c1a5a0906587ab70920}{Ant}.
 
-\hypertarget{classBug_a587a36d3145c2b4dba6c689af22c65ac}{
+\hypertarget{classRoach_a13a922274476d77e17405cbe199ce691}{
+\index{Roach@{Roach}!paint@{paint}}
+\index{paint@{paint}!Roach@{Roach}}
+\subsubsection[{paint}]{\setlength{\rightskip}{0pt plus 5cm}void Roach::paint (
+\begin{DoxyParamCaption}
+\item[{QPainter $\ast$}]{painter, }
+\item[{const QStyleOptionGraphicsItem $\ast$}]{option, }
+\item[{QWidget $\ast$}]{widget}
+\end{DoxyParamCaption}
+)}}
+\label{classRoach_a13a922274476d77e17405cbe199ce691}
+Est appelé automatiquement par Qt pour redessiner le cafard. \hypertarget{classBug_a587a36d3145c2b4dba6c689af22c65ac}{
 \index{Roach@{Roach}!shape@{shape}}
 \index{shape@{shape}!Roach@{Roach}}
 \subsubsection[{shape}]{\setlength{\rightskip}{0pt plus 5cm}QPainterPath Bug::shape (
@@ -170,7 +210,12 @@ Un object QPainterPath correspondant au contour de collision de l'insecte.
 \index{frame@{frame}!Roach@{Roach}}
 \subsubsection[{frame}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Bug::frame}\hspace{0.3cm}{\ttfamily  \mbox{[}protected, inherited\mbox{]}}}}
 \label{classBug_ad7e3597cf049f1051be94fcaf2fd3598}
-Compteur d'image utilisé pour afficher successivement chaque image des animations. \hypertarget{classBug_a7a93aae4e4b7a215c94ff85d0bd6e26d}{
+Compteur d'image utilisé pour afficher successivement chaque image des animations. \hypertarget{classRoach_afe6b72503197eb2bacafda9df317b96f}{
+\index{Roach@{Roach}!image@{image}}
+\index{image@{image}!Roach@{Roach}}
+\subsubsection[{image}]{\setlength{\rightskip}{0pt plus 5cm}QImage$\ast$ {\bf Roach::image}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classRoach_afe6b72503197eb2bacafda9df317b96f}
+Les images du cafard à chaque position, redimensionnées en fonction de sa taille. \hypertarget{classBug_a7a93aae4e4b7a215c94ff85d0bd6e26d}{
 \index{Roach@{Roach}!parent@{parent}}
 \index{parent@{parent}!Roach@{Roach}}
 \subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Render}$\ast$ {\bf Bug::parent}\hspace{0.3cm}{\ttfamily  \mbox{[}inherited\mbox{]}}}}
