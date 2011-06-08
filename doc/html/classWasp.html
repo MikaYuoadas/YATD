@@ -70,7 +70,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">Référence de la classe Wasp</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="Wasp" --><!-- doxytag: inherits="Bug" --><div class="dynheader">
+<!-- doxytag: class="Wasp" --><!-- doxytag: inherits="Bug" -->
+<p>Classe représentant les guêpes.  
+ <a href="classWasp.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Wasp_8h_source.html">Wasp.h</a>&gt;</code></p>
+<div class="dynheader">
 Graphe d'héritage de Wasp:</div>
 <div class="dyncontent">
  <div class="center">
@@ -88,10 +93,12 @@ Signaux</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal d'arrivé.  <a href="#a33f90dffa55e1dce80dc2416c75a53c8"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04c7736d744ab1c36b075f1e98ec93c2"></a><!-- doxytag: member="Wasp::Wasp" ref="a04c7736d744ab1c36b075f1e98ec93c2" args="(double x, double y, double s, double start_angle)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>Wasp</b> (double x, double y, double s, double start_angle)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac37833715ac95ea82a89c5cbd0fa26fb"></a><!-- doxytag: member="Wasp::paint" ref="ac37833715ac95ea82a89c5cbd0fa26fb" args="(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>paint</b> (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWasp.html#a04c7736d744ab1c36b075f1e98ec93c2">Wasp</a> (double x, double y, double s, double start_angle)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de <a class="el" href="classWasp.html" title="Classe représentant les guêpes.">Wasp</a>.  <a href="#a04c7736d744ab1c36b075f1e98ec93c2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWasp.html#ac4b6b3f99b8a044cc2047144f0e44bb1">~Wasp</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur de <a class="el" href="classWasp.html" title="Classe représentant les guêpes.">Wasp</a>.  <a href="#ac4b6b3f99b8a044cc2047144f0e44bb1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWasp.html#ac37833715ac95ea82a89c5cbd0fa26fb">paint</a> (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Surcharge de la méthode virtuelle pure <a class="el" href="classWasp.html#ac37833715ac95ea82a89c5cbd0fa26fb" title="Surcharge de la méthode virtuelle pure paint() héritée de QGraphicsObject.">paint()</a> héritée de QGraphicsObject.  <a href="#ac37833715ac95ea82a89c5cbd0fa26fb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QRectF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBug.html#a9b39c25361faad07b1bf2dd927d09dab">boundingRect</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Surcharge de la fonction boudingRect() héritée de QGraphicsObject.  <a href="#a9b39c25361faad07b1bf2dd927d09dab"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPainterPath&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBug.html#a587a36d3145c2b4dba6c689af22c65ac">shape</a> () const </td></tr>
@@ -118,9 +125,78 @@ Attributs protégés</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Vitesse de base.  <a href="#a13b95fbf23748ea853b01bfd0b0e7fc8"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abdd2e9eb377bb31907494f72067691f8"></a><!-- doxytag: member="Wasp::image" ref="abdd2e9eb377bb31907494f72067691f8" args="[2]" -->
-QImage *&#160;</td><td class="memItemRight" valign="bottom"><b>image</b> [2]</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QImage *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWasp.html#abdd2e9eb377bb31907494f72067691f8">image</a> [2]</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache d'images.  <a href="#abdd2e9eb377bb31907494f72067691f8"></a><br/></td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Définie les caractéristiques propres aux guêpes. </p>
+</div><hr/><h2>Documentation des constructeurs et destructeur</h2>
+<a class="anchor" id="a04c7736d744ab1c36b075f1e98ec93c2"></a><!-- doxytag: member="Wasp::Wasp" ref="a04c7736d744ab1c36b075f1e98ec93c2" args="(double x, double y, double s, double start_angle)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Wasp::Wasp </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>start_angle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Appelle le constructeur de <a class="el" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> avec les paramètres spécifiques aux guêpes. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>L'abscisse du départ des insectes. </td></tr>
+    <tr><td class="paramname">y</td><td>L'ordonnée du départ des insectes. </td></tr>
+    <tr><td class="paramname">s</td><td>La taille de la guêpe. </td></tr>
+    <tr><td class="paramname">start_angle</td><td>l'angle de départ des insectes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac4b6b3f99b8a044cc2047144f0e44bb1"></a><!-- doxytag: member="Wasp::~Wasp" ref="ac4b6b3f99b8a044cc2047144f0e44bb1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Wasp::~Wasp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Désalloue la mémoire des images. </p>
+
+</div>
+</div>
 <hr/><h2>Documentation des fonctions membres</h2>
 <a class="anchor" id="a8e0ea03e85c9324a13328da60e5c52ee"></a><!-- doxytag: member="Wasp::advance" ref="a8e0ea03e85c9324a13328da60e5c52ee" args="(int step)" -->
 <div class="memitem">
@@ -255,6 +331,40 @@ QImage *&#160;</td><td class="memItemRight" valign="bottom"><b>image</b> [2]</td
 
 </div>
 </div>
+<a class="anchor" id="ac37833715ac95ea82a89c5cbd0fa26fb"></a><!-- doxytag: member="Wasp::paint" ref="ac37833715ac95ea82a89c5cbd0fa26fb" args="(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Wasp::paint </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *&#160;</td>
+          <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QStyleOptionGraphicsItem *&#160;</td>
+          <td class="paramname"><em>option</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>widget</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Est appelé automatiquement par Qt pour dessiner la guêpe. </p>
+
+</div>
+</div>
 <a class="anchor" id="a587a36d3145c2b4dba6c689af22c65ac"></a><!-- doxytag: member="Wasp::shape" ref="a587a36d3145c2b4dba6c689af22c65ac" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -285,6 +395,20 @@ QImage *&#160;</td><td class="memItemRight" valign="bottom"><b>image</b> [2]</td
 </div>
 <div class="memdoc">
 <p>Compteur d'image utilisé pour afficher successivement chaque image des animations. </p>
+
+</div>
+</div>
+<a class="anchor" id="abdd2e9eb377bb31907494f72067691f8"></a><!-- doxytag: member="Wasp::image" ref="abdd2e9eb377bb31907494f72067691f8" args="[2]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QImage* <a class="el" href="classWasp.html#abdd2e9eb377bb31907494f72067691f8">Wasp::image</a>[2]<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Les images de la guêpes redimensionnées. </p>
 
 </div>
 </div>

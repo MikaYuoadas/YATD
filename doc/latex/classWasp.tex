@@ -2,6 +2,15 @@
 \section{Référence de la classe Wasp}
 \label{classWasp}\index{Wasp@{Wasp}}
 }
+
+
+Classe représentant les guêpes.  
+
+
+
+
+{\ttfamily \#include $<$Wasp.h$>$}
+
 Graphe d'héritage de Wasp:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -18,16 +27,12 @@ void \hyperlink{classBug_a33f90dffa55e1dce80dc2416c75a53c8}{goalReached} (\hyper
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classWasp_a04c7736d744ab1c36b075f1e98ec93c2}{
-{\bfseries Wasp} (double x, double y, double s, double start\_\-angle)}
-\label{classWasp_a04c7736d744ab1c36b075f1e98ec93c2}
-
-\item 
-\hypertarget{classWasp_ac37833715ac95ea82a89c5cbd0fa26fb}{
-void {\bfseries paint} (QPainter $\ast$painter, const QStyleOptionGraphicsItem $\ast$option, QWidget $\ast$widget)}
-\label{classWasp_ac37833715ac95ea82a89c5cbd0fa26fb}
-
-\item 
+\hyperlink{classWasp_a04c7736d744ab1c36b075f1e98ec93c2}{Wasp} (double x, double y, double s, double start\_\-angle)
+\begin{DoxyCompactList}\small\item\em Constructeur de \hyperlink{classWasp}{Wasp}. \end{DoxyCompactList}\item 
+\hyperlink{classWasp_ac4b6b3f99b8a044cc2047144f0e44bb1}{$\sim$Wasp} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \hyperlink{classWasp}{Wasp}. \end{DoxyCompactList}\item 
+void \hyperlink{classWasp_ac37833715ac95ea82a89c5cbd0fa26fb}{paint} (QPainter $\ast$painter, const QStyleOptionGraphicsItem $\ast$option, QWidget $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Surcharge de la méthode virtuelle pure \hyperlink{classWasp_ac37833715ac95ea82a89c5cbd0fa26fb}{paint()} héritée de QGraphicsObject. \end{DoxyCompactList}\item 
 QRectF \hyperlink{classBug_a9b39c25361faad07b1bf2dd927d09dab}{boundingRect} () const 
 \begin{DoxyCompactList}\small\item\em Surcharge de la fonction boudingRect() héritée de QGraphicsObject. \end{DoxyCompactList}\item 
 QPainterPath \hyperlink{classBug_a587a36d3145c2b4dba6c689af22c65ac}{shape} () const 
@@ -58,12 +63,47 @@ double \hyperlink{classBug_a13b95fbf23748ea853b01bfd0b0e7fc8}{speed}
 \subsection*{Attributs privés}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classWasp_abdd2e9eb377bb31907494f72067691f8}{
-QImage $\ast$ {\bfseries image} \mbox{[}2\mbox{]}}
-\label{classWasp_abdd2e9eb377bb31907494f72067691f8}
+QImage $\ast$ \hyperlink{classWasp_abdd2e9eb377bb31907494f72067691f8}{image} \mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em Cache d'images. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\end{DoxyCompactItemize}
 
+\subsection{Description détaillée}
+Définie les caractéristiques propres aux guêpes. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classWasp_a04c7736d744ab1c36b075f1e98ec93c2}{
+\index{Wasp@{Wasp}!Wasp@{Wasp}}
+\index{Wasp@{Wasp}!Wasp@{Wasp}}
+\subsubsection[{Wasp}]{\setlength{\rightskip}{0pt plus 5cm}Wasp::Wasp (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{s, }
+\item[{double}]{start\_\-angle}
+\end{DoxyParamCaption}
+)}}
+\label{classWasp_a04c7736d744ab1c36b075f1e98ec93c2}
+Appelle le constructeur de \hyperlink{classBug}{Bug} avec les paramètres spécifiques aux guêpes. 
+\begin{DoxyParams}{Paramètres}
+{\em x} & L'abscisse du départ des insectes. \\
+\hline
+{\em y} & L'ordonnée du départ des insectes. \\
+\hline
+{\em s} & La taille de la guêpe. \\
+\hline
+{\em start\_\-angle} & l'angle de départ des insectes. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classWasp_ac4b6b3f99b8a044cc2047144f0e44bb1}{
+\index{Wasp@{Wasp}!$\sim$Wasp@{$\sim$Wasp}}
+\index{$\sim$Wasp@{$\sim$Wasp}!Wasp@{Wasp}}
+\subsubsection[{$\sim$Wasp}]{\setlength{\rightskip}{0pt plus 5cm}Wasp::$\sim$Wasp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classWasp_ac4b6b3f99b8a044cc2047144f0e44bb1}
+Désalloue la mémoire des images. 
 
 \subsection{Documentation des fonctions membres}
 \hypertarget{classBug_a8e0ea03e85c9324a13328da60e5c52ee}{
@@ -150,7 +190,18 @@ Fonction pouvant être appelée pour infliger des dégats à l'insecte (par exem
 
 Réimplémentée dans \hyperlink{classAnt_a64b0e0e7d2605c1a5a0906587ab70920}{Ant}.
 
-\hypertarget{classBug_a587a36d3145c2b4dba6c689af22c65ac}{
+\hypertarget{classWasp_ac37833715ac95ea82a89c5cbd0fa26fb}{
+\index{Wasp@{Wasp}!paint@{paint}}
+\index{paint@{paint}!Wasp@{Wasp}}
+\subsubsection[{paint}]{\setlength{\rightskip}{0pt plus 5cm}void Wasp::paint (
+\begin{DoxyParamCaption}
+\item[{QPainter $\ast$}]{painter, }
+\item[{const QStyleOptionGraphicsItem $\ast$}]{option, }
+\item[{QWidget $\ast$}]{widget}
+\end{DoxyParamCaption}
+)}}
+\label{classWasp_ac37833715ac95ea82a89c5cbd0fa26fb}
+Est appelé automatiquement par Qt pour dessiner la guêpe. \hypertarget{classBug_a587a36d3145c2b4dba6c689af22c65ac}{
 \index{Wasp@{Wasp}!shape@{shape}}
 \index{shape@{shape}!Wasp@{Wasp}}
 \subsubsection[{shape}]{\setlength{\rightskip}{0pt plus 5cm}QPainterPath Bug::shape (
@@ -170,7 +221,12 @@ Un object QPainterPath correspondant au contour de collision de l'insecte.
 \index{frame@{frame}!Wasp@{Wasp}}
 \subsubsection[{frame}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Bug::frame}\hspace{0.3cm}{\ttfamily  \mbox{[}protected, inherited\mbox{]}}}}
 \label{classBug_ad7e3597cf049f1051be94fcaf2fd3598}
-Compteur d'image utilisé pour afficher successivement chaque image des animations. \hypertarget{classBug_a7a93aae4e4b7a215c94ff85d0bd6e26d}{
+Compteur d'image utilisé pour afficher successivement chaque image des animations. \hypertarget{classWasp_abdd2e9eb377bb31907494f72067691f8}{
+\index{Wasp@{Wasp}!image@{image}}
+\index{image@{image}!Wasp@{Wasp}}
+\subsubsection[{image}]{\setlength{\rightskip}{0pt plus 5cm}QImage$\ast$ {\bf Wasp::image}\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classWasp_abdd2e9eb377bb31907494f72067691f8}
+Les images de la guêpes redimensionnées. \hypertarget{classBug_a7a93aae4e4b7a215c94ff85d0bd6e26d}{
 \index{Wasp@{Wasp}!parent@{parent}}
 \index{parent@{parent}!Wasp@{Wasp}}
 \subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Render}$\ast$ {\bf Bug::parent}\hspace{0.3cm}{\ttfamily  \mbox{[}inherited\mbox{]}}}}
