@@ -66,22 +66,148 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">Référence de la classe Hatchery</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="Hatchery" --><table class="memberdecls">
+<!-- doxytag: class="Hatchery" -->
+<p>Classe implémentation du design pattern Factory.  
+ <a href="classHatchery.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Hatchery_8h_source.html">Hatchery.h</a>&gt;</code></p>
+<table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e86b7578b70f37fb3f7ed2e69c765b7"></a><!-- doxytag: member="Hatchery::Hatchery" ref="a8e86b7578b70f37fb3f7ed2e69c765b7" args="(double start_x, double start_y, double start_angle)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>Hatchery</b> (double start_x, double start_y, double start_angle)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af90645b2be3e8890829a69347846a934"></a><!-- doxytag: member="Hatchery::spawnBug" ref="af90645b2be3e8890829a69347846a934" args="(QString race, double size)" -->
-<a class="el" href="classBug.html">Bug</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>spawnBug</b> (QString race, double size)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHatchery.html#a8e86b7578b70f37fb3f7ed2e69c765b7">Hatchery</a> (double start_x, double start_y, double start_angle)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur d'Hatchery.  <a href="#a8e86b7578b70f37fb3f7ed2e69c765b7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBug.html">Bug</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHatchery.html#af90645b2be3e8890829a69347846a934">spawnBug</a> (QString race, double size)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée un nouvel insecte de la race et de la taille données.  <a href="#af90645b2be3e8890829a69347846a934"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae56bf748a2046b42e2b174c17e4caeda"></a><!-- doxytag: member="Hatchery::x" ref="ae56bf748a2046b42e2b174c17e4caeda" args="" -->
-double&#160;</td><td class="memItemRight" valign="bottom"><b>x</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a99f0ef4a290d0bc1e65976b5979b29b7"></a><!-- doxytag: member="Hatchery::y" ref="a99f0ef4a290d0bc1e65976b5979b29b7" args="" -->
-double&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e56c9314b9a9dfe1718d43e30f3d4d0"></a><!-- doxytag: member="Hatchery::angle" ref="a4e56c9314b9a9dfe1718d43e30f3d4d0" args="" -->
-double&#160;</td><td class="memItemRight" valign="bottom"><b>angle</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHatchery.html#ae56bf748a2046b42e2b174c17e4caeda">x</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Abscisse du spawn des insectes.  <a href="#ae56bf748a2046b42e2b174c17e4caeda"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHatchery.html#a99f0ef4a290d0bc1e65976b5979b29b7">y</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordonnée du spawn des insectes.  <a href="#a99f0ef4a290d0bc1e65976b5979b29b7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHatchery.html#a4e56c9314b9a9dfe1718d43e30f3d4d0">angle</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Angle vers lequel fait face le spawn des insectes.  <a href="#a4e56c9314b9a9dfe1718d43e30f3d4d0"></a><br/></td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Design pattern Factory utilisé pour créer un nouvel insecte au niveau du spawn. </p>
+</div><hr/><h2>Documentation des constructeurs et destructeur</h2>
+<a class="anchor" id="a8e86b7578b70f37fb3f7ed2e69c765b7"></a><!-- doxytag: member="Hatchery::Hatchery" ref="a8e86b7578b70f37fb3f7ed2e69c765b7" args="(double start_x, double start_y, double start_angle)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Hatchery::Hatchery </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>start_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>start_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>start_angle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Permet d'instancier un objet <a class="el" href="classHatchery.html" title="Classe implémentation du design pattern Factory.">Hatchery</a> pour initialiser la position et l'angle du spawn des insectes. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start_x</td><td>Un double correspondant à l'abscisse du point de départ des insectes. </td></tr>
+    <tr><td class="paramname">start_y</td><td>Un double correspondant à l'ordonnée du point de départ des insectes. </td></tr>
+    <tr><td class="paramname">start_angle</td><td>Un double correspondant à l'angle de départ des insectes (en degré). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Documentation des fonctions membres</h2>
+<a class="anchor" id="af90645b2be3e8890829a69347846a934"></a><!-- doxytag: member="Hatchery::spawnBug" ref="af90645b2be3e8890829a69347846a934" args="(QString race, double size)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classBug.html">Bug</a> * Hatchery::spawnBug </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>race</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">race</td><td>Un QString donnant la race de l'insecte a créer. </td></tr>
+    <tr><td class="paramname">size</td><td>Un double donnant la taille de l'insecte. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Un pointeur vers l'insecte créé. </dd></dl>
+
+</div>
+</div>
+<hr/><h2>Documentation des champs</h2>
+<a class="anchor" id="a4e56c9314b9a9dfe1718d43e30f3d4d0"></a><!-- doxytag: member="Hatchery::angle" ref="a4e56c9314b9a9dfe1718d43e30f3d4d0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classHatchery.html#a4e56c9314b9a9dfe1718d43e30f3d4d0">Hatchery::angle</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae56bf748a2046b42e2b174c17e4caeda"></a><!-- doxytag: member="Hatchery::x" ref="ae56bf748a2046b42e2b174c17e4caeda" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classHatchery.html#ae56bf748a2046b42e2b174c17e4caeda">Hatchery::x</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a99f0ef4a290d0bc1e65976b5979b29b7"></a><!-- doxytag: member="Hatchery::y" ref="a99f0ef4a290d0bc1e65976b5979b29b7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classHatchery.html#a99f0ef4a290d0bc1e65976b5979b29b7">Hatchery::y</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>src/<a class="el" href="Hatchery_8h_source.html">Hatchery.h</a></li>
 <li>src/Hatchery.cpp</li>

@@ -2,37 +2,98 @@
 \section{Référence de la classe Hatchery}
 \label{classHatchery}\index{Hatchery@{Hatchery}}
 }
+
+
+Classe implémentation du design pattern Factory.  
+
+
+
+
+{\ttfamily \#include $<$Hatchery.h$>$}
+
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classHatchery_a8e86b7578b70f37fb3f7ed2e69c765b7}{
-{\bfseries Hatchery} (double start\_\-x, double start\_\-y, double start\_\-angle)}
-\label{classHatchery_a8e86b7578b70f37fb3f7ed2e69c765b7}
-
-\item 
-\hypertarget{classHatchery_af90645b2be3e8890829a69347846a934}{
-\hyperlink{classBug}{Bug} $\ast$ {\bfseries spawnBug} (QString race, double size)}
-\label{classHatchery_af90645b2be3e8890829a69347846a934}
-
-\end{DoxyCompactItemize}
+\hyperlink{classHatchery_a8e86b7578b70f37fb3f7ed2e69c765b7}{Hatchery} (double start\_\-x, double start\_\-y, double start\_\-angle)
+\begin{DoxyCompactList}\small\item\em Constructeur d'Hatchery. \end{DoxyCompactList}\item 
+\hyperlink{classBug}{Bug} $\ast$ \hyperlink{classHatchery_af90645b2be3e8890829a69347846a934}{spawnBug} (QString race, double size)
+\begin{DoxyCompactList}\small\item\em Crée un nouvel insecte de la race et de la taille données. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Attributs privés}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classHatchery_ae56bf748a2046b42e2b174c17e4caeda}{
-double {\bfseries x}}
-\label{classHatchery_ae56bf748a2046b42e2b174c17e4caeda}
+double \hyperlink{classHatchery_ae56bf748a2046b42e2b174c17e4caeda}{x}
+\begin{DoxyCompactList}\small\item\em Abscisse du spawn des insectes. \end{DoxyCompactList}\item 
+double \hyperlink{classHatchery_a99f0ef4a290d0bc1e65976b5979b29b7}{y}
+\begin{DoxyCompactList}\small\item\em Ordonnée du spawn des insectes. \end{DoxyCompactList}\item 
+double \hyperlink{classHatchery_a4e56c9314b9a9dfe1718d43e30f3d4d0}{angle}
+\begin{DoxyCompactList}\small\item\em Angle vers lequel fait face le spawn des insectes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\item 
-\hypertarget{classHatchery_a99f0ef4a290d0bc1e65976b5979b29b7}{
-double {\bfseries y}}
-\label{classHatchery_a99f0ef4a290d0bc1e65976b5979b29b7}
 
-\item 
+\subsection{Description détaillée}
+Design pattern Factory utilisé pour créer un nouvel insecte au niveau du spawn. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classHatchery_a8e86b7578b70f37fb3f7ed2e69c765b7}{
+\index{Hatchery@{Hatchery}!Hatchery@{Hatchery}}
+\index{Hatchery@{Hatchery}!Hatchery@{Hatchery}}
+\subsubsection[{Hatchery}]{\setlength{\rightskip}{0pt plus 5cm}Hatchery::Hatchery (
+\begin{DoxyParamCaption}
+\item[{double}]{start\_\-x, }
+\item[{double}]{start\_\-y, }
+\item[{double}]{start\_\-angle}
+\end{DoxyParamCaption}
+)}}
+\label{classHatchery_a8e86b7578b70f37fb3f7ed2e69c765b7}
+Permet d'instancier un objet \hyperlink{classHatchery}{Hatchery} pour initialiser la position et l'angle du spawn des insectes. 
+\begin{DoxyParams}{Paramètres}
+{\em start\_\-x} & Un double correspondant à l'abscisse du point de départ des insectes. \\
+\hline
+{\em start\_\-y} & Un double correspondant à l'ordonnée du point de départ des insectes. \\
+\hline
+{\em start\_\-angle} & Un double correspondant à l'angle de départ des insectes (en degré). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classHatchery_af90645b2be3e8890829a69347846a934}{
+\index{Hatchery@{Hatchery}!spawnBug@{spawnBug}}
+\index{spawnBug@{spawnBug}!Hatchery@{Hatchery}}
+\subsubsection[{spawnBug}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Bug} $\ast$ Hatchery::spawnBug (
+\begin{DoxyParamCaption}
+\item[{QString}]{race, }
+\item[{double}]{size}
+\end{DoxyParamCaption}
+)}}
+\label{classHatchery_af90645b2be3e8890829a69347846a934}
+
+\begin{DoxyParams}{Paramètres}
+{\em race} & Un QString donnant la race de l'insecte a créer. \\
+\hline
+{\em size} & Un double donnant la taille de l'insecte. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers l'insecte créé. 
+\end{DoxyReturn}
+
+
+\subsection{Documentation des champs}
 \hypertarget{classHatchery_a4e56c9314b9a9dfe1718d43e30f3d4d0}{
-double {\bfseries angle}}
+\index{Hatchery@{Hatchery}!angle@{angle}}
+\index{angle@{angle}!Hatchery@{Hatchery}}
+\subsubsection[{angle}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf Hatchery::angle}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
 \label{classHatchery_a4e56c9314b9a9dfe1718d43e30f3d4d0}
-
-\end{DoxyCompactItemize}
+\hypertarget{classHatchery_ae56bf748a2046b42e2b174c17e4caeda}{
+\index{Hatchery@{Hatchery}!x@{x}}
+\index{x@{x}!Hatchery@{Hatchery}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf Hatchery::x}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classHatchery_ae56bf748a2046b42e2b174c17e4caeda}
+\hypertarget{classHatchery_a99f0ef4a290d0bc1e65976b5979b29b7}{
+\index{Hatchery@{Hatchery}!y@{y}}
+\index{y@{y}!Hatchery@{Hatchery}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf Hatchery::y}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classHatchery_a99f0ef4a290d0bc1e65976b5979b29b7}
 
 
 La documentation de cette classe a été générée à partir des fichiers suivants :\begin{DoxyCompactItemize}

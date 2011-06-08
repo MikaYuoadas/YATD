@@ -3,18 +3,25 @@
 .nh
 .SH NAME
 Hatchery \- 
+.PP
+Classe implémentation du design pattern Factory.  
+
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <Hatchery.h>\fP
 .SS "Fonctions membres publiques"
 
 .in +1c
 .ti -1c
 .RI "\fBHatchery\fP (double start_x, double start_y, double start_angle)"
 .br
+.RI "\fIConstructeur d'Hatchery. \fP"
 .ti -1c
 .RI "\fBBug\fP * \fBspawnBug\fP (QString race, double size)"
 .br
+.RI "\fICrée un nouvel insecte de la race et de la taille données. \fP"
 .in -1c
 .SS "Attributs privés"
 
@@ -22,13 +29,53 @@ Hatchery \-
 .ti -1c
 .RI "double \fBx\fP"
 .br
+.RI "\fIAbscisse du spawn des insectes. \fP"
 .ti -1c
 .RI "double \fBy\fP"
 .br
+.RI "\fIOrdonnée du spawn des insectes. \fP"
 .ti -1c
 .RI "double \fBangle\fP"
 .br
+.RI "\fIAngle vers lequel fait face le spawn des insectes. \fP"
 .in -1c
+.SH "Description détaillée"
+.PP 
+Design pattern Factory utilisé pour créer un nouvel insecte au niveau du spawn. 
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Hatchery::Hatchery (doublestart_x, doublestart_y, doublestart_angle)"Permet d'instancier un objet \fBHatchery\fP pour initialiser la position et l'angle du spawn des insectes. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIstart_x\fP Un double correspondant à l'abscisse du point de départ des insectes. 
+.br
+\fIstart_y\fP Un double correspondant à l'ordonnée du point de départ des insectes. 
+.br
+\fIstart_angle\fP Un double correspondant à l'angle de départ des insectes (en degré). 
+.RE
+.PP
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "\fBBug\fP * Hatchery::spawnBug (QStringrace, doublesize)"\fBParamètres:\fP
+.RS 4
+\fIrace\fP Un QString donnant la race de l'insecte a créer. 
+.br
+\fIsize\fP Un double donnant la taille de l'insecte. 
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+Un pointeur vers l'insecte créé. 
+.RE
+.PP
+
+.SH "Documentation des champs"
+.PP 
+.SS "double \fBHatchery::angle\fP\fC [private]\fP"
+.SS "double \fBHatchery::x\fP\fC [private]\fP"
+.SS "double \fBHatchery::y\fP\fC [private]\fP"
 
 .SH "Auteur"
 .PP 
