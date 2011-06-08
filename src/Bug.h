@@ -51,13 +51,13 @@ class Bug : public QGraphicsObject
          */
         Bug(double x, double y, double s, double health, double res, double start_angle, double init_speed, short int type);
         /**
-         * Surcharge de la fonction boudingRect() hérité de QGraphicsObject.
+         * Surcharge de la fonction boudingRect() héritée de QGraphicsObject.
          * Fonction appelé automatiquement par QT pour savoir s'il doit ou non réafficher l'insecte.
          * @return Un objet QRectF correspondant au rectangle englobant l'ensemble du dessin de l'insecte.
          */
         QRectF boundingRect() const;
         /**
-         * Surcharge de la méthode virtuelle pure shape() hérité de QGraphicsObject.
+         * Surcharge de la méthode virtuelle pure shape() héritée de QGraphicsObject.
          * Fonction utilisé par QT pour traiter les collisions entre objets graphiques.
          * @return Un object QPainterPath correspondant au contour de collision de l'insecte.
          */
