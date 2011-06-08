@@ -8,7 +8,7 @@
 #include "Bug.h"
 
 /**
- * Classe représentant les fourmis. Définie les caractéristiques spécifiques aux fourmis, comme leur graphisme, leur type de déplacement (FLY ou CRAWL)...
+ * Classe représentant les fourmis. Définie les caractéristiques spécifiques aux fourmis, comme leur graphisme, leur type de déplacement (CRAWL)...
  */
 class Ant : public Bug
 {
@@ -16,7 +16,7 @@ class Ant : public Bug
 
     private:
         QImage * image[3]; /**< Cache d'images. Les images de la fourmis à chaque position, redimensionnées en fonction de sa taille et mises en cache pour un affichage plus rapide.*/
-        QTimer * timer; /**< Timer de ralentissement. Quand une fourmis est blessée, elle accélère pendant 5 secondes, ce timer permet de faire ce décompte.*/
+        QTimer * timer;    /**< Timer de ralentissement. Quand une fourmis est blessée, elle accélère pendant 5 secondes, ce timer permet de faire ce décompte.*/
 
     public:
         /**
@@ -24,7 +24,7 @@ class Ant : public Bug
          * Ce constructeur initialise les images en cache de la fourmi et appelle le constructeur parent (Bug) avec les bons paramètres correspondant aux caractéristique d'une fourmi.
          * @param x Un double correspondant à l'abscisse du point de départ des insectes.
          * @param y Un double correspondant à l'ordonnée du point de départ des insectes.
-         * @param s La taille de la fourmi, influe sur la taille de la représentation graphiques et sur ses autres caractéristiques.
+         * @param s La taille de la fourmi, influe sur la taille de la représentation graphique et sur ses autres caractéristiques.
          * @param start_angle L'angle vers lequel fait face le départ des insectes.
          */
         Ant(double x, double y, double s, double start_angle);
