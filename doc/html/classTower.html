@@ -69,66 +69,485 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">Référence de la classe Tower</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="Tower" --><table class="memberdecls">
+<!-- doxytag: class="Tower" -->
+<p>Classe représentant toutes les défenses.  
+ <a href="classTower.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Tower_8h_source.html">Tower.h</a>&gt;</code></p>
+<table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-slots"></a>
 Connecteurs publics</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0c9c780f48cffacd3da6877f5d4fdc2"></a><!-- doxytag: member="Tower::fire" ref="aa0c9c780f48cffacd3da6877f5d4fdc2" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>fire</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#aa0c9c780f48cffacd3da6877f5d4fdc2">fire</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal de tir reçu.  <a href="#aa0c9c780f48cffacd3da6877f5d4fdc2"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="signals"></a>
 Signaux</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa303fa5bcabcf781c459d129b01ecfe8"></a><!-- doxytag: member="Tower::projectile" ref="aa303fa5bcabcf781c459d129b01ecfe8" args="(Projectile *missile)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>projectile</b> (<a class="el" href="classProjectile.html">Projectile</a> *missile)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#aa303fa5bcabcf781c459d129b01ecfe8">projectile</a> (<a class="el" href="classProjectile.html">Projectile</a> *missile)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Création de projectile.  <a href="#aa303fa5bcabcf781c459d129b01ecfe8"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f9ceffca6b5ac42bd49619175cd5a22"></a><!-- doxytag: member="Tower::Tower" ref="a7f9ceffca6b5ac42bd49619175cd5a22" args="(QPointF buildPos, QString typeTower)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>Tower</b> (QPointF buildPos, QString typeTower)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8fc14fa547a388fa8500f39551019d87"></a><!-- doxytag: member="Tower::boundingRect" ref="a8fc14fa547a388fa8500f39551019d87" args="() const " -->
-QRectF&#160;</td><td class="memItemRight" valign="bottom"><b>boundingRect</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0804070755704b426ef9edaadc58e46"></a><!-- doxytag: member="Tower::paint" ref="ad0804070755704b426ef9edaadc58e46" args="(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>paint</b> (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e330af9db954014fc40c2b5533095a1"></a><!-- doxytag: member="Tower::getType" ref="a0e330af9db954014fc40c2b5533095a1" args="()" -->
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad56d1012706fe2b0d189bc5b3c0bdaad"></a><!-- doxytag: member="Tower::getRange" ref="ad56d1012706fe2b0d189bc5b3c0bdaad" args="()" -->
-double&#160;</td><td class="memItemRight" valign="bottom"><b>getRange</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afefd70c063a5e89d2490c3b4824d9684"></a><!-- doxytag: member="Tower::getLvl" ref="afefd70c063a5e89d2490c3b4824d9684" args="()" -->
-short int&#160;</td><td class="memItemRight" valign="bottom"><b>getLvl</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abee41b219b8d886e34e4a7c9087d80fc"></a><!-- doxytag: member="Tower::getFirerate" ref="abee41b219b8d886e34e4a7c9087d80fc" args="()" -->
-double&#160;</td><td class="memItemRight" valign="bottom"><b>getFirerate</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a604ad233aaa46b85c8dfddc142154697"></a><!-- doxytag: member="Tower::getPrice" ref="a604ad233aaa46b85c8dfddc142154697" args="()" -->
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getPrice</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67d7ca07ddc7b0fec53ca0c2b48295e9"></a><!-- doxytag: member="Tower::getUpgCost" ref="a67d7ca07ddc7b0fec53ca0c2b48295e9" args="()" -->
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getUpgCost</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac732f3dd9c995a84da0ada08b8346f8f"></a><!-- doxytag: member="Tower::upgrade" ref="ac732f3dd9c995a84da0ada08b8346f8f" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>upgrade</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#a7f9ceffca6b5ac42bd49619175cd5a22">Tower</a> (QPointF buildPos, QString typeTower)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de <a class="el" href="classTower.html" title="Classe représentant toutes les défenses.">Tower</a>.  <a href="#a7f9ceffca6b5ac42bd49619175cd5a22"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QRectF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#a8fc14fa547a388fa8500f39551019d87">boundingRect</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Surcharge de la méthode virtuelle pure boudingRect() héritée de QGraphicsObject.  <a href="#a8fc14fa547a388fa8500f39551019d87"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#ad0804070755704b426ef9edaadc58e46">paint</a> (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Surcharge de la méthode virtuelle pure <a class="el" href="classTower.html#ad0804070755704b426ef9edaadc58e46" title="Surcharge de la méthode virtuelle pure paint() héritée de QGraphicsObject.">paint()</a> héritée de QGraphicsObject.  <a href="#ad0804070755704b426ef9edaadc58e46"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#a0e330af9db954014fc40c2b5533095a1">getType</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Assesseur.  <a href="#a0e330af9db954014fc40c2b5533095a1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#ad56d1012706fe2b0d189bc5b3c0bdaad">getRange</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Assesseur.  <a href="#ad56d1012706fe2b0d189bc5b3c0bdaad"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">short int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#afefd70c063a5e89d2490c3b4824d9684">getLvl</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Assesseur.  <a href="#afefd70c063a5e89d2490c3b4824d9684"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#abee41b219b8d886e34e4a7c9087d80fc">getFirerate</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Assesseur.  <a href="#abee41b219b8d886e34e4a7c9087d80fc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#a604ad233aaa46b85c8dfddc142154697">getPrice</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Assesseur.  <a href="#a604ad233aaa46b85c8dfddc142154697"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#a67d7ca07ddc7b0fec53ca0c2b48295e9">getUpgCost</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Assesseur.  <a href="#a67d7ca07ddc7b0fec53ca0c2b48295e9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#ac732f3dd9c995a84da0ada08b8346f8f">upgrade</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Amélioration de la défense.  <a href="#ac732f3dd9c995a84da0ada08b8346f8f"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Champs de données</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af840ab6d1ec47afde8beca150ee5ef60"></a><!-- doxytag: member="Tower::parent" ref="af840ab6d1ec47afde8beca150ee5ef60" args="" -->
-<a class="el" href="classRender.html">Render</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>parent</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRender.html">Render</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#af840ab6d1ec47afde8beca150ee5ef60">parent</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">L'objet <a class="el" href="classRender.html" title="Classe gérant le rendu graphique du jeu.">Render</a> parent de la défense.  <a href="#af840ab6d1ec47afde8beca150ee5ef60"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a719d8065544dd9e0285424cae755bb"></a><!-- doxytag: member="Tower::level" ref="a4a719d8065544dd9e0285424cae755bb" args="" -->
-short int&#160;</td><td class="memItemRight" valign="bottom"><b>level</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0899f8dc1ce4d15d9c27df3c3a9609d"></a><!-- doxytag: member="Tower::price" ref="ab0899f8dc1ce4d15d9c27df3c3a9609d" args="" -->
-float&#160;</td><td class="memItemRight" valign="bottom"><b>price</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a141e6c72b5190821851e02a5ca412535"></a><!-- doxytag: member="Tower::upg1" ref="a141e6c72b5190821851e02a5ca412535" args="" -->
-float&#160;</td><td class="memItemRight" valign="bottom"><b>upg1</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53ab9046925a4c9b403fb41b0ca4a5d4"></a><!-- doxytag: member="Tower::upg2" ref="a53ab9046925a4c9b403fb41b0ca4a5d4" args="" -->
-float&#160;</td><td class="memItemRight" valign="bottom"><b>upg2</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd813990a1ae3b4300a54b38db0e1c51"></a><!-- doxytag: member="Tower::color" ref="abd813990a1ae3b4300a54b38db0e1c51" args="" -->
-QColor&#160;</td><td class="memItemRight" valign="bottom"><b>color</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d2457327dd9be1bd9840f0654c3b76f"></a><!-- doxytag: member="Tower::targetType" ref="a7d2457327dd9be1bd9840f0654c3b76f" args="" -->
-short int&#160;</td><td class="memItemRight" valign="bottom"><b>targetType</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a435abff8e426dcff8d0650f663417a71"></a><!-- doxytag: member="Tower::range" ref="a435abff8e426dcff8d0650f663417a71" args="" -->
-double&#160;</td><td class="memItemRight" valign="bottom"><b>range</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69f1f60ed131995bc50600bd5e53271e"></a><!-- doxytag: member="Tower::firerate" ref="a69f1f60ed131995bc50600bd5e53271e" args="" -->
-double&#160;</td><td class="memItemRight" valign="bottom"><b>firerate</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7de2dee4f15ecea10d4945073ebde6f0"></a><!-- doxytag: member="Tower::timer" ref="a7de2dee4f15ecea10d4945073ebde6f0" args="" -->
-QTimer *&#160;</td><td class="memItemRight" valign="bottom"><b>timer</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e31b99355d221706b6ec16459c4c0a1"></a><!-- doxytag: member="Tower::pos" ref="a2e31b99355d221706b6ec16459c4c0a1" args="" -->
-QPointF&#160;</td><td class="memItemRight" valign="bottom"><b>pos</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94a20f8350f5f56015216ce4c81a41f7"></a><!-- doxytag: member="Tower::type" ref="a94a20f8350f5f56015216ce4c81a41f7" args="" -->
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">short int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#a4a719d8065544dd9e0285424cae755bb">level</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Le niveau actuel de la défense.  <a href="#a4a719d8065544dd9e0285424cae755bb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#ab0899f8dc1ce4d15d9c27df3c3a9609d">price</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Le prix de revent de la défense.  <a href="#ab0899f8dc1ce4d15d9c27df3c3a9609d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#a141e6c72b5190821851e02a5ca412535">upg1</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Le coût pour améliorer la défense du niveau 1 au 2.  <a href="#a141e6c72b5190821851e02a5ca412535"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#a53ab9046925a4c9b403fb41b0ca4a5d4">upg2</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Le coût pour améliorer la défense du niveau 2 au 3.  <a href="#a53ab9046925a4c9b403fb41b0ca4a5d4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QColor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#abd813990a1ae3b4300a54b38db0e1c51">color</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">La couleur de la défense.  <a href="#abd813990a1ae3b4300a54b38db0e1c51"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">short int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#a7d2457327dd9be1bd9840f0654c3b76f">targetType</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Le type de cible que peut atteindre la défense.  <a href="#a7d2457327dd9be1bd9840f0654c3b76f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#a435abff8e426dcff8d0650f663417a71">range</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">La portée de la défense.  <a href="#a435abff8e426dcff8d0650f663417a71"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#a69f1f60ed131995bc50600bd5e53271e">firerate</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">La cadence de tir de la défense.  <a href="#a69f1f60ed131995bc50600bd5e53271e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QTimer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#a7de2dee4f15ecea10d4945073ebde6f0">timer</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer utilisé pour la cadence de tir de la défense.  <a href="#a7de2dee4f15ecea10d4945073ebde6f0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QPointF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#a2e31b99355d221706b6ec16459c4c0a1">pos</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">La position sur la map de la défense.  <a href="#a2e31b99355d221706b6ec16459c4c0a1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTower.html#a94a20f8350f5f56015216ce4c81a41f7">type</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Le type spécifique de la défense.  <a href="#a94a20f8350f5f56015216ce4c81a41f7"></a><br/></td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Implémente les méthodes communes à toutes les défenses (la différenciation se fait surtout au niveau des projectiles et des stats des défenses). </p>
+</div><hr/><h2>Documentation des constructeurs et destructeur</h2>
+<a class="anchor" id="a7f9ceffca6b5ac42bd49619175cd5a22"></a><!-- doxytag: member="Tower::Tower" ref="a7f9ceffca6b5ac42bd49619175cd5a22" args="(QPointF buildPos, QString typeTower)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tower::Tower </td>
+          <td>(</td>
+          <td class="paramtype">QPointF&#160;</td>
+          <td class="paramname"><em>buildPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>typeTower</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Initialise les caractéristiques de la tour selon son type. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buildPos</td><td>La position où placer la défense. </td></tr>
+    <tr><td class="paramname">typeTower</td><td>Le type de défense à créer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Documentation des fonctions membres</h2>
+<a class="anchor" id="a8fc14fa547a388fa8500f39551019d87"></a><!-- doxytag: member="Tower::boundingRect" ref="a8fc14fa547a388fa8500f39551019d87" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QRectF Tower::boundingRect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Appelé automatiquement par Qt pour savoir s'il doit ou non redessiner l'objet. </p>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Le rectangle englobant tous les dessins de la défense. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa0c9c780f48cffacd3da6877f5d4fdc2"></a><!-- doxytag: member="Tower::fire" ref="aa0c9c780f48cffacd3da6877f5d4fdc2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tower::fire </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Méthode appelé par le timer de cadence pour tirer. </p>
+
+</div>
+</div>
+<a class="anchor" id="abee41b219b8d886e34e4a7c9087d80fc"></a><!-- doxytag: member="Tower::getFirerate" ref="abee41b219b8d886e34e4a7c9087d80fc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Tower::getFirerate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Assesseur vers firerate. </p>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Le contenu de l'attribut firerate. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afefd70c063a5e89d2490c3b4824d9684"></a><!-- doxytag: member="Tower::getLvl" ref="afefd70c063a5e89d2490c3b4824d9684" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short int Tower::getLvl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Assesseur vers level. </p>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Le contenu de l'attribut level. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a604ad233aaa46b85c8dfddc142154697"></a><!-- doxytag: member="Tower::getPrice" ref="a604ad233aaa46b85c8dfddc142154697" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Tower::getPrice </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Assesseur vers price. </p>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Le contenu de l'attribut price. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad56d1012706fe2b0d189bc5b3c0bdaad"></a><!-- doxytag: member="Tower::getRange" ref="ad56d1012706fe2b0d189bc5b3c0bdaad" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Tower::getRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Assesseur vers range. </p>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Le contenu de l'attribut range. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0e330af9db954014fc40c2b5533095a1"></a><!-- doxytag: member="Tower::getType" ref="a0e330af9db954014fc40c2b5533095a1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Tower::getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Assesseur vers type. </p>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Le contenu de l'attribut type. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a67d7ca07ddc7b0fec53ca0c2b48295e9"></a><!-- doxytag: member="Tower::getUpgCost" ref="a67d7ca07ddc7b0fec53ca0c2b48295e9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Tower::getUpgCost </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Assesseur vers upg. </p>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Le prix pour améliorer la défense vers le niveau suivant. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad0804070755704b426ef9edaadc58e46"></a><!-- doxytag: member="Tower::paint" ref="ad0804070755704b426ef9edaadc58e46" args="(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tower::paint </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *&#160;</td>
+          <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QStyleOptionGraphicsItem *&#160;</td>
+          <td class="paramname"><em>option</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>widget</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Appelé automatiquement par Qt pour dessiner la défense. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa303fa5bcabcf781c459d129b01ecfe8"></a><!-- doxytag: member="Tower::projectile" ref="aa303fa5bcabcf781c459d129b01ecfe8" args="(Projectile *missile)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tower::projectile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classProjectile.html">Projectile</a> *&#160;</td>
+          <td class="paramname"><em>missile</em></td><td>)</td>
+          <td><code> [signal]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Envoie le projectile créer à la scène. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">missile</td><td>Un pointeur vers le projectile tirée. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac732f3dd9c995a84da0ada08b8346f8f"></a><!-- doxytag: member="Tower::upgrade" ref="ac732f3dd9c995a84da0ada08b8346f8f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tower::upgrade </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Améliore la défense (et donc ses caractéristiques) vers le niveau suivant. </p>
+
+</div>
+</div>
+<hr/><h2>Documentation des champs</h2>
+<a class="anchor" id="abd813990a1ae3b4300a54b38db0e1c51"></a><!-- doxytag: member="Tower::color" ref="abd813990a1ae3b4300a54b38db0e1c51" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QColor <a class="el" href="classTower.html#abd813990a1ae3b4300a54b38db0e1c51">Tower::color</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a69f1f60ed131995bc50600bd5e53271e"></a><!-- doxytag: member="Tower::firerate" ref="a69f1f60ed131995bc50600bd5e53271e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classTower.html#a69f1f60ed131995bc50600bd5e53271e">Tower::firerate</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4a719d8065544dd9e0285424cae755bb"></a><!-- doxytag: member="Tower::level" ref="a4a719d8065544dd9e0285424cae755bb" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short int <a class="el" href="classTower.html#a4a719d8065544dd9e0285424cae755bb">Tower::level</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af840ab6d1ec47afde8beca150ee5ef60"></a><!-- doxytag: member="Tower::parent" ref="af840ab6d1ec47afde8beca150ee5ef60" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRender.html">Render</a>* <a class="el" href="classTower.html#af840ab6d1ec47afde8beca150ee5ef60">Tower::parent</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2e31b99355d221706b6ec16459c4c0a1"></a><!-- doxytag: member="Tower::pos" ref="a2e31b99355d221706b6ec16459c4c0a1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPointF <a class="el" href="classTower.html#a2e31b99355d221706b6ec16459c4c0a1">Tower::pos</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab0899f8dc1ce4d15d9c27df3c3a9609d"></a><!-- doxytag: member="Tower::price" ref="ab0899f8dc1ce4d15d9c27df3c3a9609d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="classTower.html#ab0899f8dc1ce4d15d9c27df3c3a9609d">Tower::price</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a435abff8e426dcff8d0650f663417a71"></a><!-- doxytag: member="Tower::range" ref="a435abff8e426dcff8d0650f663417a71" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classTower.html#a435abff8e426dcff8d0650f663417a71">Tower::range</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7d2457327dd9be1bd9840f0654c3b76f"></a><!-- doxytag: member="Tower::targetType" ref="a7d2457327dd9be1bd9840f0654c3b76f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short int <a class="el" href="classTower.html#a7d2457327dd9be1bd9840f0654c3b76f">Tower::targetType</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7de2dee4f15ecea10d4945073ebde6f0"></a><!-- doxytag: member="Tower::timer" ref="a7de2dee4f15ecea10d4945073ebde6f0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTimer* <a class="el" href="classTower.html#a7de2dee4f15ecea10d4945073ebde6f0">Tower::timer</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a94a20f8350f5f56015216ce4c81a41f7"></a><!-- doxytag: member="Tower::type" ref="a94a20f8350f5f56015216ce4c81a41f7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString <a class="el" href="classTower.html#a94a20f8350f5f56015216ce4c81a41f7">Tower::type</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a141e6c72b5190821851e02a5ca412535"></a><!-- doxytag: member="Tower::upg1" ref="a141e6c72b5190821851e02a5ca412535" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="classTower.html#a141e6c72b5190821851e02a5ca412535">Tower::upg1</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a53ab9046925a4c9b403fb41b0ca4a5d4"></a><!-- doxytag: member="Tower::upg2" ref="a53ab9046925a4c9b403fb41b0ca4a5d4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="classTower.html#a53ab9046925a4c9b403fb41b0ca4a5d4">Tower::upg2</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>src/<a class="el" href="Tower_8h_source.html">Tower.h</a></li>
 <li>src/moc_Tower.cpp</li>

@@ -2,141 +2,294 @@
 \section{Référence de la classe Tower}
 \label{classTower}\index{Tower@{Tower}}
 }
+
+
+Classe représentant toutes les défenses.  
+
+
+
+
+{\ttfamily \#include $<$Tower.h$>$}
+
 \subsection*{Connecteurs publics}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classTower_aa0c9c780f48cffacd3da6877f5d4fdc2}{
-void {\bfseries fire} ()}
-\label{classTower_aa0c9c780f48cffacd3da6877f5d4fdc2}
-
-\end{DoxyCompactItemize}
+void \hyperlink{classTower_aa0c9c780f48cffacd3da6877f5d4fdc2}{fire} ()
+\begin{DoxyCompactList}\small\item\em Signal de tir reçu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Signaux}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classTower_aa303fa5bcabcf781c459d129b01ecfe8}{
-void {\bfseries projectile} (\hyperlink{classProjectile}{Projectile} $\ast$missile)}
-\label{classTower_aa303fa5bcabcf781c459d129b01ecfe8}
-
-\end{DoxyCompactItemize}
+void \hyperlink{classTower_aa303fa5bcabcf781c459d129b01ecfe8}{projectile} (\hyperlink{classProjectile}{Projectile} $\ast$missile)
+\begin{DoxyCompactList}\small\item\em Création de projectile. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classTower_a7f9ceffca6b5ac42bd49619175cd5a22}{
-{\bfseries Tower} (QPointF buildPos, QString typeTower)}
-\label{classTower_a7f9ceffca6b5ac42bd49619175cd5a22}
-
-\item 
-\hypertarget{classTower_a8fc14fa547a388fa8500f39551019d87}{
-QRectF {\bfseries boundingRect} () const }
-\label{classTower_a8fc14fa547a388fa8500f39551019d87}
-
-\item 
-\hypertarget{classTower_ad0804070755704b426ef9edaadc58e46}{
-void {\bfseries paint} (QPainter $\ast$painter, const QStyleOptionGraphicsItem $\ast$option, QWidget $\ast$widget)}
-\label{classTower_ad0804070755704b426ef9edaadc58e46}
-
-\item 
-\hypertarget{classTower_a0e330af9db954014fc40c2b5533095a1}{
-QString {\bfseries getType} ()}
-\label{classTower_a0e330af9db954014fc40c2b5533095a1}
-
-\item 
-\hypertarget{classTower_ad56d1012706fe2b0d189bc5b3c0bdaad}{
-double {\bfseries getRange} ()}
-\label{classTower_ad56d1012706fe2b0d189bc5b3c0bdaad}
-
-\item 
-\hypertarget{classTower_afefd70c063a5e89d2490c3b4824d9684}{
-short int {\bfseries getLvl} ()}
-\label{classTower_afefd70c063a5e89d2490c3b4824d9684}
-
-\item 
-\hypertarget{classTower_abee41b219b8d886e34e4a7c9087d80fc}{
-double {\bfseries getFirerate} ()}
-\label{classTower_abee41b219b8d886e34e4a7c9087d80fc}
-
-\item 
-\hypertarget{classTower_a604ad233aaa46b85c8dfddc142154697}{
-float {\bfseries getPrice} ()}
-\label{classTower_a604ad233aaa46b85c8dfddc142154697}
-
-\item 
-\hypertarget{classTower_a67d7ca07ddc7b0fec53ca0c2b48295e9}{
-float {\bfseries getUpgCost} ()}
-\label{classTower_a67d7ca07ddc7b0fec53ca0c2b48295e9}
-
-\item 
-\hypertarget{classTower_ac732f3dd9c995a84da0ada08b8346f8f}{
-void {\bfseries upgrade} ()}
-\label{classTower_ac732f3dd9c995a84da0ada08b8346f8f}
-
-\end{DoxyCompactItemize}
+\hyperlink{classTower_a7f9ceffca6b5ac42bd49619175cd5a22}{Tower} (QPointF buildPos, QString typeTower)
+\begin{DoxyCompactList}\small\item\em Constructeur de \hyperlink{classTower}{Tower}. \end{DoxyCompactList}\item 
+QRectF \hyperlink{classTower_a8fc14fa547a388fa8500f39551019d87}{boundingRect} () const 
+\begin{DoxyCompactList}\small\item\em Surcharge de la méthode virtuelle pure boudingRect() héritée de QGraphicsObject. \end{DoxyCompactList}\item 
+void \hyperlink{classTower_ad0804070755704b426ef9edaadc58e46}{paint} (QPainter $\ast$painter, const QStyleOptionGraphicsItem $\ast$option, QWidget $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Surcharge de la méthode virtuelle pure \hyperlink{classTower_ad0804070755704b426ef9edaadc58e46}{paint()} héritée de QGraphicsObject. \end{DoxyCompactList}\item 
+QString \hyperlink{classTower_a0e330af9db954014fc40c2b5533095a1}{getType} ()
+\begin{DoxyCompactList}\small\item\em Assesseur. \end{DoxyCompactList}\item 
+double \hyperlink{classTower_ad56d1012706fe2b0d189bc5b3c0bdaad}{getRange} ()
+\begin{DoxyCompactList}\small\item\em Assesseur. \end{DoxyCompactList}\item 
+short int \hyperlink{classTower_afefd70c063a5e89d2490c3b4824d9684}{getLvl} ()
+\begin{DoxyCompactList}\small\item\em Assesseur. \end{DoxyCompactList}\item 
+double \hyperlink{classTower_abee41b219b8d886e34e4a7c9087d80fc}{getFirerate} ()
+\begin{DoxyCompactList}\small\item\em Assesseur. \end{DoxyCompactList}\item 
+float \hyperlink{classTower_a604ad233aaa46b85c8dfddc142154697}{getPrice} ()
+\begin{DoxyCompactList}\small\item\em Assesseur. \end{DoxyCompactList}\item 
+float \hyperlink{classTower_a67d7ca07ddc7b0fec53ca0c2b48295e9}{getUpgCost} ()
+\begin{DoxyCompactList}\small\item\em Assesseur. \end{DoxyCompactList}\item 
+void \hyperlink{classTower_ac732f3dd9c995a84da0ada08b8346f8f}{upgrade} ()
+\begin{DoxyCompactList}\small\item\em Amélioration de la défense. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Champs de données}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classTower_af840ab6d1ec47afde8beca150ee5ef60}{
-\hyperlink{classRender}{Render} $\ast$ {\bfseries parent}}
-\label{classTower_af840ab6d1ec47afde8beca150ee5ef60}
-
-\end{DoxyCompactItemize}
+\hyperlink{classRender}{Render} $\ast$ \hyperlink{classTower_af840ab6d1ec47afde8beca150ee5ef60}{parent}
+\begin{DoxyCompactList}\small\item\em L'objet \hyperlink{classRender}{Render} parent de la défense. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Attributs privés}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classTower_a4a719d8065544dd9e0285424cae755bb}{
-short int {\bfseries level}}
-\label{classTower_a4a719d8065544dd9e0285424cae755bb}
+short int \hyperlink{classTower_a4a719d8065544dd9e0285424cae755bb}{level}
+\begin{DoxyCompactList}\small\item\em Le niveau actuel de la défense. \end{DoxyCompactList}\item 
+float \hyperlink{classTower_ab0899f8dc1ce4d15d9c27df3c3a9609d}{price}
+\begin{DoxyCompactList}\small\item\em Le prix de revent de la défense. \end{DoxyCompactList}\item 
+float \hyperlink{classTower_a141e6c72b5190821851e02a5ca412535}{upg1}
+\begin{DoxyCompactList}\small\item\em Le coût pour améliorer la défense du niveau 1 au 2. \end{DoxyCompactList}\item 
+float \hyperlink{classTower_a53ab9046925a4c9b403fb41b0ca4a5d4}{upg2}
+\begin{DoxyCompactList}\small\item\em Le coût pour améliorer la défense du niveau 2 au 3. \end{DoxyCompactList}\item 
+QColor \hyperlink{classTower_abd813990a1ae3b4300a54b38db0e1c51}{color}
+\begin{DoxyCompactList}\small\item\em La couleur de la défense. \end{DoxyCompactList}\item 
+short int \hyperlink{classTower_a7d2457327dd9be1bd9840f0654c3b76f}{targetType}
+\begin{DoxyCompactList}\small\item\em Le type de cible que peut atteindre la défense. \end{DoxyCompactList}\item 
+double \hyperlink{classTower_a435abff8e426dcff8d0650f663417a71}{range}
+\begin{DoxyCompactList}\small\item\em La portée de la défense. \end{DoxyCompactList}\item 
+double \hyperlink{classTower_a69f1f60ed131995bc50600bd5e53271e}{firerate}
+\begin{DoxyCompactList}\small\item\em La cadence de tir de la défense. \end{DoxyCompactList}\item 
+QTimer $\ast$ \hyperlink{classTower_a7de2dee4f15ecea10d4945073ebde6f0}{timer}
+\begin{DoxyCompactList}\small\item\em Timer utilisé pour la cadence de tir de la défense. \end{DoxyCompactList}\item 
+QPointF \hyperlink{classTower_a2e31b99355d221706b6ec16459c4c0a1}{pos}
+\begin{DoxyCompactList}\small\item\em La position sur la map de la défense. \end{DoxyCompactList}\item 
+QString \hyperlink{classTower_a94a20f8350f5f56015216ce4c81a41f7}{type}
+\begin{DoxyCompactList}\small\item\em Le type spécifique de la défense. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\item 
-\hypertarget{classTower_ab0899f8dc1ce4d15d9c27df3c3a9609d}{
-float {\bfseries price}}
-\label{classTower_ab0899f8dc1ce4d15d9c27df3c3a9609d}
 
-\item 
-\hypertarget{classTower_a141e6c72b5190821851e02a5ca412535}{
-float {\bfseries upg1}}
-\label{classTower_a141e6c72b5190821851e02a5ca412535}
+\subsection{Description détaillée}
+Implémente les méthodes communes à toutes les défenses (la différenciation se fait surtout au niveau des projectiles et des stats des défenses). 
 
-\item 
-\hypertarget{classTower_a53ab9046925a4c9b403fb41b0ca4a5d4}{
-float {\bfseries upg2}}
-\label{classTower_a53ab9046925a4c9b403fb41b0ca4a5d4}
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classTower_a7f9ceffca6b5ac42bd49619175cd5a22}{
+\index{Tower@{Tower}!Tower@{Tower}}
+\index{Tower@{Tower}!Tower@{Tower}}
+\subsubsection[{Tower}]{\setlength{\rightskip}{0pt plus 5cm}Tower::Tower (
+\begin{DoxyParamCaption}
+\item[{QPointF}]{buildPos, }
+\item[{QString}]{typeTower}
+\end{DoxyParamCaption}
+)}}
+\label{classTower_a7f9ceffca6b5ac42bd49619175cd5a22}
+Initialise les caractéristiques de la tour selon son type. 
+\begin{DoxyParams}{Paramètres}
+{\em buildPos} & La position où placer la défense. \\
+\hline
+{\em typeTower} & Le type de défense à créer. \\
+\hline
+\end{DoxyParams}
 
-\item 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classTower_a8fc14fa547a388fa8500f39551019d87}{
+\index{Tower@{Tower}!boundingRect@{boundingRect}}
+\index{boundingRect@{boundingRect}!Tower@{Tower}}
+\subsubsection[{boundingRect}]{\setlength{\rightskip}{0pt plus 5cm}QRectF Tower::boundingRect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classTower_a8fc14fa547a388fa8500f39551019d87}
+Appelé automatiquement par Qt pour savoir s'il doit ou non redessiner l'objet. \begin{DoxyReturn}{Renvoie}
+Le rectangle englobant tous les dessins de la défense. 
+\end{DoxyReturn}
+\hypertarget{classTower_aa0c9c780f48cffacd3da6877f5d4fdc2}{
+\index{Tower@{Tower}!fire@{fire}}
+\index{fire@{fire}!Tower@{Tower}}
+\subsubsection[{fire}]{\setlength{\rightskip}{0pt plus 5cm}void Tower::fire (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classTower_aa0c9c780f48cffacd3da6877f5d4fdc2}
+Méthode appelé par le timer de cadence pour tirer. \hypertarget{classTower_abee41b219b8d886e34e4a7c9087d80fc}{
+\index{Tower@{Tower}!getFirerate@{getFirerate}}
+\index{getFirerate@{getFirerate}!Tower@{Tower}}
+\subsubsection[{getFirerate}]{\setlength{\rightskip}{0pt plus 5cm}double Tower::getFirerate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classTower_abee41b219b8d886e34e4a7c9087d80fc}
+Assesseur vers firerate. \begin{DoxyReturn}{Renvoie}
+Le contenu de l'attribut firerate. 
+\end{DoxyReturn}
+\hypertarget{classTower_afefd70c063a5e89d2490c3b4824d9684}{
+\index{Tower@{Tower}!getLvl@{getLvl}}
+\index{getLvl@{getLvl}!Tower@{Tower}}
+\subsubsection[{getLvl}]{\setlength{\rightskip}{0pt plus 5cm}short int Tower::getLvl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classTower_afefd70c063a5e89d2490c3b4824d9684}
+Assesseur vers level. \begin{DoxyReturn}{Renvoie}
+Le contenu de l'attribut level. 
+\end{DoxyReturn}
+\hypertarget{classTower_a604ad233aaa46b85c8dfddc142154697}{
+\index{Tower@{Tower}!getPrice@{getPrice}}
+\index{getPrice@{getPrice}!Tower@{Tower}}
+\subsubsection[{getPrice}]{\setlength{\rightskip}{0pt plus 5cm}float Tower::getPrice (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classTower_a604ad233aaa46b85c8dfddc142154697}
+Assesseur vers price. \begin{DoxyReturn}{Renvoie}
+Le contenu de l'attribut price. 
+\end{DoxyReturn}
+\hypertarget{classTower_ad56d1012706fe2b0d189bc5b3c0bdaad}{
+\index{Tower@{Tower}!getRange@{getRange}}
+\index{getRange@{getRange}!Tower@{Tower}}
+\subsubsection[{getRange}]{\setlength{\rightskip}{0pt plus 5cm}double Tower::getRange (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classTower_ad56d1012706fe2b0d189bc5b3c0bdaad}
+Assesseur vers range. \begin{DoxyReturn}{Renvoie}
+Le contenu de l'attribut range. 
+\end{DoxyReturn}
+\hypertarget{classTower_a0e330af9db954014fc40c2b5533095a1}{
+\index{Tower@{Tower}!getType@{getType}}
+\index{getType@{getType}!Tower@{Tower}}
+\subsubsection[{getType}]{\setlength{\rightskip}{0pt plus 5cm}QString Tower::getType (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classTower_a0e330af9db954014fc40c2b5533095a1}
+Assesseur vers type. \begin{DoxyReturn}{Renvoie}
+Le contenu de l'attribut type. 
+\end{DoxyReturn}
+\hypertarget{classTower_a67d7ca07ddc7b0fec53ca0c2b48295e9}{
+\index{Tower@{Tower}!getUpgCost@{getUpgCost}}
+\index{getUpgCost@{getUpgCost}!Tower@{Tower}}
+\subsubsection[{getUpgCost}]{\setlength{\rightskip}{0pt plus 5cm}float Tower::getUpgCost (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classTower_a67d7ca07ddc7b0fec53ca0c2b48295e9}
+Assesseur vers upg. \begin{DoxyReturn}{Renvoie}
+Le prix pour améliorer la défense vers le niveau suivant. 
+\end{DoxyReturn}
+\hypertarget{classTower_ad0804070755704b426ef9edaadc58e46}{
+\index{Tower@{Tower}!paint@{paint}}
+\index{paint@{paint}!Tower@{Tower}}
+\subsubsection[{paint}]{\setlength{\rightskip}{0pt plus 5cm}void Tower::paint (
+\begin{DoxyParamCaption}
+\item[{QPainter $\ast$}]{painter, }
+\item[{const QStyleOptionGraphicsItem $\ast$}]{option, }
+\item[{QWidget $\ast$}]{widget}
+\end{DoxyParamCaption}
+)}}
+\label{classTower_ad0804070755704b426ef9edaadc58e46}
+Appelé automatiquement par Qt pour dessiner la défense. \hypertarget{classTower_aa303fa5bcabcf781c459d129b01ecfe8}{
+\index{Tower@{Tower}!projectile@{projectile}}
+\index{projectile@{projectile}!Tower@{Tower}}
+\subsubsection[{projectile}]{\setlength{\rightskip}{0pt plus 5cm}void Tower::projectile (
+\begin{DoxyParamCaption}
+\item[{{\bf Projectile} $\ast$}]{missile}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}signal\mbox{]}}}}
+\label{classTower_aa303fa5bcabcf781c459d129b01ecfe8}
+Envoie le projectile créer à la scène. 
+\begin{DoxyParams}{Paramètres}
+{\em missile} & Un pointeur vers le projectile tirée. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classTower_ac732f3dd9c995a84da0ada08b8346f8f}{
+\index{Tower@{Tower}!upgrade@{upgrade}}
+\index{upgrade@{upgrade}!Tower@{Tower}}
+\subsubsection[{upgrade}]{\setlength{\rightskip}{0pt plus 5cm}void Tower::upgrade (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classTower_ac732f3dd9c995a84da0ada08b8346f8f}
+Améliore la défense (et donc ses caractéristiques) vers le niveau suivant. 
+
+\subsection{Documentation des champs}
 \hypertarget{classTower_abd813990a1ae3b4300a54b38db0e1c51}{
-QColor {\bfseries color}}
+\index{Tower@{Tower}!color@{color}}
+\index{color@{color}!Tower@{Tower}}
+\subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}QColor {\bf Tower::color}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
 \label{classTower_abd813990a1ae3b4300a54b38db0e1c51}
-
-\item 
-\hypertarget{classTower_a7d2457327dd9be1bd9840f0654c3b76f}{
-short int {\bfseries targetType}}
-\label{classTower_a7d2457327dd9be1bd9840f0654c3b76f}
-
-\item 
-\hypertarget{classTower_a435abff8e426dcff8d0650f663417a71}{
-double {\bfseries range}}
-\label{classTower_a435abff8e426dcff8d0650f663417a71}
-
-\item 
 \hypertarget{classTower_a69f1f60ed131995bc50600bd5e53271e}{
-double {\bfseries firerate}}
+\index{Tower@{Tower}!firerate@{firerate}}
+\index{firerate@{firerate}!Tower@{Tower}}
+\subsubsection[{firerate}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf Tower::firerate}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
 \label{classTower_a69f1f60ed131995bc50600bd5e53271e}
-
-\item 
-\hypertarget{classTower_a7de2dee4f15ecea10d4945073ebde6f0}{
-QTimer $\ast$ {\bfseries timer}}
-\label{classTower_a7de2dee4f15ecea10d4945073ebde6f0}
-
-\item 
+\hypertarget{classTower_a4a719d8065544dd9e0285424cae755bb}{
+\index{Tower@{Tower}!level@{level}}
+\index{level@{level}!Tower@{Tower}}
+\subsubsection[{level}]{\setlength{\rightskip}{0pt plus 5cm}short int {\bf Tower::level}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classTower_a4a719d8065544dd9e0285424cae755bb}
+\hypertarget{classTower_af840ab6d1ec47afde8beca150ee5ef60}{
+\index{Tower@{Tower}!parent@{parent}}
+\index{parent@{parent}!Tower@{Tower}}
+\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Render}$\ast$ {\bf Tower::parent}}}
+\label{classTower_af840ab6d1ec47afde8beca150ee5ef60}
 \hypertarget{classTower_a2e31b99355d221706b6ec16459c4c0a1}{
-QPointF {\bfseries pos}}
+\index{Tower@{Tower}!pos@{pos}}
+\index{pos@{pos}!Tower@{Tower}}
+\subsubsection[{pos}]{\setlength{\rightskip}{0pt plus 5cm}QPointF {\bf Tower::pos}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
 \label{classTower_a2e31b99355d221706b6ec16459c4c0a1}
-
-\item 
+\hypertarget{classTower_ab0899f8dc1ce4d15d9c27df3c3a9609d}{
+\index{Tower@{Tower}!price@{price}}
+\index{price@{price}!Tower@{Tower}}
+\subsubsection[{price}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Tower::price}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classTower_ab0899f8dc1ce4d15d9c27df3c3a9609d}
+\hypertarget{classTower_a435abff8e426dcff8d0650f663417a71}{
+\index{Tower@{Tower}!range@{range}}
+\index{range@{range}!Tower@{Tower}}
+\subsubsection[{range}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf Tower::range}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classTower_a435abff8e426dcff8d0650f663417a71}
+\hypertarget{classTower_a7d2457327dd9be1bd9840f0654c3b76f}{
+\index{Tower@{Tower}!targetType@{targetType}}
+\index{targetType@{targetType}!Tower@{Tower}}
+\subsubsection[{targetType}]{\setlength{\rightskip}{0pt plus 5cm}short int {\bf Tower::targetType}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classTower_a7d2457327dd9be1bd9840f0654c3b76f}
+\hypertarget{classTower_a7de2dee4f15ecea10d4945073ebde6f0}{
+\index{Tower@{Tower}!timer@{timer}}
+\index{timer@{timer}!Tower@{Tower}}
+\subsubsection[{timer}]{\setlength{\rightskip}{0pt plus 5cm}QTimer$\ast$ {\bf Tower::timer}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classTower_a7de2dee4f15ecea10d4945073ebde6f0}
 \hypertarget{classTower_a94a20f8350f5f56015216ce4c81a41f7}{
-QString {\bfseries type}}
+\index{Tower@{Tower}!type@{type}}
+\index{type@{type}!Tower@{Tower}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}QString {\bf Tower::type}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
 \label{classTower_a94a20f8350f5f56015216ce4c81a41f7}
-
-\end{DoxyCompactItemize}
+\hypertarget{classTower_a141e6c72b5190821851e02a5ca412535}{
+\index{Tower@{Tower}!upg1@{upg1}}
+\index{upg1@{upg1}!Tower@{Tower}}
+\subsubsection[{upg1}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Tower::upg1}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classTower_a141e6c72b5190821851e02a5ca412535}
+\hypertarget{classTower_a53ab9046925a4c9b403fb41b0ca4a5d4}{
+\index{Tower@{Tower}!upg2@{upg2}}
+\index{upg2@{upg2}!Tower@{Tower}}
+\subsubsection[{upg2}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Tower::upg2}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classTower_a53ab9046925a4c9b403fb41b0ca4a5d4}
 
 
 La documentation de cette classe a été générée à partir des fichiers suivants :\begin{DoxyCompactItemize}

@@ -3,15 +3,21 @@
 .nh
 .SH NAME
 Tower \- 
+.PP
+Classe représentant toutes les défenses.  
+
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <Tower.h>\fP
 .SS "Connecteurs publics"
 
 .in +1c
 .ti -1c
 .RI "void \fBfire\fP ()"
 .br
+.RI "\fISignal de tir reçu. \fP"
 .in -1c
 .SS "Signaux"
 
@@ -19,6 +25,7 @@ Tower \-
 .ti -1c
 .RI "void \fBprojectile\fP (\fBProjectile\fP *missile)"
 .br
+.RI "\fICréation de projectile. \fP"
 .in -1c
 .SS "Fonctions membres publiques"
 
@@ -26,33 +33,43 @@ Tower \-
 .ti -1c
 .RI "\fBTower\fP (QPointF buildPos, QString typeTower)"
 .br
+.RI "\fIConstructeur de \fBTower\fP. \fP"
 .ti -1c
 .RI "QRectF \fBboundingRect\fP () const "
 .br
+.RI "\fISurcharge de la méthode virtuelle pure boudingRect() héritée de QGraphicsObject. \fP"
 .ti -1c
 .RI "void \fBpaint\fP (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)"
 .br
+.RI "\fISurcharge de la méthode virtuelle pure \fBpaint()\fP héritée de QGraphicsObject. \fP"
 .ti -1c
 .RI "QString \fBgetType\fP ()"
 .br
+.RI "\fIAssesseur. \fP"
 .ti -1c
 .RI "double \fBgetRange\fP ()"
 .br
+.RI "\fIAssesseur. \fP"
 .ti -1c
 .RI "short int \fBgetLvl\fP ()"
 .br
+.RI "\fIAssesseur. \fP"
 .ti -1c
 .RI "double \fBgetFirerate\fP ()"
 .br
+.RI "\fIAssesseur. \fP"
 .ti -1c
 .RI "float \fBgetPrice\fP ()"
 .br
+.RI "\fIAssesseur. \fP"
 .ti -1c
 .RI "float \fBgetUpgCost\fP ()"
 .br
+.RI "\fIAssesseur. \fP"
 .ti -1c
 .RI "void \fBupgrade\fP ()"
 .br
+.RI "\fIAmélioration de la défense. \fP"
 .in -1c
 .SS "Champs de données"
 
@@ -60,6 +77,7 @@ Tower \-
 .ti -1c
 .RI "\fBRender\fP * \fBparent\fP"
 .br
+.RI "\fIL'objet \fBRender\fP parent de la défense. \fP"
 .in -1c
 .SS "Attributs privés"
 
@@ -67,37 +85,146 @@ Tower \-
 .ti -1c
 .RI "short int \fBlevel\fP"
 .br
+.RI "\fILe niveau actuel de la défense. \fP"
 .ti -1c
 .RI "float \fBprice\fP"
 .br
+.RI "\fILe prix de revent de la défense. \fP"
 .ti -1c
 .RI "float \fBupg1\fP"
 .br
+.RI "\fILe coût pour améliorer la défense du niveau 1 au 2. \fP"
 .ti -1c
 .RI "float \fBupg2\fP"
 .br
+.RI "\fILe coût pour améliorer la défense du niveau 2 au 3. \fP"
 .ti -1c
 .RI "QColor \fBcolor\fP"
 .br
+.RI "\fILa couleur de la défense. \fP"
 .ti -1c
 .RI "short int \fBtargetType\fP"
 .br
+.RI "\fILe type de cible que peut atteindre la défense. \fP"
 .ti -1c
 .RI "double \fBrange\fP"
 .br
+.RI "\fILa portée de la défense. \fP"
 .ti -1c
 .RI "double \fBfirerate\fP"
 .br
+.RI "\fILa cadence de tir de la défense. \fP"
 .ti -1c
 .RI "QTimer * \fBtimer\fP"
 .br
+.RI "\fITimer utilisé pour la cadence de tir de la défense. \fP"
 .ti -1c
 .RI "QPointF \fBpos\fP"
 .br
+.RI "\fILa position sur la map de la défense. \fP"
 .ti -1c
 .RI "QString \fBtype\fP"
 .br
+.RI "\fILe type spécifique de la défense. \fP"
 .in -1c
+.SH "Description détaillée"
+.PP 
+Implémente les méthodes communes à toutes les défenses (la différenciation se fait surtout au niveau des projectiles et des stats des défenses). 
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Tower::Tower (QPointFbuildPos, QStringtypeTower)"Initialise les caractéristiques de la tour selon son type. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIbuildPos\fP La position où placer la défense. 
+.br
+\fItypeTower\fP Le type de défense à créer. 
+.RE
+.PP
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "QRectF Tower::boundingRect () const"Appelé automatiquement par Qt pour savoir s'il doit ou non redessiner l'objet. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+Le rectangle englobant tous les dessins de la défense. 
+.RE
+.PP
+
+.SS "void Tower::fire ()\fC [slot]\fP"Méthode appelé par le timer de cadence pour tirer. 
+.SS "double Tower::getFirerate ()"Assesseur vers firerate. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+Le contenu de l'attribut firerate. 
+.RE
+.PP
+
+.SS "short int Tower::getLvl ()"Assesseur vers level. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+Le contenu de l'attribut level. 
+.RE
+.PP
+
+.SS "float Tower::getPrice ()"Assesseur vers price. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+Le contenu de l'attribut price. 
+.RE
+.PP
+
+.SS "double Tower::getRange ()"Assesseur vers range. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+Le contenu de l'attribut range. 
+.RE
+.PP
+
+.SS "QString Tower::getType ()"Assesseur vers type. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+Le contenu de l'attribut type. 
+.RE
+.PP
+
+.SS "float Tower::getUpgCost ()"Assesseur vers upg. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+Le prix pour améliorer la défense vers le niveau suivant. 
+.RE
+.PP
+
+.SS "void Tower::paint (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)"Appelé automatiquement par Qt pour dessiner la défense. 
+.SS "void Tower::projectile (\fBProjectile\fP *missile)\fC [signal]\fP"Envoie le projectile créer à la scène. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fImissile\fP Un pointeur vers le projectile tirée. 
+.RE
+.PP
+
+.SS "void Tower::upgrade ()"Améliore la défense (et donc ses caractéristiques) vers le niveau suivant. 
+.SH "Documentation des champs"
+.PP 
+.SS "QColor \fBTower::color\fP\fC [private]\fP"
+.SS "double \fBTower::firerate\fP\fC [private]\fP"
+.SS "short int \fBTower::level\fP\fC [private]\fP"
+.SS "\fBRender\fP* \fBTower::parent\fP"
+.SS "QPointF \fBTower::pos\fP\fC [private]\fP"
+.SS "float \fBTower::price\fP\fC [private]\fP"
+.SS "double \fBTower::range\fP\fC [private]\fP"
+.SS "short int \fBTower::targetType\fP\fC [private]\fP"
+.SS "QTimer* \fBTower::timer\fP\fC [private]\fP"
+.SS "QString \fBTower::type\fP\fC [private]\fP"
+.SS "float \fBTower::upg1\fP\fC [private]\fP"
+.SS "float \fBTower::upg2\fP\fC [private]\fP"
 
 .SH "Auteur"
 .PP 
