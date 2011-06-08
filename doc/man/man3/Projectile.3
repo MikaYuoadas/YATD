@@ -3,9 +3,14 @@
 .nh
 .SH NAME
 Projectile \- 
+.PP
+Classe représentant les projectiles des tours.  
+
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <Projectile.h>\fP
 .PP
 Dérivée par \fBWater\fP.
 .SS "Signaux"
@@ -14,6 +19,7 @@ Dérivée par \fBWater\fP.
 .ti -1c
 .RI "void \fBexplode\fP (\fBProjectile\fP *missile)"
 .br
+.RI "\fISignal d'explosion du projectile. \fP"
 .in -1c
 .SS "Fonctions membres publiques"
 
@@ -21,12 +27,15 @@ Dérivée par \fBWater\fP.
 .ti -1c
 .RI "\fBProjectile\fP (QPointF start, \fBBug\fP *trgt, double init_speed, double damage)"
 .br
+.RI "\fIConstructeur de \fBProjectile\fP Initialise les caractéristiques du projectile. \fP"
 .ti -1c
 .RI "QRectF \fBboundingRect\fP () const "
 .br
+.RI "\fISurcharge de la methode virtuelle pure \fBboundingRect()\fP héritée de QGraphicsObject. \fP"
 .ti -1c
 .RI "void \fBpaint\fP (QPainter *painter, QColor color)"
 .br
+.RI "\fISurcharge de la méthode virtuelle pure \fBpaint()\fP héritée de QGraphicsObject. \fP"
 .in -1c
 .SS "Fonctions membres protégées"
 
@@ -34,6 +43,7 @@ Dérivée par \fBWater\fP.
 .ti -1c
 .RI "void \fBadvance\fP (int step)"
 .br
+.RI "\fISurcharge de la méthode virtuelle pure héritée de QGraphicsObject. \fP"
 .in -1c
 .SS "Attributs privés"
 
@@ -41,22 +51,80 @@ Dérivée par \fBWater\fP.
 .ti -1c
 .RI "QPointF \fBdest\fP"
 .br
+.RI "\fILa destination du projectile. \fP"
 .ti -1c
 .RI "\fBBug\fP * \fBtarget\fP"
 .br
+.RI "\fIL'insecte ciblée par le projectile. \fP"
 .ti -1c
 .RI "double \fBspeed\fP"
 .br
+.RI "\fILa vitesse en case par seconde du projectile. \fP"
 .ti -1c
 .RI "double \fBdmg\fP"
 .br
+.RI "\fILes dégats infligé à l'impact par le projectile. \fP"
 .ti -1c
 .RI "double \fBmaxrange\fP"
 .br
+.RI "\fILa portée maximale du projectile (s'il n'atteint personne avant d'arriver à se portée max, il disparait). \fP"
 .ti -1c
 .RI "double \fBtravelled\fP"
 .br
+.RI "\fILa distance parcourue par le projectile. \fP"
 .in -1c
+.SH "Description détaillée"
+.PP 
+Définie les méthodes des projectiles ainsi que leur caractéristiques de base. 
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Projectile::Projectile (QPointFstart, \fBBug\fP *trgt, doubleinit_speed, doubledamage)"\fBParamètres:\fP
+.RS 4
+\fIstart\fP Point de départ du projectile. 
+.br
+\fItrgt\fP Insecte cible du projectile. 
+.br
+\fIinit_speed\fP Vitesse de vol du projectile. 
+.br
+\fIdamage\fP Dégats infligés à l'impact par le projectile. 
+.RE
+.PP
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "void Projectile::advance (intstep)\fC [protected]\fP"Est appellé automatiquement par Qt deux fois par appelle au slot advance de la QGraphicsScene. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIstep\fP appelé une fois avant de redessiner avec step = 0 et une fois avec step = 1. 
+.RE
+.PP
+
+.SS "QRectF Projectile::boundingRect () const"Fonction appelé automatiquement par QT pour savoir s'il doit redessiner ou non l'objet graphique. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+Un object QRectF correspondant au rectangle englobant le dessin du projectile. 
+.RE
+.PP
+
+.SS "void Projectile::explode (\fBProjectile\fP *missile)\fC [signal]\fP"Signale émit lorsque le projectile explose pour qu'il soit retiré de la scène. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fImissile\fP Un pointeur vers le projectile pour que la scène puisse le détruire correctement. 
+.RE
+.PP
+
+.SS "void Projectile::paint (QPainter *painter, QColorcolor)"Est appelé automatiquement par Qt pour redessiner le projectile. 
+.SH "Documentation des champs"
+.PP 
+.SS "QPointF \fBProjectile::dest\fP\fC [private]\fP"
+.SS "double \fBProjectile::dmg\fP\fC [private]\fP"
+.SS "double \fBProjectile::maxrange\fP\fC [private]\fP"
+.SS "double \fBProjectile::speed\fP\fC [private]\fP"
+.SS "\fBBug\fP* \fBProjectile::target\fP\fC [private]\fP"
+.SS "double \fBProjectile::travelled\fP\fC [private]\fP"
 
 .SH "Auteur"
 .PP 

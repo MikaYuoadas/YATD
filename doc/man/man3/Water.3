@@ -14,12 +14,13 @@ Est dérivée de \fBProjectile\fP.
 .ti -1c
 .RI "void \fBexplode\fP (\fBProjectile\fP *missile)"
 .br
+.RI "\fISignal d'explosion du projectile. \fP"
 .in -1c
 .SS "Fonctions membres publiques"
 
 .in +1c
 .ti -1c
-.RI "\fBWater\fP (QPointF start, \fBBug\fP *target, short int lvl)"
+.RI "\fBWater\fP (QPointF start, \fBBug\fP *\fBtarget\fP, short int lvl)"
 .br
 .ti -1c
 .RI "void \fBpaint\fP (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)"
@@ -27,9 +28,11 @@ Est dérivée de \fBProjectile\fP.
 .ti -1c
 .RI "QRectF \fBboundingRect\fP () const "
 .br
+.RI "\fISurcharge de la methode virtuelle pure \fBboundingRect()\fP héritée de QGraphicsObject. \fP"
 .ti -1c
 .RI "void \fBpaint\fP (QPainter *painter, QColor color)"
 .br
+.RI "\fISurcharge de la méthode virtuelle pure \fBpaint()\fP héritée de QGraphicsObject. \fP"
 .in -1c
 .SS "Fonctions membres protégées"
 
@@ -37,7 +40,35 @@ Est dérivée de \fBProjectile\fP.
 .ti -1c
 .RI "void \fBadvance\fP (int step)"
 .br
+.RI "\fISurcharge de la méthode virtuelle pure héritée de QGraphicsObject. \fP"
 .in -1c
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "void Projectile::advance (intstep)\fC [protected, inherited]\fP"Est appellé automatiquement par Qt deux fois par appelle au slot advance de la QGraphicsScene. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIstep\fP appelé une fois avant de redessiner avec step = 0 et une fois avec step = 1. 
+.RE
+.PP
+
+.SS "QRectF Projectile::boundingRect () const\fC [inherited]\fP"Fonction appelé automatiquement par QT pour savoir s'il doit redessiner ou non l'objet graphique. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+Un object QRectF correspondant au rectangle englobant le dessin du projectile. 
+.RE
+.PP
+
+.SS "void Projectile::explode (\fBProjectile\fP *missile)\fC [signal, inherited]\fP"Signale émit lorsque le projectile explose pour qu'il soit retiré de la scène. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fImissile\fP Un pointeur vers le projectile pour que la scène puisse le détruire correctement. 
+.RE
+.PP
+
+.SS "void Projectile::paint (QPainter *painter, QColorcolor)\fC [inherited]\fP"Est appelé automatiquement par Qt pour redessiner le projectile. 
 
 .SH "Auteur"
 .PP 
