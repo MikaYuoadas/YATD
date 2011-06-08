@@ -15,6 +15,7 @@ UI::UI(QWidget * parent) : QWidget(parent), selected(NULL)
     QObject::connect(start, SIGNAL(clicked()), this, SLOT(startWave()));
     upg = new QPushButton("Améliorer", stats);
     upg->setGeometry(20, 150, 75, 20);
+    QObject::connect(upg, SIGNAL(clicked()), this, SLOT(upgradeSelectedTower()));
     sell = new QPushButton("Vendre", stats);
     sell->setGeometry(105, 150, 75, 20);
     QObject::connect(sell, SIGNAL(clicked()), this, SLOT(sellSelectedTower()));
@@ -43,17 +44,17 @@ UI::UI(QWidget * parent) : QWidget(parent), selected(NULL)
     firerate = new QLabel("cadence de tir : ", stats);
     firerate->setGeometry(5, 90, 100, 20);
 
-    t_name = new QLabel("test", stats);
+    t_name = new QLabel("", stats);
     t_name->setGeometry(130, 15, 100, 20);
-    t_lvl = new QLabel("test", stats);
+    t_lvl = new QLabel("", stats);
     t_lvl->setGeometry(130, 40, 100, 20);
-    t_range = new QLabel("test", stats);
+    t_range = new QLabel("", stats);
     t_range->setGeometry(130, 65, 100, 20);
-    t_firerate = new QLabel("test", stats);
+    t_firerate = new QLabel("", stats);
     t_firerate->setGeometry(130, 90, 100, 20);
 
     // Game Stats display
-    wave = new QLabel("Wave text here", this);
+    wave = new QLabel("", this);
     wave->setGeometry(0, 5, UI_WIDTH, 20);
     cred_txt = new QLabel("Crédits :", this);
     cred_txt->move(0, 65);
@@ -141,4 +142,14 @@ void UI::sellSelectedTower()
     t_lvl->setText("");
     t_range->setText("");
     t_firerate->setText("");
+}
+
+void UI::upgradeSelectedTower()
+{
+    if (selected->getLvl() < 3) {
+        if (cred->intValue() >= selected->getUpgCost()) {
+            cred->display(cred->intValue() - (int) selected->getUpgCost());
+            selected->upgrade();
+        }
+    }
 }

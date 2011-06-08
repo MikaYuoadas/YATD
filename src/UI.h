@@ -53,6 +53,7 @@ class UI : public QWidget
         void buyBowlingTower();
         void selectTower(Tower * tower);
         void sellSelectedTower();
+        void upgradeSelectedTower();
 
     signals:
         void buyTower(QString type);

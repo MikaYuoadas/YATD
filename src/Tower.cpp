@@ -6,24 +6,32 @@ Tower::Tower(QPointF buildPos, QString typeTower) :
     level(1), pos(buildPos), type(typeTower), parent(NULL)
 {
     if (type == "water") {
+        upg1 = 20;
+        upg2 = 45;
         price = 4;
         firerate = 4.5;
         range = 2.5;
         target = CRAWL & FLY;
         color = Qt::cyan;
     } else if (type == "slingshot") {
+        upg1 = 25;
+        upg2 = 60;
         price = 6;
         firerate = 1.0;
         range = 3.5;
         target = FLY;
         color = Qt::yellow;
     } else if (type == "paintball") {
+        upg1 = 25;
+        upg2 = 60;
         price = 6;
         firerate = 2;
         range = 4.5;
         target = CRAWL & FLY;
         color = Qt::darkRed;
     } else if (type == "bowling") {
+        upg1 = 40;
+        upg2 = 80;
         price = 7.5;
         firerate = 0.5;
         range = 4;
@@ -67,6 +75,14 @@ float Tower::getPrice()
     return price;
 }
 
+float Tower::getUpgCost()
+{
+    if (level == 2)
+        return upg2;
+    else
+        return upg1;
+}
+
 double Tower::getFirerate()
 {
     return firerate;
@@ -82,4 +98,36 @@ void Tower::fire()
         }
         emit projectile(missile);
     }
+}
+
+void Tower::upgrade()
+{
+    level += 1;
+    if (type == "water") {
+        if (level == 2)
+            price = 14;
+        else
+            price = 37;
+        firerate = 4 - level / 2;
+        range = 2 + level / 2;
+    } else if (type == "slingshot") {
+        if (level == 2)
+            price = 19;
+        else
+            price = 49;
+        range = 3 + level / 2;
+    } else if (type == "paintball") {
+        if (level == 2)
+            price = 19;
+        else
+            price = 49;
+        range = 4 + level / 2;
+    } else if (type == "bowling") {
+        if (level == 2)
+            price = 28;
+        else
+            price = 68;
+        range = 3 + level;
+    }
+    timer->start(1000 / firerate);
 }
