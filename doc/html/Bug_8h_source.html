@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;define.h&quot;</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;Render.h&quot;</span>
 <a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="keyword">class </span><a class="code" href="classRender.html">Render</a>;
+<a name="l00011"></a>00011 <span class="keyword">class </span><a class="code" href="classRender.html" title="Classe gérant le rendu graphique du jeu.">Render</a>;
 <a name="l00012"></a>00012 
 <a name="l00016"></a><a class="code" href="classBug.html">00016</a> <span class="keyword">class </span><a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> : <span class="keyword">public</span> QGraphicsObject
 <a name="l00017"></a>00017 {
@@ -88,7 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00035"></a><a class="code" href="classBug.html#a00484a34d1e537e92b0bba7e2e5ddbeb">00035</a>         <span class="keywordtype">short</span> <span class="keywordtype">int</span> <a class="code" href="classBug.html#a00484a34d1e537e92b0bba7e2e5ddbeb" title="Type de déplacement.">moveType</a>;     
 <a name="l00036"></a><a class="code" href="classBug.html#aead6b14a5cfd6713e8913f3e84cd6797">00036</a>         QPoint <a class="code" href="classBug.html#aead6b14a5cfd6713e8913f3e84cd6797" title="Case d&#39;origine.">lastSquare</a>;      
 <a name="l00038"></a>00038     <span class="keyword">public</span>:
-<a name="l00039"></a><a class="code" href="classBug.html#a7a93aae4e4b7a215c94ff85d0bd6e26d">00039</a>         <a class="code" href="classRender.html">Render</a> * <a class="code" href="classBug.html#a7a93aae4e4b7a215c94ff85d0bd6e26d" title="L&#39;objet Render parent de l&#39;insecte.">parent</a>;        
+<a name="l00039"></a><a class="code" href="classBug.html#a7a93aae4e4b7a215c94ff85d0bd6e26d">00039</a>         <a class="code" href="classRender.html" title="Classe gérant le rendu graphique du jeu.">Render</a> * <a class="code" href="classBug.html#a7a93aae4e4b7a215c94ff85d0bd6e26d" title="L&#39;objet Render parent de l&#39;insecte.">parent</a>;        
 <a name="l00052"></a>00052         <a class="code" href="classBug.html#a1d3140d50abd44257d5e0b1b6dcb4514" title="Constructeur de Bug.">Bug</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> s, <span class="keywordtype">double</span> health, <span class="keywordtype">double</span> res, <span class="keywordtype">double</span> start_angle, <span class="keywordtype">double</span> init_speed, <span class="keywordtype">short</span> <span class="keywordtype">int</span> type);
 <a name="l00058"></a>00058         QRectF <a class="code" href="classBug.html#a9b39c25361faad07b1bf2dd927d09dab" title="Surcharge de la fonction boudingRect() hérité de QGraphicsObject.">boundingRect</a>() <span class="keyword">const</span>;
 <a name="l00064"></a>00064         QPainterPath <a class="code" href="classBug.html#a587a36d3145c2b4dba6c689af22c65ac" title="Surcharge de la méthode virtuelle pure shape() hérité de QGraphicsObject.">shape</a>() <span class="keyword">const</span>;

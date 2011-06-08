@@ -2,176 +2,436 @@
 \section{Référence de la classe Render}
 \label{classRender}\index{Render@{Render}}
 }
+
+
+Classe gérant le rendu graphique du jeu.  
+
+
+
+
+{\ttfamily \#include $<$Render.h$>$}
+
 \subsection*{Connecteurs publics}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classRender_a3252d02e9509f342bc96129b4b10b415}{
-void {\bfseries nextWave} ()}
-\label{classRender_a3252d02e9509f342bc96129b4b10b415}
-
-\item 
-\hypertarget{classRender_a9413625fc472b4b7806f3a0d615d6ea9}{
-void {\bfseries nextBug} ()}
-\label{classRender_a9413625fc472b4b7806f3a0d615d6ea9}
-
-\item 
-\hypertarget{classRender_a8e2eccb2fc3914198b8939bf0625c955}{
-void {\bfseries towerBought} (QString type)}
-\label{classRender_a8e2eccb2fc3914198b8939bf0625c955}
-
-\item 
-\hypertarget{classRender_aeeddbbe27102625cc2d5234fa0be523a}{
-void {\bfseries bugFinish} (\hyperlink{classBug}{Bug} $\ast$bug)}
-\label{classRender_aeeddbbe27102625cc2d5234fa0be523a}
-
-\item 
-\hypertarget{classRender_a940007358a139d0b30e002929d24f770}{
-void {\bfseries bugKilled} (\hyperlink{classBug}{Bug} $\ast$bug)}
-\label{classRender_a940007358a139d0b30e002929d24f770}
-
-\item 
-\hypertarget{classRender_a3b5bb3705131ca57252398e0f6a9e3e5}{
-void {\bfseries addProjectile} (\hyperlink{classProjectile}{Projectile} $\ast$missile)}
-\label{classRender_a3b5bb3705131ca57252398e0f6a9e3e5}
-
-\item 
-\hypertarget{classRender_a20678c257926bfff635fded745e11f4a}{
-void {\bfseries destroyTower} (\hyperlink{classTower}{Tower} $\ast$tower)}
-\label{classRender_a20678c257926bfff635fded745e11f4a}
-
-\item 
-\hypertarget{classRender_aedec0cbbe4808368656b772dfe3e63f9}{
-void {\bfseries explodingProjectile} (\hyperlink{classProjectile}{Projectile} $\ast$missile)}
-\label{classRender_aedec0cbbe4808368656b772dfe3e63f9}
-
-\end{DoxyCompactItemize}
+void \hyperlink{classRender_a3252d02e9509f342bc96129b4b10b415}{nextWave} ()
+\begin{DoxyCompactList}\small\item\em Lance la prochaine Vague. \end{DoxyCompactList}\item 
+void \hyperlink{classRender_a9413625fc472b4b7806f3a0d615d6ea9}{nextBug} ()
+\begin{DoxyCompactList}\small\item\em Crée le prochaine insecte de la vague. \end{DoxyCompactList}\item 
+void \hyperlink{classRender_a8e2eccb2fc3914198b8939bf0625c955}{towerBought} (QString type)
+\begin{DoxyCompactList}\small\item\em Message indiquant l'achat d'une tour à la scène. \end{DoxyCompactList}\item 
+void \hyperlink{classRender_aeeddbbe27102625cc2d5234fa0be523a}{bugFinish} (\hyperlink{classBug}{Bug} $\ast$bug)
+\begin{DoxyCompactList}\small\item\em Arrivée d'un insecte. \end{DoxyCompactList}\item 
+void \hyperlink{classRender_a940007358a139d0b30e002929d24f770}{bugKilled} (\hyperlink{classBug}{Bug} $\ast$bug)
+\begin{DoxyCompactList}\small\item\em Mort d'un insecte. \end{DoxyCompactList}\item 
+void \hyperlink{classRender_a3b5bb3705131ca57252398e0f6a9e3e5}{addProjectile} (\hyperlink{classProjectile}{Projectile} $\ast$missile)
+\begin{DoxyCompactList}\small\item\em Ajout d'un projectile. \end{DoxyCompactList}\item 
+void \hyperlink{classRender_a20678c257926bfff635fded745e11f4a}{destroyTower} (\hyperlink{classTower}{Tower} $\ast$tower)
+\begin{DoxyCompactList}\small\item\em Vente d'une tour. \end{DoxyCompactList}\item 
+void \hyperlink{classRender_aedec0cbbe4808368656b772dfe3e63f9}{explodingProjectile} (\hyperlink{classProjectile}{Projectile} $\ast$missile)
+\begin{DoxyCompactList}\small\item\em explosion d'un projectile. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Signaux}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classRender_a916c15ab4b31cc0f34d9d53b89b89ac0}{
-void {\bfseries newWaveName} (QString name)}
-\label{classRender_a916c15ab4b31cc0f34d9d53b89b89ac0}
-
-\item 
-\hypertarget{classRender_ad88f7f01a7b9fafa756221707d590a78}{
-void {\bfseries loseLife} ()}
-\label{classRender_ad88f7f01a7b9fafa756221707d590a78}
-
-\item 
-\hypertarget{classRender_acd71f1c6c9d67dff3627da4ff6a4c9b8}{
-void {\bfseries getCred} ()}
-\label{classRender_acd71f1c6c9d67dff3627da4ff6a4c9b8}
-
-\item 
-\hypertarget{classRender_a126c4b49e93103a751f66359d8e63171}{
-void {\bfseries selectTower} (\hyperlink{classTower}{Tower} $\ast$tower)}
-\label{classRender_a126c4b49e93103a751f66359d8e63171}
-
-\end{DoxyCompactItemize}
+void \hyperlink{classRender_a916c15ab4b31cc0f34d9d53b89b89ac0}{newWaveName} (QString name)
+\begin{DoxyCompactList}\small\item\em Nouvelle vaque. \end{DoxyCompactList}\item 
+void \hyperlink{classRender_ad88f7f01a7b9fafa756221707d590a78}{loseLife} ()
+\begin{DoxyCompactList}\small\item\em Perte d'une vie. \end{DoxyCompactList}\item 
+void \hyperlink{classRender_acd71f1c6c9d67dff3627da4ff6a4c9b8}{getCred} ()
+\begin{DoxyCompactList}\small\item\em Gain d'un crédit. \end{DoxyCompactList}\item 
+void \hyperlink{classRender_a126c4b49e93103a751f66359d8e63171}{selectTower} (\hyperlink{classTower}{Tower} $\ast$tower)
+\begin{DoxyCompactList}\small\item\em Sélection d'une tour. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classRender_aae10ca06c2755038752a2a007727f0ca}{
-void {\bfseries drawBackground} (QPainter $\ast$painter, const QRectF \&rect)}
-\label{classRender_aae10ca06c2755038752a2a007727f0ca}
-
-\item 
-\hypertarget{classRender_a1291eebbb0647502fc90d058bc22e7a3}{
-QPoint {\bfseries square} (QGraphicsItem \&item)}
-\label{classRender_a1291eebbb0647502fc90d058bc22e7a3}
-
-\item 
-\hypertarget{classRender_afd1f727c1514ca01ad1cefbf4992497b}{
-QPoint {\bfseries goal} ()}
-\label{classRender_afd1f727c1514ca01ad1cefbf4992497b}
-
-\item 
-\hypertarget{classRender_a696f385b556f15a7420293a055734e4d}{
-double {\bfseries getAngle} (QPoint \&current)}
-\label{classRender_a696f385b556f15a7420293a055734e4d}
-
-\item 
-\hypertarget{classRender_a899ce19de8a01bb4bc01653cd8761357}{
-void {\bfseries mousePressEvent} (QGraphicsSceneMouseEvent $\ast$mouseEvent)}
-\label{classRender_a899ce19de8a01bb4bc01653cd8761357}
-
-\item 
-\hypertarget{classRender_a8074fc252757d5c446d79f8205348116}{
-\hyperlink{classBug}{Bug} $\ast$ {\bfseries getTarget} (QPointF pos, double range, short int targetType)}
-\label{classRender_a8074fc252757d5c446d79f8205348116}
-
-\end{DoxyCompactItemize}
+\hyperlink{classRender_a8610cc11739ef679b5935dd819021351}{Render} ()
+\begin{DoxyCompactList}\small\item\em Constructeur du rendu. \end{DoxyCompactList}\item 
+\hyperlink{classRender_ab0f4b917605cb15902f8d045a4197faf}{$\sim$Render} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \hyperlink{classRender}{Render}. \end{DoxyCompactList}\item 
+void \hyperlink{classRender_aae10ca06c2755038752a2a007727f0ca}{drawBackground} (QPainter $\ast$painter, const QRectF \&rect)
+\begin{DoxyCompactList}\small\item\em Méthode surchargée de QGraphicsScene. \end{DoxyCompactList}\item 
+QPoint \hyperlink{classRender_a1291eebbb0647502fc90d058bc22e7a3}{square} (QGraphicsItem \&item)
+\begin{DoxyCompactList}\small\item\em Donne les coordonnées de la case où se trouve l'objet graphique donnée. \end{DoxyCompactList}\item 
+QPoint \hyperlink{classRender_afd1f727c1514ca01ad1cefbf4992497b}{goal} ()
+\begin{DoxyCompactList}\small\item\em Acesseur. \end{DoxyCompactList}\item 
+double \hyperlink{classRender_a696f385b556f15a7420293a055734e4d}{getAngle} (QPoint \&current)
+\begin{DoxyCompactList}\small\item\em Permet à un insecte de se diriger. \end{DoxyCompactList}\item 
+void \hyperlink{classRender_a899ce19de8a01bb4bc01653cd8761357}{mousePressEvent} (QGraphicsSceneMouseEvent $\ast$mouseEvent)
+\begin{DoxyCompactList}\small\item\em Catch les événements souris. \end{DoxyCompactList}\item 
+\hyperlink{classBug}{Bug} $\ast$ \hyperlink{classRender_a8074fc252757d5c446d79f8205348116}{getTarget} (QPointF pos, double range, short int targetType)
+\begin{DoxyCompactList}\small\item\em Permet aux tours de choisir leur prochaine cible. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Fonctions membres privées}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classRender_a4a1fed13f76997e45e90dd39d622d33e}{
-void {\bfseries addBug} (\hyperlink{classBug}{Bug} $\ast$bug)}
-\label{classRender_a4a1fed13f76997e45e90dd39d622d33e}
-
-\end{DoxyCompactItemize}
+void \hyperlink{classRender_a4a1fed13f76997e45e90dd39d622d33e}{addBug} (\hyperlink{classBug}{Bug} $\ast$bug)
+\begin{DoxyCompactList}\small\item\em Interface de addItem() spécialisé. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Attributs privés}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classRender_a6351bb3de99ef093995785788c1d218e}{
-QTimer {\bfseries waveTimer}}
-\label{classRender_a6351bb3de99ef093995785788c1d218e}
+QTimer \hyperlink{classRender_a6351bb3de99ef093995785788c1d218e}{waveTimer}
+\begin{DoxyCompactList}\small\item\em Timer appelant la méthode \hyperlink{classRender_a9413625fc472b4b7806f3a0d615d6ea9}{nextBug()} a intervalle régulier lors d'une vague. \end{DoxyCompactList}\item 
+QPoint $\ast$ \hyperlink{classRender_afa2c3b6d106bf91639ddf351d7d3315e}{start}
+\begin{DoxyCompactList}\small\item\em La position du départ des insectes. \end{DoxyCompactList}\item 
+double \hyperlink{classRender_ab66f1b35519a6e9d6fe14e75a6973680}{start\_\-angle}
+\begin{DoxyCompactList}\small\item\em L'angle de départ des insectes. \end{DoxyCompactList}\item 
+int \hyperlink{classRender_a682e96907f3d52f710df4e9c2a5e9d07}{waveNumber}
+\begin{DoxyCompactList}\small\item\em Le numéro de la vague en cours. \end{DoxyCompactList}\item 
+QStringList $\ast$ \hyperlink{classRender_a6b5e2349a706152d4763d22b995e9237}{wave}
+\begin{DoxyCompactList}\small\item\em La liste des insectes restant a spawn dans la vague en cours. \end{DoxyCompactList}\item 
+int \hyperlink{classRender_a9c7793879c5007b8cae3a9c2885d283f}{map} \mbox{[}ROW\mbox{]}\mbox{[}COLUMN\mbox{]}
+\begin{DoxyCompactList}\small\item\em Un tableau à deux dimensions des cases de la map avec leur contenu (chemin, boue, herbe). \end{DoxyCompactList}\item 
+\hyperlink{classTower}{Tower} $\ast$ \hyperlink{classRender_a7b01b65692570fe6dec24d0a5c1aa178}{towers} \mbox{[}ROW\mbox{]}\mbox{[}COLUMN\mbox{]}
+\begin{DoxyCompactList}\small\item\em Un tableau à deux dimensions de pointeurs vers les tours présentent sur la map. \end{DoxyCompactList}\item 
+QPoint \hyperlink{classRender_a08247005a2c595988f8a0ab14a8b1ad9}{goalSquare}
+\begin{DoxyCompactList}\small\item\em La position de l'arrivée des insectes. \end{DoxyCompactList}\item 
+QHash$<$ int, QPixmap $>$ \hyperlink{classRender_aaa10cde2c7a766914312f85d7c7eb25c}{tiles}
+\begin{DoxyCompactList}\small\item\em La liste des images des différentes tuiles présentent sur la map. \end{DoxyCompactList}\item 
+\hyperlink{classHatchery}{Hatchery} $\ast$ \hyperlink{classRender_ac6b86ad92172fefa5b9a56b31e9055d3}{b1}
+\begin{DoxyCompactList}\small\item\em Un pointeur vers la fabrique a utiliser pour spawn les insectes. \end{DoxyCompactList}\item 
+QString \hyperlink{classRender_ae8f2c323913fe8b89e0e7f443ef41ae0}{tower2build}
+\begin{DoxyCompactList}\small\item\em La tour que l'on vient d'acheter et que l'on doit placer. \end{DoxyCompactList}\item 
+QList$<$ \hyperlink{classBug}{Bug} $\ast$ $>$ \hyperlink{classRender_a3d5b29479d129b61c6ad8f3eec2f1f76}{bugs}
+\begin{DoxyCompactList}\small\item\em Une liste de pointeur vers tous les insectes présent dans la Scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\item 
-\hypertarget{classRender_afa2c3b6d106bf91639ddf351d7d3315e}{
-QPoint $\ast$ {\bfseries start}}
-\label{classRender_afa2c3b6d106bf91639ddf351d7d3315e}
 
-\item 
-\hypertarget{classRender_ab66f1b35519a6e9d6fe14e75a6973680}{
-double {\bfseries start\_\-angle}}
-\label{classRender_ab66f1b35519a6e9d6fe14e75a6973680}
+\subsection{Description détaillée}
+Classe héritant de QGraphicsScene et gérant les interactions entre les éléments du jeu, le placement des tours... 
 
-\item 
-\hypertarget{classRender_a682e96907f3d52f710df4e9c2a5e9d07}{
-int {\bfseries waveNumber}}
-\label{classRender_a682e96907f3d52f710df4e9c2a5e9d07}
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classRender_a8610cc11739ef679b5935dd819021351}{
+\index{Render@{Render}!Render@{Render}}
+\index{Render@{Render}!Render@{Render}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}Render::Render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classRender_a8610cc11739ef679b5935dd819021351}
+Crée un nouvelle objet pour gérer le rendu. \hypertarget{classRender_ab0f4b917605cb15902f8d045a4197faf}{
+\index{Render@{Render}!$\sim$Render@{$\sim$Render}}
+\index{$\sim$Render@{$\sim$Render}!Render@{Render}}
+\subsubsection[{$\sim$Render}]{\setlength{\rightskip}{0pt plus 5cm}Render::$\sim$Render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classRender_ab0f4b917605cb15902f8d045a4197faf}
+Désalloue correctement la mémoire puis quitte le jeu. 
 
-\item 
-\hypertarget{classRender_a6b5e2349a706152d4763d22b995e9237}{
-QStringList $\ast$ {\bfseries wave}}
-\label{classRender_a6b5e2349a706152d4763d22b995e9237}
+\subsection{Documentation des fonctions membres}
+\hypertarget{classRender_a4a1fed13f76997e45e90dd39d622d33e}{
+\index{Render@{Render}!addBug@{addBug}}
+\index{addBug@{addBug}!Render@{Render}}
+\subsubsection[{addBug}]{\setlength{\rightskip}{0pt plus 5cm}void Render::addBug (
+\begin{DoxyParamCaption}
+\item[{{\bf Bug} $\ast$}]{bug}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classRender_a4a1fed13f76997e45e90dd39d622d33e}
+Permet d'ajouter un insecte en initialisant correctement son parent et an l'ajoutant à la liste spécifique aux insectes. \hypertarget{classRender_a3b5bb3705131ca57252398e0f6a9e3e5}{
+\index{Render@{Render}!addProjectile@{addProjectile}}
+\index{addProjectile@{addProjectile}!Render@{Render}}
+\subsubsection[{addProjectile}]{\setlength{\rightskip}{0pt plus 5cm}void Render::addProjectile (
+\begin{DoxyParamCaption}
+\item[{{\bf Projectile} $\ast$}]{missile}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classRender_a3b5bb3705131ca57252398e0f6a9e3e5}
+Lorsqu'un projectile est tirée, \hyperlink{classRender}{Render} l'ajoute à la scène. 
+\begin{DoxyParams}{Paramètres}
+{\em missile} & Un pointeur vers le projectile qui vient d'être tiré. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRender_aeeddbbe27102625cc2d5234fa0be523a}{
+\index{Render@{Render}!bugFinish@{bugFinish}}
+\index{bugFinish@{bugFinish}!Render@{Render}}
+\subsubsection[{bugFinish}]{\setlength{\rightskip}{0pt plus 5cm}void Render::bugFinish (
+\begin{DoxyParamCaption}
+\item[{{\bf Bug} $\ast$}]{bug}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classRender_aeeddbbe27102625cc2d5234fa0be523a}
+Quand un insecte arrive la scène le détruit et fais perdre une vie (emit \hyperlink{classRender_ad88f7f01a7b9fafa756221707d590a78}{loseLife()}) au joueur. 
+\begin{DoxyParams}{Paramètres}
+{\em bug} & Un pointeur vers l'insecte qui vient d'arriver à la fin. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRender_a940007358a139d0b30e002929d24f770}{
+\index{Render@{Render}!bugKilled@{bugKilled}}
+\index{bugKilled@{bugKilled}!Render@{Render}}
+\subsubsection[{bugKilled}]{\setlength{\rightskip}{0pt plus 5cm}void Render::bugKilled (
+\begin{DoxyParamCaption}
+\item[{{\bf Bug} $\ast$}]{bug}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classRender_a940007358a139d0b30e002929d24f770}
+Quand un insecte est tué, la scène le détruit, appelant ses caractéristiques spéciales et ajoute un crédit au joueur. 
+\begin{DoxyParams}{Paramètres}
+{\em bug} & Un pointeur vers l'insecte qui vient d'arriver à la fin. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRender_a20678c257926bfff635fded745e11f4a}{
+\index{Render@{Render}!destroyTower@{destroyTower}}
+\index{destroyTower@{destroyTower}!Render@{Render}}
+\subsubsection[{destroyTower}]{\setlength{\rightskip}{0pt plus 5cm}void Render::destroyTower (
+\begin{DoxyParamCaption}
+\item[{{\bf Tower} $\ast$}]{tower}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classRender_a20678c257926bfff635fded745e11f4a}
+Lorsqu'une défense est vendu, la scène la détruit. 
+\begin{DoxyParams}{Paramètres}
+{\em tower} & Un pointeur vers la tour à détruire. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRender_aae10ca06c2755038752a2a007727f0ca}{
+\index{Render@{Render}!drawBackground@{drawBackground}}
+\index{drawBackground@{drawBackground}!Render@{Render}}
+\subsubsection[{drawBackground}]{\setlength{\rightskip}{0pt plus 5cm}void Render::drawBackground (
+\begin{DoxyParamCaption}
+\item[{QPainter $\ast$}]{painter, }
+\item[{const QRectF \&}]{rect}
+\end{DoxyParamCaption}
+)}}
+\label{classRender_aae10ca06c2755038752a2a007727f0ca}
+Appelé automatiquement par Qt, permet de redessiner le fond de la scène. \hypertarget{classRender_aedec0cbbe4808368656b772dfe3e63f9}{
+\index{Render@{Render}!explodingProjectile@{explodingProjectile}}
+\index{explodingProjectile@{explodingProjectile}!Render@{Render}}
+\subsubsection[{explodingProjectile}]{\setlength{\rightskip}{0pt plus 5cm}void Render::explodingProjectile (
+\begin{DoxyParamCaption}
+\item[{{\bf Projectile} $\ast$}]{missile}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classRender_aedec0cbbe4808368656b772dfe3e63f9}
+Lorsqu'un projectile explose, la scène le détruit. 
+\begin{DoxyParams}{Paramètres}
+{\em missile} & Un pointeur vers le projectile à faire exploser. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRender_a696f385b556f15a7420293a055734e4d}{
+\index{Render@{Render}!getAngle@{getAngle}}
+\index{getAngle@{getAngle}!Render@{Render}}
+\subsubsection[{getAngle}]{\setlength{\rightskip}{0pt plus 5cm}double Render::getAngle (
+\begin{DoxyParamCaption}
+\item[{QPoint \&}]{current}
+\end{DoxyParamCaption}
+)}}
+\label{classRender_a696f385b556f15a7420293a055734e4d}
+Donne à un insecte l'angle vers lequel se tourner pour suivre le chemin. 
+\begin{DoxyParams}{Paramètres}
+{\em current} & La position actuelle de l'insecte. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+L'angle vers lequel se diriger. 
+\end{DoxyReturn}
+\hypertarget{classRender_acd71f1c6c9d67dff3627da4ff6a4c9b8}{
+\index{Render@{Render}!getCred@{getCred}}
+\index{getCred@{getCred}!Render@{Render}}
+\subsubsection[{getCred}]{\setlength{\rightskip}{0pt plus 5cm}void Render::getCred (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}signal\mbox{]}}}}
+\label{classRender_acd71f1c6c9d67dff3627da4ff6a4c9b8}
+Indique à l'UI de créditer le joueur pour un kill d'insecte. \hypertarget{classRender_a8074fc252757d5c446d79f8205348116}{
+\index{Render@{Render}!getTarget@{getTarget}}
+\index{getTarget@{getTarget}!Render@{Render}}
+\subsubsection[{getTarget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Bug} $\ast$ Render::getTarget (
+\begin{DoxyParamCaption}
+\item[{QPointF}]{pos, }
+\item[{double}]{range, }
+\item[{short int}]{targetType}
+\end{DoxyParamCaption}
+)}}
+\label{classRender_a8074fc252757d5c446d79f8205348116}
+Donne l'insecte le plus avancé sur le chemin à portée de la tour et d'un type de déplacement permettant d'être touché par la tour. 
+\begin{DoxyParams}{Paramètres}
+{\em pos} & La position de la tour. \\
+\hline
+{\em range} & La portée en case de la tour. \\
+\hline
+{\em targetType} & Le(s) type(s) de cibles que la tour peut attaquer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+L'insecte à abattre. 
+\end{DoxyReturn}
+\hypertarget{classRender_afd1f727c1514ca01ad1cefbf4992497b}{
+\index{Render@{Render}!goal@{goal}}
+\index{goal@{goal}!Render@{Render}}
+\subsubsection[{goal}]{\setlength{\rightskip}{0pt plus 5cm}QPoint Render::goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classRender_afd1f727c1514ca01ad1cefbf4992497b}
+Retourne la position de l'arrivée. \begin{DoxyReturn}{Renvoie}
+les coordonnées de l'arrivée sous forme d'un QPoint. 
+\end{DoxyReturn}
+\hypertarget{classRender_ad88f7f01a7b9fafa756221707d590a78}{
+\index{Render@{Render}!loseLife@{loseLife}}
+\index{loseLife@{loseLife}!Render@{Render}}
+\subsubsection[{loseLife}]{\setlength{\rightskip}{0pt plus 5cm}void Render::loseLife (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}signal\mbox{]}}}}
+\label{classRender_ad88f7f01a7b9fafa756221707d590a78}
+Indique à l'UI que le joueur viens de perdre une vie. \hypertarget{classRender_a899ce19de8a01bb4bc01653cd8761357}{
+\index{Render@{Render}!mousePressEvent@{mousePressEvent}}
+\index{mousePressEvent@{mousePressEvent}!Render@{Render}}
+\subsubsection[{mousePressEvent}]{\setlength{\rightskip}{0pt plus 5cm}void Render::mousePressEvent (
+\begin{DoxyParamCaption}
+\item[{QGraphicsSceneMouseEvent $\ast$}]{mouseEvent}
+\end{DoxyParamCaption}
+)}}
+\label{classRender_a899ce19de8a01bb4bc01653cd8761357}
+Surcharge de la méthode héritée de QGraphicsScene pour gérer les entrées souris. 
+\begin{DoxyParams}{Paramètres}
+{\em mouseEvent} & L'événement souris générée par Qt. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRender_a916c15ab4b31cc0f34d9d53b89b89ac0}{
+\index{Render@{Render}!newWaveName@{newWaveName}}
+\index{newWaveName@{newWaveName}!Render@{Render}}
+\subsubsection[{newWaveName}]{\setlength{\rightskip}{0pt plus 5cm}void Render::newWaveName (
+\begin{DoxyParamCaption}
+\item[{QString}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}signal\mbox{]}}}}
+\label{classRender_a916c15ab4b31cc0f34d9d53b89b89ac0}
+Indique à l'UI de changer le nom de la vague en cours. 
+\begin{DoxyParams}{Paramètres}
+{\em name} & le nom de la nouvelle vague. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRender_a9413625fc472b4b7806f3a0d615d6ea9}{
+\index{Render@{Render}!nextBug@{nextBug}}
+\index{nextBug@{nextBug}!Render@{Render}}
+\subsubsection[{nextBug}]{\setlength{\rightskip}{0pt plus 5cm}void Render::nextBug (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classRender_a9413625fc472b4b7806f3a0d615d6ea9}
+Appelle la fabrique pour spawn l'insecte suivant de la vague donnée par la liste wave. \hypertarget{classRender_a3252d02e9509f342bc96129b4b10b415}{
+\index{Render@{Render}!nextWave@{nextWave}}
+\index{nextWave@{nextWave}!Render@{Render}}
+\subsubsection[{nextWave}]{\setlength{\rightskip}{0pt plus 5cm}void Render::nextWave (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classRender_a3252d02e9509f342bc96129b4b10b415}
+Lance la prochaine Vague en lisant le fichier de conguration dans map/. \hypertarget{classRender_a126c4b49e93103a751f66359d8e63171}{
+\index{Render@{Render}!selectTower@{selectTower}}
+\index{selectTower@{selectTower}!Render@{Render}}
+\subsubsection[{selectTower}]{\setlength{\rightskip}{0pt plus 5cm}void Render::selectTower (
+\begin{DoxyParamCaption}
+\item[{{\bf Tower} $\ast$}]{tower}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}signal\mbox{]}}}}
+\label{classRender_a126c4b49e93103a751f66359d8e63171}
+Indique à l'UI que le joueur vient de sélectionner une défense. 
+\begin{DoxyParams}{Paramètres}
+{\em tower} & Un pointeur vers la défense sélectionnée. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRender_a1291eebbb0647502fc90d058bc22e7a3}{
+\index{Render@{Render}!square@{square}}
+\index{square@{square}!Render@{Render}}
+\subsubsection[{square}]{\setlength{\rightskip}{0pt plus 5cm}QPoint Render::square (
+\begin{DoxyParamCaption}
+\item[{QGraphicsItem \&}]{item}
+\end{DoxyParamCaption}
+)}}
+\label{classRender_a1291eebbb0647502fc90d058bc22e7a3}
+Donne les coordonnées de la case où se trouve l'objet graphique donnée. 
+\begin{DoxyParams}{Paramètres}
+{\em item} & Un pointeur vers l'objet dont on veut connaitre la position. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Les coordonnée de la case sous forme d'un QPoint. 
+\end{DoxyReturn}
+\hypertarget{classRender_a8e2eccb2fc3914198b8939bf0625c955}{
+\index{Render@{Render}!towerBought@{towerBought}}
+\index{towerBought@{towerBought}!Render@{Render}}
+\subsubsection[{towerBought}]{\setlength{\rightskip}{0pt plus 5cm}void Render::towerBought (
+\begin{DoxyParamCaption}
+\item[{QString}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classRender_a8e2eccb2fc3914198b8939bf0625c955}
+Message indiquant l'achat d'une tour à la scène. 
+\begin{DoxyParams}{Paramètres}
+{\em type} & Le type de tour à placer. \\
+\hline
+\end{DoxyParams}
 
-\item 
-\hypertarget{classRender_a9c7793879c5007b8cae3a9c2885d283f}{
-int {\bfseries map} \mbox{[}ROW\mbox{]}\mbox{[}COLUMN\mbox{]}}
-\label{classRender_a9c7793879c5007b8cae3a9c2885d283f}
 
-\item 
-\hypertarget{classRender_a7b01b65692570fe6dec24d0a5c1aa178}{
-\hyperlink{classTower}{Tower} $\ast$ {\bfseries towers} \mbox{[}ROW\mbox{]}\mbox{[}COLUMN\mbox{]}}
-\label{classRender_a7b01b65692570fe6dec24d0a5c1aa178}
-
-\item 
-\hypertarget{classRender_a08247005a2c595988f8a0ab14a8b1ad9}{
-QPoint {\bfseries goalSquare}}
-\label{classRender_a08247005a2c595988f8a0ab14a8b1ad9}
-
-\item 
-\hypertarget{classRender_aaa10cde2c7a766914312f85d7c7eb25c}{
-QHash$<$ int, QPixmap $>$ {\bfseries tiles}}
-\label{classRender_aaa10cde2c7a766914312f85d7c7eb25c}
-
-\item 
+\subsection{Documentation des champs}
 \hypertarget{classRender_ac6b86ad92172fefa5b9a56b31e9055d3}{
-\hyperlink{classHatchery}{Hatchery} $\ast$ {\bfseries b1}}
+\index{Render@{Render}!b1@{b1}}
+\index{b1@{b1}!Render@{Render}}
+\subsubsection[{b1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hatchery}$\ast$ {\bf Render::b1}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
 \label{classRender_ac6b86ad92172fefa5b9a56b31e9055d3}
-
-\item 
-\hypertarget{classRender_ae8f2c323913fe8b89e0e7f443ef41ae0}{
-QString {\bfseries tower2build}}
-\label{classRender_ae8f2c323913fe8b89e0e7f443ef41ae0}
-
-\item 
 \hypertarget{classRender_a3d5b29479d129b61c6ad8f3eec2f1f76}{
-QList$<$ \hyperlink{classBug}{Bug} $\ast$ $>$ {\bfseries bugs}}
+\index{Render@{Render}!bugs@{bugs}}
+\index{bugs@{bugs}!Render@{Render}}
+\subsubsection[{bugs}]{\setlength{\rightskip}{0pt plus 5cm}QList$<${\bf Bug} $\ast$$>$ {\bf Render::bugs}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
 \label{classRender_a3d5b29479d129b61c6ad8f3eec2f1f76}
-
-\end{DoxyCompactItemize}
+\hypertarget{classRender_a08247005a2c595988f8a0ab14a8b1ad9}{
+\index{Render@{Render}!goalSquare@{goalSquare}}
+\index{goalSquare@{goalSquare}!Render@{Render}}
+\subsubsection[{goalSquare}]{\setlength{\rightskip}{0pt plus 5cm}QPoint {\bf Render::goalSquare}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classRender_a08247005a2c595988f8a0ab14a8b1ad9}
+\hypertarget{classRender_a9c7793879c5007b8cae3a9c2885d283f}{
+\index{Render@{Render}!map@{map}}
+\index{map@{map}!Render@{Render}}
+\subsubsection[{map}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Render::map}\mbox{[}ROW\mbox{]}\mbox{[}COLUMN\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classRender_a9c7793879c5007b8cae3a9c2885d283f}
+\hypertarget{classRender_afa2c3b6d106bf91639ddf351d7d3315e}{
+\index{Render@{Render}!start@{start}}
+\index{start@{start}!Render@{Render}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}QPoint$\ast$ {\bf Render::start}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classRender_afa2c3b6d106bf91639ddf351d7d3315e}
+\hypertarget{classRender_ab66f1b35519a6e9d6fe14e75a6973680}{
+\index{Render@{Render}!start\_\-angle@{start\_\-angle}}
+\index{start\_\-angle@{start\_\-angle}!Render@{Render}}
+\subsubsection[{start\_\-angle}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf Render::start\_\-angle}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classRender_ab66f1b35519a6e9d6fe14e75a6973680}
+\hypertarget{classRender_aaa10cde2c7a766914312f85d7c7eb25c}{
+\index{Render@{Render}!tiles@{tiles}}
+\index{tiles@{tiles}!Render@{Render}}
+\subsubsection[{tiles}]{\setlength{\rightskip}{0pt plus 5cm}QHash$<$int, QPixmap$>$ {\bf Render::tiles}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classRender_aaa10cde2c7a766914312f85d7c7eb25c}
+\hypertarget{classRender_ae8f2c323913fe8b89e0e7f443ef41ae0}{
+\index{Render@{Render}!tower2build@{tower2build}}
+\index{tower2build@{tower2build}!Render@{Render}}
+\subsubsection[{tower2build}]{\setlength{\rightskip}{0pt plus 5cm}QString {\bf Render::tower2build}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classRender_ae8f2c323913fe8b89e0e7f443ef41ae0}
+\hypertarget{classRender_a7b01b65692570fe6dec24d0a5c1aa178}{
+\index{Render@{Render}!towers@{towers}}
+\index{towers@{towers}!Render@{Render}}
+\subsubsection[{towers}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tower}$\ast$ {\bf Render::towers}\mbox{[}ROW\mbox{]}\mbox{[}COLUMN\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classRender_a7b01b65692570fe6dec24d0a5c1aa178}
+\hypertarget{classRender_a6b5e2349a706152d4763d22b995e9237}{
+\index{Render@{Render}!wave@{wave}}
+\index{wave@{wave}!Render@{Render}}
+\subsubsection[{wave}]{\setlength{\rightskip}{0pt plus 5cm}QStringList$\ast$ {\bf Render::wave}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classRender_a6b5e2349a706152d4763d22b995e9237}
+\hypertarget{classRender_a682e96907f3d52f710df4e9c2a5e9d07}{
+\index{Render@{Render}!waveNumber@{waveNumber}}
+\index{waveNumber@{waveNumber}!Render@{Render}}
+\subsubsection[{waveNumber}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Render::waveNumber}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classRender_a682e96907f3d52f710df4e9c2a5e9d07}
+\hypertarget{classRender_a6351bb3de99ef093995785788c1d218e}{
+\index{Render@{Render}!waveTimer@{waveTimer}}
+\index{waveTimer@{waveTimer}!Render@{Render}}
+\subsubsection[{waveTimer}]{\setlength{\rightskip}{0pt plus 5cm}QTimer {\bf Render::waveTimer}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classRender_a6351bb3de99ef093995785788c1d218e}
 
 
 La documentation de cette classe a été générée à partir des fichiers suivants :\begin{DoxyCompactItemize}

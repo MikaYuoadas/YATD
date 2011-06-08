@@ -69,80 +69,725 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">Référence de la classe Render</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="Render" --><table class="memberdecls">
+<!-- doxytag: class="Render" -->
+<p>Classe gérant le rendu graphique du jeu.  
+ <a href="classRender.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Render_8h_source.html">Render.h</a>&gt;</code></p>
+<table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-slots"></a>
 Connecteurs publics</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3252d02e9509f342bc96129b4b10b415"></a><!-- doxytag: member="Render::nextWave" ref="a3252d02e9509f342bc96129b4b10b415" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>nextWave</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9413625fc472b4b7806f3a0d615d6ea9"></a><!-- doxytag: member="Render::nextBug" ref="a9413625fc472b4b7806f3a0d615d6ea9" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>nextBug</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e2eccb2fc3914198b8939bf0625c955"></a><!-- doxytag: member="Render::towerBought" ref="a8e2eccb2fc3914198b8939bf0625c955" args="(QString type)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>towerBought</b> (QString type)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeeddbbe27102625cc2d5234fa0be523a"></a><!-- doxytag: member="Render::bugFinish" ref="aeeddbbe27102625cc2d5234fa0be523a" args="(Bug *bug)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>bugFinish</b> (<a class="el" href="classBug.html">Bug</a> *bug)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a940007358a139d0b30e002929d24f770"></a><!-- doxytag: member="Render::bugKilled" ref="a940007358a139d0b30e002929d24f770" args="(Bug *bug)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>bugKilled</b> (<a class="el" href="classBug.html">Bug</a> *bug)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b5bb3705131ca57252398e0f6a9e3e5"></a><!-- doxytag: member="Render::addProjectile" ref="a3b5bb3705131ca57252398e0f6a9e3e5" args="(Projectile *missile)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addProjectile</b> (<a class="el" href="classProjectile.html">Projectile</a> *missile)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20678c257926bfff635fded745e11f4a"></a><!-- doxytag: member="Render::destroyTower" ref="a20678c257926bfff635fded745e11f4a" args="(Tower *tower)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>destroyTower</b> (<a class="el" href="classTower.html">Tower</a> *tower)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedec0cbbe4808368656b772dfe3e63f9"></a><!-- doxytag: member="Render::explodingProjectile" ref="aedec0cbbe4808368656b772dfe3e63f9" args="(Projectile *missile)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>explodingProjectile</b> (<a class="el" href="classProjectile.html">Projectile</a> *missile)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a3252d02e9509f342bc96129b4b10b415">nextWave</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Lance la prochaine Vague.  <a href="#a3252d02e9509f342bc96129b4b10b415"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a9413625fc472b4b7806f3a0d615d6ea9">nextBug</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée le prochaine insecte de la vague.  <a href="#a9413625fc472b4b7806f3a0d615d6ea9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a8e2eccb2fc3914198b8939bf0625c955">towerBought</a> (QString type)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Message indiquant l'achat d'une tour à la scène.  <a href="#a8e2eccb2fc3914198b8939bf0625c955"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#aeeddbbe27102625cc2d5234fa0be523a">bugFinish</a> (<a class="el" href="classBug.html">Bug</a> *bug)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrivée d'un insecte.  <a href="#aeeddbbe27102625cc2d5234fa0be523a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a940007358a139d0b30e002929d24f770">bugKilled</a> (<a class="el" href="classBug.html">Bug</a> *bug)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Mort d'un insecte.  <a href="#a940007358a139d0b30e002929d24f770"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a3b5bb3705131ca57252398e0f6a9e3e5">addProjectile</a> (<a class="el" href="classProjectile.html">Projectile</a> *missile)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajout d'un projectile.  <a href="#a3b5bb3705131ca57252398e0f6a9e3e5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a20678c257926bfff635fded745e11f4a">destroyTower</a> (<a class="el" href="classTower.html">Tower</a> *tower)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Vente d'une tour.  <a href="#a20678c257926bfff635fded745e11f4a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#aedec0cbbe4808368656b772dfe3e63f9">explodingProjectile</a> (<a class="el" href="classProjectile.html">Projectile</a> *missile)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">explosion d'un projectile.  <a href="#aedec0cbbe4808368656b772dfe3e63f9"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="signals"></a>
 Signaux</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a916c15ab4b31cc0f34d9d53b89b89ac0"></a><!-- doxytag: member="Render::newWaveName" ref="a916c15ab4b31cc0f34d9d53b89b89ac0" args="(QString name)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>newWaveName</b> (QString name)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad88f7f01a7b9fafa756221707d590a78"></a><!-- doxytag: member="Render::loseLife" ref="ad88f7f01a7b9fafa756221707d590a78" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>loseLife</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd71f1c6c9d67dff3627da4ff6a4c9b8"></a><!-- doxytag: member="Render::getCred" ref="acd71f1c6c9d67dff3627da4ff6a4c9b8" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>getCred</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a126c4b49e93103a751f66359d8e63171"></a><!-- doxytag: member="Render::selectTower" ref="a126c4b49e93103a751f66359d8e63171" args="(Tower *tower)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>selectTower</b> (<a class="el" href="classTower.html">Tower</a> *tower)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a916c15ab4b31cc0f34d9d53b89b89ac0">newWaveName</a> (QString name)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Nouvelle vaque.  <a href="#a916c15ab4b31cc0f34d9d53b89b89ac0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#ad88f7f01a7b9fafa756221707d590a78">loseLife</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Perte d'une vie.  <a href="#ad88f7f01a7b9fafa756221707d590a78"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#acd71f1c6c9d67dff3627da4ff6a4c9b8">getCred</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gain d'un crédit.  <a href="#acd71f1c6c9d67dff3627da4ff6a4c9b8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a126c4b49e93103a751f66359d8e63171">selectTower</a> (<a class="el" href="classTower.html">Tower</a> *tower)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sélection d'une tour.  <a href="#a126c4b49e93103a751f66359d8e63171"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae10ca06c2755038752a2a007727f0ca"></a><!-- doxytag: member="Render::drawBackground" ref="aae10ca06c2755038752a2a007727f0ca" args="(QPainter *painter, const QRectF &amp;rect)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawBackground</b> (QPainter *painter, const QRectF &amp;rect)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1291eebbb0647502fc90d058bc22e7a3"></a><!-- doxytag: member="Render::square" ref="a1291eebbb0647502fc90d058bc22e7a3" args="(QGraphicsItem &amp;item)" -->
-QPoint&#160;</td><td class="memItemRight" valign="bottom"><b>square</b> (QGraphicsItem &amp;item)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd1f727c1514ca01ad1cefbf4992497b"></a><!-- doxytag: member="Render::goal" ref="afd1f727c1514ca01ad1cefbf4992497b" args="()" -->
-QPoint&#160;</td><td class="memItemRight" valign="bottom"><b>goal</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a696f385b556f15a7420293a055734e4d"></a><!-- doxytag: member="Render::getAngle" ref="a696f385b556f15a7420293a055734e4d" args="(QPoint &amp;current)" -->
-double&#160;</td><td class="memItemRight" valign="bottom"><b>getAngle</b> (QPoint &amp;current)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a899ce19de8a01bb4bc01653cd8761357"></a><!-- doxytag: member="Render::mousePressEvent" ref="a899ce19de8a01bb4bc01653cd8761357" args="(QGraphicsSceneMouseEvent *mouseEvent)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>mousePressEvent</b> (QGraphicsSceneMouseEvent *mouseEvent)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8074fc252757d5c446d79f8205348116"></a><!-- doxytag: member="Render::getTarget" ref="a8074fc252757d5c446d79f8205348116" args="(QPointF pos, double range, short int targetType)" -->
-<a class="el" href="classBug.html">Bug</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getTarget</b> (QPointF pos, double range, short int targetType)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a8610cc11739ef679b5935dd819021351">Render</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur du rendu.  <a href="#a8610cc11739ef679b5935dd819021351"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#ab0f4b917605cb15902f8d045a4197faf">~Render</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur de <a class="el" href="classRender.html" title="Classe gérant le rendu graphique du jeu.">Render</a>.  <a href="#ab0f4b917605cb15902f8d045a4197faf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#aae10ca06c2755038752a2a007727f0ca">drawBackground</a> (QPainter *painter, const QRectF &amp;rect)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Méthode surchargée de QGraphicsScene.  <a href="#aae10ca06c2755038752a2a007727f0ca"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QPoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a1291eebbb0647502fc90d058bc22e7a3">square</a> (QGraphicsItem &amp;item)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Donne les coordonnées de la case où se trouve l'objet graphique donnée.  <a href="#a1291eebbb0647502fc90d058bc22e7a3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QPoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#afd1f727c1514ca01ad1cefbf4992497b">goal</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Acesseur.  <a href="#afd1f727c1514ca01ad1cefbf4992497b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a696f385b556f15a7420293a055734e4d">getAngle</a> (QPoint &amp;current)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet à un insecte de se diriger.  <a href="#a696f385b556f15a7420293a055734e4d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a899ce19de8a01bb4bc01653cd8761357">mousePressEvent</a> (QGraphicsSceneMouseEvent *mouseEvent)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Catch les événements souris.  <a href="#a899ce19de8a01bb4bc01653cd8761357"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBug.html">Bug</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a8074fc252757d5c446d79f8205348116">getTarget</a> (QPointF pos, double range, short int targetType)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet aux tours de choisir leur prochaine cible.  <a href="#a8074fc252757d5c446d79f8205348116"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Fonctions membres privées</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a1fed13f76997e45e90dd39d622d33e"></a><!-- doxytag: member="Render::addBug" ref="a4a1fed13f76997e45e90dd39d622d33e" args="(Bug *bug)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addBug</b> (<a class="el" href="classBug.html">Bug</a> *bug)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a4a1fed13f76997e45e90dd39d622d33e">addBug</a> (<a class="el" href="classBug.html">Bug</a> *bug)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface de addItem() spécialisé.  <a href="#a4a1fed13f76997e45e90dd39d622d33e"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6351bb3de99ef093995785788c1d218e"></a><!-- doxytag: member="Render::waveTimer" ref="a6351bb3de99ef093995785788c1d218e" args="" -->
-QTimer&#160;</td><td class="memItemRight" valign="bottom"><b>waveTimer</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa2c3b6d106bf91639ddf351d7d3315e"></a><!-- doxytag: member="Render::start" ref="afa2c3b6d106bf91639ddf351d7d3315e" args="" -->
-QPoint *&#160;</td><td class="memItemRight" valign="bottom"><b>start</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab66f1b35519a6e9d6fe14e75a6973680"></a><!-- doxytag: member="Render::start_angle" ref="ab66f1b35519a6e9d6fe14e75a6973680" args="" -->
-double&#160;</td><td class="memItemRight" valign="bottom"><b>start_angle</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a682e96907f3d52f710df4e9c2a5e9d07"></a><!-- doxytag: member="Render::waveNumber" ref="a682e96907f3d52f710df4e9c2a5e9d07" args="" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>waveNumber</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b5e2349a706152d4763d22b995e9237"></a><!-- doxytag: member="Render::wave" ref="a6b5e2349a706152d4763d22b995e9237" args="" -->
-QStringList *&#160;</td><td class="memItemRight" valign="bottom"><b>wave</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c7793879c5007b8cae3a9c2885d283f"></a><!-- doxytag: member="Render::map" ref="a9c7793879c5007b8cae3a9c2885d283f" args="[ROW][COLUMN]" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>map</b> [ROW][COLUMN]</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b01b65692570fe6dec24d0a5c1aa178"></a><!-- doxytag: member="Render::towers" ref="a7b01b65692570fe6dec24d0a5c1aa178" args="[ROW][COLUMN]" -->
-<a class="el" href="classTower.html">Tower</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>towers</b> [ROW][COLUMN]</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08247005a2c595988f8a0ab14a8b1ad9"></a><!-- doxytag: member="Render::goalSquare" ref="a08247005a2c595988f8a0ab14a8b1ad9" args="" -->
-QPoint&#160;</td><td class="memItemRight" valign="bottom"><b>goalSquare</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa10cde2c7a766914312f85d7c7eb25c"></a><!-- doxytag: member="Render::tiles" ref="aaa10cde2c7a766914312f85d7c7eb25c" args="" -->
-QHash&lt; int, QPixmap &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tiles</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6b86ad92172fefa5b9a56b31e9055d3"></a><!-- doxytag: member="Render::b1" ref="ac6b86ad92172fefa5b9a56b31e9055d3" args="" -->
-<a class="el" href="classHatchery.html">Hatchery</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>b1</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8f2c323913fe8b89e0e7f443ef41ae0"></a><!-- doxytag: member="Render::tower2build" ref="ae8f2c323913fe8b89e0e7f443ef41ae0" args="" -->
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>tower2build</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d5b29479d129b61c6ad8f3eec2f1f76"></a><!-- doxytag: member="Render::bugs" ref="a3d5b29479d129b61c6ad8f3eec2f1f76" args="" -->
-QList&lt; <a class="el" href="classBug.html">Bug</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>bugs</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QTimer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a6351bb3de99ef093995785788c1d218e">waveTimer</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer appelant la méthode <a class="el" href="classRender.html#a9413625fc472b4b7806f3a0d615d6ea9" title="Crée le prochaine insecte de la vague.">nextBug()</a> a intervalle régulier lors d'une vague.  <a href="#a6351bb3de99ef093995785788c1d218e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QPoint *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#afa2c3b6d106bf91639ddf351d7d3315e">start</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">La position du départ des insectes.  <a href="#afa2c3b6d106bf91639ddf351d7d3315e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#ab66f1b35519a6e9d6fe14e75a6973680">start_angle</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">L'angle de départ des insectes.  <a href="#ab66f1b35519a6e9d6fe14e75a6973680"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a682e96907f3d52f710df4e9c2a5e9d07">waveNumber</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Le numéro de la vague en cours.  <a href="#a682e96907f3d52f710df4e9c2a5e9d07"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QStringList *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a6b5e2349a706152d4763d22b995e9237">wave</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">La liste des insectes restant a spawn dans la vague en cours.  <a href="#a6b5e2349a706152d4763d22b995e9237"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a9c7793879c5007b8cae3a9c2885d283f">map</a> [ROW][COLUMN]</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Un tableau à deux dimensions des cases de la map avec leur contenu (chemin, boue, herbe).  <a href="#a9c7793879c5007b8cae3a9c2885d283f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTower.html">Tower</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a7b01b65692570fe6dec24d0a5c1aa178">towers</a> [ROW][COLUMN]</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Un tableau à deux dimensions de pointeurs vers les tours présentent sur la map.  <a href="#a7b01b65692570fe6dec24d0a5c1aa178"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QPoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a08247005a2c595988f8a0ab14a8b1ad9">goalSquare</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">La position de l'arrivée des insectes.  <a href="#a08247005a2c595988f8a0ab14a8b1ad9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QHash&lt; int, QPixmap &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#aaa10cde2c7a766914312f85d7c7eb25c">tiles</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">La liste des images des différentes tuiles présentent sur la map.  <a href="#aaa10cde2c7a766914312f85d7c7eb25c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHatchery.html">Hatchery</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#ac6b86ad92172fefa5b9a56b31e9055d3">b1</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Un pointeur vers la fabrique a utiliser pour spawn les insectes.  <a href="#ac6b86ad92172fefa5b9a56b31e9055d3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#ae8f2c323913fe8b89e0e7f443ef41ae0">tower2build</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">La tour que l'on vient d'acheter et que l'on doit placer.  <a href="#ae8f2c323913fe8b89e0e7f443ef41ae0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="classBug.html">Bug</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a3d5b29479d129b61c6ad8f3eec2f1f76">bugs</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Une liste de pointeur vers tous les insectes présent dans la Scene.  <a href="#a3d5b29479d129b61c6ad8f3eec2f1f76"></a><br/></td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Classe héritant de QGraphicsScene et gérant les interactions entre les éléments du jeu, le placement des tours... </p>
+</div><hr/><h2>Documentation des constructeurs et destructeur</h2>
+<a class="anchor" id="a8610cc11739ef679b5935dd819021351"></a><!-- doxytag: member="Render::Render" ref="a8610cc11739ef679b5935dd819021351" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Render::Render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Crée un nouvelle objet pour gérer le rendu. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab0f4b917605cb15902f8d045a4197faf"></a><!-- doxytag: member="Render::~Render" ref="ab0f4b917605cb15902f8d045a4197faf" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Render::~Render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Désalloue correctement la mémoire puis quitte le jeu. </p>
+
+</div>
+</div>
+<hr/><h2>Documentation des fonctions membres</h2>
+<a class="anchor" id="a4a1fed13f76997e45e90dd39d622d33e"></a><!-- doxytag: member="Render::addBug" ref="a4a1fed13f76997e45e90dd39d622d33e" args="(Bug *bug)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::addBug </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBug.html">Bug</a> *&#160;</td>
+          <td class="paramname"><em>bug</em></td><td>)</td>
+          <td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Permet d'ajouter un insecte en initialisant correctement son parent et an l'ajoutant à la liste spécifique aux insectes. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3b5bb3705131ca57252398e0f6a9e3e5"></a><!-- doxytag: member="Render::addProjectile" ref="a3b5bb3705131ca57252398e0f6a9e3e5" args="(Projectile *missile)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::addProjectile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classProjectile.html">Projectile</a> *&#160;</td>
+          <td class="paramname"><em>missile</em></td><td>)</td>
+          <td><code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Lorsqu'un projectile est tirée, <a class="el" href="classRender.html" title="Classe gérant le rendu graphique du jeu.">Render</a> l'ajoute à la scène. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">missile</td><td>Un pointeur vers le projectile qui vient d'être tiré. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aeeddbbe27102625cc2d5234fa0be523a"></a><!-- doxytag: member="Render::bugFinish" ref="aeeddbbe27102625cc2d5234fa0be523a" args="(Bug *bug)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::bugFinish </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBug.html">Bug</a> *&#160;</td>
+          <td class="paramname"><em>bug</em></td><td>)</td>
+          <td><code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Quand un insecte arrive la scène le détruit et fais perdre une vie (emit <a class="el" href="classRender.html#ad88f7f01a7b9fafa756221707d590a78" title="Perte d&#39;une vie.">loseLife()</a>) au joueur. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bug</td><td>Un pointeur vers l'insecte qui vient d'arriver à la fin. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a940007358a139d0b30e002929d24f770"></a><!-- doxytag: member="Render::bugKilled" ref="a940007358a139d0b30e002929d24f770" args="(Bug *bug)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::bugKilled </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBug.html">Bug</a> *&#160;</td>
+          <td class="paramname"><em>bug</em></td><td>)</td>
+          <td><code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Quand un insecte est tué, la scène le détruit, appelant ses caractéristiques spéciales et ajoute un crédit au joueur. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bug</td><td>Un pointeur vers l'insecte qui vient d'arriver à la fin. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a20678c257926bfff635fded745e11f4a"></a><!-- doxytag: member="Render::destroyTower" ref="a20678c257926bfff635fded745e11f4a" args="(Tower *tower)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::destroyTower </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTower.html">Tower</a> *&#160;</td>
+          <td class="paramname"><em>tower</em></td><td>)</td>
+          <td><code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Lorsqu'une défense est vendu, la scène la détruit. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tower</td><td>Un pointeur vers la tour à détruire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aae10ca06c2755038752a2a007727f0ca"></a><!-- doxytag: member="Render::drawBackground" ref="aae10ca06c2755038752a2a007727f0ca" args="(QPainter *painter, const QRectF &amp;rect)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::drawBackground </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *&#160;</td>
+          <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QRectF &amp;&#160;</td>
+          <td class="paramname"><em>rect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Appelé automatiquement par Qt, permet de redessiner le fond de la scène. </p>
+
+</div>
+</div>
+<a class="anchor" id="aedec0cbbe4808368656b772dfe3e63f9"></a><!-- doxytag: member="Render::explodingProjectile" ref="aedec0cbbe4808368656b772dfe3e63f9" args="(Projectile *missile)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::explodingProjectile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classProjectile.html">Projectile</a> *&#160;</td>
+          <td class="paramname"><em>missile</em></td><td>)</td>
+          <td><code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Lorsqu'un projectile explose, la scène le détruit. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">missile</td><td>Un pointeur vers le projectile à faire exploser. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a696f385b556f15a7420293a055734e4d"></a><!-- doxytag: member="Render::getAngle" ref="a696f385b556f15a7420293a055734e4d" args="(QPoint &amp;current)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Render::getAngle </td>
+          <td>(</td>
+          <td class="paramtype">QPoint &amp;&#160;</td>
+          <td class="paramname"><em>current</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Donne à un insecte l'angle vers lequel se tourner pour suivre le chemin. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">current</td><td>La position actuelle de l'insecte. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>L'angle vers lequel se diriger. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acd71f1c6c9d67dff3627da4ff6a4c9b8"></a><!-- doxytag: member="Render::getCred" ref="acd71f1c6c9d67dff3627da4ff6a4c9b8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::getCred </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [signal]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Indique à l'UI de créditer le joueur pour un kill d'insecte. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8074fc252757d5c446d79f8205348116"></a><!-- doxytag: member="Render::getTarget" ref="a8074fc252757d5c446d79f8205348116" args="(QPointF pos, double range, short int targetType)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classBug.html">Bug</a> * Render::getTarget </td>
+          <td>(</td>
+          <td class="paramtype">QPointF&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short int&#160;</td>
+          <td class="paramname"><em>targetType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Donne l'insecte le plus avancé sur le chemin à portée de la tour et d'un type de déplacement permettant d'être touché par la tour. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>La position de la tour. </td></tr>
+    <tr><td class="paramname">range</td><td>La portée en case de la tour. </td></tr>
+    <tr><td class="paramname">targetType</td><td>Le(s) type(s) de cibles que la tour peut attaquer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>L'insecte à abattre. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afd1f727c1514ca01ad1cefbf4992497b"></a><!-- doxytag: member="Render::goal" ref="afd1f727c1514ca01ad1cefbf4992497b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPoint Render::goal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Retourne la position de l'arrivée. </p>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>les coordonnées de l'arrivée sous forme d'un QPoint. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad88f7f01a7b9fafa756221707d590a78"></a><!-- doxytag: member="Render::loseLife" ref="ad88f7f01a7b9fafa756221707d590a78" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::loseLife </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [signal]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Indique à l'UI que le joueur viens de perdre une vie. </p>
+
+</div>
+</div>
+<a class="anchor" id="a899ce19de8a01bb4bc01653cd8761357"></a><!-- doxytag: member="Render::mousePressEvent" ref="a899ce19de8a01bb4bc01653cd8761357" args="(QGraphicsSceneMouseEvent *mouseEvent)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::mousePressEvent </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsSceneMouseEvent *&#160;</td>
+          <td class="paramname"><em>mouseEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Surcharge de la méthode héritée de QGraphicsScene pour gérer les entrées souris. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mouseEvent</td><td>L'événement souris générée par Qt. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a916c15ab4b31cc0f34d9d53b89b89ac0"></a><!-- doxytag: member="Render::newWaveName" ref="a916c15ab4b31cc0f34d9d53b89b89ac0" args="(QString name)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::newWaveName </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td><code> [signal]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Indique à l'UI de changer le nom de la vague en cours. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>le nom de la nouvelle vague. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9413625fc472b4b7806f3a0d615d6ea9"></a><!-- doxytag: member="Render::nextBug" ref="a9413625fc472b4b7806f3a0d615d6ea9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::nextBug </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Appelle la fabrique pour spawn l'insecte suivant de la vague donnée par la liste wave. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3252d02e9509f342bc96129b4b10b415"></a><!-- doxytag: member="Render::nextWave" ref="a3252d02e9509f342bc96129b4b10b415" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::nextWave </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Lance la prochaine Vague en lisant le fichier de conguration dans map/. </p>
+
+</div>
+</div>
+<a class="anchor" id="a126c4b49e93103a751f66359d8e63171"></a><!-- doxytag: member="Render::selectTower" ref="a126c4b49e93103a751f66359d8e63171" args="(Tower *tower)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::selectTower </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTower.html">Tower</a> *&#160;</td>
+          <td class="paramname"><em>tower</em></td><td>)</td>
+          <td><code> [signal]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Indique à l'UI que le joueur vient de sélectionner une défense. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tower</td><td>Un pointeur vers la défense sélectionnée. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1291eebbb0647502fc90d058bc22e7a3"></a><!-- doxytag: member="Render::square" ref="a1291eebbb0647502fc90d058bc22e7a3" args="(QGraphicsItem &amp;item)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPoint Render::square </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsItem &amp;&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Donne les coordonnées de la case où se trouve l'objet graphique donnée. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">item</td><td>Un pointeur vers l'objet dont on veut connaitre la position. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Les coordonnée de la case sous forme d'un QPoint. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8e2eccb2fc3914198b8939bf0625c955"></a><!-- doxytag: member="Render::towerBought" ref="a8e2eccb2fc3914198b8939bf0625c955" args="(QString type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::towerBought </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td><code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Message indiquant l'achat d'une tour à la scène. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Le type de tour à placer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Documentation des champs</h2>
+<a class="anchor" id="ac6b86ad92172fefa5b9a56b31e9055d3"></a><!-- doxytag: member="Render::b1" ref="ac6b86ad92172fefa5b9a56b31e9055d3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHatchery.html">Hatchery</a>* <a class="el" href="classRender.html#ac6b86ad92172fefa5b9a56b31e9055d3">Render::b1</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3d5b29479d129b61c6ad8f3eec2f1f76"></a><!-- doxytag: member="Render::bugs" ref="a3d5b29479d129b61c6ad8f3eec2f1f76" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt;<a class="el" href="classBug.html">Bug</a> *&gt; <a class="el" href="classRender.html#a3d5b29479d129b61c6ad8f3eec2f1f76">Render::bugs</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a08247005a2c595988f8a0ab14a8b1ad9"></a><!-- doxytag: member="Render::goalSquare" ref="a08247005a2c595988f8a0ab14a8b1ad9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPoint <a class="el" href="classRender.html#a08247005a2c595988f8a0ab14a8b1ad9">Render::goalSquare</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9c7793879c5007b8cae3a9c2885d283f"></a><!-- doxytag: member="Render::map" ref="a9c7793879c5007b8cae3a9c2885d283f" args="[ROW][COLUMN]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classRender.html#a9c7793879c5007b8cae3a9c2885d283f">Render::map</a>[ROW][COLUMN]<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afa2c3b6d106bf91639ddf351d7d3315e"></a><!-- doxytag: member="Render::start" ref="afa2c3b6d106bf91639ddf351d7d3315e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPoint* <a class="el" href="classRender.html#afa2c3b6d106bf91639ddf351d7d3315e">Render::start</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab66f1b35519a6e9d6fe14e75a6973680"></a><!-- doxytag: member="Render::start_angle" ref="ab66f1b35519a6e9d6fe14e75a6973680" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classRender.html#ab66f1b35519a6e9d6fe14e75a6973680">Render::start_angle</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaa10cde2c7a766914312f85d7c7eb25c"></a><!-- doxytag: member="Render::tiles" ref="aaa10cde2c7a766914312f85d7c7eb25c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QHash&lt;int, QPixmap&gt; <a class="el" href="classRender.html#aaa10cde2c7a766914312f85d7c7eb25c">Render::tiles</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae8f2c323913fe8b89e0e7f443ef41ae0"></a><!-- doxytag: member="Render::tower2build" ref="ae8f2c323913fe8b89e0e7f443ef41ae0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString <a class="el" href="classRender.html#ae8f2c323913fe8b89e0e7f443ef41ae0">Render::tower2build</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7b01b65692570fe6dec24d0a5c1aa178"></a><!-- doxytag: member="Render::towers" ref="a7b01b65692570fe6dec24d0a5c1aa178" args="[ROW][COLUMN]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTower.html">Tower</a>* <a class="el" href="classRender.html#a7b01b65692570fe6dec24d0a5c1aa178">Render::towers</a>[ROW][COLUMN]<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6b5e2349a706152d4763d22b995e9237"></a><!-- doxytag: member="Render::wave" ref="a6b5e2349a706152d4763d22b995e9237" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList* <a class="el" href="classRender.html#a6b5e2349a706152d4763d22b995e9237">Render::wave</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a682e96907f3d52f710df4e9c2a5e9d07"></a><!-- doxytag: member="Render::waveNumber" ref="a682e96907f3d52f710df4e9c2a5e9d07" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classRender.html#a682e96907f3d52f710df4e9c2a5e9d07">Render::waveNumber</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6351bb3de99ef093995785788c1d218e"></a><!-- doxytag: member="Render::waveTimer" ref="a6351bb3de99ef093995785788c1d218e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTimer <a class="el" href="classRender.html#a6351bb3de99ef093995785788c1d218e">Render::waveTimer</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>src/<a class="el" href="Render_8h_source.html">Render.h</a></li>
 <li>src/moc_Render.cpp</li>

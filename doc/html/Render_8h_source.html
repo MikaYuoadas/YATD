@@ -82,52 +82,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00021"></a>00021 <span class="keyword">class </span><a class="code" href="classTower.html">Tower</a>;
 <a name="l00022"></a>00022 <span class="keyword">class </span><a class="code" href="classProjectile.html" title="Classe représentant les projectiles des tours.">Projectile</a>;
 <a name="l00023"></a>00023 
-<a name="l00024"></a><a class="code" href="classRender.html">00024</a> <span class="keyword">class </span><a class="code" href="classRender.html">Render</a> : <span class="keyword">public</span> QGraphicsScene
-<a name="l00025"></a>00025 {
-<a name="l00026"></a>00026     Q_OBJECT
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028     <span class="keyword">private</span>:
-<a name="l00029"></a>00029         QTimer waveTimer;
-<a name="l00030"></a>00030         QPoint * start;
-<a name="l00031"></a>00031         <span class="keywordtype">double</span> start_angle;
-<a name="l00032"></a>00032         <span class="keywordtype">int</span> waveNumber;
-<a name="l00033"></a>00033         QStringList * wave;
-<a name="l00034"></a>00034         <span class="keywordtype">int</span> map[ROW][COLUMN];
-<a name="l00035"></a>00035         <a class="code" href="classTower.html">Tower</a> * towers[ROW][COLUMN];
-<a name="l00036"></a>00036         QPoint goalSquare;
-<a name="l00037"></a>00037         QHash&lt;int, QPixmap&gt; tiles;
-<a name="l00038"></a>00038         <span class="keywordtype">void</span> addBug(<a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * bug);
-<a name="l00039"></a>00039         <a class="code" href="classHatchery.html" title="Classe implémentation du design pattern Factory.">Hatchery</a> * b1;
-<a name="l00040"></a>00040         QString tower2build;
-<a name="l00041"></a>00041         QList&lt;Bug *&gt; bugs;
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043     <span class="keyword">public</span>:
-<a name="l00044"></a>00044         <a class="code" href="classRender.html">Render</a>();
-<a name="l00045"></a>00045         ~<a class="code" href="classRender.html">Render</a>();
-<a name="l00046"></a>00046         <span class="keywordtype">void</span> drawBackground(QPainter *painter, <span class="keyword">const</span> QRectF &amp; rect);
-<a name="l00047"></a>00047         QPoint square(QGraphicsItem &amp; item);
-<a name="l00048"></a>00048         QPoint goal();
-<a name="l00049"></a>00049         <span class="keywordtype">double</span> getAngle(QPoint &amp; current);
-<a name="l00050"></a>00050         <span class="keywordtype">void</span> mousePressEvent(QGraphicsSceneMouseEvent * mouseEvent);
-<a name="l00051"></a>00051         <a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * getTarget(QPointF pos, <span class="keywordtype">double</span> range, <span class="keywordtype">short</span> <span class="keywordtype">int</span> targetType);
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053     <span class="keyword">public</span> slots:
-<a name="l00054"></a>00054         <span class="keywordtype">void</span> nextWave();
-<a name="l00055"></a>00055         <span class="keywordtype">void</span> nextBug();
-<a name="l00056"></a>00056         <span class="keywordtype">void</span> towerBought(QString type);
-<a name="l00057"></a>00057         <span class="keywordtype">void</span> bugFinish(<a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * bug);
-<a name="l00058"></a>00058         <span class="keywordtype">void</span> bugKilled(<a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * bug);
-<a name="l00059"></a>00059         <span class="keywordtype">void</span> addProjectile(<a class="code" href="classProjectile.html" title="Classe représentant les projectiles des tours.">Projectile</a> * missile);
-<a name="l00060"></a>00060         <span class="keywordtype">void</span> destroyTower(<a class="code" href="classTower.html">Tower</a> * tower);
-<a name="l00061"></a>00061         <span class="keywordtype">void</span> explodingProjectile(<a class="code" href="classProjectile.html" title="Classe représentant les projectiles des tours.">Projectile</a> * missile);
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063     signals:
-<a name="l00064"></a>00064         <span class="keywordtype">void</span> newWaveName(QString name);
-<a name="l00065"></a>00065         <span class="keywordtype">void</span> loseLife();
-<a name="l00066"></a>00066         <span class="keywordtype">void</span> getCred();
-<a name="l00067"></a>00067         <span class="keywordtype">void</span> selectTower(<a class="code" href="classTower.html">Tower</a> * tower);
-<a name="l00068"></a>00068 };
-<a name="l00069"></a>00069 <span class="preprocessor">#endif</span>
+<a name="l00028"></a><a class="code" href="classRender.html">00028</a> <span class="keyword">class </span><a class="code" href="classRender.html" title="Classe gérant le rendu graphique du jeu.">Render</a> : <span class="keyword">public</span> QGraphicsScene
+<a name="l00029"></a>00029 {
+<a name="l00030"></a>00030     Q_OBJECT
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032     <span class="keyword">private</span>:
+<a name="l00033"></a><a class="code" href="classRender.html#a6351bb3de99ef093995785788c1d218e">00033</a>         QTimer <a class="code" href="classRender.html#a6351bb3de99ef093995785788c1d218e" title="Timer appelant la méthode nextBug() a intervalle régulier lors d&#39;une vague.">waveTimer</a>;            
+<a name="l00034"></a><a class="code" href="classRender.html#afa2c3b6d106bf91639ddf351d7d3315e">00034</a>         QPoint * <a class="code" href="classRender.html#afa2c3b6d106bf91639ddf351d7d3315e" title="La position du départ des insectes.">start</a>;              
+<a name="l00035"></a><a class="code" href="classRender.html#ab66f1b35519a6e9d6fe14e75a6973680">00035</a>         <span class="keywordtype">double</span> <a class="code" href="classRender.html#ab66f1b35519a6e9d6fe14e75a6973680" title="L&#39;angle de départ des insectes.">start_angle</a>;          
+<a name="l00036"></a><a class="code" href="classRender.html#a682e96907f3d52f710df4e9c2a5e9d07">00036</a>         <span class="keywordtype">int</span> <a class="code" href="classRender.html#a682e96907f3d52f710df4e9c2a5e9d07" title="Le numéro de la vague en cours.">waveNumber</a>;              
+<a name="l00037"></a><a class="code" href="classRender.html#a6b5e2349a706152d4763d22b995e9237">00037</a>         QStringList * <a class="code" href="classRender.html#a6b5e2349a706152d4763d22b995e9237" title="La liste des insectes restant a spawn dans la vague en cours.">wave</a>;          
+<a name="l00038"></a><a class="code" href="classRender.html#a9c7793879c5007b8cae3a9c2885d283f">00038</a>         <span class="keywordtype">int</span> <a class="code" href="classRender.html#a9c7793879c5007b8cae3a9c2885d283f" title="Un tableau à deux dimensions des cases de la map avec leur contenu (chemin, boue, herbe)...">map</a>[ROW][COLUMN];        
+<a name="l00039"></a><a class="code" href="classRender.html#a7b01b65692570fe6dec24d0a5c1aa178">00039</a>         <a class="code" href="classTower.html">Tower</a> * <a class="code" href="classRender.html#a7b01b65692570fe6dec24d0a5c1aa178" title="Un tableau à deux dimensions de pointeurs vers les tours présentent sur la map.">towers</a>[ROW][COLUMN]; 
+<a name="l00040"></a><a class="code" href="classRender.html#a08247005a2c595988f8a0ab14a8b1ad9">00040</a>         QPoint <a class="code" href="classRender.html#a08247005a2c595988f8a0ab14a8b1ad9" title="La position de l&#39;arrivée des insectes.">goalSquare</a>;           
+<a name="l00041"></a><a class="code" href="classRender.html#aaa10cde2c7a766914312f85d7c7eb25c">00041</a>         QHash&lt;int, QPixmap&gt; <a class="code" href="classRender.html#aaa10cde2c7a766914312f85d7c7eb25c" title="La liste des images des différentes tuiles présentent sur la map.">tiles</a>;   
+<a name="l00042"></a><a class="code" href="classRender.html#ac6b86ad92172fefa5b9a56b31e9055d3">00042</a>         <a class="code" href="classHatchery.html" title="Classe implémentation du design pattern Factory.">Hatchery</a> * <a class="code" href="classRender.html#ac6b86ad92172fefa5b9a56b31e9055d3" title="Un pointeur vers la fabrique a utiliser pour spawn les insectes.">b1</a>;               
+<a name="l00043"></a><a class="code" href="classRender.html#ae8f2c323913fe8b89e0e7f443ef41ae0">00043</a>         QString <a class="code" href="classRender.html#ae8f2c323913fe8b89e0e7f443ef41ae0" title="La tour que l&#39;on vient d&#39;acheter et que l&#39;on doit placer.">tower2build</a>;         
+<a name="l00044"></a><a class="code" href="classRender.html#a3d5b29479d129b61c6ad8f3eec2f1f76">00044</a>         QList&lt;Bug *&gt; <a class="code" href="classRender.html#a3d5b29479d129b61c6ad8f3eec2f1f76" title="Une liste de pointeur vers tous les insectes présent dans la Scene.">bugs</a>;           
+<a name="l00049"></a>00049         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a4a1fed13f76997e45e90dd39d622d33e" title="Interface de addItem() spécialisé.">addBug</a>(<a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * bug);
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051     <span class="keyword">public</span>:
+<a name="l00056"></a>00056         <a class="code" href="classRender.html#a8610cc11739ef679b5935dd819021351" title="Constructeur du rendu.">Render</a>();
+<a name="l00061"></a>00061         <a class="code" href="classRender.html#ab0f4b917605cb15902f8d045a4197faf" title="Destructeur de Render.">~Render</a>();
+<a name="l00066"></a>00066         <span class="keywordtype">void</span> <a class="code" href="classRender.html#aae10ca06c2755038752a2a007727f0ca" title="Méthode surchargée de QGraphicsScene.">drawBackground</a>(QPainter *painter, <span class="keyword">const</span> QRectF &amp; rect);
+<a name="l00073"></a>00073         QPoint <a class="code" href="classRender.html#a1291eebbb0647502fc90d058bc22e7a3" title="Donne les coordonnées de la case où se trouve l&#39;objet graphique donnée.">square</a>(QGraphicsItem &amp; item);
+<a name="l00079"></a>00079         QPoint <a class="code" href="classRender.html#afd1f727c1514ca01ad1cefbf4992497b" title="Acesseur.">goal</a>();
+<a name="l00086"></a>00086         <span class="keywordtype">double</span> <a class="code" href="classRender.html#a696f385b556f15a7420293a055734e4d" title="Permet à un insecte de se diriger.">getAngle</a>(QPoint &amp; current);
+<a name="l00092"></a>00092         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a899ce19de8a01bb4bc01653cd8761357" title="Catch les événements souris.">mousePressEvent</a>(QGraphicsSceneMouseEvent * mouseEvent);
+<a name="l00101"></a>00101         <a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * <a class="code" href="classRender.html#a8074fc252757d5c446d79f8205348116" title="Permet aux tours de choisir leur prochaine cible.">getTarget</a>(QPointF pos, <span class="keywordtype">double</span> range, <span class="keywordtype">short</span> <span class="keywordtype">int</span> targetType);
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103     <span class="keyword">public</span> slots:
+<a name="l00108"></a>00108         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a3252d02e9509f342bc96129b4b10b415" title="Lance la prochaine Vague.">nextWave</a>();
+<a name="l00113"></a>00113         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a9413625fc472b4b7806f3a0d615d6ea9" title="Crée le prochaine insecte de la vague.">nextBug</a>();
+<a name="l00119"></a>00119         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a8e2eccb2fc3914198b8939bf0625c955" title="Message indiquant l&#39;achat d&#39;une tour à la scène.">towerBought</a>(QString type);
+<a name="l00125"></a>00125         <span class="keywordtype">void</span> <a class="code" href="classRender.html#aeeddbbe27102625cc2d5234fa0be523a" title="Arrivée d&#39;un insecte.">bugFinish</a>(<a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * bug);
+<a name="l00131"></a>00131         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a940007358a139d0b30e002929d24f770" title="Mort d&#39;un insecte.">bugKilled</a>(<a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * bug);
+<a name="l00137"></a>00137         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a3b5bb3705131ca57252398e0f6a9e3e5" title="Ajout d&#39;un projectile.">addProjectile</a>(<a class="code" href="classProjectile.html" title="Classe représentant les projectiles des tours.">Projectile</a> * missile);
+<a name="l00143"></a>00143         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a20678c257926bfff635fded745e11f4a" title="Vente d&#39;une tour.">destroyTower</a>(<a class="code" href="classTower.html">Tower</a> * tower);
+<a name="l00149"></a>00149         <span class="keywordtype">void</span> <a class="code" href="classRender.html#aedec0cbbe4808368656b772dfe3e63f9" title="explosion d&#39;un projectile.">explodingProjectile</a>(<a class="code" href="classProjectile.html" title="Classe représentant les projectiles des tours.">Projectile</a> * missile);
+<a name="l00150"></a>00150 
+<a name="l00151"></a>00151     signals:
+<a name="l00157"></a>00157         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a916c15ab4b31cc0f34d9d53b89b89ac0" title="Nouvelle vaque.">newWaveName</a>(QString name);
+<a name="l00162"></a>00162         <span class="keywordtype">void</span> <a class="code" href="classRender.html#ad88f7f01a7b9fafa756221707d590a78" title="Perte d&#39;une vie.">loseLife</a>();
+<a name="l00167"></a>00167         <span class="keywordtype">void</span> <a class="code" href="classRender.html#acd71f1c6c9d67dff3627da4ff6a4c9b8" title="Gain d&#39;un crédit.">getCred</a>();
+<a name="l00173"></a>00173         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a126c4b49e93103a751f66359d8e63171" title="Sélection d&#39;une tour.">selectTower</a>(<a class="code" href="classTower.html">Tower</a> * tower);
+<a name="l00174"></a>00174 };
+<a name="l00175"></a>00175 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->

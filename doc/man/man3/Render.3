@@ -3,36 +3,49 @@
 .nh
 .SH NAME
 Render \- 
+.PP
+Classe gérant le rendu graphique du jeu.  
+
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <Render.h>\fP
 .SS "Connecteurs publics"
 
 .in +1c
 .ti -1c
 .RI "void \fBnextWave\fP ()"
 .br
+.RI "\fILance la prochaine Vague. \fP"
 .ti -1c
 .RI "void \fBnextBug\fP ()"
 .br
+.RI "\fICrée le prochaine insecte de la vague. \fP"
 .ti -1c
 .RI "void \fBtowerBought\fP (QString type)"
 .br
+.RI "\fIMessage indiquant l'achat d'une tour à la scène. \fP"
 .ti -1c
 .RI "void \fBbugFinish\fP (\fBBug\fP *bug)"
 .br
+.RI "\fIArrivée d'un insecte. \fP"
 .ti -1c
 .RI "void \fBbugKilled\fP (\fBBug\fP *bug)"
 .br
+.RI "\fIMort d'un insecte. \fP"
 .ti -1c
 .RI "void \fBaddProjectile\fP (\fBProjectile\fP *missile)"
 .br
+.RI "\fIAjout d'un projectile. \fP"
 .ti -1c
 .RI "void \fBdestroyTower\fP (\fBTower\fP *tower)"
 .br
+.RI "\fIVente d'une tour. \fP"
 .ti -1c
 .RI "void \fBexplodingProjectile\fP (\fBProjectile\fP *missile)"
 .br
+.RI "\fIexplosion d'un projectile. \fP"
 .in -1c
 .SS "Signaux"
 
@@ -40,37 +53,55 @@ Render \-
 .ti -1c
 .RI "void \fBnewWaveName\fP (QString name)"
 .br
+.RI "\fINouvelle vaque. \fP"
 .ti -1c
 .RI "void \fBloseLife\fP ()"
 .br
+.RI "\fIPerte d'une vie. \fP"
 .ti -1c
 .RI "void \fBgetCred\fP ()"
 .br
+.RI "\fIGain d'un crédit. \fP"
 .ti -1c
 .RI "void \fBselectTower\fP (\fBTower\fP *tower)"
 .br
+.RI "\fISélection d'une tour. \fP"
 .in -1c
 .SS "Fonctions membres publiques"
 
 .in +1c
 .ti -1c
+.RI "\fBRender\fP ()"
+.br
+.RI "\fIConstructeur du rendu. \fP"
+.ti -1c
+.RI "\fB~Render\fP ()"
+.br
+.RI "\fIDestructeur de \fBRender\fP. \fP"
+.ti -1c
 .RI "void \fBdrawBackground\fP (QPainter *painter, const QRectF &rect)"
 .br
+.RI "\fIMéthode surchargée de QGraphicsScene. \fP"
 .ti -1c
 .RI "QPoint \fBsquare\fP (QGraphicsItem &item)"
 .br
+.RI "\fIDonne les coordonnées de la case où se trouve l'objet graphique donnée. \fP"
 .ti -1c
 .RI "QPoint \fBgoal\fP ()"
 .br
+.RI "\fIAcesseur. \fP"
 .ti -1c
 .RI "double \fBgetAngle\fP (QPoint &current)"
 .br
+.RI "\fIPermet à un insecte de se diriger. \fP"
 .ti -1c
 .RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *mouseEvent)"
 .br
+.RI "\fICatch les événements souris. \fP"
 .ti -1c
 .RI "\fBBug\fP * \fBgetTarget\fP (QPointF pos, double range, short int targetType)"
 .br
+.RI "\fIPermet aux tours de choisir leur prochaine cible. \fP"
 .in -1c
 .SS "Fonctions membres privées"
 
@@ -78,6 +109,7 @@ Render \-
 .ti -1c
 .RI "void \fBaddBug\fP (\fBBug\fP *bug)"
 .br
+.RI "\fIInterface de addItem() spécialisé. \fP"
 .in -1c
 .SS "Attributs privés"
 
@@ -85,40 +117,204 @@ Render \-
 .ti -1c
 .RI "QTimer \fBwaveTimer\fP"
 .br
+.RI "\fITimer appelant la méthode \fBnextBug()\fP a intervalle régulier lors d'une vague. \fP"
 .ti -1c
 .RI "QPoint * \fBstart\fP"
 .br
+.RI "\fILa position du départ des insectes. \fP"
 .ti -1c
 .RI "double \fBstart_angle\fP"
 .br
+.RI "\fIL'angle de départ des insectes. \fP"
 .ti -1c
 .RI "int \fBwaveNumber\fP"
 .br
+.RI "\fILe numéro de la vague en cours. \fP"
 .ti -1c
 .RI "QStringList * \fBwave\fP"
 .br
+.RI "\fILa liste des insectes restant a spawn dans la vague en cours. \fP"
 .ti -1c
 .RI "int \fBmap\fP [ROW][COLUMN]"
 .br
+.RI "\fIUn tableau à deux dimensions des cases de la map avec leur contenu (chemin, boue, herbe). \fP"
 .ti -1c
 .RI "\fBTower\fP * \fBtowers\fP [ROW][COLUMN]"
 .br
+.RI "\fIUn tableau à deux dimensions de pointeurs vers les tours présentent sur la map. \fP"
 .ti -1c
 .RI "QPoint \fBgoalSquare\fP"
 .br
+.RI "\fILa position de l'arrivée des insectes. \fP"
 .ti -1c
 .RI "QHash< int, QPixmap > \fBtiles\fP"
 .br
+.RI "\fILa liste des images des différentes tuiles présentent sur la map. \fP"
 .ti -1c
 .RI "\fBHatchery\fP * \fBb1\fP"
 .br
+.RI "\fIUn pointeur vers la fabrique a utiliser pour spawn les insectes. \fP"
 .ti -1c
 .RI "QString \fBtower2build\fP"
 .br
+.RI "\fILa tour que l'on vient d'acheter et que l'on doit placer. \fP"
 .ti -1c
 .RI "QList< \fBBug\fP * > \fBbugs\fP"
 .br
+.RI "\fIUne liste de pointeur vers tous les insectes présent dans la Scene. \fP"
 .in -1c
+.SH "Description détaillée"
+.PP 
+Classe héritant de QGraphicsScene et gérant les interactions entre les éléments du jeu, le placement des tours... 
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Render::Render ()"Crée un nouvelle objet pour gérer le rendu. 
+.SS "Render::~Render ()"Désalloue correctement la mémoire puis quitte le jeu. 
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "void Render::addBug (\fBBug\fP *bug)\fC [private]\fP"Permet d'ajouter un insecte en initialisant correctement son parent et an l'ajoutant à la liste spécifique aux insectes. 
+.SS "void Render::addProjectile (\fBProjectile\fP *missile)\fC [slot]\fP"Lorsqu'un projectile est tirée, \fBRender\fP l'ajoute à la scène. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fImissile\fP Un pointeur vers le projectile qui vient d'être tiré. 
+.RE
+.PP
+
+.SS "void Render::bugFinish (\fBBug\fP *bug)\fC [slot]\fP"Quand un insecte arrive la scène le détruit et fais perdre une vie (emit \fBloseLife()\fP) au joueur. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIbug\fP Un pointeur vers l'insecte qui vient d'arriver à la fin. 
+.RE
+.PP
+
+.SS "void Render::bugKilled (\fBBug\fP *bug)\fC [slot]\fP"Quand un insecte est tué, la scène le détruit, appelant ses caractéristiques spéciales et ajoute un crédit au joueur. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIbug\fP Un pointeur vers l'insecte qui vient d'arriver à la fin. 
+.RE
+.PP
+
+.SS "void Render::destroyTower (\fBTower\fP *tower)\fC [slot]\fP"Lorsqu'une défense est vendu, la scène la détruit. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fItower\fP Un pointeur vers la tour à détruire. 
+.RE
+.PP
+
+.SS "void Render::drawBackground (QPainter *painter, const QRectF &rect)"Appelé automatiquement par Qt, permet de redessiner le fond de la scène. 
+.SS "void Render::explodingProjectile (\fBProjectile\fP *missile)\fC [slot]\fP"Lorsqu'un projectile explose, la scène le détruit. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fImissile\fP Un pointeur vers le projectile à faire exploser. 
+.RE
+.PP
+
+.SS "double Render::getAngle (QPoint &current)"Donne à un insecte l'angle vers lequel se tourner pour suivre le chemin. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIcurrent\fP La position actuelle de l'insecte. 
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+L'angle vers lequel se diriger. 
+.RE
+.PP
+
+.SS "void Render::getCred ()\fC [signal]\fP"Indique à l'UI de créditer le joueur pour un kill d'insecte. 
+.SS "\fBBug\fP * Render::getTarget (QPointFpos, doublerange, short inttargetType)"Donne l'insecte le plus avancé sur le chemin à portée de la tour et d'un type de déplacement permettant d'être touché par la tour. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIpos\fP La position de la tour. 
+.br
+\fIrange\fP La portée en case de la tour. 
+.br
+\fItargetType\fP Le(s) type(s) de cibles que la tour peut attaquer. 
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+L'insecte à abattre. 
+.RE
+.PP
+
+.SS "QPoint Render::goal ()"Retourne la position de l'arrivée. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+les coordonnées de l'arrivée sous forme d'un QPoint. 
+.RE
+.PP
+
+.SS "void Render::loseLife ()\fC [signal]\fP"Indique à l'UI que le joueur viens de perdre une vie. 
+.SS "void Render::mousePressEvent (QGraphicsSceneMouseEvent *mouseEvent)"Surcharge de la méthode héritée de QGraphicsScene pour gérer les entrées souris. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fImouseEvent\fP L'événement souris générée par Qt. 
+.RE
+.PP
+
+.SS "void Render::newWaveName (QStringname)\fC [signal]\fP"Indique à l'UI de changer le nom de la vague en cours. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIname\fP le nom de la nouvelle vague. 
+.RE
+.PP
+
+.SS "void Render::nextBug ()\fC [slot]\fP"Appelle la fabrique pour spawn l'insecte suivant de la vague donnée par la liste wave. 
+.SS "void Render::nextWave ()\fC [slot]\fP"Lance la prochaine Vague en lisant le fichier de conguration dans map/. 
+.SS "void Render::selectTower (\fBTower\fP *tower)\fC [signal]\fP"Indique à l'UI que le joueur vient de sélectionner une défense. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fItower\fP Un pointeur vers la défense sélectionnée. 
+.RE
+.PP
+
+.SS "QPoint Render::square (QGraphicsItem &item)"Donne les coordonnées de la case où se trouve l'objet graphique donnée. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIitem\fP Un pointeur vers l'objet dont on veut connaitre la position. 
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+Les coordonnée de la case sous forme d'un QPoint. 
+.RE
+.PP
+
+.SS "void Render::towerBought (QStringtype)\fC [slot]\fP"Message indiquant l'achat d'une tour à la scène. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fItype\fP Le type de tour à placer. 
+.RE
+.PP
+
+.SH "Documentation des champs"
+.PP 
+.SS "\fBHatchery\fP* \fBRender::b1\fP\fC [private]\fP"
+.SS "QList<\fBBug\fP *> \fBRender::bugs\fP\fC [private]\fP"
+.SS "QPoint \fBRender::goalSquare\fP\fC [private]\fP"
+.SS "int \fBRender::map\fP[ROW][COLUMN]\fC [private]\fP"
+.SS "QPoint* \fBRender::start\fP\fC [private]\fP"
+.SS "double \fBRender::start_angle\fP\fC [private]\fP"
+.SS "QHash<int, QPixmap> \fBRender::tiles\fP\fC [private]\fP"
+.SS "QString \fBRender::tower2build\fP\fC [private]\fP"
+.SS "\fBTower\fP* \fBRender::towers\fP[ROW][COLUMN]\fC [private]\fP"
+.SS "QStringList* \fBRender::wave\fP\fC [private]\fP"
+.SS "int \fBRender::waveNumber\fP\fC [private]\fP"
+.SS "QTimer \fBRender::waveTimer\fP\fC [private]\fP"
 
 .SH "Auteur"
 .PP 
