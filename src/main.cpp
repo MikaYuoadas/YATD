@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
 
     QTimer timer;
     QObject::connect(&timer, SIGNAL(timeout()), &render, SLOT(advance()));
+    QObject::connect(&ui, SIGNAL(defeat()), &timer, SLOT(stop()));
     timer.start(TIMER_INT);
 
     QObject::connect(&ui, SIGNAL(nextWave()), &render, SLOT(nextWave()));

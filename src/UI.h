@@ -58,5 +58,6 @@ class UI : public QWidget
         void buyTower(QString type);
         void nextWave();
         void towerSold(Tower * tower);
+        void defeat();
 };
 #endif

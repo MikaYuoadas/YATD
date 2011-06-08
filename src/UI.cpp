@@ -88,7 +88,8 @@ void UI::addCred()
 void UI::loseLife()
 {
     life->display(life->intValue() - 1);
-    //TODO : défaite si life <= 0
+    if (life->intValue() <= 0)
+        emit defeat();
 }
 
 void UI::buyWaterTower()
