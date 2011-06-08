@@ -34,7 +34,7 @@ class Ant : public Bug
          */
         ~Ant();
         /**
-         * Surcharge de la fonction virtuelle pure paint() héritée de QGraphicsObject.
+         * Surcharge de la méthode virtuelle pure paint() héritée de QGraphicsObject.
          * Est appelé automatiquement par Qt pour redessiner la fourmi.
          */
         void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);

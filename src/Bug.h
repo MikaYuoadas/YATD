@@ -57,7 +57,7 @@ class Bug : public QGraphicsObject
          */
         QRectF boundingRect() const;
         /**
-         * Surcharge de la fonction shape() hérité de QGraphicsObject.
+         * Surcharge de la méthode virtuelle pure shape() hérité de QGraphicsObject.
          * Fonction utilisé par QT pour traiter les collisions entre objets graphiques.
          * @return Un object QPainterPath correspondant au contour de collision de l'insecte.
          */
