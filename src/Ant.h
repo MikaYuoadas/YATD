@@ -8,7 +8,8 @@
 #include "Bug.h"
 
 /**
- * Classe représentant les fourmis. Définie les caractéristiques spécifiques aux fourmis, comme leur graphisme, leur type de déplacement (CRAWL)...
+ * Classe représentant les fourmis.
+ * Définie les caractéristiques spécifiques aux fourmis, comme leur graphisme, leur type de déplacement (CRAWL)...
  */
 class Ant : public Bug
 {
