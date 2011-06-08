@@ -3,9 +3,14 @@
 .nh
 .SH NAME
 Water \- 
+.PP
+Classe représentant les projectiles du pistolet à eau.  
+
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <Water.h>\fP
 .PP
 Est dérivée de \fBProjectile\fP.
 .SS "Signaux"
@@ -22,9 +27,11 @@ Est dérivée de \fBProjectile\fP.
 .ti -1c
 .RI "\fBWater\fP (QPointF start, \fBBug\fP *\fBtarget\fP, short int lvl)"
 .br
+.RI "\fIConstructeur de Ware. \fP"
 .ti -1c
 .RI "void \fBpaint\fP (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)"
 .br
+.RI "\fISurcharge de la méthode virtuelle pure \fBpaint()\fP héritée de QGraphicsObject. \fP"
 .ti -1c
 .RI "QRectF \fBboundingRect\fP () const "
 .br
@@ -42,6 +49,23 @@ Est dérivée de \fBProjectile\fP.
 .br
 .RI "\fISurcharge de la méthode virtuelle pure héritée de QGraphicsObject. \fP"
 .in -1c
+.SH "Description détaillée"
+.PP 
+Classe représentant les projectiles du pistolet à eau, rien de spéciale. 
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Water::Water (QPointFstart, \fBBug\fP *target, short intlvl)"Appelle le constructeur de \fBProjectile\fP avec les caractéristiques du pistolet à eau. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIstart\fP Position de départ. 
+.br
+\fItarget\fP Pointeur vers l'insecte ciblé. 
+.br
+\fIlvl\fP Le niveau du projectile. 
+.RE
+.PP
+
 .SH "Documentation des fonctions membres"
 .PP 
 .SS "void Projectile::advance (intstep)\fC [protected, inherited]\fP"Est appellé automatiquement par Qt deux fois par appelle au slot advance de la QGraphicsScene. 
@@ -68,6 +92,7 @@ Un object QRectF correspondant au rectangle englobant le dessin du projectile.
 .RE
 .PP
 
+.SS "void Water::paint (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)"Appelé automatiquement par Qt pour redessiner l'objet. 
 .SS "void Projectile::paint (QPainter *painter, QColorcolor)\fC [inherited]\fP"Est appelé automatiquement par Qt pour redessiner le projectile. 
 
 .SH "Auteur"

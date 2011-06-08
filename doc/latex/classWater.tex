@@ -2,6 +2,15 @@
 \section{Référence de la classe Water}
 \label{classWater}\index{Water@{Water}}
 }
+
+
+Classe représentant les projectiles du pistolet à eau.  
+
+
+
+
+{\ttfamily \#include $<$Water.h$>$}
+
 Graphe d'héritage de Water:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,16 +25,10 @@ void \hyperlink{classProjectile_a18d1fccd74f92b54f239c13c74cbc00c}{explode} (\hy
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classWater_aee3bec8d65112f496fec8d8cb18cd9af}{
-{\bfseries Water} (QPointF start, \hyperlink{classBug}{Bug} $\ast$\hyperlink{classProjectile_ae5273bd2c6550b94f38310b69859b093}{target}, short int lvl)}
-\label{classWater_aee3bec8d65112f496fec8d8cb18cd9af}
-
-\item 
-\hypertarget{classWater_a1f8777c164bb06a357a78cabd9e790a2}{
-void {\bfseries paint} (QPainter $\ast$painter, const QStyleOptionGraphicsItem $\ast$option, QWidget $\ast$widget)}
-\label{classWater_a1f8777c164bb06a357a78cabd9e790a2}
-
-\item 
+\hyperlink{classWater_aee3bec8d65112f496fec8d8cb18cd9af}{Water} (QPointF start, \hyperlink{classBug}{Bug} $\ast$\hyperlink{classProjectile_ae5273bd2c6550b94f38310b69859b093}{target}, short int lvl)
+\begin{DoxyCompactList}\small\item\em Constructeur de Ware. \end{DoxyCompactList}\item 
+void \hyperlink{classWater_a1f8777c164bb06a357a78cabd9e790a2}{paint} (QPainter $\ast$painter, const QStyleOptionGraphicsItem $\ast$option, QWidget $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Surcharge de la méthode virtuelle pure \hyperlink{classWater_a1f8777c164bb06a357a78cabd9e790a2}{paint()} héritée de QGraphicsObject. \end{DoxyCompactList}\item 
 QRectF \hyperlink{classProjectile_a0e0b18909c9c154404384707c6515802}{boundingRect} () const 
 \begin{DoxyCompactList}\small\item\em Surcharge de la methode virtuelle pure \hyperlink{classProjectile_a0e0b18909c9c154404384707c6515802}{boundingRect()} héritée de QGraphicsObject. \end{DoxyCompactList}\item 
 void \hyperlink{classProjectile_aef0d6ffcea7620988cf5446d0c1133fa}{paint} (QPainter $\ast$painter, QColor color)
@@ -35,6 +38,32 @@ void \hyperlink{classProjectile_aef0d6ffcea7620988cf5446d0c1133fa}{paint} (QPain
 \item 
 void \hyperlink{classProjectile_a8e3b4bae49558a0febfce8c1accea72d}{advance} (int step)
 \begin{DoxyCompactList}\small\item\em Surcharge de la méthode virtuelle pure héritée de QGraphicsObject. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Classe représentant les projectiles du pistolet à eau, rien de spéciale. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classWater_aee3bec8d65112f496fec8d8cb18cd9af}{
+\index{Water@{Water}!Water@{Water}}
+\index{Water@{Water}!Water@{Water}}
+\subsubsection[{Water}]{\setlength{\rightskip}{0pt plus 5cm}Water::Water (
+\begin{DoxyParamCaption}
+\item[{QPointF}]{start, }
+\item[{{\bf Bug} $\ast$}]{target, }
+\item[{short int}]{lvl}
+\end{DoxyParamCaption}
+)}}
+\label{classWater_aee3bec8d65112f496fec8d8cb18cd9af}
+Appelle le constructeur de \hyperlink{classProjectile}{Projectile} avec les caractéristiques du pistolet à eau. 
+\begin{DoxyParams}{Paramètres}
+{\em start} & Position de départ. \\
+\hline
+{\em target} & Pointeur vers l'insecte ciblé. \\
+\hline
+{\em lvl} & Le niveau du projectile. \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Documentation des fonctions membres}
@@ -78,7 +107,18 @@ Signale émit lorsque le projectile explose pour qu'il soit retiré de la scène
 {\em missile} & Un pointeur vers le projectile pour que la scène puisse le détruire correctement. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classProjectile_aef0d6ffcea7620988cf5446d0c1133fa}{
+\hypertarget{classWater_a1f8777c164bb06a357a78cabd9e790a2}{
+\index{Water@{Water}!paint@{paint}}
+\index{paint@{paint}!Water@{Water}}
+\subsubsection[{paint}]{\setlength{\rightskip}{0pt plus 5cm}void Water::paint (
+\begin{DoxyParamCaption}
+\item[{QPainter $\ast$}]{painter, }
+\item[{const QStyleOptionGraphicsItem $\ast$}]{option, }
+\item[{QWidget $\ast$}]{widget}
+\end{DoxyParamCaption}
+)}}
+\label{classWater_a1f8777c164bb06a357a78cabd9e790a2}
+Appelé automatiquement par Qt pour redessiner l'objet. \hypertarget{classProjectile_aef0d6ffcea7620988cf5446d0c1133fa}{
 \index{Water@{Water}!paint@{paint}}
 \index{paint@{paint}!Water@{Water}}
 \subsubsection[{paint}]{\setlength{\rightskip}{0pt plus 5cm}void Projectile::paint (

@@ -64,13 +64,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 <span class="preprocessor">#include &quot;Projectile.h&quot;</span>
 <a name="l00005"></a>00005 
-<a name="l00006"></a><a class="code" href="classWater.html">00006</a> <span class="keyword">class </span><a class="code" href="classWater.html">Water</a> : <span class="keyword">public</span> <a class="code" href="classProjectile.html" title="Classe représentant les projectiles des tours.">Projectile</a>
-<a name="l00007"></a>00007 {
-<a name="l00008"></a>00008     <span class="keyword">public</span>:
-<a name="l00009"></a>00009         <a class="code" href="classWater.html">Water</a>(QPointF start, <a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * <a class="code" href="classProjectile.html#ae5273bd2c6550b94f38310b69859b093" title="L&#39;insecte ciblée par le projectile.">target</a>, <span class="keywordtype">short</span> <span class="keywordtype">int</span> lvl);
-<a name="l00010"></a>00010         <span class="keywordtype">void</span> paint(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option, QWidget *widget);
-<a name="l00011"></a>00011 };
-<a name="l00012"></a>00012 <span class="preprocessor">#endif</span>
+<a name="l00010"></a><a class="code" href="classWater.html">00010</a> <span class="keyword">class </span><a class="code" href="classWater.html" title="Classe représentant les projectiles du pistolet à eau.">Water</a> : <span class="keyword">public</span> <a class="code" href="classProjectile.html" title="Classe représentant les projectiles des tours.">Projectile</a>
+<a name="l00011"></a>00011 {
+<a name="l00012"></a>00012     <span class="keyword">public</span>:
+<a name="l00020"></a>00020         <a class="code" href="classWater.html#aee3bec8d65112f496fec8d8cb18cd9af" title="Constructeur de Ware.">Water</a>(QPointF start, <a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * <a class="code" href="classProjectile.html#ae5273bd2c6550b94f38310b69859b093" title="L&#39;insecte ciblée par le projectile.">target</a>, <span class="keywordtype">short</span> <span class="keywordtype">int</span> lvl);
+<a name="l00025"></a>00025         <span class="keywordtype">void</span> <a class="code" href="classWater.html#a1f8777c164bb06a357a78cabd9e790a2" title="Surcharge de la méthode virtuelle pure paint() héritée de QGraphicsObject.">paint</a>(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option, QWidget *widget);
+<a name="l00026"></a>00026 };
+<a name="l00027"></a>00027 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->
