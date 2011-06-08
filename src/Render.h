@@ -19,6 +19,7 @@
 class Bug;
 class Hatchery;
 class Tower;
+class Projectile;
 
 class Render : public QGraphicsScene
 {
@@ -57,6 +58,7 @@ class Render : public QGraphicsScene
         void bugKilled(Bug * bug);
         void addProjectile(Projectile * missile);
         void destroyTower(Tower * tower);
+        void explodingProjectile(Projectile * missile);
 
     signals:
         void newWaveName(QString name);

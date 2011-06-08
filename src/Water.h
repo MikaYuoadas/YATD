@@ -6,7 +6,7 @@
 class Water : public Projectile
 {
     public:
-        Water(QPointF start, QPointF dest, short int lvl);
-        void paint(QPainter *painter, const QStyleOptionQraphicsItem *option, QWidget *widget);
-}
+        Water(QPointF start, Bug * target, short int lvl);
+        void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+};
 #endif

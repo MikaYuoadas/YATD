@@ -233,6 +233,7 @@ void Render::mousePressEvent(QGraphicsSceneMouseEvent * mouseEvent)
         towers[pos.y()][pos.x()] = tower;
         tower->parent = this;
         addItem(tower);
+        QObject::connect(tower, SIGNAL(projectile(Projectile *)), this, SLOT(addProjectile(Projectile *)));
         tower2build = "none";
     } else if (towers[pos.y()][pos.x()] != NULL) {
         Tower * tower = towers[pos.y()][pos.x()];
@@ -247,6 +248,7 @@ void Render::towerBought(QString type)
 
 void Render::addProjectile(Projectile * missile)
 {
+    QObject::connect(missile, SIGNAL(explode(Projectile *)), this, SLOT(explodingProjectile(Projectile *)));
     addItem(missile);
 }
 
@@ -256,7 +258,7 @@ Bug * Render::getTarget(QPointF pos, double range)
     for (int i = 0; i < bugs.size(); i++) {
         double x = bugs.at(i)->x();
         double y = bugs.at(i)->y();
-        if (sqrt(pow(2, x - pos.x()) + pow(2, y - pos.y())) <= range * SQUARE_SIZE) {
+        if (sqrt(pow(x - pos.x(), 2) + pow(y - pos.y(), 2)) <= range * SQUARE_SIZE) {
             bug = bugs.at(i);
             break;
         }
@@ -269,4 +271,11 @@ void Render::destroyTower(Tower * tower)
     tower->disconnect();
     removeItem(tower);
     tower->deleteLater();
+}
+
+void Render::explodingProjectile(Projectile * missile)
+{
+    missile->disconnect();
+    removeItem(missile);
+    missile->deleteLater();
 }

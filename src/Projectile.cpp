@@ -3,10 +3,10 @@
 #include "Projectile.h"
 #include "define.h"
 
-Projectile::Projectile(QPointF start, QPointF destination, double init_speed, double damage) :
-    dest(destination), speed(init_speed), dmg(damage), travelled(0)
+Projectile::Projectile(QPointF start, Bug * trgt, double init_speed, double damage) :
+    dest(trgt->pos()), target(trgt), speed(init_speed), dmg(damage), travelled(0)
 {
-    maxrange = sqrt(pow(2, dest.x() - start.x()) + pow(2, dest.y() - start.y()));
+    maxrange = sqrt(pow(dest.x() - start.x(), 2) + pow(dest.y() - start.y(), 2));
     setPos(start);
 }
 
@@ -14,11 +14,15 @@ void Projectile::advance(int step)
 {
     if (!step)
         return;
-    double hyp = sqrt(pow(2, dest.x() - pos().x()) + pow(2, dest.y() - pos().y()));
+    double hyp = sqrt(pow(dest.x() - pos().x(), 2) + pow(dest.y() - pos().y(), 2));
     double rspeed = speed * BASE_SPEED;
     moveBy((dest.x() - pos().x()) / hyp * rspeed, (dest.y() - pos().y()) / hyp * rspeed);
     travelled += rspeed;
-    // if travelled > maxrange explode
+    if (travelled > maxrange) {
+        setPos(dest);
+        target->hit(dmg);
+        emit explode(this);
+    }
 }
 
 QRectF Projectile::boundingRect() const

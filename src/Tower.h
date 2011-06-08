@@ -11,6 +11,7 @@
 #include "Render.h"
 
 class Render;
+class Projectile;
 
 class Tower : public QGraphicsObject
 {

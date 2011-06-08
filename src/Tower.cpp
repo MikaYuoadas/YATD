@@ -1,4 +1,5 @@
 #include "Tower.h"
+#include "Water.h"
 #include "define.h"
 
 Tower::Tower(QPointF buildPos, QString typeTower) :
@@ -74,6 +75,11 @@ double Tower::getFirerate()
 void Tower::fire()
 {
     Bug * target = parent->getTarget(pos, range);
-    Projectile * missile = NULL;
-    emit projectile(missile);
+    if (target != NULL) {
+        Projectile * missile = NULL;
+        if (type == "water") {
+            missile = new Water(pos, target, level);
+        }
+        emit projectile(missile);
+    }
 }
