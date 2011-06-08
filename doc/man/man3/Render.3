@@ -1,4 +1,4 @@
-.TH "Render" 3 "Mon Jun 6 2011" "Version 0.9" "YATD" \" -*- nroff -*-
+.TH "Render" 3 "Wed Jun 8 2011" "Version 0.9" "YATD" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -29,6 +29,9 @@ Render \-
 .br
 .ti -1c
 .RI "void \fBdestroyTower\fP (\fBTower\fP *tower)"
+.br
+.ti -1c
+.RI "void \fBexplodingProjectile\fP (\fBProjectile\fP *missile)"
 .br
 .in -1c
 .SS "Signaux"
@@ -66,7 +69,7 @@ Render \-
 .RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *mouseEvent)"
 .br
 .ti -1c
-.RI "\fBBug\fP * \fBgetTarget\fP (QPointF pos, double range)"
+.RI "\fBBug\fP * \fBgetTarget\fP (QPointF pos, double range, short int targetType)"
 .br
 .in -1c
 .SS "Fonctions membres privées"

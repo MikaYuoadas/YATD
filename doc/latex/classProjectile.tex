@@ -8,12 +8,20 @@ Graphe d'héritage de Projectile:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{classProjectile}
 \end{center}
 \end{figure}
+\subsection*{Signaux}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classProjectile_a18d1fccd74f92b54f239c13c74cbc00c}{
+void {\bfseries explode} (\hyperlink{classProjectile}{Projectile} $\ast$missile)}
+\label{classProjectile_a18d1fccd74f92b54f239c13c74cbc00c}
+
+\end{DoxyCompactItemize}
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classProjectile_ab151a0ca022ef3f316c996886e226892}{
-{\bfseries Projectile} (QPointF start, QPointF destination, double init\_\-speed, double damage)}
-\label{classProjectile_ab151a0ca022ef3f316c996886e226892}
+\hypertarget{classProjectile_adb1e35e75922feb87c3391f549d3274f}{
+{\bfseries Projectile} (QPointF start, \hyperlink{classBug}{Bug} $\ast$trgt, double init\_\-speed, double damage)}
+\label{classProjectile_adb1e35e75922feb87c3391f549d3274f}
 
 \item 
 \hypertarget{classProjectile_a0e0b18909c9c154404384707c6515802}{
@@ -42,6 +50,11 @@ QPointF {\bfseries dest}}
 \label{classProjectile_a15091a3a02fbfac2dd4fb44ac9cbceab}
 
 \item 
+\hypertarget{classProjectile_ae5273bd2c6550b94f38310b69859b093}{
+\hyperlink{classBug}{Bug} $\ast$ {\bfseries target}}
+\label{classProjectile_ae5273bd2c6550b94f38310b69859b093}
+
+\item 
 \hypertarget{classProjectile_aae1f5d683c71d152b6a12d922ec4714f}{
 double {\bfseries speed}}
 \label{classProjectile_aae1f5d683c71d152b6a12d922ec4714f}
@@ -67,4 +80,5 @@ double {\bfseries travelled}}
 La documentation de cette classe a été générée à partir des fichiers suivants :\begin{DoxyCompactItemize}
 \item 
 src/Projectile.h\item 
+src/moc\_\-Projectile.cpp\item 
 src/Projectile.cpp\end{DoxyCompactItemize}

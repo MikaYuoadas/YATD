@@ -2,6 +2,15 @@
 \section{Référence de la classe Ant}
 \label{classAnt}\index{Ant@{Ant}}
 }
+
+
+Classe représentant les fourmis.  
+
+
+
+
+{\ttfamily \#include $<$Ant.h$>$}
+
 Graphe d'héritage de Ant:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -18,22 +27,20 @@ void \hyperlink{classBug_a33f90dffa55e1dce80dc2416c75a53c8}{goalReached} (\hyper
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classAnt_a52f0aed092463606f4d4edd2091d92eb}{
-{\bfseries Ant} (double x, double y, double s, double start\_\-angle)}
-\label{classAnt_a52f0aed092463606f4d4edd2091d92eb}
-
-\item 
-\hypertarget{classAnt_abb2b56b817ce45d815251549a77402be}{
-void {\bfseries paint} (QPainter $\ast$painter, const QStyleOptionGraphicsItem $\ast$option, QWidget $\ast$widget)}
-\label{classAnt_abb2b56b817ce45d815251549a77402be}
-
-\item 
+\hyperlink{classAnt_a52f0aed092463606f4d4edd2091d92eb}{Ant} (double x, double y, double s, double start\_\-angle)
+\begin{DoxyCompactList}\small\item\em Constructeur de \hyperlink{classAnt}{Ant}. \end{DoxyCompactList}\item 
+\hyperlink{classAnt_a33ca6bd592236726a18a2159908e4116}{$\sim$Ant} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \hyperlink{classAnt}{Ant}. \end{DoxyCompactList}\item 
+void \hyperlink{classAnt_abb2b56b817ce45d815251549a77402be}{paint} (QPainter $\ast$painter, const QStyleOptionGraphicsItem $\ast$option, QWidget $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Surcharge de la fonction virtuelle pure \hyperlink{classAnt_abb2b56b817ce45d815251549a77402be}{paint()} héritée de QGraphicsObject. \end{DoxyCompactList}\item 
 void \hyperlink{classAnt_a64b0e0e7d2605c1a5a0906587ab70920}{hit} (double dmg)
-\begin{DoxyCompactList}\small\item\em Infliger des dégats à l'insecte. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Infliger des dégats à la fourmi et activer sa capacité spéciale. \end{DoxyCompactList}\item 
 QRectF \hyperlink{classBug_a9b39c25361faad07b1bf2dd927d09dab}{boundingRect} () const 
 \begin{DoxyCompactList}\small\item\em Surcharge de la fonction boudingRect() hérité de QGraphicsObject. \end{DoxyCompactList}\item 
 QPainterPath \hyperlink{classBug_a587a36d3145c2b4dba6c689af22c65ac}{shape} () const 
-\begin{DoxyCompactList}\small\item\em Surcharge de la fonction \hyperlink{classBug_a587a36d3145c2b4dba6c689af22c65ac}{shape()} hérité de QGraphicsObject. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Surcharge de la fonction \hyperlink{classBug_a587a36d3145c2b4dba6c689af22c65ac}{shape()} hérité de QGraphicsObject. \end{DoxyCompactList}\item 
+short int \hyperlink{classBug_aced471cedcfa855baddf4c827003e755}{getMoveType} ()
+\begin{DoxyCompactList}\small\item\em Permet d'accéder à la valeur moveType de l'insecte. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Champs de données}
 \begin{DoxyCompactItemize}
 \item 
@@ -57,24 +64,56 @@ double \hyperlink{classBug_a13b95fbf23748ea853b01bfd0b0e7fc8}{speed}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{classAnt_a1261f3d930faf4c98f06e173203a3d72}{
-void {\bfseries slowDown} ()}
+void \hyperlink{classAnt_a1261f3d930faf4c98f06e173203a3d72}{slowDown} ()}
 \label{classAnt_a1261f3d930faf4c98f06e173203a3d72}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Slot appelé pour ralentir la fourmi Après 5 secondes, le timer émet un signal timeout qui appelle la fonction \hyperlink{classAnt_a1261f3d930faf4c98f06e173203a3d72}{slowDown()} de la fourmi pour reprendre sa vitesse initiale? \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Attributs privés}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classAnt_af7d498fe6677833f371d3d9561727678}{
-QImage $\ast$ {\bfseries image} \mbox{[}3\mbox{]}}
-\label{classAnt_af7d498fe6677833f371d3d9561727678}
+QImage $\ast$ \hyperlink{classAnt_af7d498fe6677833f371d3d9561727678}{image} \mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em Cache d'images. \end{DoxyCompactList}\item 
+QTimer $\ast$ \hyperlink{classAnt_a0535768a0f4cb7682a13c6cd514cf7b0}{timer}
+\begin{DoxyCompactList}\small\item\em Timer de ralentissement. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\item 
-\hypertarget{classAnt_a0535768a0f4cb7682a13c6cd514cf7b0}{
-QTimer $\ast$ {\bfseries timer}}
-\label{classAnt_a0535768a0f4cb7682a13c6cd514cf7b0}
 
-\end{DoxyCompactItemize}
+\subsection{Description détaillée}
+Définie les caractéristiques spécifiques aux fourmis, comme leur graphisme, leur type de déplacement (FLY ou CRAWL)... 
 
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classAnt_a52f0aed092463606f4d4edd2091d92eb}{
+\index{Ant@{Ant}!Ant@{Ant}}
+\index{Ant@{Ant}!Ant@{Ant}}
+\subsubsection[{Ant}]{\setlength{\rightskip}{0pt plus 5cm}Ant::Ant (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{s, }
+\item[{double}]{start\_\-angle}
+\end{DoxyParamCaption}
+)}}
+\label{classAnt_a52f0aed092463606f4d4edd2091d92eb}
+Ce constructeur initialise les images en cache de la fourmi et appelle le constructeur parent (\hyperlink{classBug}{Bug}) avec les bons paramètres correspondant aux caractéristique d'une fourmi. 
+\begin{DoxyParams}{Paramètres}
+{\em x} & Un double correspondant à l'abscisse du point de départ des insectes. \\
+\hline
+{\em y} & Un double correspondant à l'ordonnée du point de départ des insectes. \\
+\hline
+{\em s} & La taille de la fourmi, influe sur la taille de la représentation graphiques et sur ses autres caractéristiques. \\
+\hline
+{\em start\_\-angle} & L'angle vers lequel fait face le départ des insectes. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAnt_a33ca6bd592236726a18a2159908e4116}{
+\index{Ant@{Ant}!$\sim$Ant@{$\sim$Ant}}
+\index{$\sim$Ant@{$\sim$Ant}!Ant@{Ant}}
+\subsubsection[{$\sim$Ant}]{\setlength{\rightskip}{0pt plus 5cm}Ant::$\sim$Ant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classAnt_a33ca6bd592236726a18a2159908e4116}
+Désalloue la mémoire des images de la fourmi en cache. 
 
 \subsection{Documentation des fonctions membres}
 \hypertarget{classBug_a8e0ea03e85c9324a13328da60e5c52ee}{
@@ -117,6 +156,18 @@ Signal émit lorsque l'insecte est tué.
 {\em bug} & Un pointeur vers l'insecte qui vient de mourir. \\
 \hline
 \end{DoxyParams}
+\hypertarget{classBug_aced471cedcfa855baddf4c827003e755}{
+\index{Ant@{Ant}!getMoveType@{getMoveType}}
+\index{getMoveType@{getMoveType}!Ant@{Ant}}
+\subsubsection[{getMoveType}]{\setlength{\rightskip}{0pt plus 5cm}short int Bug::getMoveType (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inherited\mbox{]}}}}
+\label{classBug_aced471cedcfa855baddf4c827003e755}
+\begin{DoxyReturn}{Renvoie}
+la valeur prédéfinie FLY ou CRAWL. 
+\end{DoxyReturn}
 \hypertarget{classBug_a33f90dffa55e1dce80dc2416c75a53c8}{
 \index{Ant@{Ant}!goalReached@{goalReached}}
 \index{goalReached@{goalReached}!Ant@{Ant}}
@@ -140,16 +191,27 @@ Signal émit par l'insecte lorsqu'il atteint son but.
 \end{DoxyParamCaption}
 )}}
 \label{classAnt_a64b0e0e7d2605c1a5a0906587ab70920}
-Fonction pouvant être appelée pour infliger des dégats à l'insecte (par exemple par les projectiles des tours). 
+Appelle la méthode \hyperlink{classBug_a63402c05b5ba3fb034e41f1ced0e4b9f}{Bug::hit()} pour infliger les dégats, et lance le timer pour accélérer la fourmi pendant 5 secondes. 
 \begin{DoxyParams}{Paramètres}
-{\em dmg} & Un double correspondant au point de dégat à infliger (avant réduction par la résistance de l'insecte). \\
+{\em dmg} & Un double correspondant au montant de dégats à infliger avec réduction. \\
 \hline
 \end{DoxyParams}
 
 
 Réimplémentée à partir de \hyperlink{classBug_a63402c05b5ba3fb034e41f1ced0e4b9f}{Bug}.
 
-\hypertarget{classBug_a587a36d3145c2b4dba6c689af22c65ac}{
+\hypertarget{classAnt_abb2b56b817ce45d815251549a77402be}{
+\index{Ant@{Ant}!paint@{paint}}
+\index{paint@{paint}!Ant@{Ant}}
+\subsubsection[{paint}]{\setlength{\rightskip}{0pt plus 5cm}void Ant::paint (
+\begin{DoxyParamCaption}
+\item[{QPainter $\ast$}]{painter, }
+\item[{const QStyleOptionGraphicsItem $\ast$}]{option, }
+\item[{QWidget $\ast$}]{widget}
+\end{DoxyParamCaption}
+)}}
+\label{classAnt_abb2b56b817ce45d815251549a77402be}
+Est appelé automatiquement par Qt pour redessiner la fourmi. \hypertarget{classBug_a587a36d3145c2b4dba6c689af22c65ac}{
 \index{Ant@{Ant}!shape@{shape}}
 \index{shape@{shape}!Ant@{Ant}}
 \subsubsection[{shape}]{\setlength{\rightskip}{0pt plus 5cm}QPainterPath Bug::shape (
@@ -169,7 +231,12 @@ Un object QPainterPath correspondant au contour de collision de l'insecte.
 \index{frame@{frame}!Ant@{Ant}}
 \subsubsection[{frame}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Bug::frame}\hspace{0.3cm}{\ttfamily  \mbox{[}protected, inherited\mbox{]}}}}
 \label{classBug_ad7e3597cf049f1051be94fcaf2fd3598}
-Compteur d'image utilisé pour afficher successivement chaque image des animations. \hypertarget{classBug_a7a93aae4e4b7a215c94ff85d0bd6e26d}{
+Compteur d'image utilisé pour afficher successivement chaque image des animations. \hypertarget{classAnt_af7d498fe6677833f371d3d9561727678}{
+\index{Ant@{Ant}!image@{image}}
+\index{image@{image}!Ant@{Ant}}
+\subsubsection[{image}]{\setlength{\rightskip}{0pt plus 5cm}QImage$\ast$ {\bf Ant::image}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classAnt_af7d498fe6677833f371d3d9561727678}
+Les images de la fourmis à chaque position, redimensionnées en fonction de sa taille et mises en cache pour un affichage plus rapide. \hypertarget{classBug_a7a93aae4e4b7a215c94ff85d0bd6e26d}{
 \index{Ant@{Ant}!parent@{parent}}
 \index{parent@{parent}!Ant@{Ant}}
 \subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Render}$\ast$ {\bf Bug::parent}\hspace{0.3cm}{\ttfamily  \mbox{[}inherited\mbox{]}}}}
@@ -184,7 +251,12 @@ La taille de l'insecte, influe à la fois sur la taille de la représentation gr
 \index{speed@{speed}!Ant@{Ant}}
 \subsubsection[{speed}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf Bug::speed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected, inherited\mbox{]}}}}
 \label{classBug_a13b95fbf23748ea853b01bfd0b0e7fc8}
-La vitesse en case/seconde à laquelle se déplace l'insecte. 
+La vitesse en case/seconde à laquelle se déplace l'insecte. \hypertarget{classAnt_a0535768a0f4cb7682a13c6cd514cf7b0}{
+\index{Ant@{Ant}!timer@{timer}}
+\index{timer@{timer}!Ant@{Ant}}
+\subsubsection[{timer}]{\setlength{\rightskip}{0pt plus 5cm}QTimer$\ast$ {\bf Ant::timer}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classAnt_a0535768a0f4cb7682a13c6cd514cf7b0}
+Quand une fourmis est blessée, elle accélère pendant 5 secondes, ce timer permet de faire ce décompte. 
 
 La documentation de cette classe a été générée à partir des fichiers suivants :\begin{DoxyCompactItemize}
 \item 

@@ -68,24 +68,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;Bug.h&quot;</span>
 <a name="l00009"></a>00009 
-<a name="l00010"></a><a class="code" href="classAnt.html">00010</a> <span class="keyword">class </span><a class="code" href="classAnt.html">Ant</a> : <span class="keyword">public</span> <a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a>
-<a name="l00011"></a>00011 {
-<a name="l00012"></a>00012     Q_OBJECT
-<a name="l00013"></a>00013 
-<a name="l00014"></a>00014     <span class="keyword">private</span>:
-<a name="l00015"></a>00015         QImage * image[3];
-<a name="l00016"></a>00016         QTimer * timer;
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018     <span class="keyword">public</span>:
-<a name="l00019"></a>00019         <a class="code" href="classAnt.html">Ant</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> s, <span class="keywordtype">double</span> start_angle);
-<a name="l00020"></a>00020         ~<a class="code" href="classAnt.html">Ant</a>();
-<a name="l00021"></a>00021         <span class="keywordtype">void</span> paint(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option, QWidget *widget);
-<a name="l00022"></a>00022         <span class="keywordtype">void</span> <a class="code" href="classAnt.html#a64b0e0e7d2605c1a5a0906587ab70920" title="Infliger des dégats à l&#39;insecte.">hit</a>(<span class="keywordtype">double</span> dmg);
-<a name="l00023"></a>00023 
-<a name="l00024"></a>00024     <span class="keyword">private</span> slots:
-<a name="l00025"></a>00025         <span class="keywordtype">void</span> slowDown();
-<a name="l00026"></a>00026 };
-<a name="l00027"></a>00027 <span class="preprocessor">#endif</span>
+<a name="l00013"></a><a class="code" href="classAnt.html">00013</a> <span class="keyword">class </span><a class="code" href="classAnt.html" title="Classe représentant les fourmis.">Ant</a> : <span class="keyword">public</span> <a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a>
+<a name="l00014"></a>00014 {
+<a name="l00015"></a>00015     Q_OBJECT
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017     <span class="keyword">private</span>:
+<a name="l00018"></a><a class="code" href="classAnt.html#af7d498fe6677833f371d3d9561727678">00018</a>         QImage * <a class="code" href="classAnt.html#af7d498fe6677833f371d3d9561727678" title="Cache d&#39;images.">image</a>[3]; 
+<a name="l00019"></a><a class="code" href="classAnt.html#a0535768a0f4cb7682a13c6cd514cf7b0">00019</a>         QTimer * <a class="code" href="classAnt.html#a0535768a0f4cb7682a13c6cd514cf7b0" title="Timer de ralentissement.">timer</a>; 
+<a name="l00021"></a>00021     <span class="keyword">public</span>:
+<a name="l00030"></a>00030         <a class="code" href="classAnt.html#a52f0aed092463606f4d4edd2091d92eb" title="Constructeur de Ant.">Ant</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> s, <span class="keywordtype">double</span> start_angle);
+<a name="l00035"></a>00035         <a class="code" href="classAnt.html#a33ca6bd592236726a18a2159908e4116" title="Destructeur de Ant.">~Ant</a>();
+<a name="l00040"></a>00040         <span class="keywordtype">void</span> <a class="code" href="classAnt.html#abb2b56b817ce45d815251549a77402be" title="Surcharge de la fonction virtuelle pure paint() héritée de QGraphicsObject.">paint</a>(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option, QWidget *widget);
+<a name="l00046"></a>00046         <span class="keywordtype">void</span> <a class="code" href="classAnt.html#a64b0e0e7d2605c1a5a0906587ab70920" title="Infliger des dégats à la fourmi et activer sa capacité spéciale.">hit</a>(<span class="keywordtype">double</span> dmg);
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048     <span class="keyword">private</span> slots:
+<a name="l00053"></a>00053         <span class="keywordtype">void</span> <a class="code" href="classAnt.html#a1261f3d930faf4c98f06e173203a3d72" title="Slot appelé pour ralentir la fourmi Après 5 secondes, le timer émet un signal timeout qui appelle la ...">slowDown</a>();
+<a name="l00054"></a>00054 };
+<a name="l00055"></a>00055 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->

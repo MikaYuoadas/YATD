@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00006"></a><a class="code" href="classWater.html">00006</a> <span class="keyword">class </span><a class="code" href="classWater.html">Water</a> : <span class="keyword">public</span> <a class="code" href="classProjectile.html">Projectile</a>
 <a name="l00007"></a>00007 {
 <a name="l00008"></a>00008     <span class="keyword">public</span>:
-<a name="l00009"></a>00009         <a class="code" href="classWater.html">Water</a>(QPointF start, QPointF dest, <span class="keywordtype">short</span> <span class="keywordtype">int</span> lvl);
+<a name="l00009"></a>00009         <a class="code" href="classWater.html">Water</a>(QPointF start, <a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * target, <span class="keywordtype">short</span> <span class="keywordtype">int</span> lvl);
 <a name="l00010"></a>00010         <span class="keywordtype">void</span> paint(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option, QWidget *widget);
 <a name="l00011"></a>00011 };
 <a name="l00012"></a>00012 <span class="preprocessor">#endif</span>

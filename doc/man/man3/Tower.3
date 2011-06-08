@@ -1,4 +1,4 @@
-.TH "Tower" 3 "Mon Jun 6 2011" "Version 0.9" "YATD" \" -*- nroff -*-
+.TH "Tower" 3 "Wed Jun 8 2011" "Version 0.9" "YATD" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -47,6 +47,12 @@ Tower \-
 .ti -1c
 .RI "float \fBgetPrice\fP ()"
 .br
+.ti -1c
+.RI "float \fBgetUpgCost\fP ()"
+.br
+.ti -1c
+.RI "void \fBupgrade\fP ()"
+.br
 .in -1c
 .SS "Champs de données"
 
@@ -65,10 +71,16 @@ Tower \-
 .RI "float \fBprice\fP"
 .br
 .ti -1c
+.RI "float \fBupg1\fP"
+.br
+.ti -1c
+.RI "float \fBupg2\fP"
+.br
+.ti -1c
 .RI "QColor \fBcolor\fP"
 .br
 .ti -1c
-.RI "short int \fBtarget\fP"
+.RI "short int \fBtargetType\fP"
 .br
 .ti -1c
 .RI "double \fBrange\fP"

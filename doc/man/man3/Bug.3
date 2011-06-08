@@ -1,4 +1,4 @@
-.TH "Bug" 3 "Mon Jun 6 2011" "Version 0.9" "YATD" \" -*- nroff -*-
+.TH "Bug" 3 "Wed Jun 8 2011" "Version 0.9" "YATD" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -44,6 +44,10 @@ Dérivée par \fBAnt\fP, \fBMosquito\fP, \fBRoach\fP, et \fBWasp\fP.
 .RI "void \fBhit\fP (double dmg)"
 .br
 .RI "\fIInfliger des dégats à l'insecte. \fP"
+.ti -1c
+.RI "short int \fBgetMoveType\fP ()"
+.br
+.RI "\fIPermet d'accéder à la valeur moveType de l'insecte. \fP"
 .in -1c
 .SS "Champs de données"
 
@@ -151,6 +155,12 @@ Un objet QRectF correspondant au rectangle englobant l'ensemble du dessin de l'i
 \fBParamètres:\fP
 .RS 4
 \fIbug\fP Un pointeur vers l'insecte qui vient de mourir. 
+.RE
+.PP
+
+.SS "short int Bug::getMoveType ()"\fBRenvoie:\fP
+.RS 4
+la valeur prédéfinie FLY ou CRAWL. 
 .RE
 .PP
 

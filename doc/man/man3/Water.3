@@ -1,4 +1,4 @@
-.TH "Water" 3 "Mon Jun 6 2011" "Version 0.9" "YATD" \" -*- nroff -*-
+.TH "Water" 3 "Wed Jun 8 2011" "Version 0.9" "YATD" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,11 +8,18 @@ Water \-
 .PP
 .PP
 Est dérivée de \fBProjectile\fP.
+.SS "Signaux"
+
+.in +1c
+.ti -1c
+.RI "void \fBexplode\fP (\fBProjectile\fP *missile)"
+.br
+.in -1c
 .SS "Fonctions membres publiques"
 
 .in +1c
 .ti -1c
-.RI "\fBWater\fP (QPointF start, QPointF dest, short int lvl)"
+.RI "\fBWater\fP (QPointF start, \fBBug\fP *target, short int lvl)"
 .br
 .ti -1c
 .RI "void \fBpaint\fP (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)"

@@ -1,11 +1,16 @@
-.TH "Ant" 3 "Mon Jun 6 2011" "Version 0.9" "YATD" \" -*- nroff -*-
+.TH "Ant" 3 "Wed Jun 8 2011" "Version 0.9" "YATD" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 Ant \- 
+.PP
+Classe représentant les fourmis.  
+
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <Ant.h>\fP
 .PP
 Est dérivée de \fBBug\fP.
 .SS "Signaux"
@@ -26,13 +31,19 @@ Est dérivée de \fBBug\fP.
 .ti -1c
 .RI "\fBAnt\fP (double x, double y, double s, double start_angle)"
 .br
+.RI "\fIConstructeur de \fBAnt\fP. \fP"
+.ti -1c
+.RI "\fB~Ant\fP ()"
+.br
+.RI "\fIDestructeur de \fBAnt\fP. \fP"
 .ti -1c
 .RI "void \fBpaint\fP (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)"
 .br
+.RI "\fISurcharge de la fonction virtuelle pure \fBpaint()\fP héritée de QGraphicsObject. \fP"
 .ti -1c
 .RI "void \fBhit\fP (double dmg)"
 .br
-.RI "\fIInfliger des dégats à l'insecte. \fP"
+.RI "\fIInfliger des dégats à la fourmi et activer sa capacité spéciale. \fP"
 .ti -1c
 .RI "QRectF \fBboundingRect\fP () const "
 .br
@@ -41,6 +52,10 @@ Est dérivée de \fBBug\fP.
 .RI "QPainterPath \fBshape\fP () const "
 .br
 .RI "\fISurcharge de la fonction \fBshape()\fP hérité de QGraphicsObject. \fP"
+.ti -1c
+.RI "short int \fBgetMoveType\fP ()"
+.br
+.RI "\fIPermet d'accéder à la valeur moveType de l'insecte. \fP"
 .in -1c
 .SS "Champs de données"
 
@@ -80,6 +95,7 @@ Est dérivée de \fBBug\fP.
 .ti -1c
 .RI "void \fBslowDown\fP ()"
 .br
+.RI "\fISlot appelé pour ralentir la fourmi Après 5 secondes, le timer émet un signal timeout qui appelle la fonction \fBslowDown()\fP de la fourmi pour reprendre sa vitesse initiale? \fP"
 .in -1c
 .SS "Attributs privés"
 
@@ -87,10 +103,32 @@ Est dérivée de \fBBug\fP.
 .ti -1c
 .RI "QImage * \fBimage\fP [3]"
 .br
+.RI "\fICache d'images. \fP"
 .ti -1c
 .RI "QTimer * \fBtimer\fP"
 .br
+.RI "\fITimer de ralentissement. \fP"
 .in -1c
+.SH "Description détaillée"
+.PP 
+Définie les caractéristiques spécifiques aux fourmis, comme leur graphisme, leur type de déplacement (FLY ou CRAWL)... 
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Ant::Ant (doublex, doubley, doubles, doublestart_angle)"Ce constructeur initialise les images en cache de la fourmi et appelle le constructeur parent (\fBBug\fP) avec les bons paramètres correspondant aux caractéristique d'une fourmi. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIx\fP Un double correspondant à l'abscisse du point de départ des insectes. 
+.br
+\fIy\fP Un double correspondant à l'ordonnée du point de départ des insectes. 
+.br
+\fIs\fP La taille de la fourmi, influe sur la taille de la représentation graphiques et sur ses autres caractéristiques. 
+.br
+\fIstart_angle\fP L'angle vers lequel fait face le départ des insectes. 
+.RE
+.PP
+
+.SS "Ant::~Ant ()"Désalloue la mémoire des images de la fourmi en cache. 
 .SH "Documentation des fonctions membres"
 .PP 
 .SS "void Bug::advance (intstep)\fC [protected, inherited]\fP"Implémentation de la fonction virtuelle pure \fBadvance()\fP héritée de QGGaphicsObject. 
@@ -117,6 +155,12 @@ Un objet QRectF correspondant au rectangle englobant l'ensemble du dessin de l'i
 .RE
 .PP
 
+.SS "short int Bug::getMoveType ()\fC [inherited]\fP"\fBRenvoie:\fP
+.RS 4
+la valeur prédéfinie FLY ou CRAWL. 
+.RE
+.PP
+
 .SS "void Bug::goalReached (\fBBug\fP *bug)\fC [signal, inherited]\fP"Signal émit par l'insecte lorsqu'il atteint son but. 
 .PP
 \fBParamètres:\fP
@@ -125,16 +169,17 @@ Un objet QRectF correspondant au rectangle englobant l'ensemble du dessin de l'i
 .RE
 .PP
 
-.SS "void Ant::hit (doubledmg)"Fonction pouvant être appelée pour infliger des dégats à l'insecte (par exemple par les projectiles des tours). 
+.SS "void Ant::hit (doubledmg)"Appelle la méthode \fBBug::hit()\fP pour infliger les dégats, et lance le timer pour accélérer la fourmi pendant 5 secondes. 
 .PP
 \fBParamètres:\fP
 .RS 4
-\fIdmg\fP Un double correspondant au point de dégat à infliger (avant réduction par la résistance de l'insecte). 
+\fIdmg\fP Un double correspondant au montant de dégats à infliger avec réduction. 
 .RE
 .PP
 
 .PP
 Réimplémentée à partir de \fBBug\fP.
+.SS "void Ant::paint (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)"Est appelé automatiquement par Qt pour redessiner la fourmi. 
 .SS "QPainterPath Bug::shape () const\fC [inherited]\fP"Fonction utilisé par QT pour traiter les collisions entre objets graphiques. 
 .PP
 \fBRenvoie:\fP
@@ -146,9 +191,11 @@ Un object QPainterPath correspondant au contour de collision de l'insecte.
 .SH "Documentation des champs"
 .PP 
 .SS "int \fBBug::frame\fP\fC [protected, inherited]\fP"Compteur d'image utilisé pour afficher successivement chaque image des animations. 
+.SS "QImage* \fBAnt::image\fP[3]\fC [private]\fP"Les images de la fourmis à chaque position, redimensionnées en fonction de sa taille et mises en cache pour un affichage plus rapide. 
 .SS "\fBRender\fP* \fBBug::parent\fP\fC [inherited]\fP"Quand on ajoute un insecte à l'objet \fBRender\fP par la méthode addBug(), cet attribut est automatiquement initialisé. 
 .SS "double \fBBug::size\fP\fC [protected, inherited]\fP"La taille de l'insecte, influe à la fois sur la taille de la représentation graphique et sur les caractéristiques de l'insecte.' 
 .SS "double \fBBug::speed\fP\fC [protected, inherited]\fP"La vitesse en case/seconde à laquelle se déplace l'insecte. 
+.SS "QTimer* \fBAnt::timer\fP\fC [private]\fP"Quand une fourmis est blessée, elle accélère pendant 5 secondes, ce timer permet de faire ce décompte. 
 
 .SH "Auteur"
 .PP 

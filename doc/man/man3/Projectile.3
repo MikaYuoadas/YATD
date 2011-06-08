@@ -1,4 +1,4 @@
-.TH "Projectile" 3 "Mon Jun 6 2011" "Version 0.9" "YATD" \" -*- nroff -*-
+.TH "Projectile" 3 "Wed Jun 8 2011" "Version 0.9" "YATD" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,11 +8,18 @@ Projectile \-
 .PP
 .PP
 Dérivée par \fBWater\fP.
+.SS "Signaux"
+
+.in +1c
+.ti -1c
+.RI "void \fBexplode\fP (\fBProjectile\fP *missile)"
+.br
+.in -1c
 .SS "Fonctions membres publiques"
 
 .in +1c
 .ti -1c
-.RI "\fBProjectile\fP (QPointF start, QPointF destination, double init_speed, double damage)"
+.RI "\fBProjectile\fP (QPointF start, \fBBug\fP *trgt, double init_speed, double damage)"
 .br
 .ti -1c
 .RI "QRectF \fBboundingRect\fP () const "
@@ -33,6 +40,9 @@ Dérivée par \fBWater\fP.
 .in +1c
 .ti -1c
 .RI "QPointF \fBdest\fP"
+.br
+.ti -1c
+.RI "\fBBug\fP * \fBtarget\fP"
 .br
 .ti -1c
 .RI "double \fBspeed\fP"
