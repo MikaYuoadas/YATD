@@ -3,9 +3,14 @@
 .nh
 .SH NAME
 Mosquito \- 
+.PP
+Classe représentant les moustiques.  
+
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <Mosquito.h>\fP
 .PP
 Est dérivée de \fBBug\fP.
 .SS "Signaux"
@@ -26,9 +31,15 @@ Est dérivée de \fBBug\fP.
 .ti -1c
 .RI "\fBMosquito\fP (double x, double y, double s, double start_angle)"
 .br
+.RI "\fIConstructeur de \fBMosquito\fP. \fP"
+.ti -1c
+.RI "\fB~Mosquito\fP ()"
+.br
+.RI "\fIDestructeur de \fBMosquito\fP. \fP"
 .ti -1c
 .RI "void \fBpaint\fP (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)"
 .br
+.RI "\fISurcharge de la fonction virtuelle pure \fBpaint()\fP hérité de QGraphicsObject. \fP"
 .ti -1c
 .RI "QRectF \fBboundingRect\fP () const "
 .br
@@ -84,7 +95,28 @@ Est dérivée de \fBBug\fP.
 .ti -1c
 .RI "QImage * \fBimage\fP [2]"
 .br
+.RI "\fICache d'image. \fP"
 .in -1c
+.SH "Description détaillée"
+.PP 
+Définie les caractéristiques spécifiques aux moustiques, comme leur graphisme, leur type de déplacement (FLY)... 
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Mosquito::Mosquito (doublex, doubley, doubles, doublestart_angle)"Ce constructeur charge les images du moustique et appelle le constructeur parent de \fBBug()\fP avec les paramètres correspondants aux caractéristiques d'un moustique. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIx\fP Un double correspondant à l'abscisse du point de départ des insectes. 
+.br
+\fIy\fP Un double correspondant à l'ordonnée du point de départ des insectes. 
+.br
+\fIs\fP La taille du moustique, influe sur la taille de sa représentation graphique et sur les autres caractéristiques. 
+.br
+\fIstart_angle\fP Angle de départ de l'insecte. 
+.RE
+.PP
+
+.SS "Mosquito::~Mosquito ()"Désalloue la mémoire des images du moustique mises en cache. 
 .SH "Documentation des fonctions membres"
 .PP 
 .SS "void Bug::advance (intstep)\fC [protected, inherited]\fP"Implémentation de la fonction virtuelle pure \fBadvance()\fP héritée de QGGaphicsObject. 
@@ -135,6 +167,7 @@ la valeur prédéfinie FLY ou CRAWL.
 
 .PP
 Réimplémentée dans \fBAnt\fP.
+.SS "void Mosquito::paint (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)"Est appelé automatiquement par Qt pour redessiner le moustique. 
 .SS "QPainterPath Bug::shape () const\fC [inherited]\fP"Fonction utilisé par QT pour traiter les collisions entre objets graphiques. 
 .PP
 \fBRenvoie:\fP
@@ -146,6 +179,7 @@ Un object QPainterPath correspondant au contour de collision de l'insecte.
 .SH "Documentation des champs"
 .PP 
 .SS "int \fBBug::frame\fP\fC [protected, inherited]\fP"Compteur d'image utilisé pour afficher successivement chaque image des animations. 
+.SS "QImage* \fBMosquito::image\fP[2]\fC [private]\fP"Les images du moustique sont redimensionnées puis mises en cache pour un affichage plus rapide. 
 .SS "\fBRender\fP* \fBBug::parent\fP\fC [inherited]\fP"Quand on ajoute un insecte à l'objet \fBRender\fP par la méthode addBug(), cet attribut est automatiquement initialisé. 
 .SS "double \fBBug::size\fP\fC [protected, inherited]\fP"La taille de l'insecte, influe à la fois sur la taille de la représentation graphique et sur les caractéristiques de l'insecte.' 
 .SS "double \fBBug::speed\fP\fC [protected, inherited]\fP"La vitesse en case/seconde à laquelle se déplace l'insecte. 
