@@ -117,26 +117,26 @@ void Tower::upgrade()
             price = 14;
         else
             price = 37;
-        firerate = 4 - level / 2;
-        range = 2 + level / 2;
+        firerate = 4 - level / 2.0;
+        range = 2.0 + level / 2.0;
     } else if (type == "slingshot") {
         if (level == 2)
             price = 19;
         else
             price = 49;
-        range = 3 + level / 2;
+        range = 3.0 + level / 2.0;
     } else if (type == "paintball") {
         if (level == 2)
             price = 19;
         else
             price = 49;
-        range = 4 + level / 2;
+        range = 4.0 + level / 2.0;
     } else if (type == "bowling") {
         if (level == 2)
             price = 28;
         else
             price = 68;
-        range = 3 + level;
+        range = 3.0 + level;
     }
     timer->start(1000 / firerate);
 }
