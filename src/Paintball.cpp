@@ -8,7 +8,7 @@ Paintball::Paintball(QPointF start, Bug * target, short int level) :
 {
 }
 
-void Stone::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+void Paintball::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     Projectile::paint(painter, Qt::red);
 }
