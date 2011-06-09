@@ -1,0 +1,256 @@
+\select@language {french}
+\contentsline {chapter}{\numberline {1}Index des structures de donn\IeC {\'e}es}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Hi\IeC {\'e}rarchie des classes}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Index des structures de donn\IeC {\'e}es}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Structures de donn\IeC {\'e}es}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Documentation des structures de donn\IeC {\'e}es}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}R\IeC {\'e}f\IeC {\'e}rence de la classe Ant}{5}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Description d\IeC {\'e}taill\IeC {\'e}e}{6}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Documentation des constructeurs et destructeur}{6}{subsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2.1}Ant}{7}{subsubsection.3.1.2.1}
+\contentsline {subsubsection}{\numberline {3.1.2.2}$\sim $Ant}{7}{subsubsection.3.1.2.2}
+\contentsline {subsection}{\numberline {3.1.3}Documentation des fonctions membres}{7}{subsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.3.1}advance}{7}{subsubsection.3.1.3.1}
+\contentsline {subsubsection}{\numberline {3.1.3.2}boundingRect}{7}{subsubsection.3.1.3.2}
+\contentsline {subsubsection}{\numberline {3.1.3.3}dead}{7}{subsubsection.3.1.3.3}
+\contentsline {subsubsection}{\numberline {3.1.3.4}getMoveType}{7}{subsubsection.3.1.3.4}
+\contentsline {subsubsection}{\numberline {3.1.3.5}goalReached}{8}{subsubsection.3.1.3.5}
+\contentsline {subsubsection}{\numberline {3.1.3.6}hit}{8}{subsubsection.3.1.3.6}
+\contentsline {subsubsection}{\numberline {3.1.3.7}paint}{8}{subsubsection.3.1.3.7}
+\contentsline {subsubsection}{\numberline {3.1.3.8}shape}{8}{subsubsection.3.1.3.8}
+\contentsline {subsection}{\numberline {3.1.4}Documentation des champs}{8}{subsection.3.1.4}
+\contentsline {subsubsection}{\numberline {3.1.4.1}frame}{8}{subsubsection.3.1.4.1}
+\contentsline {subsubsection}{\numberline {3.1.4.2}image}{8}{subsubsection.3.1.4.2}
+\contentsline {subsubsection}{\numberline {3.1.4.3}parent}{8}{subsubsection.3.1.4.3}
+\contentsline {subsubsection}{\numberline {3.1.4.4}size}{9}{subsubsection.3.1.4.4}
+\contentsline {subsubsection}{\numberline {3.1.4.5}speed}{9}{subsubsection.3.1.4.5}
+\contentsline {subsubsection}{\numberline {3.1.4.6}timer}{9}{subsubsection.3.1.4.6}
+\contentsline {section}{\numberline {3.2}R\IeC {\'e}f\IeC {\'e}rence de la classe Bug}{9}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Description d\IeC {\'e}taill\IeC {\'e}e}{10}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Documentation des constructeurs et destructeur}{10}{subsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.2.1}Bug}{11}{subsubsection.3.2.2.1}
+\contentsline {subsection}{\numberline {3.2.3}Documentation des fonctions membres}{11}{subsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.3.1}advance}{11}{subsubsection.3.2.3.1}
+\contentsline {subsubsection}{\numberline {3.2.3.2}boundingRect}{11}{subsubsection.3.2.3.2}
+\contentsline {subsubsection}{\numberline {3.2.3.3}dead}{11}{subsubsection.3.2.3.3}
+\contentsline {subsubsection}{\numberline {3.2.3.4}getMoveType}{11}{subsubsection.3.2.3.4}
+\contentsline {subsubsection}{\numberline {3.2.3.5}goalReached}{12}{subsubsection.3.2.3.5}
+\contentsline {subsubsection}{\numberline {3.2.3.6}hit}{12}{subsubsection.3.2.3.6}
+\contentsline {subsubsection}{\numberline {3.2.3.7}shape}{12}{subsubsection.3.2.3.7}
+\contentsline {subsection}{\numberline {3.2.4}Documentation des champs}{12}{subsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.4.1}angle}{12}{subsubsection.3.2.4.1}
+\contentsline {subsubsection}{\numberline {3.2.4.2}frame}{12}{subsubsection.3.2.4.2}
+\contentsline {subsubsection}{\numberline {3.2.4.3}hp}{12}{subsubsection.3.2.4.3}
+\contentsline {subsubsection}{\numberline {3.2.4.4}lastSquare}{12}{subsubsection.3.2.4.4}
+\contentsline {subsubsection}{\numberline {3.2.4.5}moveType}{13}{subsubsection.3.2.4.5}
+\contentsline {subsubsection}{\numberline {3.2.4.6}parent}{13}{subsubsection.3.2.4.6}
+\contentsline {subsubsection}{\numberline {3.2.4.7}resist}{13}{subsubsection.3.2.4.7}
+\contentsline {subsubsection}{\numberline {3.2.4.8}size}{13}{subsubsection.3.2.4.8}
+\contentsline {subsubsection}{\numberline {3.2.4.9}speed}{13}{subsubsection.3.2.4.9}
+\contentsline {section}{\numberline {3.3}R\IeC {\'e}f\IeC {\'e}rence de la classe Hatchery}{13}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Description d\IeC {\'e}taill\IeC {\'e}e}{14}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Documentation des constructeurs et destructeur}{14}{subsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.2.1}Hatchery}{14}{subsubsection.3.3.2.1}
+\contentsline {subsection}{\numberline {3.3.3}Documentation des fonctions membres}{14}{subsection.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.3.1}spawnBug}{14}{subsubsection.3.3.3.1}
+\contentsline {subsection}{\numberline {3.3.4}Documentation des champs}{14}{subsection.3.3.4}
+\contentsline {subsubsection}{\numberline {3.3.4.1}angle}{14}{subsubsection.3.3.4.1}
+\contentsline {subsubsection}{\numberline {3.3.4.2}x}{14}{subsubsection.3.3.4.2}
+\contentsline {subsubsection}{\numberline {3.3.4.3}y}{14}{subsubsection.3.3.4.3}
+\contentsline {section}{\numberline {3.4}R\IeC {\'e}f\IeC {\'e}rence de la classe Mosquito}{15}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Description d\IeC {\'e}taill\IeC {\'e}e}{16}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Documentation des constructeurs et destructeur}{16}{subsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.2.1}Mosquito}{16}{subsubsection.3.4.2.1}
+\contentsline {subsubsection}{\numberline {3.4.2.2}$\sim $Mosquito}{16}{subsubsection.3.4.2.2}
+\contentsline {subsection}{\numberline {3.4.3}Documentation des fonctions membres}{16}{subsection.3.4.3}
+\contentsline {subsubsection}{\numberline {3.4.3.1}advance}{16}{subsubsection.3.4.3.1}
+\contentsline {subsubsection}{\numberline {3.4.3.2}boundingRect}{17}{subsubsection.3.4.3.2}
+\contentsline {subsubsection}{\numberline {3.4.3.3}dead}{17}{subsubsection.3.4.3.3}
+\contentsline {subsubsection}{\numberline {3.4.3.4}getMoveType}{17}{subsubsection.3.4.3.4}
+\contentsline {subsubsection}{\numberline {3.4.3.5}goalReached}{17}{subsubsection.3.4.3.5}
+\contentsline {subsubsection}{\numberline {3.4.3.6}hit}{17}{subsubsection.3.4.3.6}
+\contentsline {subsubsection}{\numberline {3.4.3.7}paint}{17}{subsubsection.3.4.3.7}
+\contentsline {subsubsection}{\numberline {3.4.3.8}shape}{17}{subsubsection.3.4.3.8}
+\contentsline {subsection}{\numberline {3.4.4}Documentation des champs}{18}{subsection.3.4.4}
+\contentsline {subsubsection}{\numberline {3.4.4.1}frame}{18}{subsubsection.3.4.4.1}
+\contentsline {subsubsection}{\numberline {3.4.4.2}image}{18}{subsubsection.3.4.4.2}
+\contentsline {subsubsection}{\numberline {3.4.4.3}parent}{18}{subsubsection.3.4.4.3}
+\contentsline {subsubsection}{\numberline {3.4.4.4}size}{18}{subsubsection.3.4.4.4}
+\contentsline {subsubsection}{\numberline {3.4.4.5}speed}{18}{subsubsection.3.4.4.5}
+\contentsline {section}{\numberline {3.5}R\IeC {\'e}f\IeC {\'e}rence de la classe Projectile}{18}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Description d\IeC {\'e}taill\IeC {\'e}e}{19}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Documentation des constructeurs et destructeur}{19}{subsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.2.1}Projectile}{19}{subsubsection.3.5.2.1}
+\contentsline {subsection}{\numberline {3.5.3}Documentation des fonctions membres}{20}{subsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.3.1}advance}{20}{subsubsection.3.5.3.1}
+\contentsline {subsubsection}{\numberline {3.5.3.2}boundingRect}{20}{subsubsection.3.5.3.2}
+\contentsline {subsubsection}{\numberline {3.5.3.3}explode}{20}{subsubsection.3.5.3.3}
+\contentsline {subsubsection}{\numberline {3.5.3.4}paint}{20}{subsubsection.3.5.3.4}
+\contentsline {subsection}{\numberline {3.5.4}Documentation des champs}{20}{subsection.3.5.4}
+\contentsline {subsubsection}{\numberline {3.5.4.1}dest}{20}{subsubsection.3.5.4.1}
+\contentsline {subsubsection}{\numberline {3.5.4.2}dmg}{20}{subsubsection.3.5.4.2}
+\contentsline {subsubsection}{\numberline {3.5.4.3}maxrange}{20}{subsubsection.3.5.4.3}
+\contentsline {subsubsection}{\numberline {3.5.4.4}speed}{20}{subsubsection.3.5.4.4}
+\contentsline {subsubsection}{\numberline {3.5.4.5}target}{20}{subsubsection.3.5.4.5}
+\contentsline {subsubsection}{\numberline {3.5.4.6}travelled}{20}{subsubsection.3.5.4.6}
+\contentsline {section}{\numberline {3.6}R\IeC {\'e}f\IeC {\'e}rence de la classe Render}{21}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Description d\IeC {\'e}taill\IeC {\'e}e}{22}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Documentation des constructeurs et destructeur}{22}{subsection.3.6.2}
+\contentsline {subsubsection}{\numberline {3.6.2.1}Render}{22}{subsubsection.3.6.2.1}
+\contentsline {subsubsection}{\numberline {3.6.2.2}$\sim $Render}{23}{subsubsection.3.6.2.2}
+\contentsline {subsection}{\numberline {3.6.3}Documentation des fonctions membres}{23}{subsection.3.6.3}
+\contentsline {subsubsection}{\numberline {3.6.3.1}addBug}{23}{subsubsection.3.6.3.1}
+\contentsline {subsubsection}{\numberline {3.6.3.2}addProjectile}{23}{subsubsection.3.6.3.2}
+\contentsline {subsubsection}{\numberline {3.6.3.3}bugFinish}{23}{subsubsection.3.6.3.3}
+\contentsline {subsubsection}{\numberline {3.6.3.4}bugKilled}{23}{subsubsection.3.6.3.4}
+\contentsline {subsubsection}{\numberline {3.6.3.5}destroyTower}{23}{subsubsection.3.6.3.5}
+\contentsline {subsubsection}{\numberline {3.6.3.6}drawBackground}{23}{subsubsection.3.6.3.6}
+\contentsline {subsubsection}{\numberline {3.6.3.7}explodingProjectile}{24}{subsubsection.3.6.3.7}
+\contentsline {subsubsection}{\numberline {3.6.3.8}getAngle}{24}{subsubsection.3.6.3.8}
+\contentsline {subsubsection}{\numberline {3.6.3.9}getCred}{24}{subsubsection.3.6.3.9}
+\contentsline {subsubsection}{\numberline {3.6.3.10}getTarget}{24}{subsubsection.3.6.3.10}
+\contentsline {subsubsection}{\numberline {3.6.3.11}goal}{24}{subsubsection.3.6.3.11}
+\contentsline {subsubsection}{\numberline {3.6.3.12}loseLife}{24}{subsubsection.3.6.3.12}
+\contentsline {subsubsection}{\numberline {3.6.3.13}mousePressEvent}{25}{subsubsection.3.6.3.13}
+\contentsline {subsubsection}{\numberline {3.6.3.14}newWaveName}{25}{subsubsection.3.6.3.14}
+\contentsline {subsubsection}{\numberline {3.6.3.15}nextBug}{25}{subsubsection.3.6.3.15}
+\contentsline {subsubsection}{\numberline {3.6.3.16}nextWave}{25}{subsubsection.3.6.3.16}
+\contentsline {subsubsection}{\numberline {3.6.3.17}selectTower}{25}{subsubsection.3.6.3.17}
+\contentsline {subsubsection}{\numberline {3.6.3.18}square}{25}{subsubsection.3.6.3.18}
+\contentsline {subsubsection}{\numberline {3.6.3.19}towerBought}{25}{subsubsection.3.6.3.19}
+\contentsline {subsection}{\numberline {3.6.4}Documentation des champs}{26}{subsection.3.6.4}
+\contentsline {subsubsection}{\numberline {3.6.4.1}b1}{26}{subsubsection.3.6.4.1}
+\contentsline {subsubsection}{\numberline {3.6.4.2}bugs}{26}{subsubsection.3.6.4.2}
+\contentsline {subsubsection}{\numberline {3.6.4.3}goalSquare}{26}{subsubsection.3.6.4.3}
+\contentsline {subsubsection}{\numberline {3.6.4.4}map}{26}{subsubsection.3.6.4.4}
+\contentsline {subsubsection}{\numberline {3.6.4.5}start}{26}{subsubsection.3.6.4.5}
+\contentsline {subsubsection}{\numberline {3.6.4.6}start\_\discretionary {-}{}{}angle}{26}{subsubsection.3.6.4.6}
+\contentsline {subsubsection}{\numberline {3.6.4.7}tiles}{26}{subsubsection.3.6.4.7}
+\contentsline {subsubsection}{\numberline {3.6.4.8}tower2build}{26}{subsubsection.3.6.4.8}
+\contentsline {subsubsection}{\numberline {3.6.4.9}towers}{26}{subsubsection.3.6.4.9}
+\contentsline {subsubsection}{\numberline {3.6.4.10}wave}{26}{subsubsection.3.6.4.10}
+\contentsline {subsubsection}{\numberline {3.6.4.11}waveNumber}{26}{subsubsection.3.6.4.11}
+\contentsline {subsubsection}{\numberline {3.6.4.12}waveTimer}{26}{subsubsection.3.6.4.12}
+\contentsline {section}{\numberline {3.7}R\IeC {\'e}f\IeC {\'e}rence de la classe Roach}{26}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Description d\IeC {\'e}taill\IeC {\'e}e}{27}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Documentation des constructeurs et destructeur}{28}{subsection.3.7.2}
+\contentsline {subsubsection}{\numberline {3.7.2.1}Roach}{28}{subsubsection.3.7.2.1}
+\contentsline {subsubsection}{\numberline {3.7.2.2}$\sim $Roach}{28}{subsubsection.3.7.2.2}
+\contentsline {subsection}{\numberline {3.7.3}Documentation des fonctions membres}{28}{subsection.3.7.3}
+\contentsline {subsubsection}{\numberline {3.7.3.1}advance}{28}{subsubsection.3.7.3.1}
+\contentsline {subsubsection}{\numberline {3.7.3.2}boundingRect}{28}{subsubsection.3.7.3.2}
+\contentsline {subsubsection}{\numberline {3.7.3.3}dead}{28}{subsubsection.3.7.3.3}
+\contentsline {subsubsection}{\numberline {3.7.3.4}getMoveType}{28}{subsubsection.3.7.3.4}
+\contentsline {subsubsection}{\numberline {3.7.3.5}goalReached}{28}{subsubsection.3.7.3.5}
+\contentsline {subsubsection}{\numberline {3.7.3.6}hit}{29}{subsubsection.3.7.3.6}
+\contentsline {subsubsection}{\numberline {3.7.3.7}paint}{29}{subsubsection.3.7.3.7}
+\contentsline {subsubsection}{\numberline {3.7.3.8}shape}{29}{subsubsection.3.7.3.8}
+\contentsline {subsection}{\numberline {3.7.4}Documentation des champs}{29}{subsection.3.7.4}
+\contentsline {subsubsection}{\numberline {3.7.4.1}frame}{29}{subsubsection.3.7.4.1}
+\contentsline {subsubsection}{\numberline {3.7.4.2}image}{29}{subsubsection.3.7.4.2}
+\contentsline {subsubsection}{\numberline {3.7.4.3}parent}{29}{subsubsection.3.7.4.3}
+\contentsline {subsubsection}{\numberline {3.7.4.4}size}{29}{subsubsection.3.7.4.4}
+\contentsline {subsubsection}{\numberline {3.7.4.5}speed}{30}{subsubsection.3.7.4.5}
+\contentsline {section}{\numberline {3.8}R\IeC {\'e}f\IeC {\'e}rence de la classe Tower}{30}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}Description d\IeC {\'e}taill\IeC {\'e}e}{31}{subsection.3.8.1}
+\contentsline {subsection}{\numberline {3.8.2}Documentation des constructeurs et destructeur}{31}{subsection.3.8.2}
+\contentsline {subsubsection}{\numberline {3.8.2.1}Tower}{31}{subsubsection.3.8.2.1}
+\contentsline {subsection}{\numberline {3.8.3}Documentation des fonctions membres}{31}{subsection.3.8.3}
+\contentsline {subsubsection}{\numberline {3.8.3.1}boundingRect}{31}{subsubsection.3.8.3.1}
+\contentsline {subsubsection}{\numberline {3.8.3.2}fire}{32}{subsubsection.3.8.3.2}
+\contentsline {subsubsection}{\numberline {3.8.3.3}getFirerate}{32}{subsubsection.3.8.3.3}
+\contentsline {subsubsection}{\numberline {3.8.3.4}getLvl}{32}{subsubsection.3.8.3.4}
+\contentsline {subsubsection}{\numberline {3.8.3.5}getPrice}{32}{subsubsection.3.8.3.5}
+\contentsline {subsubsection}{\numberline {3.8.3.6}getRange}{32}{subsubsection.3.8.3.6}
+\contentsline {subsubsection}{\numberline {3.8.3.7}getType}{32}{subsubsection.3.8.3.7}
+\contentsline {subsubsection}{\numberline {3.8.3.8}getUpgCost}{32}{subsubsection.3.8.3.8}
+\contentsline {subsubsection}{\numberline {3.8.3.9}paint}{33}{subsubsection.3.8.3.9}
+\contentsline {subsubsection}{\numberline {3.8.3.10}projectile}{33}{subsubsection.3.8.3.10}
+\contentsline {subsubsection}{\numberline {3.8.3.11}upgrade}{33}{subsubsection.3.8.3.11}
+\contentsline {subsection}{\numberline {3.8.4}Documentation des champs}{33}{subsection.3.8.4}
+\contentsline {subsubsection}{\numberline {3.8.4.1}color}{33}{subsubsection.3.8.4.1}
+\contentsline {subsubsection}{\numberline {3.8.4.2}firerate}{33}{subsubsection.3.8.4.2}
+\contentsline {subsubsection}{\numberline {3.8.4.3}level}{33}{subsubsection.3.8.4.3}
+\contentsline {subsubsection}{\numberline {3.8.4.4}parent}{33}{subsubsection.3.8.4.4}
+\contentsline {subsubsection}{\numberline {3.8.4.5}pos}{33}{subsubsection.3.8.4.5}
+\contentsline {subsubsection}{\numberline {3.8.4.6}price}{33}{subsubsection.3.8.4.6}
+\contentsline {subsubsection}{\numberline {3.8.4.7}range}{33}{subsubsection.3.8.4.7}
+\contentsline {subsubsection}{\numberline {3.8.4.8}targetType}{33}{subsubsection.3.8.4.8}
+\contentsline {subsubsection}{\numberline {3.8.4.9}timer}{33}{subsubsection.3.8.4.9}
+\contentsline {subsubsection}{\numberline {3.8.4.10}type}{33}{subsubsection.3.8.4.10}
+\contentsline {subsubsection}{\numberline {3.8.4.11}upg1}{33}{subsubsection.3.8.4.11}
+\contentsline {subsubsection}{\numberline {3.8.4.12}upg2}{33}{subsubsection.3.8.4.12}
+\contentsline {section}{\numberline {3.9}R\IeC {\'e}f\IeC {\'e}rence de la classe UI}{34}{section.3.9}
+\contentsline {subsection}{\numberline {3.9.1}Description d\IeC {\'e}taill\IeC {\'e}e}{35}{subsection.3.9.1}
+\contentsline {subsection}{\numberline {3.9.2}Documentation des constructeurs et destructeur}{35}{subsection.3.9.2}
+\contentsline {subsubsection}{\numberline {3.9.2.1}UI}{36}{subsubsection.3.9.2.1}
+\contentsline {subsection}{\numberline {3.9.3}Documentation des fonctions membres}{36}{subsection.3.9.3}
+\contentsline {subsubsection}{\numberline {3.9.3.1}addCred}{36}{subsubsection.3.9.3.1}
+\contentsline {subsubsection}{\numberline {3.9.3.2}buyBowlingTower}{36}{subsubsection.3.9.3.2}
+\contentsline {subsubsection}{\numberline {3.9.3.3}buyPaintballTower}{36}{subsubsection.3.9.3.3}
+\contentsline {subsubsection}{\numberline {3.9.3.4}buySlingshotTower}{36}{subsubsection.3.9.3.4}
+\contentsline {subsubsection}{\numberline {3.9.3.5}buyTower}{36}{subsubsection.3.9.3.5}
+\contentsline {subsubsection}{\numberline {3.9.3.6}buyWaterTower}{36}{subsubsection.3.9.3.6}
+\contentsline {subsubsection}{\numberline {3.9.3.7}defeat}{36}{subsubsection.3.9.3.7}
+\contentsline {subsubsection}{\numberline {3.9.3.8}loseLife}{36}{subsubsection.3.9.3.8}
+\contentsline {subsubsection}{\numberline {3.9.3.9}nextWave}{37}{subsubsection.3.9.3.9}
+\contentsline {subsubsection}{\numberline {3.9.3.10}selectTower}{37}{subsubsection.3.9.3.10}
+\contentsline {subsubsection}{\numberline {3.9.3.11}sellSelectedTower}{37}{subsubsection.3.9.3.11}
+\contentsline {subsubsection}{\numberline {3.9.3.12}setWaveName}{37}{subsubsection.3.9.3.12}
+\contentsline {subsubsection}{\numberline {3.9.3.13}startWave}{37}{subsubsection.3.9.3.13}
+\contentsline {subsubsection}{\numberline {3.9.3.14}towerSold}{37}{subsubsection.3.9.3.14}
+\contentsline {subsubsection}{\numberline {3.9.3.15}upgradeSelectedTower}{37}{subsubsection.3.9.3.15}
+\contentsline {subsection}{\numberline {3.9.4}Documentation des champs}{37}{subsection.3.9.4}
+\contentsline {subsubsection}{\numberline {3.9.4.1}bowling}{37}{subsubsection.3.9.4.1}
+\contentsline {subsubsection}{\numberline {3.9.4.2}cred}{37}{subsubsection.3.9.4.2}
+\contentsline {subsubsection}{\numberline {3.9.4.3}cred\_\discretionary {-}{}{}txt}{38}{subsubsection.3.9.4.3}
+\contentsline {subsubsection}{\numberline {3.9.4.4}firerate}{38}{subsubsection.3.9.4.4}
+\contentsline {subsubsection}{\numberline {3.9.4.5}life}{38}{subsubsection.3.9.4.5}
+\contentsline {subsubsection}{\numberline {3.9.4.6}life\_\discretionary {-}{}{}txt}{38}{subsubsection.3.9.4.6}
+\contentsline {subsubsection}{\numberline {3.9.4.7}lvl}{38}{subsubsection.3.9.4.7}
+\contentsline {subsubsection}{\numberline {3.9.4.8}name}{38}{subsubsection.3.9.4.8}
+\contentsline {subsubsection}{\numberline {3.9.4.9}paintball}{38}{subsubsection.3.9.4.9}
+\contentsline {subsubsection}{\numberline {3.9.4.10}range}{38}{subsubsection.3.9.4.10}
+\contentsline {subsubsection}{\numberline {3.9.4.11}selected}{38}{subsubsection.3.9.4.11}
+\contentsline {subsubsection}{\numberline {3.9.4.12}sell}{38}{subsubsection.3.9.4.12}
+\contentsline {subsubsection}{\numberline {3.9.4.13}sling}{38}{subsubsection.3.9.4.13}
+\contentsline {subsubsection}{\numberline {3.9.4.14}start}{38}{subsubsection.3.9.4.14}
+\contentsline {subsubsection}{\numberline {3.9.4.15}stats}{38}{subsubsection.3.9.4.15}
+\contentsline {subsubsection}{\numberline {3.9.4.16}t\_\discretionary {-}{}{}firerate}{38}{subsubsection.3.9.4.16}
+\contentsline {subsubsection}{\numberline {3.9.4.17}t\_\discretionary {-}{}{}lvl}{38}{subsubsection.3.9.4.17}
+\contentsline {subsubsection}{\numberline {3.9.4.18}t\_\discretionary {-}{}{}name}{38}{subsubsection.3.9.4.18}
+\contentsline {subsubsection}{\numberline {3.9.4.19}t\_\discretionary {-}{}{}range}{38}{subsubsection.3.9.4.19}
+\contentsline {subsubsection}{\numberline {3.9.4.20}tower}{38}{subsubsection.3.9.4.20}
+\contentsline {subsubsection}{\numberline {3.9.4.21}upg}{38}{subsubsection.3.9.4.21}
+\contentsline {subsubsection}{\numberline {3.9.4.22}water}{38}{subsubsection.3.9.4.22}
+\contentsline {subsubsection}{\numberline {3.9.4.23}wave}{38}{subsubsection.3.9.4.23}
+\contentsline {section}{\numberline {3.10}R\IeC {\'e}f\IeC {\'e}rence de la classe Wasp}{39}{section.3.10}
+\contentsline {subsection}{\numberline {3.10.1}Description d\IeC {\'e}taill\IeC {\'e}e}{40}{subsection.3.10.1}
+\contentsline {subsection}{\numberline {3.10.2}Documentation des constructeurs et destructeur}{40}{subsection.3.10.2}
+\contentsline {subsubsection}{\numberline {3.10.2.1}Wasp}{40}{subsubsection.3.10.2.1}
+\contentsline {subsubsection}{\numberline {3.10.2.2}$\sim $Wasp}{40}{subsubsection.3.10.2.2}
+\contentsline {subsection}{\numberline {3.10.3}Documentation des fonctions membres}{40}{subsection.3.10.3}
+\contentsline {subsubsection}{\numberline {3.10.3.1}advance}{40}{subsubsection.3.10.3.1}
+\contentsline {subsubsection}{\numberline {3.10.3.2}boundingRect}{41}{subsubsection.3.10.3.2}
+\contentsline {subsubsection}{\numberline {3.10.3.3}dead}{41}{subsubsection.3.10.3.3}
+\contentsline {subsubsection}{\numberline {3.10.3.4}getMoveType}{41}{subsubsection.3.10.3.4}
+\contentsline {subsubsection}{\numberline {3.10.3.5}goalReached}{41}{subsubsection.3.10.3.5}
+\contentsline {subsubsection}{\numberline {3.10.3.6}hit}{41}{subsubsection.3.10.3.6}
+\contentsline {subsubsection}{\numberline {3.10.3.7}paint}{41}{subsubsection.3.10.3.7}
+\contentsline {subsubsection}{\numberline {3.10.3.8}shape}{41}{subsubsection.3.10.3.8}
+\contentsline {subsection}{\numberline {3.10.4}Documentation des champs}{42}{subsection.3.10.4}
+\contentsline {subsubsection}{\numberline {3.10.4.1}frame}{42}{subsubsection.3.10.4.1}
+\contentsline {subsubsection}{\numberline {3.10.4.2}image}{42}{subsubsection.3.10.4.2}
+\contentsline {subsubsection}{\numberline {3.10.4.3}parent}{42}{subsubsection.3.10.4.3}
+\contentsline {subsubsection}{\numberline {3.10.4.4}size}{42}{subsubsection.3.10.4.4}
+\contentsline {subsubsection}{\numberline {3.10.4.5}speed}{42}{subsubsection.3.10.4.5}
+\contentsline {section}{\numberline {3.11}R\IeC {\'e}f\IeC {\'e}rence de la classe Water}{42}{section.3.11}
+\contentsline {subsection}{\numberline {3.11.1}Description d\IeC {\'e}taill\IeC {\'e}e}{43}{subsection.3.11.1}
+\contentsline {subsection}{\numberline {3.11.2}Documentation des constructeurs et destructeur}{43}{subsection.3.11.2}
+\contentsline {subsubsection}{\numberline {3.11.2.1}Water}{43}{subsubsection.3.11.2.1}
+\contentsline {subsection}{\numberline {3.11.3}Documentation des fonctions membres}{43}{subsection.3.11.3}
+\contentsline {subsubsection}{\numberline {3.11.3.1}advance}{43}{subsubsection.3.11.3.1}
+\contentsline {subsubsection}{\numberline {3.11.3.2}boundingRect}{44}{subsubsection.3.11.3.2}
+\contentsline {subsubsection}{\numberline {3.11.3.3}explode}{44}{subsubsection.3.11.3.3}
+\contentsline {subsubsection}{\numberline {3.11.3.4}paint}{44}{subsubsection.3.11.3.4}
+\contentsline {subsubsection}{\numberline {3.11.3.5}paint}{44}{subsubsection.3.11.3.5}
