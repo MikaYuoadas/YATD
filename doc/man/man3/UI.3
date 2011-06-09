@@ -58,6 +58,10 @@ Classe de l'interface graphique.
 .RI "void \fBupgradeSelectedTower\fP ()"
 .br
 .RI "\fIAmélioration de la défense sélectionnée. \fP"
+.ti -1c
+.RI "void \fBtogglePause\fP ()"
+.br
+.RI "\fIPause. \fP"
 .in -1c
 .SS "Signaux"
 
@@ -78,6 +82,14 @@ Classe de l'interface graphique.
 .RI "void \fBdefeat\fP ()"
 .br
 .RI "\fISignal de défaite. \fP"
+.ti -1c
+.RI "void \fBpause\fP ()"
+.br
+.RI "\fIPause. \fP"
+.ti -1c
+.RI "void \fBunpause\fP ()"
+.br
+.RI "\fIUnpause. \fP"
 .in -1c
 .SS "Fonctions membres publiques"
 
@@ -106,6 +118,10 @@ Classe de l'interface graphique.
 .RI "QGroupBox * \fBstats\fP"
 .br
 .RI "\fIRegroupe les éléments ayant attrait à la défense sélectionnée. \fP"
+.ti -1c
+.RI "QPushButton * \fBpauseBtn\fP"
+.br
+.RI "\fILe bouton pour mettre le jeu en pause. \fP"
 .ti -1c
 .RI "QPushButton * \fBsell\fP"
 .br
@@ -186,6 +202,10 @@ Classe de l'interface graphique.
 .RI "\fBTower\fP * \fBselected\fP"
 .br
 .RI "\fIUn pointeur vers la tour sélectionnée actuellement. \fP"
+.ti -1c
+.RI "bool \fBpauseVar\fP"
+.br
+.RI "\fITrue si le jeu est en pause, False sinon. \fP"
 .in -1c
 .SH "Description détaillée"
 .PP 
@@ -218,6 +238,7 @@ Gère l'ensemble des éléments de l'interface graphique affichée à droite.
 .SS "void UI::defeat ()\fC [signal]\fP"Indique au programme de stopper le jeu. 
 .SS "void UI::loseLife ()\fC [slot]\fP"Décrémente de 1 le total de vies du joueur. 
 .SS "void UI::nextWave ()\fC [signal]\fP"Indique au \fBRender\fP de lancer la vague suivante. 
+.SS "void UI::pause ()\fC [signal]\fP"Arrête le jeu en cours. 
 .SS "void UI::selectTower (\fBTower\fP *tower)\fC [slot]\fP"Affiche les caractérisque de la défense sélectionnée. 
 .PP
 \fBParamètres:\fP
@@ -236,6 +257,7 @@ Gère l'ensemble des éléments de l'interface graphique affichée à droite.
 .PP
 
 .SS "void UI::startWave ()\fC [slot]\fP"Reçoit le signal du bouton 'lancer la vague suivante'. 
+.SS "void UI::togglePause ()\fC [slot]\fP"Arrête le jeu en cours ou relance le jeu en pause. 
 .SS "void UI::towerSold (\fBTower\fP *tower)\fC [signal]\fP"Indique au \fBRender\fP de détruire une défense vendue. 
 .PP
 \fBParamètres:\fP
@@ -244,6 +266,7 @@ Gère l'ensemble des éléments de l'interface graphique affichée à droite.
 .RE
 .PP
 
+.SS "void UI::unpause ()\fC [signal]\fP"Relance le jeu. 
 .SS "void UI::upgradeSelectedTower ()\fC [slot]\fP"Reçoit le signal du bouton 'améliorer' et améliore la tour si les crédits sont suffisants. 
 .SH "Documentation des champs"
 .PP 
@@ -256,6 +279,8 @@ Gère l'ensemble des éléments de l'interface graphique affichée à droite.
 .SS "QLabel* \fBUI::lvl\fP\fC [private]\fP"
 .SS "QLabel* \fBUI::name\fP\fC [private]\fP"
 .SS "QPushButton* \fBUI::paintball\fP\fC [private]\fP"
+.SS "QPushButton* \fBUI::pauseBtn\fP\fC [private]\fP"
+.SS "bool \fBUI::pauseVar\fP\fC [private]\fP"
 .SS "QLabel* \fBUI::range\fP\fC [private]\fP"
 .SS "\fBTower\fP* \fBUI::selected\fP\fC [private]\fP"
 .SS "QPushButton* \fBUI::sell\fP\fC [private]\fP"

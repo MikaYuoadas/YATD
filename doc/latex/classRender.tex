@@ -29,7 +29,11 @@ void \hyperlink{classRender_a3b5bb3705131ca57252398e0f6a9e3e5}{addProjectile} (\
 void \hyperlink{classRender_a20678c257926bfff635fded745e11f4a}{destroyTower} (\hyperlink{classTower}{Tower} $\ast$tower)
 \begin{DoxyCompactList}\small\item\em Vente d'une tour. \end{DoxyCompactList}\item 
 void \hyperlink{classRender_aedec0cbbe4808368656b772dfe3e63f9}{explodingProjectile} (\hyperlink{classProjectile}{Projectile} $\ast$missile)
-\begin{DoxyCompactList}\small\item\em explosion d'un projectile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em explosion d'un projectile. \end{DoxyCompactList}\item 
+void \hyperlink{classRender_af137a4a60ad5195b0ccd3076e160f1d4}{stop} ()
+\begin{DoxyCompactList}\small\item\em Pause. \end{DoxyCompactList}\item 
+void \hyperlink{classRender_a071e49ad740ed2bd509f31c68d37acd8}{restart} ()
+\begin{DoxyCompactList}\small\item\em Fin pause. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Signaux}
 \begin{DoxyCompactItemize}
 \item 
@@ -40,7 +44,11 @@ void \hyperlink{classRender_ad88f7f01a7b9fafa756221707d590a78}{loseLife} ()
 void \hyperlink{classRender_acd71f1c6c9d67dff3627da4ff6a4c9b8}{getCred} ()
 \begin{DoxyCompactList}\small\item\em Gain d'un crédit. \end{DoxyCompactList}\item 
 void \hyperlink{classRender_a126c4b49e93103a751f66359d8e63171}{selectTower} (\hyperlink{classTower}{Tower} $\ast$tower)
-\begin{DoxyCompactList}\small\item\em Sélection d'une tour. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sélection d'une tour. \end{DoxyCompactList}\item 
+void \hyperlink{classRender_abb5d0f66b85c255f756aced453b00b5b}{pause} ()
+\begin{DoxyCompactList}\small\item\em Pause. \end{DoxyCompactList}\item 
+void \hyperlink{classRender_acc15883381c82b6bb4b0d858260ecdff}{unpause} ()
+\begin{DoxyCompactList}\small\item\em Fin pause. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
@@ -324,7 +332,25 @@ Appelle la fabrique pour spawn l'insecte suivant de la vague donnée par la list
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
 \label{classRender_a3252d02e9509f342bc96129b4b10b415}
-Lance la prochaine Vague en lisant le fichier de conguration dans map/. \hypertarget{classRender_a126c4b49e93103a751f66359d8e63171}{
+Lance la prochaine Vague en lisant le fichier de conguration dans map/. \hypertarget{classRender_abb5d0f66b85c255f756aced453b00b5b}{
+\index{Render@{Render}!pause@{pause}}
+\index{pause@{pause}!Render@{Render}}
+\subsubsection[{pause}]{\setlength{\rightskip}{0pt plus 5cm}void Render::pause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}signal\mbox{]}}}}
+\label{classRender_abb5d0f66b85c255f756aced453b00b5b}
+Stoppe le jeu. \hypertarget{classRender_a071e49ad740ed2bd509f31c68d37acd8}{
+\index{Render@{Render}!restart@{restart}}
+\index{restart@{restart}!Render@{Render}}
+\subsubsection[{restart}]{\setlength{\rightskip}{0pt plus 5cm}void Render::restart (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classRender_a071e49ad740ed2bd509f31c68d37acd8}
+Relance le jeu \hypertarget{classRender_a126c4b49e93103a751f66359d8e63171}{
 \index{Render@{Render}!selectTower@{selectTower}}
 \index{selectTower@{selectTower}!Render@{Render}}
 \subsubsection[{selectTower}]{\setlength{\rightskip}{0pt plus 5cm}void Render::selectTower (
@@ -355,7 +381,16 @@ Donne les coordonnées de la case où se trouve l'objet graphique donnée.
 \begin{DoxyReturn}{Renvoie}
 Les coordonnée de la case sous forme d'un QPoint. 
 \end{DoxyReturn}
-\hypertarget{classRender_a8e2eccb2fc3914198b8939bf0625c955}{
+\hypertarget{classRender_af137a4a60ad5195b0ccd3076e160f1d4}{
+\index{Render@{Render}!stop@{stop}}
+\index{stop@{stop}!Render@{Render}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void Render::stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classRender_af137a4a60ad5195b0ccd3076e160f1d4}
+Lance la pause. \hypertarget{classRender_a8e2eccb2fc3914198b8939bf0625c955}{
 \index{Render@{Render}!towerBought@{towerBought}}
 \index{towerBought@{towerBought}!Render@{Render}}
 \subsubsection[{towerBought}]{\setlength{\rightskip}{0pt plus 5cm}void Render::towerBought (
@@ -369,7 +404,16 @@ Message indiquant l'achat d'une tour à la scène.
 {\em type} & Le type de tour à placer. \\
 \hline
 \end{DoxyParams}
-
+\hypertarget{classRender_acc15883381c82b6bb4b0d858260ecdff}{
+\index{Render@{Render}!unpause@{unpause}}
+\index{unpause@{unpause}!Render@{Render}}
+\subsubsection[{unpause}]{\setlength{\rightskip}{0pt plus 5cm}void Render::unpause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}signal\mbox{]}}}}
+\label{classRender_acc15883381c82b6bb4b0d858260ecdff}
+Relance le jeu en cours. 
 
 \subsection{Documentation des champs}
 \hypertarget{classRender_ac6b86ad92172fefa5b9a56b31e9055d3}{

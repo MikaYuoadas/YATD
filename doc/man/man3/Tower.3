@@ -18,6 +18,14 @@ Classe représentant toutes les défenses.
 .RI "void \fBfire\fP ()"
 .br
 .RI "\fISignal de tir reçu. \fP"
+.ti -1c
+.RI "void \fBpause\fP ()"
+.br
+.RI "\fIPause tirs. \fP"
+.ti -1c
+.RI "void \fBunpause\fP ()"
+.br
+.RI "\fIFin pause. \fP"
 .in -1c
 .SS "Signaux"
 
@@ -202,6 +210,7 @@ Le prix pour améliorer la défense vers le niveau suivant.
 .PP
 
 .SS "void Tower::paint (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)"Appelé automatiquement par Qt pour dessiner la défense. 
+.SS "void Tower::pause ()\fC [slot]\fP"Met en pause la tour. 
 .SS "void Tower::projectile (\fBProjectile\fP *missile)\fC [signal]\fP"Envoie le projectile créer à la scène. 
 .PP
 \fBParamètres:\fP
@@ -210,6 +219,7 @@ Le prix pour améliorer la défense vers le niveau suivant.
 .RE
 .PP
 
+.SS "void Tower::unpause ()\fC [slot]\fP"Relance les tirs. 
 .SS "void Tower::upgrade ()"Améliore la défense (et donc ses caractéristiques) vers le niveau suivant. 
 .SH "Documentation des champs"
 .PP 

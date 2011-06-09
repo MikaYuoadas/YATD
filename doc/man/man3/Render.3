@@ -46,6 +46,14 @@ Classe gérant le rendu graphique du jeu.
 .RI "void \fBexplodingProjectile\fP (\fBProjectile\fP *missile)"
 .br
 .RI "\fIexplosion d'un projectile. \fP"
+.ti -1c
+.RI "void \fBstop\fP ()"
+.br
+.RI "\fIPause. \fP"
+.ti -1c
+.RI "void \fBrestart\fP ()"
+.br
+.RI "\fIFin pause. \fP"
 .in -1c
 .SS "Signaux"
 
@@ -66,6 +74,14 @@ Classe gérant le rendu graphique du jeu.
 .RI "void \fBselectTower\fP (\fBTower\fP *tower)"
 .br
 .RI "\fISélection d'une tour. \fP"
+.ti -1c
+.RI "void \fBpause\fP ()"
+.br
+.RI "\fIPause. \fP"
+.ti -1c
+.RI "void \fBunpause\fP ()"
+.br
+.RI "\fIFin pause. \fP"
 .in -1c
 .SS "Fonctions membres publiques"
 
@@ -272,6 +288,8 @@ les coordonnées de l'arrivée sous forme d'un QPoint.
 
 .SS "void Render::nextBug ()\fC [slot]\fP"Appelle la fabrique pour spawn l'insecte suivant de la vague donnée par la liste wave. 
 .SS "void Render::nextWave ()\fC [slot]\fP"Lance la prochaine Vague en lisant le fichier de conguration dans map/. 
+.SS "void Render::pause ()\fC [signal]\fP"Stoppe le jeu. 
+.SS "void Render::restart ()\fC [slot]\fP"Relance le jeu 
 .SS "void Render::selectTower (\fBTower\fP *tower)\fC [signal]\fP"Indique à l'UI que le joueur vient de sélectionner une défense. 
 .PP
 \fBParamètres:\fP
@@ -293,6 +311,7 @@ Les coordonnée de la case sous forme d'un QPoint.
 .RE
 .PP
 
+.SS "void Render::stop ()\fC [slot]\fP"Lance la pause. 
 .SS "void Render::towerBought (QStringtype)\fC [slot]\fP"Message indiquant l'achat d'une tour à la scène. 
 .PP
 \fBParamètres:\fP
@@ -301,6 +320,7 @@ Les coordonnée de la case sous forme d'un QPoint.
 .RE
 .PP
 
+.SS "void Render::unpause ()\fC [signal]\fP"Relance le jeu en cours. 
 .SH "Documentation des champs"
 .PP 
 .SS "\fBHatchery\fP* \fBRender::b1\fP\fC [private]\fP"

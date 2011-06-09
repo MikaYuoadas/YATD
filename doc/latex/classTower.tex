@@ -15,7 +15,11 @@ Classe représentant toutes les défenses.
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{classTower_aa0c9c780f48cffacd3da6877f5d4fdc2}{fire} ()
-\begin{DoxyCompactList}\small\item\em Signal de tir reçu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Signal de tir reçu. \end{DoxyCompactList}\item 
+void \hyperlink{classTower_ad6aa6d3d567855c721caab37fabfbd76}{pause} ()
+\begin{DoxyCompactList}\small\item\em Pause tirs. \end{DoxyCompactList}\item 
+void \hyperlink{classTower_aca92d523901d4307c681008156d0a293}{unpause} ()
+\begin{DoxyCompactList}\small\item\em Fin pause. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Signaux}
 \begin{DoxyCompactItemize}
 \item 
@@ -204,7 +208,16 @@ Le prix pour améliorer la défense vers le niveau suivant.
 \end{DoxyParamCaption}
 )}}
 \label{classTower_ad0804070755704b426ef9edaadc58e46}
-Appelé automatiquement par Qt pour dessiner la défense. \hypertarget{classTower_aa303fa5bcabcf781c459d129b01ecfe8}{
+Appelé automatiquement par Qt pour dessiner la défense. \hypertarget{classTower_ad6aa6d3d567855c721caab37fabfbd76}{
+\index{Tower@{Tower}!pause@{pause}}
+\index{pause@{pause}!Tower@{Tower}}
+\subsubsection[{pause}]{\setlength{\rightskip}{0pt plus 5cm}void Tower::pause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classTower_ad6aa6d3d567855c721caab37fabfbd76}
+Met en pause la tour. \hypertarget{classTower_aa303fa5bcabcf781c459d129b01ecfe8}{
 \index{Tower@{Tower}!projectile@{projectile}}
 \index{projectile@{projectile}!Tower@{Tower}}
 \subsubsection[{projectile}]{\setlength{\rightskip}{0pt plus 5cm}void Tower::projectile (
@@ -218,7 +231,16 @@ Envoie le projectile créer à la scène.
 {\em missile} & Un pointeur vers le projectile tirée. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classTower_ac732f3dd9c995a84da0ada08b8346f8f}{
+\hypertarget{classTower_aca92d523901d4307c681008156d0a293}{
+\index{Tower@{Tower}!unpause@{unpause}}
+\index{unpause@{unpause}!Tower@{Tower}}
+\subsubsection[{unpause}]{\setlength{\rightskip}{0pt plus 5cm}void Tower::unpause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classTower_aca92d523901d4307c681008156d0a293}
+Relance les tirs. \hypertarget{classTower_ac732f3dd9c995a84da0ada08b8346f8f}{
 \index{Tower@{Tower}!upgrade@{upgrade}}
 \index{upgrade@{upgrade}!Tower@{Tower}}
 \subsubsection[{upgrade}]{\setlength{\rightskip}{0pt plus 5cm}void Tower::upgrade (

@@ -93,6 +93,10 @@ Connecteurs publics</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Vente d'une tour.  <a href="#a20678c257926bfff635fded745e11f4a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#aedec0cbbe4808368656b772dfe3e63f9">explodingProjectile</a> (<a class="el" href="classProjectile.html">Projectile</a> *missile)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">explosion d'un projectile.  <a href="#aedec0cbbe4808368656b772dfe3e63f9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#af137a4a60ad5195b0ccd3076e160f1d4">stop</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause.  <a href="#af137a4a60ad5195b0ccd3076e160f1d4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a071e49ad740ed2bd509f31c68d37acd8">restart</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fin pause.  <a href="#a071e49ad740ed2bd509f31c68d37acd8"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="signals"></a>
 Signaux</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a916c15ab4b31cc0f34d9d53b89b89ac0">newWaveName</a> (QString name)</td></tr>
@@ -103,6 +107,10 @@ Signaux</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gain d'un crédit.  <a href="#acd71f1c6c9d67dff3627da4ff6a4c9b8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a126c4b49e93103a751f66359d8e63171">selectTower</a> (<a class="el" href="classTower.html">Tower</a> *tower)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sélection d'une tour.  <a href="#a126c4b49e93103a751f66359d8e63171"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#abb5d0f66b85c255f756aced453b00b5b">pause</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause.  <a href="#abb5d0f66b85c255f756aced453b00b5b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#acc15883381c82b6bb4b0d858260ecdff">unpause</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fin pause.  <a href="#acc15883381c82b6bb4b0d858260ecdff"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a8610cc11739ef679b5935dd819021351">Render</a> ()</td></tr>
@@ -558,6 +566,40 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="abb5d0f66b85c255f756aced453b00b5b"></a><!-- doxytag: member="Render::pause" ref="abb5d0f66b85c255f756aced453b00b5b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::pause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [signal]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Stoppe le jeu. </p>
+
+</div>
+</div>
+<a class="anchor" id="a071e49ad740ed2bd509f31c68d37acd8"></a><!-- doxytag: member="Render::restart" ref="a071e49ad740ed2bd509f31c68d37acd8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::restart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Relance le jeu </p>
+
+</div>
+</div>
 <a class="anchor" id="a126c4b49e93103a751f66359d8e63171"></a><!-- doxytag: member="Render::selectTower" ref="a126c4b49e93103a751f66359d8e63171" args="(Tower *tower)" -->
 <div class="memitem">
 <div class="memproto">
@@ -607,6 +649,23 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af137a4a60ad5195b0ccd3076e160f1d4"></a><!-- doxytag: member="Render::stop" ref="af137a4a60ad5195b0ccd3076e160f1d4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Lance la pause. </p>
+
+</div>
+</div>
 <a class="anchor" id="a8e2eccb2fc3914198b8939bf0625c955"></a><!-- doxytag: member="Render::towerBought" ref="a8e2eccb2fc3914198b8939bf0625c955" args="(QString type)" -->
 <div class="memitem">
 <div class="memproto">
@@ -628,6 +687,23 @@ Attributs privés</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="acc15883381c82b6bb4b0d858260ecdff"></a><!-- doxytag: member="Render::unpause" ref="acc15883381c82b6bb4b0d858260ecdff" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Render::unpause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [signal]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Relance le jeu en cours. </p>
 
 </div>
 </div>

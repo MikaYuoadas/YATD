@@ -35,7 +35,9 @@ void \hyperlink{classUI_acc2450574743936721ad9d77b055d6d5}{selectTower} (\hyperl
 void \hyperlink{classUI_ad3666cc06e62117ba0ad65a1c3e6f1e5}{sellSelectedTower} ()
 \begin{DoxyCompactList}\small\item\em Vente de la tour sélectionnée. \end{DoxyCompactList}\item 
 void \hyperlink{classUI_a27f41a4f11f20308275dcb7638d25461}{upgradeSelectedTower} ()
-\begin{DoxyCompactList}\small\item\em Amélioration de la défense sélectionnée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Amélioration de la défense sélectionnée. \end{DoxyCompactList}\item 
+void \hyperlink{classUI_a0f9ae7742463929072d5a1f0203ebc69}{togglePause} ()
+\begin{DoxyCompactList}\small\item\em Pause. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Signaux}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,7 +48,11 @@ void \hyperlink{classUI_a63ad3c5f5b04203406c224ed01f50ddb}{nextWave} ()
 void \hyperlink{classUI_a9c3ac46b4d04af5455a74f1034b44f26}{towerSold} (\hyperlink{classTower}{Tower} $\ast$\hyperlink{classUI_a352f80a494c8d3c1723f1248438ea912}{tower})
 \begin{DoxyCompactList}\small\item\em Vente d'une défense. \end{DoxyCompactList}\item 
 void \hyperlink{classUI_a6d4de01a54d50dfeb43e2b9d9af81dda}{defeat} ()
-\begin{DoxyCompactList}\small\item\em Signal de défaite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Signal de défaite. \end{DoxyCompactList}\item 
+void \hyperlink{classUI_ad8894e9a606c3c18c98fa80865f6c536}{pause} ()
+\begin{DoxyCompactList}\small\item\em Pause. \end{DoxyCompactList}\item 
+void \hyperlink{classUI_ab0e81d329c53e2fc8e3a37842665c35c}{unpause} ()
+\begin{DoxyCompactList}\small\item\em Unpause. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
@@ -64,6 +70,8 @@ QGroupBox $\ast$ \hyperlink{classUI_a352f80a494c8d3c1723f1248438ea912}{tower}
 \begin{DoxyCompactList}\small\item\em Regroupe les éléments du magasin de défenses. \end{DoxyCompactList}\item 
 QGroupBox $\ast$ \hyperlink{classUI_a04ffefe0b9ef54d2ebc76595b00bb900}{stats}
 \begin{DoxyCompactList}\small\item\em Regroupe les éléments ayant attrait à la défense sélectionnée. \end{DoxyCompactList}\item 
+QPushButton $\ast$ \hyperlink{classUI_a521e74a190e8d9dec345af91860f861e}{pauseBtn}
+\begin{DoxyCompactList}\small\item\em Le bouton pour mettre le jeu en pause. \end{DoxyCompactList}\item 
 QPushButton $\ast$ \hyperlink{classUI_a4e35fb65ac2aa948adb7f7b9eb94d5c2}{sell}
 \begin{DoxyCompactList}\small\item\em Le bouton pour vendre la tour sélectionnée. \end{DoxyCompactList}\item 
 QPushButton $\ast$ \hyperlink{classUI_abf5a7181f1e80c8873cfae97be8e8b4f}{upg}
@@ -103,7 +111,9 @@ QLCDNumber $\ast$ \hyperlink{classUI_a1e6f0b63d2e4cb88476541452f81bd64}{cred}
 QLCDNumber $\ast$ \hyperlink{classUI_a19d84baf49aecab7730ae12609b83be7}{life}
 \begin{DoxyCompactList}\small\item\em L'afficheur de vie restantes. \end{DoxyCompactList}\item 
 \hyperlink{classTower}{Tower} $\ast$ \hyperlink{classUI_af4edf19be15102c7aefb0e682c72c475}{selected}
-\begin{DoxyCompactList}\small\item\em Un pointeur vers la tour sélectionnée actuellement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Un pointeur vers la tour sélectionnée actuellement. \end{DoxyCompactList}\item 
+bool \hyperlink{classUI_aed0413bfd2b639b24fe2303b8eb36b1c}{pauseVar}
+\begin{DoxyCompactList}\small\item\em True si le jeu est en pause, False sinon. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Description détaillée}
@@ -213,7 +223,16 @@ Décrémente de 1 le total de vies du joueur. \hypertarget{classUI_a63ad3c5f5b04
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}signal\mbox{]}}}}
 \label{classUI_a63ad3c5f5b04203406c224ed01f50ddb}
-Indique au \hyperlink{classRender}{Render} de lancer la vague suivante. \hypertarget{classUI_acc2450574743936721ad9d77b055d6d5}{
+Indique au \hyperlink{classRender}{Render} de lancer la vague suivante. \hypertarget{classUI_ad8894e9a606c3c18c98fa80865f6c536}{
+\index{UI@{UI}!pause@{pause}}
+\index{pause@{pause}!UI@{UI}}
+\subsubsection[{pause}]{\setlength{\rightskip}{0pt plus 5cm}void UI::pause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}signal\mbox{]}}}}
+\label{classUI_ad8894e9a606c3c18c98fa80865f6c536}
+Arrête le jeu en cours. \hypertarget{classUI_acc2450574743936721ad9d77b055d6d5}{
 \index{UI@{UI}!selectTower@{selectTower}}
 \index{selectTower@{selectTower}!UI@{UI}}
 \subsubsection[{selectTower}]{\setlength{\rightskip}{0pt plus 5cm}void UI::selectTower (
@@ -259,7 +278,16 @@ Change le nom de la vague courante.
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
 \label{classUI_adca7adc8d262fe82ce9eb3950b334416}
-Reçoit le signal du bouton \char`\"{}lancer la vague suivante\char`\"{}. \hypertarget{classUI_a9c3ac46b4d04af5455a74f1034b44f26}{
+Reçoit le signal du bouton \char`\"{}lancer la vague suivante\char`\"{}. \hypertarget{classUI_a0f9ae7742463929072d5a1f0203ebc69}{
+\index{UI@{UI}!togglePause@{togglePause}}
+\index{togglePause@{togglePause}!UI@{UI}}
+\subsubsection[{togglePause}]{\setlength{\rightskip}{0pt plus 5cm}void UI::togglePause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}
+\label{classUI_a0f9ae7742463929072d5a1f0203ebc69}
+Arrête le jeu en cours ou relance le jeu en pause. \hypertarget{classUI_a9c3ac46b4d04af5455a74f1034b44f26}{
 \index{UI@{UI}!towerSold@{towerSold}}
 \index{towerSold@{towerSold}!UI@{UI}}
 \subsubsection[{towerSold}]{\setlength{\rightskip}{0pt plus 5cm}void UI::towerSold (
@@ -273,7 +301,16 @@ Indique au \hyperlink{classRender}{Render} de détruire une défense vendue.
 {\em tower} & Un pointeur vers la défense à détruire. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classUI_a27f41a4f11f20308275dcb7638d25461}{
+\hypertarget{classUI_ab0e81d329c53e2fc8e3a37842665c35c}{
+\index{UI@{UI}!unpause@{unpause}}
+\index{unpause@{unpause}!UI@{UI}}
+\subsubsection[{unpause}]{\setlength{\rightskip}{0pt plus 5cm}void UI::unpause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}signal\mbox{]}}}}
+\label{classUI_ab0e81d329c53e2fc8e3a37842665c35c}
+Relance le jeu. \hypertarget{classUI_a27f41a4f11f20308275dcb7638d25461}{
 \index{UI@{UI}!upgradeSelectedTower@{upgradeSelectedTower}}
 \index{upgradeSelectedTower@{upgradeSelectedTower}!UI@{UI}}
 \subsubsection[{upgradeSelectedTower}]{\setlength{\rightskip}{0pt plus 5cm}void UI::upgradeSelectedTower (
@@ -330,6 +367,16 @@ Reçoit le signal du bouton \char`\"{}améliorer\char`\"{} et améliore la tour 
 \index{paintball@{paintball}!UI@{UI}}
 \subsubsection[{paintball}]{\setlength{\rightskip}{0pt plus 5cm}QPushButton$\ast$ {\bf UI::paintball}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
 \label{classUI_a39fd06f53449fb6382de26d280be2e5f}
+\hypertarget{classUI_a521e74a190e8d9dec345af91860f861e}{
+\index{UI@{UI}!pauseBtn@{pauseBtn}}
+\index{pauseBtn@{pauseBtn}!UI@{UI}}
+\subsubsection[{pauseBtn}]{\setlength{\rightskip}{0pt plus 5cm}QPushButton$\ast$ {\bf UI::pauseBtn}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_a521e74a190e8d9dec345af91860f861e}
+\hypertarget{classUI_aed0413bfd2b639b24fe2303b8eb36b1c}{
+\index{UI@{UI}!pauseVar@{pauseVar}}
+\index{pauseVar@{pauseVar}!UI@{UI}}
+\subsubsection[{pauseVar}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf UI::pauseVar}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classUI_aed0413bfd2b639b24fe2303b8eb36b1c}
 \hypertarget{classUI_aacb7c02b6a962b8adc8a7d4b6ffc1553}{
 \index{UI@{UI}!range@{range}}
 \index{range@{range}!UI@{UI}}
