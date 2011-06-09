@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>YATD: Référence de la classe Projectile</title>
+<title>YATD: Référence de la classe Bowling</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -62,27 +62,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div class="summary">
 <a href="#signals">Signaux</a> &#124;
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
-<a href="#pro-methods">Fonctions membres protégées</a> &#124;
-<a href="#pri-attribs">Attributs privés</a>  </div>
+<a href="#pro-methods">Fonctions membres protégées</a>  </div>
   <div class="headertitle">
-<div class="title">Référence de la classe Projectile</div>  </div>
+<div class="title">Référence de la classe Bowling</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="Projectile" -->
-<p>Classe représentant les projectiles des tours.  
- <a href="classProjectile.html#details">Plus de détails...</a></p>
+<!-- doxytag: class="Bowling" --><!-- doxytag: inherits="Projectile" -->
+<p>Classe représentant les projectiles du joueur de pétanque.  
+ <a href="classBowling.html#details">Plus de détails...</a></p>
 
-<p><code>#include &lt;<a class="el" href="Projectile_8h_source.html">Projectile.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="Bowling_8h_source.html">Bowling.h</a>&gt;</code></p>
 <div class="dynheader">
-Graphe d'héritage de Projectile:</div>
+Graphe d'héritage de Bowling:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classProjectile.png" usemap="#Projectile_map" alt=""/>
-  <map id="Projectile_map" name="Projectile_map">
-<area href="classBowling.html" title="Classe représentant les projectiles du joueur de pétanque." alt="Bowling" shape="rect" coords="0,56,65,80"/>
-<area href="classPaintball.html" title="Classe représentant les projectiles du paintball." alt="Paintball" shape="rect" coords="75,56,140,80"/>
-<area href="classStone.html" title="Classe représentant les projectiles du lance-pierres." alt="Stone" shape="rect" coords="150,56,215,80"/>
-<area href="classWater.html" title="Classe représentant les projectiles du pistolet à eau." alt="Water" shape="rect" coords="225,56,290,80"/>
+  <img src="classBowling.png" usemap="#Bowling_map" alt=""/>
+  <map id="Bowling_map" name="Bowling_map">
+<area href="classProjectile.html" title="Classe représentant les projectiles des tours." alt="Projectile" shape="rect" coords="0,0,65,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -92,8 +88,10 @@ Signaux</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal d'explosion du projectile.  <a href="#a18d1fccd74f92b54f239c13c74cbc00c"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjectile.html#adb1e35e75922feb87c3391f549d3274f">Projectile</a> (QPointF start, <a class="el" href="classBug.html">Bug</a> *trgt, double init_speed, double damage)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de <a class="el" href="classProjectile.html" title="Classe représentant les projectiles des tours.">Projectile</a> Initialise les caractéristiques du projectile.  <a href="#adb1e35e75922feb87c3391f549d3274f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBowling.html#aedb6a5ea36ab23e7a559ab437a5ce64a">Bowling</a> (QPointF start, <a class="el" href="classBug.html">Bug</a> *<a class="el" href="classProjectile.html#ae5273bd2c6550b94f38310b69859b093">target</a>, short int lvl)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de <a class="el" href="classBowling.html" title="Classe représentant les projectiles du joueur de pétanque.">Bowling</a>.  <a href="#aedb6a5ea36ab23e7a559ab437a5ce64a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBowling.html#aff2371151330a42f1e9cd48e545d3239">paint</a> (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Surcharge de la méthode virtuelle pure <a class="el" href="classBowling.html#aff2371151330a42f1e9cd48e545d3239" title="Surcharge de la méthode virtuelle pure paint() héritée de QGraphicsObject.">paint()</a> héritée de QGraphicsObject.  <a href="#aff2371151330a42f1e9cd48e545d3239"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QRectF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjectile.html#a0e0b18909c9c154404384707c6515802">boundingRect</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Surcharge de la methode virtuelle pure <a class="el" href="classProjectile.html#a0e0b18909c9c154404384707c6515802" title="Surcharge de la methode virtuelle pure boundingRect() héritée de QGraphicsObject.">boundingRect()</a> héritée de QGraphicsObject.  <a href="#a0e0b18909c9c154404384707c6515802"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjectile.html#aef0d6ffcea7620988cf5446d0c1133fa">paint</a> (QPainter *painter, QColor color)</td></tr>
@@ -102,30 +100,16 @@ Fonctions membres publiques</h2></td></tr>
 Fonctions membres protégées</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjectile.html#a8e3b4bae49558a0febfce8c1accea72d">advance</a> (int step)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Surcharge de la méthode virtuelle pure héritée de QGraphicsObject.  <a href="#a8e3b4bae49558a0febfce8c1accea72d"></a><br/></td></tr>
-<tr><td colspan="2"><h2><a name="pri-attribs"></a>
-Attributs privés</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QPointF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjectile.html#a15091a3a02fbfac2dd4fb44ac9cbceab">dest</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">La destination du projectile.  <a href="#a15091a3a02fbfac2dd4fb44ac9cbceab"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBug.html">Bug</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjectile.html#ae5273bd2c6550b94f38310b69859b093">target</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">L'insecte ciblée par le projectile.  <a href="#ae5273bd2c6550b94f38310b69859b093"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjectile.html#aae1f5d683c71d152b6a12d922ec4714f">speed</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">La vitesse en case par seconde du projectile.  <a href="#aae1f5d683c71d152b6a12d922ec4714f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjectile.html#ac94938ed5b3d3e01217bf72f80ad2e3d">dmg</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Les dégats infligé à l'impact par le projectile.  <a href="#ac94938ed5b3d3e01217bf72f80ad2e3d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjectile.html#a019db4c89ccf3eb291b06ba7b55f0754">maxrange</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">La portée maximale du projectile (s'il n'atteint personne avant d'arriver à se portée max, il disparait).  <a href="#a019db4c89ccf3eb291b06ba7b55f0754"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjectile.html#a0fc0c0258f36a9347f45d1edb8b767e5">travelled</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">La distance parcourue par le projectile.  <a href="#a0fc0c0258f36a9347f45d1edb8b767e5"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
-<div class="textblock"><p>Définie les méthodes des projectiles ainsi que leur caractéristiques de base. </p>
+<div class="textblock"><p>Classe représentant les projectiles du joueu de pétanque, rien de spéciale. </p>
 </div><hr/><h2>Documentation des constructeurs et destructeur</h2>
-<a class="anchor" id="adb1e35e75922feb87c3391f549d3274f"></a><!-- doxytag: member="Projectile::Projectile" ref="adb1e35e75922feb87c3391f549d3274f" args="(QPointF start, Bug *trgt, double init_speed, double damage)" -->
+<a class="anchor" id="aedb6a5ea36ab23e7a559ab437a5ce64a"></a><!-- doxytag: member="Bowling::Bowling" ref="aedb6a5ea36ab23e7a559ab437a5ce64a" args="(QPointF start, Bug *target, short int lvl)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Projectile::Projectile </td>
+          <td class="memname">Bowling::Bowling </td>
           <td>(</td>
           <td class="paramtype">QPointF&#160;</td>
           <td class="paramname"><em>start</em>, </td>
@@ -134,19 +118,13 @@ Attributs privés</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classBug.html">Bug</a> *&#160;</td>
-          <td class="paramname"><em>trgt</em>, </td>
+          <td class="paramname"><em>target</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>init_speed</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>damage</em>&#160;</td>
+          <td class="paramtype">short int&#160;</td>
+          <td class="paramname"><em>lvl</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -156,12 +134,12 @@ Attributs privés</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Appelle le constructeur de <a class="el" href="classProjectile.html" title="Classe représentant les projectiles des tours.">Projectile</a> avec les caractéristiques du joueur de pétanque. </p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">start</td><td>Point de départ du projectile. </td></tr>
-    <tr><td class="paramname">trgt</td><td>Insecte cible du projectile. </td></tr>
-    <tr><td class="paramname">init_speed</td><td>Vitesse de vol du projectile. </td></tr>
-    <tr><td class="paramname">damage</td><td>Dégats infligés à l'impact par le projectile. </td></tr>
+    <tr><td class="paramname">start</td><td>Position de départ. </td></tr>
+    <tr><td class="paramname">target</td><td>Pointeur vers l'insecte ciblé. </td></tr>
+    <tr><td class="paramname">lvl</td><td>Le niveau du projectile. </td></tr>
   </table>
   </dd>
 </dl>
@@ -169,7 +147,7 @@ Attributs privés</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Documentation des fonctions membres</h2>
-<a class="anchor" id="a8e3b4bae49558a0febfce8c1accea72d"></a><!-- doxytag: member="Projectile::advance" ref="a8e3b4bae49558a0febfce8c1accea72d" args="(int step)" -->
+<a class="anchor" id="a8e3b4bae49558a0febfce8c1accea72d"></a><!-- doxytag: member="Bowling::advance" ref="a8e3b4bae49558a0febfce8c1accea72d" args="(int step)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -178,7 +156,7 @@ Attributs privés</h2></td></tr>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>step</em></td><td>)</td>
-          <td><code> [protected]</code></td>
+          <td><code> [protected, inherited]</code></td>
         </tr>
       </table>
 </div>
@@ -193,7 +171,7 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0e0b18909c9c154404384707c6515802"></a><!-- doxytag: member="Projectile::boundingRect" ref="a0e0b18909c9c154404384707c6515802" args="() const " -->
+<a class="anchor" id="a0e0b18909c9c154404384707c6515802"></a><!-- doxytag: member="Bowling::boundingRect" ref="a0e0b18909c9c154404384707c6515802" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -201,7 +179,7 @@ Attributs privés</h2></td></tr>
           <td class="memname">QRectF Projectile::boundingRect </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td> const<code> [inherited]</code></td>
         </tr>
       </table>
 </div>
@@ -211,7 +189,7 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a18d1fccd74f92b54f239c13c74cbc00c"></a><!-- doxytag: member="Projectile::explode" ref="a18d1fccd74f92b54f239c13c74cbc00c" args="(Projectile *missile)" -->
+<a class="anchor" id="a18d1fccd74f92b54f239c13c74cbc00c"></a><!-- doxytag: member="Bowling::explode" ref="a18d1fccd74f92b54f239c13c74cbc00c" args="(Projectile *missile)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -220,7 +198,7 @@ Attributs privés</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classProjectile.html">Projectile</a> *&#160;</td>
           <td class="paramname"><em>missile</em></td><td>)</td>
-          <td><code> [signal]</code></td>
+          <td><code> [signal, inherited]</code></td>
         </tr>
       </table>
 </div>
@@ -235,7 +213,41 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aef0d6ffcea7620988cf5446d0c1133fa"></a><!-- doxytag: member="Projectile::paint" ref="aef0d6ffcea7620988cf5446d0c1133fa" args="(QPainter *painter, QColor color)" -->
+<a class="anchor" id="aff2371151330a42f1e9cd48e545d3239"></a><!-- doxytag: member="Bowling::paint" ref="aff2371151330a42f1e9cd48e545d3239" args="(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bowling::paint </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *&#160;</td>
+          <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QStyleOptionGraphicsItem *&#160;</td>
+          <td class="paramname"><em>option</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>widget</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Appelé automatiquement par Qt pour redessiner l'objet. </p>
+
+</div>
+</div>
+<a class="anchor" id="aef0d6ffcea7620988cf5446d0c1133fa"></a><!-- doxytag: member="Bowling::paint" ref="aef0d6ffcea7620988cf5446d0c1133fa" args="(QPainter *painter, QColor color)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -254,7 +266,7 @@ Attributs privés</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td><code> [inherited]</code></td>
         </tr>
       </table>
 </div>
@@ -263,89 +275,9 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
-<hr/><h2>Documentation des champs</h2>
-<a class="anchor" id="a15091a3a02fbfac2dd4fb44ac9cbceab"></a><!-- doxytag: member="Projectile::dest" ref="a15091a3a02fbfac2dd4fb44ac9cbceab" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">QPointF <a class="el" href="classProjectile.html#a15091a3a02fbfac2dd4fb44ac9cbceab">Projectile::dest</a><code> [private]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ac94938ed5b3d3e01217bf72f80ad2e3d"></a><!-- doxytag: member="Projectile::dmg" ref="ac94938ed5b3d3e01217bf72f80ad2e3d" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="classProjectile.html#ac94938ed5b3d3e01217bf72f80ad2e3d">Projectile::dmg</a><code> [private]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a019db4c89ccf3eb291b06ba7b55f0754"></a><!-- doxytag: member="Projectile::maxrange" ref="a019db4c89ccf3eb291b06ba7b55f0754" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="classProjectile.html#a019db4c89ccf3eb291b06ba7b55f0754">Projectile::maxrange</a><code> [private]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aae1f5d683c71d152b6a12d922ec4714f"></a><!-- doxytag: member="Projectile::speed" ref="aae1f5d683c71d152b6a12d922ec4714f" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="classProjectile.html#aae1f5d683c71d152b6a12d922ec4714f">Projectile::speed</a><code> [private]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ae5273bd2c6550b94f38310b69859b093"></a><!-- doxytag: member="Projectile::target" ref="ae5273bd2c6550b94f38310b69859b093" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classBug.html">Bug</a>* <a class="el" href="classProjectile.html#ae5273bd2c6550b94f38310b69859b093">Projectile::target</a><code> [private]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a0fc0c0258f36a9347f45d1edb8b767e5"></a><!-- doxytag: member="Projectile::travelled" ref="a0fc0c0258f36a9347f45d1edb8b767e5" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="classProjectile.html#a0fc0c0258f36a9347f45d1edb8b767e5">Projectile::travelled</a><code> [private]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
-<li>src/<a class="el" href="Projectile_8h_source.html">Projectile.h</a></li>
-<li>src/moc_Projectile.cpp</li>
-<li>src/Projectile.cpp</li>
+<li>src/<a class="el" href="Bowling_8h_source.html">Bowling.h</a></li>
+<li>src/Bowling.cpp</li>
 </ul>
 </div>
 <!-- window showing the filter options -->
