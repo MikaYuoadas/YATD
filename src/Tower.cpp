@@ -2,6 +2,7 @@
 #include "Water.h"
 #include "Stone.h"
 #include "Paintball.h"
+#include "Bowling.h"
 #include "define.h"
 
 Tower::Tower(QPointF buildPos, QString typeTower) :
@@ -101,6 +102,8 @@ void Tower::fire()
             missile = new Stone(pos, target, level);
         } else if (type == "paintball") {
             missile = new Paintball(pos, target, level);
+        } else if (type == "bowling") {
+            missile = new Bowling(pos, target, level);
         }
         emit projectile(missile);
     }
