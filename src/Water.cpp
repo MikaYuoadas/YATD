@@ -4,7 +4,7 @@
 #include "define.h"
 
 Water::Water(QPointF start, Bug * target, short int level) :
-    Projectile(start, target, WATER_SPEED, 5 * pow(1.5, level))
+    Projectile(start, target, WATER_SPEED, 5 * pow(level, 1.5))
 {
 }
 
