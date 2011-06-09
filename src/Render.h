@@ -147,6 +147,16 @@ class Render : public QGraphicsScene
          * @param missile Un pointeur vers le projectile à faire exploser.
          */
         void explodingProjectile(Projectile * missile);
+        /**
+         * Pause.
+         * Lance la pause.
+         */
+        void stop();
+        /**
+         * Fin pause.
+         * Relance le jeu
+         */
+        void restart();
 
     signals:
         /**
@@ -171,5 +181,15 @@ class Render : public QGraphicsScene
          * @param tower Un pointeur vers la défense sélectionnée.
          */
         void selectTower(Tower * tower);
+        /**
+         * Pause.
+         * Stoppe le jeu.
+         */
+        void pause();
+        /**
+         * Fin pause.
+         * Relance le jeu en cours.
+         */
+        void unpause();
 };
 #endif

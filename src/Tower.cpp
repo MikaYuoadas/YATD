@@ -137,3 +137,13 @@ void Tower::upgrade()
     }
     timer->start(1000 / firerate);
 }
+
+void Tower::pause()
+{
+    timer->stop();
+}
+
+void Tower::unpause()
+{
+    timer->start(1000 / firerate);
+}

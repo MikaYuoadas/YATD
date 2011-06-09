@@ -234,6 +234,8 @@ void Render::mousePressEvent(QGraphicsSceneMouseEvent * mouseEvent)
         tower->parent = this;
         addItem(tower);
         QObject::connect(tower, SIGNAL(projectile(Projectile *)), this, SLOT(addProjectile(Projectile *)));
+        QObject::connect(this, SIGNAL(pause()), tower, SLOT(pause()));
+        QObject::connect(this, SIGNAL(unpause()), tower, SLOT(unpause()));
         tower2build = "none";
     } else if (towers[pos.y()][pos.x()] != NULL) {
         Tower * tower = towers[pos.y()][pos.x()];
@@ -279,4 +281,14 @@ void Render::explodingProjectile(Projectile * missile)
     missile->disconnect();
     removeItem(missile);
     missile->deleteLater();
+}
+
+void Render::stop()
+{
+    emit pause();
+}
+
+void Render::restart()
+{
+    emit unpause();
 }

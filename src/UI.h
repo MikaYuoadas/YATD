@@ -21,6 +21,7 @@ class UI : public QWidget
     private:
         QGroupBox * tower;       /**< Regroupe les éléments du magasin de défenses.*/
         QGroupBox * stats;       /**< Regroupe les éléments ayant attrait à la défense sélectionnée.*/
+        QPushButton * pauseBtn;  /**< Le bouton pour mettre le jeu en pause.*/
         QPushButton * sell;      /**< Le bouton pour vendre la tour sélectionnée.*/
         QPushButton * upg;       /**< Le bouton pour améliorer la tour sélectionnée.*/
         QPushButton * water;     /**< Le bouton pour acheter un pistolet à eau.*/
@@ -41,6 +42,7 @@ class UI : public QWidget
         QLCDNumber * cred;       /**< L'affciheur de crédits restants.*/
         QLCDNumber * life;       /**< L'afficheur de vie restantes.*/
         Tower * selected;        /**< Un pointeur vers la tour sélectionnée actuellement.*/
+        bool pauseVar;           /**< True si le jeu est en pause, False sinon.*/
 
     public:
         QPushButton *start;      /**< Le bouton pour lancer la vague suivante.*/
@@ -105,6 +107,10 @@ class UI : public QWidget
          * Reçoit le signal du bouton "améliorer" et améliore la tour si les crédits sont suffisants.
          */
         void upgradeSelectedTower();
+        /**
+         * Pause. Arrête le jeu en cours ou relance le jeu en pause.
+         */
+        void togglePause();
 
     signals:
         /**
@@ -125,5 +131,13 @@ class UI : public QWidget
          * Signal de défaite. Indique au programme de stopper le jeu.
          */
         void defeat();
+        /**
+         * Pause. Arrête le jeu en cours.
+         */
+        void pause();
+        /**
+         * Unpause. Relance le jeu.
+         */
+        void unpause();
 };
 #endif

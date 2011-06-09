@@ -96,6 +96,16 @@ class Tower : public QGraphicsObject
          * Méthode appelé par le timer de cadence pour tirer.
          */
         void fire();
+        /**
+         * Pause tirs.
+         * Met en pause la tour.
+         */
+        void pause();
+        /**
+         * Fin pause.
+         * Relance les tirs.
+         */
+        void unpause();
 
     signals:
         /**

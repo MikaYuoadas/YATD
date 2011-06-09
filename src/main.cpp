@@ -42,6 +42,8 @@ int main(int argc, char *argv[])
     QObject::connect(&ui, SIGNAL(defeat()), &timer, SLOT(stop()));
     timer.start(TIMER_INT);
 
+    QObject::connect(&ui, SIGNAL(pause()), &render, SLOT(restart()));
+    QObject::connect(&ui, SIGNAL(unpause()), &render, SLOT(stop()));
     QObject::connect(&ui, SIGNAL(nextWave()), &render, SLOT(nextWave()));
     QObject::connect(&ui, SIGNAL(buyTower(QString)), &render, SLOT(towerBought(QString)));
     QObject::connect(&ui, SIGNAL(towerSold(Tower *)), &render, SLOT(destroyTower(Tower *)));

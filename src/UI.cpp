@@ -3,13 +3,16 @@
 #include "UI.h"
 #include "define.h"
 
-UI::UI(QWidget * parent) : QWidget(parent), selected(NULL)
+UI::UI(QWidget * parent) : QWidget(parent), selected(NULL), pauseVar(false)
 {
     tower = new QGroupBox("Créer une défense", this);
     tower->setGeometry(0, 120, UI_WIDTH, 180);
     stats = new QGroupBox("Stats", this);
     stats->setGeometry(0, 310, UI_WIDTH, 180);
 
+    pauseBtn = new QPushButton("Lancer la vague suivante", this);
+    pauseBtn->setGeometry(10, 50, 180, 25);
+    QObject::connect(pauseBtn, SIGNAL(clicked()), this, SLOT(togglePause()));
     start = new QPushButton("Lancer la vague suivante", this);
     start->setGeometry(10, 30, 180, 25);
     QObject::connect(start, SIGNAL(clicked()), this, SLOT(startWave()));
@@ -151,5 +154,16 @@ void UI::upgradeSelectedTower()
             cred->display(cred->intValue() - (int) selected->getUpgCost());
             selected->upgrade();
         }
+    }
+}
+
+void UI::togglePause()
+{
+    if (pauseVar) {
+        emit unpause();
+        pauseVar = false;
+    } else {
+        emit pause();
+        pauseVar = true;
     }
 }
