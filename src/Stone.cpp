@@ -10,5 +10,5 @@ Stone::Stone(QPointF start, Bug * target, short int level) :
 
 void Stone::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-    Projectile::paint(painter, Qt::grey);
+    Projectile::paint(painter, Qt::gray);
 }
