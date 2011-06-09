@@ -156,6 +156,10 @@ void UI::upgradeSelectedTower()
             if (cred->intValue() >= selected->getUpgCost()) {
                 cred->display(cred->intValue() - (int) selected->getUpgCost());
                 selected->upgrade();
+                t_name->setText(tower->getType());
+                t_lvl->setText(QString().setNum(tower->getLvl()));
+                t_range->setText(QString().setNum(tower->getRange()));
+                t_firerate->setText(QString().setNum(tower->getFirerate()));
             }
         }
 }
