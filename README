@@ -1,1 +1,7 @@
-YATD is a Tower Defence game developped for the course LO21
+YATD is a Tower Defence game developped for the course LO21.
+
+
+Documentation was generated using doxygen.
+It's recommended to use the html version if possible as we only checked the quality and accuracy of this version.
+HTML documentation can be found at : doc/html/index.html
+LaTeX documentation can be found at : doc/latex/refman.pdf
