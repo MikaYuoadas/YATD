@@ -1,5 +1,6 @@
 #include "Tower.h"
 #include "Water.h"
+#include "Stone.h"
 #include "define.h"
 
 Tower::Tower(QPointF buildPos, QString typeTower) :
@@ -95,6 +96,8 @@ void Tower::fire()
         Projectile * missile = NULL;
         if (type == "water") {
             missile = new Water(pos, target, level);
+        } else if (type == "slingshot") {
+            missile = new Stone(pos, target, level);
         }
         emit projectile(missile);
     }
