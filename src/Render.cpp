@@ -283,6 +283,7 @@ Bug * Render::getTarget(QPointF pos, double range, short int targetType)
 
 void Render::destroyTower(Tower * tower)
 {
+    /*TODO: set towers case to NULL*/
     tower->disconnect();
     removeItem(tower);
     tower->deleteLater();
