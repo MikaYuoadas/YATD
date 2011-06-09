@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>YATD: Liste des fichiers</title>
+<title>YATD:  Fichier source de src/Stone.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -51,30 +51,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li class="current"><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
     </ul>
   </div>
-</div>
 <div class="header">
   <div class="headertitle">
-<div class="title">Liste des fichiers</div>  </div>
+<div class="title">src/Stone.h</div>  </div>
 </div>
 <div class="contents">
-<div class="textblock">Liste de tous les fichiers documentés avec une brève description :</div><table>
-  <tr><td class="indexkey">src/<b>Ant.h</b> <a href="Ant_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey">src/<b>Bug.h</b> <a href="Bug_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey">src/<b>define.h</b> <a href="define_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey">src/<b>Hatchery.h</b> <a href="Hatchery_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey">src/<b>Mosquito.h</b> <a href="Mosquito_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey">src/<b>Projectile.h</b> <a href="Projectile_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey">src/<b>Render.h</b> <a href="Render_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey">src/<b>Roach.h</b> <a href="Roach_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey">src/<b>Stone.h</b> <a href="Stone_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey">src/<b>Tower.h</b> <a href="Tower_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey">src/<b>UI.h</b> <a href="UI_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey">src/<b>Wasp.h</b> <a href="Wasp_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey">src/<b>Water.h</b> <a href="Water_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-</table>
+<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef STONE</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define STONE</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;Projectile.h&quot;</span>
+<a name="l00005"></a>00005 
+<a name="l00010"></a><a class="code" href="classStone.html">00010</a> <span class="keyword">class </span><a class="code" href="classStone.html" title="Classe représentant les projectiles du lance-pierres.">Stone</a> : <span class="keyword">public</span> <a class="code" href="classProjectile.html" title="Classe représentant les projectiles des tours.">Projectile</a>
+<a name="l00011"></a>00011 {
+<a name="l00012"></a>00012     <span class="keyword">public</span>:
+<a name="l00020"></a>00020         <a class="code" href="classStone.html#a7d5e2861bb294614f36d1d1f3ff4ae2a" title="Constructeur de Stone.">Stone</a>(QPointF start, <a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * <a class="code" href="classProjectile.html#ae5273bd2c6550b94f38310b69859b093" title="L&#39;insecte ciblée par le projectile.">target</a>, <span class="keywordtype">short</span> <span class="keywordtype">int</span> lvl);
+<a name="l00025"></a>00025         <span class="keywordtype">void</span> <a class="code" href="classStone.html#a6bff8608f4ffbae0e227c017bd36884b" title="Surcharge de la méthode virtuelle pure paint() héritée de QGraphicsObject.">paint</a>(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option, QWidget *widget);
+<a name="l00026"></a>00026 };
+<a name="l00027"></a>00027 <span class="preprocessor">#endif</span>
+</pre></div></div>
 </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"

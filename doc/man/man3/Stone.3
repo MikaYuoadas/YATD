@@ -1,16 +1,16 @@
-.TH "Water" 3 "Thu Jun 9 2011" "Version 0.9" "YATD" \" -*- nroff -*-
+.TH "Stone" 3 "Thu Jun 9 2011" "Version 0.9" "YATD" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Water \- 
+Stone \- 
 .PP
-Classe représentant les projectiles du pistolet à eau.  
+Classe représentant les projectiles du lance-pierres.  
 
 .SH SYNOPSIS
 .br
 .PP
 .PP
-\fC#include <Water.h>\fP
+\fC#include <Stone.h>\fP
 .PP
 Est dérivée de \fBProjectile\fP.
 .SS "Signaux"
@@ -25,9 +25,9 @@ Est dérivée de \fBProjectile\fP.
 
 .in +1c
 .ti -1c
-.RI "\fBWater\fP (QPointF start, \fBBug\fP *\fBtarget\fP, short int lvl)"
+.RI "\fBStone\fP (QPointF start, \fBBug\fP *\fBtarget\fP, short int lvl)"
 .br
-.RI "\fIConstructeur de Ware. \fP"
+.RI "\fIConstructeur de \fBStone\fP. \fP"
 .ti -1c
 .RI "void \fBpaint\fP (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)"
 .br
@@ -51,10 +51,10 @@ Est dérivée de \fBProjectile\fP.
 .in -1c
 .SH "Description détaillée"
 .PP 
-Classe représentant les projectiles du pistolet à eau, rien de spéciale. 
+Classe représentant les projectiles du lance-pierres, rien de spéciale. 
 .SH "Documentation des constructeurs et destructeur"
 .PP 
-.SS "Water::Water (QPointFstart, \fBBug\fP *target, short intlvl)"Appelle le constructeur de \fBProjectile\fP avec les caractéristiques du pistolet à eau. 
+.SS "Stone::Stone (QPointFstart, \fBBug\fP *target, short intlvl)"Appelle le constructeur de \fBProjectile\fP avec les caractéristiques du lance-pierre. 
 .PP
 \fBParamètres:\fP
 .RS 4
@@ -92,7 +92,7 @@ Un object QRectF correspondant au rectangle englobant le dessin du projectile.
 .RE
 .PP
 
-.SS "void Water::paint (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)"Appelé automatiquement par Qt pour redessiner l'objet. 
+.SS "void Stone::paint (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)"Appelé automatiquement par Qt pour redessiner l'objet. 
 .SS "void Projectile::paint (QPainter *painter, QColorcolor)\fC [inherited]\fP"Est appelé automatiquement par Qt pour redessiner le projectile. 
 
 .SH "Auteur"
