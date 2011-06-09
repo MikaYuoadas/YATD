@@ -37,5 +37,4 @@ void Roach::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
         pic = image[0];
     double tsize = BASE_SIZE * size;
     painter->drawImage(QRectF(-tsize/2, -tsize/2, tsize, tsize), *pic);
-    painter->drawEllipse(QRectF(-tsize/2 + 5, -tsize/2 + 5, tsize - 10, tsize - 10));
 }
