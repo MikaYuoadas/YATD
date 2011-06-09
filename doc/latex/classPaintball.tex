@@ -1,20 +1,20 @@
-\hypertarget{classStone}{
-\section{Référence de la classe Stone}
-\label{classStone}\index{Stone@{Stone}}
+\hypertarget{classPaintball}{
+\section{Référence de la classe Paintball}
+\label{classPaintball}\index{Paintball@{Paintball}}
 }
 
 
-Classe représentant les projectiles du lance-\/pierres.  
+Classe représentant les projectiles du paintball.  
 
 
 
 
-{\ttfamily \#include $<$Stone.h$>$}
+{\ttfamily \#include $<$Paintball.h$>$}
 
-Graphe d'héritage de Stone:\begin{figure}[H]
+Graphe d'héritage de Paintball:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classStone}
+\includegraphics[height=2.000000cm]{classPaintball}
 \end{center}
 \end{figure}
 \subsection*{Signaux}
@@ -25,10 +25,10 @@ void \hyperlink{classProjectile_a18d1fccd74f92b54f239c13c74cbc00c}{explode} (\hy
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classStone_a7d5e2861bb294614f36d1d1f3ff4ae2a}{Stone} (QPointF start, \hyperlink{classBug}{Bug} $\ast$\hyperlink{classProjectile_ae5273bd2c6550b94f38310b69859b093}{target}, short int lvl)
-\begin{DoxyCompactList}\small\item\em Constructeur de \hyperlink{classStone}{Stone}. \end{DoxyCompactList}\item 
-void \hyperlink{classStone_a6bff8608f4ffbae0e227c017bd36884b}{paint} (QPainter $\ast$painter, const QStyleOptionGraphicsItem $\ast$option, QWidget $\ast$widget)
-\begin{DoxyCompactList}\small\item\em Surcharge de la méthode virtuelle pure \hyperlink{classStone_a6bff8608f4ffbae0e227c017bd36884b}{paint()} héritée de QGraphicsObject. \end{DoxyCompactList}\item 
+\hyperlink{classPaintball_a49fb3e83330128d0456f54235f0fd557}{Paintball} (QPointF start, \hyperlink{classBug}{Bug} $\ast$\hyperlink{classProjectile_ae5273bd2c6550b94f38310b69859b093}{target}, short int lvl)
+\begin{DoxyCompactList}\small\item\em Constructeur de \hyperlink{classPaintball}{Paintball}. \end{DoxyCompactList}\item 
+void \hyperlink{classPaintball_a7cab2d49d3e63731595b86c7cb939171}{paint} (QPainter $\ast$painter, const QStyleOptionGraphicsItem $\ast$option, QWidget $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Surcharge de la méthode virtuelle pure \hyperlink{classPaintball_a7cab2d49d3e63731595b86c7cb939171}{paint()} héritée de QGraphicsObject. \end{DoxyCompactList}\item 
 QRectF \hyperlink{classProjectile_a0e0b18909c9c154404384707c6515802}{boundingRect} () const 
 \begin{DoxyCompactList}\small\item\em Surcharge de la methode virtuelle pure \hyperlink{classProjectile_a0e0b18909c9c154404384707c6515802}{boundingRect()} héritée de QGraphicsObject. \end{DoxyCompactList}\item 
 void \hyperlink{classProjectile_aef0d6ffcea7620988cf5446d0c1133fa}{paint} (QPainter $\ast$painter, QColor color)
@@ -41,21 +41,21 @@ void \hyperlink{classProjectile_a8e3b4bae49558a0febfce8c1accea72d}{advance} (int
 
 
 \subsection{Description détaillée}
-Classe représentant les projectiles du lance-\/pierres, rien de spéciale. 
+Classe représentant les projectiles du paintball, rien de spéciale. 
 
 \subsection{Documentation des constructeurs et destructeur}
-\hypertarget{classStone_a7d5e2861bb294614f36d1d1f3ff4ae2a}{
-\index{Stone@{Stone}!Stone@{Stone}}
-\index{Stone@{Stone}!Stone@{Stone}}
-\subsubsection[{Stone}]{\setlength{\rightskip}{0pt plus 5cm}Stone::Stone (
+\hypertarget{classPaintball_a49fb3e83330128d0456f54235f0fd557}{
+\index{Paintball@{Paintball}!Paintball@{Paintball}}
+\index{Paintball@{Paintball}!Paintball@{Paintball}}
+\subsubsection[{Paintball}]{\setlength{\rightskip}{0pt plus 5cm}Paintball::Paintball (
 \begin{DoxyParamCaption}
 \item[{QPointF}]{start, }
 \item[{{\bf Bug} $\ast$}]{target, }
 \item[{short int}]{lvl}
 \end{DoxyParamCaption}
 )}}
-\label{classStone_a7d5e2861bb294614f36d1d1f3ff4ae2a}
-Appelle le constructeur de \hyperlink{classProjectile}{Projectile} avec les caractéristiques du lance-\/pierre. 
+\label{classPaintball_a49fb3e83330128d0456f54235f0fd557}
+Appelle le constructeur de \hyperlink{classProjectile}{Projectile} avec les caractéristiques du paintball. 
 \begin{DoxyParams}{Paramètres}
 {\em start} & Position de départ. \\
 \hline
@@ -68,8 +68,8 @@ Appelle le constructeur de \hyperlink{classProjectile}{Projectile} avec les cara
 
 \subsection{Documentation des fonctions membres}
 \hypertarget{classProjectile_a8e3b4bae49558a0febfce8c1accea72d}{
-\index{Stone@{Stone}!advance@{advance}}
-\index{advance@{advance}!Stone@{Stone}}
+\index{Paintball@{Paintball}!advance@{advance}}
+\index{advance@{advance}!Paintball@{Paintball}}
 \subsubsection[{advance}]{\setlength{\rightskip}{0pt plus 5cm}void Projectile::advance (
 \begin{DoxyParamCaption}
 \item[{int}]{step}
@@ -82,8 +82,8 @@ Est appellé automatiquement par Qt deux fois par appelle au slot advance de la 
 \hline
 \end{DoxyParams}
 \hypertarget{classProjectile_a0e0b18909c9c154404384707c6515802}{
-\index{Stone@{Stone}!boundingRect@{boundingRect}}
-\index{boundingRect@{boundingRect}!Stone@{Stone}}
+\index{Paintball@{Paintball}!boundingRect@{boundingRect}}
+\index{boundingRect@{boundingRect}!Paintball@{Paintball}}
 \subsubsection[{boundingRect}]{\setlength{\rightskip}{0pt plus 5cm}QRectF Projectile::boundingRect (
 \begin{DoxyParamCaption}
 {}
@@ -94,8 +94,8 @@ Fonction appelé automatiquement par QT pour savoir s'il doit redessiner ou non 
 Un object QRectF correspondant au rectangle englobant le dessin du projectile. 
 \end{DoxyReturn}
 \hypertarget{classProjectile_a18d1fccd74f92b54f239c13c74cbc00c}{
-\index{Stone@{Stone}!explode@{explode}}
-\index{explode@{explode}!Stone@{Stone}}
+\index{Paintball@{Paintball}!explode@{explode}}
+\index{explode@{explode}!Paintball@{Paintball}}
 \subsubsection[{explode}]{\setlength{\rightskip}{0pt plus 5cm}void Projectile::explode (
 \begin{DoxyParamCaption}
 \item[{{\bf Projectile} $\ast$}]{missile}
@@ -107,20 +107,20 @@ Signale émit lorsque le projectile explose pour qu'il soit retiré de la scène
 {\em missile} & Un pointeur vers le projectile pour que la scène puisse le détruire correctement. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classStone_a6bff8608f4ffbae0e227c017bd36884b}{
-\index{Stone@{Stone}!paint@{paint}}
-\index{paint@{paint}!Stone@{Stone}}
-\subsubsection[{paint}]{\setlength{\rightskip}{0pt plus 5cm}void Stone::paint (
+\hypertarget{classPaintball_a7cab2d49d3e63731595b86c7cb939171}{
+\index{Paintball@{Paintball}!paint@{paint}}
+\index{paint@{paint}!Paintball@{Paintball}}
+\subsubsection[{paint}]{\setlength{\rightskip}{0pt plus 5cm}void Paintball::paint (
 \begin{DoxyParamCaption}
 \item[{QPainter $\ast$}]{painter, }
 \item[{const QStyleOptionGraphicsItem $\ast$}]{option, }
 \item[{QWidget $\ast$}]{widget}
 \end{DoxyParamCaption}
 )}}
-\label{classStone_a6bff8608f4ffbae0e227c017bd36884b}
+\label{classPaintball_a7cab2d49d3e63731595b86c7cb939171}
 Appelé automatiquement par Qt pour redessiner l'objet. \hypertarget{classProjectile_aef0d6ffcea7620988cf5446d0c1133fa}{
-\index{Stone@{Stone}!paint@{paint}}
-\index{paint@{paint}!Stone@{Stone}}
+\index{Paintball@{Paintball}!paint@{paint}}
+\index{paint@{paint}!Paintball@{Paintball}}
 \subsubsection[{paint}]{\setlength{\rightskip}{0pt plus 5cm}void Projectile::paint (
 \begin{DoxyParamCaption}
 \item[{QPainter $\ast$}]{painter, }
@@ -132,6 +132,5 @@ Est appelé automatiquement par Qt pour redessiner le projectile.
 
 La documentation de cette classe a été générée à partir des fichiers suivants :\begin{DoxyCompactItemize}
 \item 
-src/Stone.h\item 
-src/Paintball.cpp\item 
-src/Stone.cpp\end{DoxyCompactItemize}
+src/Paintball.h\item 
+src/Paintball.cpp\end{DoxyCompactItemize}
