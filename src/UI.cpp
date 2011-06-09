@@ -139,22 +139,25 @@ void UI::selectTower(Tower * tower)
 
 void UI::sellSelectedTower()
 {
-    cred->display(cred->intValue() + (int) selected->getPrice());
-    emit towerSold(selected);
-    t_name->setText("");
-    t_lvl->setText("");
-    t_range->setText("");
-    t_firerate->setText("");
+    if (selected != NULL) {
+        cred->display(cred->intValue() + (int) selected->getPrice());
+        emit towerSold(selected);
+        t_name->setText("");
+        t_lvl->setText("");
+        t_range->setText("");
+        t_firerate->setText("");
+    }
 }
 
 void UI::upgradeSelectedTower()
 {
-    if (selected->getLvl() < 3) {
-        if (cred->intValue() >= selected->getUpgCost()) {
-            cred->display(cred->intValue() - (int) selected->getUpgCost());
-            selected->upgrade();
+    if (selected != NULL)
+        if (selected->getLvl() < 3) {
+            if (cred->intValue() >= selected->getUpgCost()) {
+                cred->display(cred->intValue() - (int) selected->getUpgCost());
+                selected->upgrade();
+            }
         }
-    }
 }
 
 void UI::togglePause()
