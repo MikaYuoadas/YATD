@@ -146,6 +146,7 @@ void UI::sellSelectedTower()
         t_lvl->setText("");
         t_range->setText("");
         t_firerate->setText("");
+        selected == NULL;
     }
 }
 
