@@ -96,8 +96,8 @@ Signaux</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal d'arrivé.  <a href="#a33f90dffa55e1dce80dc2416c75a53c8"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBug.html#a1d3140d50abd44257d5e0b1b6dcb4514">Bug</a> (double x, double y, double s, double health, double res, double start_angle, double init_speed, short int type)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de <a class="el" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a>.  <a href="#a1d3140d50abd44257d5e0b1b6dcb4514"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBug.html#a51f8bff5f42fcdf9e0503ddb5ef74fe5">Bug</a> (double x, double y, double s, double health, double res, double start_angle, double init_speed, short int type, QString raceBug)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de <a class="el" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a>.  <a href="#a51f8bff5f42fcdf9e0503ddb5ef74fe5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QRectF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBug.html#a9b39c25361faad07b1bf2dd927d09dab">boundingRect</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Surcharge de la fonction boudingRect() héritée de QGraphicsObject.  <a href="#a9b39c25361faad07b1bf2dd927d09dab"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPainterPath&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBug.html#a587a36d3145c2b4dba6c689af22c65ac">shape</a> () const </td></tr>
@@ -106,8 +106,17 @@ Fonctions membres publiques</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Infliger des dégats à l'insecte.  <a href="#a63402c05b5ba3fb034e41f1ced0e4b9f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">short int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBug.html#aced471cedcfa855baddf4c827003e755">getMoveType</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet d'accéder à la valeur moveType de l'insecte.  <a href="#aced471cedcfa855baddf4c827003e755"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBug.html#ae29490347059f21518ff7162d0fbe9e5">getSize</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Assesseur.  <a href="#ae29490347059f21518ff7162d0fbe9e5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QPointF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBug.html#a1c6d7743b87e9c4a85a58ea510c18526">getPos</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Assesseur.  <a href="#a1c6d7743b87e9c4a85a58ea510c18526"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBug.html#abd2246d752d1088b35e01d57d176ce5f">getAngle</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Assesseur.  <a href="#abd2246d752d1088b35e01d57d176ce5f"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Champs de données</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a749053e5ac7cc0f6f43c39d99f7b99f8"></a><!-- doxytag: member="Bug::race" ref="a749053e5ac7cc0f6f43c39d99f7b99f8" args="" -->
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBug.html#a749053e5ac7cc0f6f43c39d99f7b99f8">race</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">type de l'insecte <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRender.html">Render</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBug.html#a7a93aae4e4b7a215c94ff85d0bd6e26d">parent</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">L'objet <a class="el" href="classRender.html" title="Classe gérant le rendu graphique du jeu.">Render</a> parent de l'insecte.  <a href="#a7a93aae4e4b7a215c94ff85d0bd6e26d"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
@@ -138,7 +147,7 @@ Attributs privés</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
 <div class="textblock"><p>Cette classe définie les actions de base commune à tous les insectes (l'affichage, la vie et les déplacements entre autres). </p>
 </div><hr/><h2>Documentation des constructeurs et destructeur</h2>
-<a class="anchor" id="a1d3140d50abd44257d5e0b1b6dcb4514"></a><!-- doxytag: member="Bug::Bug" ref="a1d3140d50abd44257d5e0b1b6dcb4514" args="(double x, double y, double s, double health, double res, double start_angle, double init_speed, short int type)" -->
+<a class="anchor" id="a51f8bff5f42fcdf9e0503ddb5ef74fe5"></a><!-- doxytag: member="Bug::Bug" ref="a51f8bff5f42fcdf9e0503ddb5ef74fe5" args="(double x, double y, double s, double health, double res, double start_angle, double init_speed, short int type, QString raceBug)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -188,7 +197,13 @@ Attributs privés</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">short int&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>raceBug</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -209,6 +224,7 @@ Attributs privés</h2></td></tr>
     <tr><td class="paramname">start_angle</td><td>L'angle vers lequel fait face le départ des insectes. </td></tr>
     <tr><td class="paramname">init_speed</td><td>La vitesse initiale de l'insecte. </td></tr>
     <tr><td class="paramname">type</td><td>Prends une des valeurs prédéfinies FLY ou CRAWL correspondant au type de déplacement de l'insecte. </td></tr>
+    <tr><td class="paramname">raceBug</td><td>La race de l'insecte. </td></tr>
   </table>
   </dd>
 </dl>
@@ -282,6 +298,24 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="abd2246d752d1088b35e01d57d176ce5f"></a><!-- doxytag: member="Bug::getAngle" ref="abd2246d752d1088b35e01d57d176ce5f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Bug::getAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Assesseur vers angle. </p>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>L'ange de l'insecte. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aced471cedcfa855baddf4c827003e755"></a><!-- doxytag: member="Bug::getMoveType" ref="aced471cedcfa855baddf4c827003e755" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -296,6 +330,42 @@ Attributs privés</h2></td></tr>
 </div>
 <div class="memdoc">
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>la valeur prédéfinie FLY ou CRAWL. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1c6d7743b87e9c4a85a58ea510c18526"></a><!-- doxytag: member="Bug::getPos" ref="a1c6d7743b87e9c4a85a58ea510c18526" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPointF Bug::getPos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Assesseur vers pos. </p>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>La position de l'insecte dans la scène. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae29490347059f21518ff7162d0fbe9e5"></a><!-- doxytag: member="Bug::getSize" ref="ae29490347059f21518ff7162d0fbe9e5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Bug::getSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Assesseur vers size. </p>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>La taille de l'insecte. </dd></dl>
 
 </div>
 </div>

@@ -22,6 +22,10 @@ Classe implémentation du design pattern Factory.
 .RI "\fBBug\fP * \fBspawnBug\fP (QString race, double size)"
 .br
 .RI "\fICrée un nouvel insecte de la race et de la taille données. \fP"
+.ti -1c
+.RI "\fBBug\fP * \fBspawnBug\fP (QString race, double size, QPointF pos, double spawn_angle)"
+.br
+.RI "\fICrée un nouvel insecte de la race et de la taille données. \fP"
 .in -1c
 .SS "Attributs privés"
 
@@ -63,6 +67,23 @@ Design pattern Factory utilisé pour créer un nouvel insecte au niveau du spawn
 \fIrace\fP Un QString donnant la race de l'insecte a créer. 
 .br
 \fIsize\fP Un double donnant la taille de l'insecte. 
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+Un pointeur vers l'insecte créé. 
+.RE
+.PP
+
+.SS "\fBBug\fP * Hatchery::spawnBug (QStringrace, doublesize, QPointFpos, doublespawn_angle)"\fBParamètres:\fP
+.RS 4
+\fIrace\fP Un QString donnant la race de l'insecte a créer. 
+.br
+\fIsize\fP Un double donnant la taille de l'insecte. 
+.br
+\fIpos\fP La position où mettre le nouvel insecte. 
+.br
+\fIspawn_angle\fP L'angle de départ de l'insecte. 
 .RE
 .PP
 \fBRenvoie:\fP

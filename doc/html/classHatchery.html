@@ -78,6 +78,8 @@ Fonctions membres publiques</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur d'Hatchery.  <a href="#a8e86b7578b70f37fb3f7ed2e69c765b7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBug.html">Bug</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHatchery.html#af90645b2be3e8890829a69347846a934">spawnBug</a> (QString race, double size)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée un nouvel insecte de la race et de la taille données.  <a href="#af90645b2be3e8890829a69347846a934"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBug.html">Bug</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHatchery.html#ad062be27d539081dd061eec1898df12b">spawnBug</a> (QString race, double size, QPointF pos, double spawn_angle)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée un nouvel insecte de la race et de la taille données.  <a href="#ad062be27d539081dd061eec1898df12b"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHatchery.html#ae56bf748a2046b42e2b174c17e4caeda">x</a></td></tr>
@@ -161,6 +163,55 @@ Attributs privés</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">race</td><td>Un QString donnant la race de l'insecte a créer. </td></tr>
     <tr><td class="paramname">size</td><td>Un double donnant la taille de l'insecte. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Un pointeur vers l'insecte créé. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad062be27d539081dd061eec1898df12b"></a><!-- doxytag: member="Hatchery::spawnBug" ref="ad062be27d539081dd061eec1898df12b" args="(QString race, double size, QPointF pos, double spawn_angle)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classBug.html">Bug</a> * Hatchery::spawnBug </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>race</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QPointF&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>spawn_angle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">race</td><td>Un QString donnant la race de l'insecte a créer. </td></tr>
+    <tr><td class="paramname">size</td><td>Un double donnant la taille de l'insecte. </td></tr>
+    <tr><td class="paramname">pos</td><td>La position où mettre le nouvel insecte. </td></tr>
+    <tr><td class="paramname">spawn_angle</td><td>L'angle de départ de l'insecte. </td></tr>
   </table>
   </dd>
 </dl>

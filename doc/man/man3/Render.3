@@ -118,6 +118,10 @@ Classe gérant le rendu graphique du jeu.
 .RI "\fBBug\fP * \fBgetTarget\fP (QPointF pos, double range, short int targetType)"
 .br
 .RI "\fIPermet aux tours de choisir leur prochaine cible. \fP"
+.ti -1c
+.RI "bool \fBisnotDead\fP (\fBBug\fP *tager)"
+.br
+.RI "\fIIndique si l'insecte exite toujours. \fP"
 .in -1c
 .SS "Fonctions membres privées"
 
@@ -269,6 +273,7 @@ les coordonnées de l'arrivée sous forme d'un QPoint.
 .RE
 .PP
 
+.SS "bool Render::isnotDead (\fBBug\fP *tager)"Test si le pointeur donnée pointe toujours sur un insecte existant. return true si l'insecte existe. 
 .SS "void Render::loseLife ()\fC [signal]\fP"Indique à l'UI que le joueur viens de perdre une vie. 
 .SS "void Render::mousePressEvent (QGraphicsSceneMouseEvent *mouseEvent)"Surcharge de la méthode héritée de QGraphicsScene pour gérer les entrées souris. 
 .PP

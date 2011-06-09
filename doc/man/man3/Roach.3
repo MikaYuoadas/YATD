@@ -56,10 +56,26 @@ Est dérivée de \fBBug\fP.
 .RI "short int \fBgetMoveType\fP ()"
 .br
 .RI "\fIPermet d'accéder à la valeur moveType de l'insecte. \fP"
+.ti -1c
+.RI "double \fBgetSize\fP ()"
+.br
+.RI "\fIAssesseur. \fP"
+.ti -1c
+.RI "QPointF \fBgetPos\fP ()"
+.br
+.RI "\fIAssesseur. \fP"
+.ti -1c
+.RI "double \fBgetAngle\fP ()"
+.br
+.RI "\fIAssesseur. \fP"
 .in -1c
 .SS "Champs de données"
 
 .in +1c
+.ti -1c
+.RI "QString \fBrace\fP"
+.br
+.RI "\fItype de l'insecte \fP"
 .ti -1c
 .RI "\fBRender\fP * \fBparent\fP"
 .br
@@ -130,9 +146,33 @@ Un objet QRectF correspondant au rectangle englobant l'ensemble du dessin de l'i
 .RE
 .PP
 
+.SS "double Bug::getAngle ()\fC [inherited]\fP"Assesseur vers angle. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+L'ange de l'insecte. 
+.RE
+.PP
+
 .SS "short int Bug::getMoveType ()\fC [inherited]\fP"\fBRenvoie:\fP
 .RS 4
 la valeur prédéfinie FLY ou CRAWL. 
+.RE
+.PP
+
+.SS "QPointF Bug::getPos ()\fC [inherited]\fP"Assesseur vers pos. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+La position de l'insecte dans la scène. 
+.RE
+.PP
+
+.SS "double Bug::getSize ()\fC [inherited]\fP"Assesseur vers size. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+La taille de l'insecte. 
 .RE
 .PP
 

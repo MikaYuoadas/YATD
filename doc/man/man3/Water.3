@@ -41,6 +41,14 @@ Est dérivée de \fBProjectile\fP.
 .br
 .RI "\fISurcharge de la méthode virtuelle pure \fBpaint()\fP héritée de QGraphicsObject. \fP"
 .in -1c
+.SS "Champs de données"
+
+.in +1c
+.ti -1c
+.RI "\fBRender\fP * \fBparent\fP"
+.br
+.RI "\fILa scene parente du projectile. \fP"
+.in -1c
 .SS "Fonctions membres protégées"
 
 .in +1c
@@ -94,6 +102,9 @@ Un object QRectF correspondant au rectangle englobant le dessin du projectile.
 
 .SS "void Water::paint (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)"Appelé automatiquement par Qt pour redessiner l'objet. 
 .SS "void Projectile::paint (QPainter *painter, QColorcolor)\fC [inherited]\fP"Est appelé automatiquement par Qt pour redessiner le projectile. 
+.SH "Documentation des champs"
+.PP 
+.SS "\fBRender\fP* \fBProjectile::parent\fP\fC [inherited]\fP"
 
 .SH "Auteur"
 .PP 

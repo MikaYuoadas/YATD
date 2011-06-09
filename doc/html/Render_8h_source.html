@@ -110,28 +110,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00086"></a>00086         <span class="keywordtype">double</span> <a class="code" href="classRender.html#a696f385b556f15a7420293a055734e4d" title="Permet à un insecte de se diriger.">getAngle</a>(QPoint &amp; current);
 <a name="l00092"></a>00092         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a899ce19de8a01bb4bc01653cd8761357" title="Catch les événements souris.">mousePressEvent</a>(QGraphicsSceneMouseEvent * mouseEvent);
 <a name="l00101"></a>00101         <a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * <a class="code" href="classRender.html#a8074fc252757d5c446d79f8205348116" title="Permet aux tours de choisir leur prochaine cible.">getTarget</a>(QPointF pos, <span class="keywordtype">double</span> range, <span class="keywordtype">short</span> <span class="keywordtype">int</span> targetType);
-<a name="l00102"></a>00102 
-<a name="l00103"></a>00103     <span class="keyword">public</span> slots:
-<a name="l00108"></a>00108         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a3252d02e9509f342bc96129b4b10b415" title="Lance la prochaine Vague.">nextWave</a>();
-<a name="l00113"></a>00113         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a9413625fc472b4b7806f3a0d615d6ea9" title="Crée le prochaine insecte de la vague.">nextBug</a>();
-<a name="l00119"></a>00119         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a8e2eccb2fc3914198b8939bf0625c955" title="Message indiquant l&#39;achat d&#39;une tour à la scène.">towerBought</a>(QString type);
-<a name="l00125"></a>00125         <span class="keywordtype">void</span> <a class="code" href="classRender.html#aeeddbbe27102625cc2d5234fa0be523a" title="Arrivée d&#39;un insecte.">bugFinish</a>(<a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * bug);
-<a name="l00131"></a>00131         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a940007358a139d0b30e002929d24f770" title="Mort d&#39;un insecte.">bugKilled</a>(<a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * bug);
-<a name="l00137"></a>00137         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a3b5bb3705131ca57252398e0f6a9e3e5" title="Ajout d&#39;un projectile.">addProjectile</a>(<a class="code" href="classProjectile.html" title="Classe représentant les projectiles des tours.">Projectile</a> * missile);
-<a name="l00143"></a>00143         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a20678c257926bfff635fded745e11f4a" title="Vente d&#39;une tour.">destroyTower</a>(<a class="code" href="classTower.html" title="Classe représentant toutes les défenses.">Tower</a> * tower);
-<a name="l00149"></a>00149         <span class="keywordtype">void</span> <a class="code" href="classRender.html#aedec0cbbe4808368656b772dfe3e63f9" title="explosion d&#39;un projectile.">explodingProjectile</a>(<a class="code" href="classProjectile.html" title="Classe représentant les projectiles des tours.">Projectile</a> * missile);
-<a name="l00154"></a>00154         <span class="keywordtype">void</span> <a class="code" href="classRender.html#af137a4a60ad5195b0ccd3076e160f1d4" title="Pause.">stop</a>();
-<a name="l00159"></a>00159         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a071e49ad740ed2bd509f31c68d37acd8" title="Fin pause.">restart</a>();
-<a name="l00160"></a>00160 
-<a name="l00161"></a>00161     signals:
-<a name="l00167"></a>00167         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a916c15ab4b31cc0f34d9d53b89b89ac0" title="Nouvelle vaque.">newWaveName</a>(QString name);
-<a name="l00172"></a>00172         <span class="keywordtype">void</span> <a class="code" href="classRender.html#ad88f7f01a7b9fafa756221707d590a78" title="Perte d&#39;une vie.">loseLife</a>();
-<a name="l00177"></a>00177         <span class="keywordtype">void</span> <a class="code" href="classRender.html#acd71f1c6c9d67dff3627da4ff6a4c9b8" title="Gain d&#39;un crédit.">getCred</a>();
-<a name="l00183"></a>00183         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a126c4b49e93103a751f66359d8e63171" title="Sélection d&#39;une tour.">selectTower</a>(<a class="code" href="classTower.html" title="Classe représentant toutes les défenses.">Tower</a> * tower);
-<a name="l00188"></a>00188         <span class="keywordtype">void</span> <a class="code" href="classRender.html#abb5d0f66b85c255f756aced453b00b5b" title="Pause.">pause</a>();
-<a name="l00193"></a>00193         <span class="keywordtype">void</span> <a class="code" href="classRender.html#acc15883381c82b6bb4b0d858260ecdff" title="Fin pause.">unpause</a>();
-<a name="l00194"></a>00194 };
-<a name="l00195"></a>00195 <span class="preprocessor">#endif</span>
+<a name="l00107"></a>00107         <span class="keywordtype">bool</span> <a class="code" href="classRender.html#a8b8e53278c49bf3a65704b0913eaaefc" title="Indique si l&#39;insecte exite toujours.">isnotDead</a>(<a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * tager);
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109     <span class="keyword">public</span> slots:
+<a name="l00114"></a>00114         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a3252d02e9509f342bc96129b4b10b415" title="Lance la prochaine Vague.">nextWave</a>();
+<a name="l00119"></a>00119         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a9413625fc472b4b7806f3a0d615d6ea9" title="Crée le prochaine insecte de la vague.">nextBug</a>();
+<a name="l00125"></a>00125         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a8e2eccb2fc3914198b8939bf0625c955" title="Message indiquant l&#39;achat d&#39;une tour à la scène.">towerBought</a>(QString type);
+<a name="l00131"></a>00131         <span class="keywordtype">void</span> <a class="code" href="classRender.html#aeeddbbe27102625cc2d5234fa0be523a" title="Arrivée d&#39;un insecte.">bugFinish</a>(<a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * bug);
+<a name="l00137"></a>00137         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a940007358a139d0b30e002929d24f770" title="Mort d&#39;un insecte.">bugKilled</a>(<a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * bug);
+<a name="l00143"></a>00143         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a3b5bb3705131ca57252398e0f6a9e3e5" title="Ajout d&#39;un projectile.">addProjectile</a>(<a class="code" href="classProjectile.html" title="Classe représentant les projectiles des tours.">Projectile</a> * missile);
+<a name="l00149"></a>00149         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a20678c257926bfff635fded745e11f4a" title="Vente d&#39;une tour.">destroyTower</a>(<a class="code" href="classTower.html" title="Classe représentant toutes les défenses.">Tower</a> * tower);
+<a name="l00155"></a>00155         <span class="keywordtype">void</span> <a class="code" href="classRender.html#aedec0cbbe4808368656b772dfe3e63f9" title="explosion d&#39;un projectile.">explodingProjectile</a>(<a class="code" href="classProjectile.html" title="Classe représentant les projectiles des tours.">Projectile</a> * missile);
+<a name="l00160"></a>00160         <span class="keywordtype">void</span> <a class="code" href="classRender.html#af137a4a60ad5195b0ccd3076e160f1d4" title="Pause.">stop</a>();
+<a name="l00165"></a>00165         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a071e49ad740ed2bd509f31c68d37acd8" title="Fin pause.">restart</a>();
+<a name="l00166"></a>00166 
+<a name="l00167"></a>00167     signals:
+<a name="l00173"></a>00173         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a916c15ab4b31cc0f34d9d53b89b89ac0" title="Nouvelle vaque.">newWaveName</a>(QString name);
+<a name="l00178"></a>00178         <span class="keywordtype">void</span> <a class="code" href="classRender.html#ad88f7f01a7b9fafa756221707d590a78" title="Perte d&#39;une vie.">loseLife</a>();
+<a name="l00183"></a>00183         <span class="keywordtype">void</span> <a class="code" href="classRender.html#acd71f1c6c9d67dff3627da4ff6a4c9b8" title="Gain d&#39;un crédit.">getCred</a>();
+<a name="l00189"></a>00189         <span class="keywordtype">void</span> <a class="code" href="classRender.html#a126c4b49e93103a751f66359d8e63171" title="Sélection d&#39;une tour.">selectTower</a>(<a class="code" href="classTower.html" title="Classe représentant toutes les défenses.">Tower</a> * tower);
+<a name="l00194"></a>00194         <span class="keywordtype">void</span> <a class="code" href="classRender.html#abb5d0f66b85c255f756aced453b00b5b" title="Pause.">pause</a>();
+<a name="l00199"></a>00199         <span class="keywordtype">void</span> <a class="code" href="classRender.html#acc15883381c82b6bb4b0d858260ecdff" title="Fin pause.">unpause</a>();
+<a name="l00200"></a>00200 };
+<a name="l00201"></a>00201 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->

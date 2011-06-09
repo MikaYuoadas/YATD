@@ -67,7 +67,9 @@ double \hyperlink{classRender_a696f385b556f15a7420293a055734e4d}{getAngle} (QPoi
 void \hyperlink{classRender_a899ce19de8a01bb4bc01653cd8761357}{mousePressEvent} (QGraphicsSceneMouseEvent $\ast$mouseEvent)
 \begin{DoxyCompactList}\small\item\em Catch les événements souris. \end{DoxyCompactList}\item 
 \hyperlink{classBug}{Bug} $\ast$ \hyperlink{classRender_a8074fc252757d5c446d79f8205348116}{getTarget} (QPointF pos, double range, short int targetType)
-\begin{DoxyCompactList}\small\item\em Permet aux tours de choisir leur prochaine cible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Permet aux tours de choisir leur prochaine cible. \end{DoxyCompactList}\item 
+bool \hyperlink{classRender_a8b8e53278c49bf3a65704b0913eaaefc}{isnotDead} (\hyperlink{classBug}{Bug} $\ast$tager)
+\begin{DoxyCompactList}\small\item\em Indique si l'insecte exite toujours. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Fonctions membres privées}
 \begin{DoxyCompactItemize}
 \item 
@@ -277,7 +279,16 @@ L'insecte à abattre.
 Retourne la position de l'arrivée. \begin{DoxyReturn}{Renvoie}
 les coordonnées de l'arrivée sous forme d'un QPoint. 
 \end{DoxyReturn}
-\hypertarget{classRender_ad88f7f01a7b9fafa756221707d590a78}{
+\hypertarget{classRender_a8b8e53278c49bf3a65704b0913eaaefc}{
+\index{Render@{Render}!isnotDead@{isnotDead}}
+\index{isnotDead@{isnotDead}!Render@{Render}}
+\subsubsection[{isnotDead}]{\setlength{\rightskip}{0pt plus 5cm}bool Render::isnotDead (
+\begin{DoxyParamCaption}
+\item[{{\bf Bug} $\ast$}]{tager}
+\end{DoxyParamCaption}
+)}}
+\label{classRender_a8b8e53278c49bf3a65704b0913eaaefc}
+Test si le pointeur donnée pointe toujours sur un insecte existant. return true si l'insecte existe. \hypertarget{classRender_ad88f7f01a7b9fafa756221707d590a78}{
 \index{Render@{Render}!loseLife@{loseLife}}
 \index{loseLife@{loseLife}!Render@{Render}}
 \subsubsection[{loseLife}]{\setlength{\rightskip}{0pt plus 5cm}void Render::loseLife (

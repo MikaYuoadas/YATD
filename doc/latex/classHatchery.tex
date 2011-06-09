@@ -17,6 +17,8 @@ Classe implémentation du design pattern Factory.
 \hyperlink{classHatchery_a8e86b7578b70f37fb3f7ed2e69c765b7}{Hatchery} (double start\_\-x, double start\_\-y, double start\_\-angle)
 \begin{DoxyCompactList}\small\item\em Constructeur d'Hatchery. \end{DoxyCompactList}\item 
 \hyperlink{classBug}{Bug} $\ast$ \hyperlink{classHatchery_af90645b2be3e8890829a69347846a934}{spawnBug} (QString race, double size)
+\begin{DoxyCompactList}\small\item\em Crée un nouvel insecte de la race et de la taille données. \end{DoxyCompactList}\item 
+\hyperlink{classBug}{Bug} $\ast$ \hyperlink{classHatchery_ad062be27d539081dd061eec1898df12b}{spawnBug} (QString race, double size, QPointF pos, double spawn\_\-angle)
 \begin{DoxyCompactList}\small\item\em Crée un nouvel insecte de la race et de la taille données. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Attributs privés}
 \begin{DoxyCompactItemize}
@@ -71,6 +73,32 @@ Permet d'instancier un objet \hyperlink{classHatchery}{Hatchery} pour initialise
 {\em race} & Un QString donnant la race de l'insecte a créer. \\
 \hline
 {\em size} & Un double donnant la taille de l'insecte. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers l'insecte créé. 
+\end{DoxyReturn}
+\hypertarget{classHatchery_ad062be27d539081dd061eec1898df12b}{
+\index{Hatchery@{Hatchery}!spawnBug@{spawnBug}}
+\index{spawnBug@{spawnBug}!Hatchery@{Hatchery}}
+\subsubsection[{spawnBug}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Bug} $\ast$ Hatchery::spawnBug (
+\begin{DoxyParamCaption}
+\item[{QString}]{race, }
+\item[{double}]{size, }
+\item[{QPointF}]{pos, }
+\item[{double}]{spawn\_\-angle}
+\end{DoxyParamCaption}
+)}}
+\label{classHatchery_ad062be27d539081dd061eec1898df12b}
+
+\begin{DoxyParams}{Paramètres}
+{\em race} & Un QString donnant la race de l'insecte a créer. \\
+\hline
+{\em size} & Un double donnant la taille de l'insecte. \\
+\hline
+{\em pos} & La position où mettre le nouvel insecte. \\
+\hline
+{\em spawn\_\-angle} & L'angle de départ de l'insecte. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}

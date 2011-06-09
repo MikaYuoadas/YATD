@@ -129,6 +129,8 @@ Fonctions membres publiques</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Catch les événements souris.  <a href="#a899ce19de8a01bb4bc01653cd8761357"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBug.html">Bug</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a8074fc252757d5c446d79f8205348116">getTarget</a> (QPointF pos, double range, short int targetType)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet aux tours de choisir leur prochaine cible.  <a href="#a8074fc252757d5c446d79f8205348116"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a8b8e53278c49bf3a65704b0913eaaefc">isnotDead</a> (<a class="el" href="classBug.html">Bug</a> *tager)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si l'insecte exite toujours.  <a href="#a8b8e53278c49bf3a65704b0913eaaefc"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Fonctions membres privées</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRender.html#a4a1fed13f76997e45e90dd39d622d33e">addBug</a> (<a class="el" href="classBug.html">Bug</a> *bug)</td></tr>
@@ -464,6 +466,24 @@ Attributs privés</h2></td></tr>
 <div class="memdoc">
 <p>Retourne la position de l'arrivée. </p>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>les coordonnées de l'arrivée sous forme d'un QPoint. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8b8e53278c49bf3a65704b0913eaaefc"></a><!-- doxytag: member="Render::isnotDead" ref="a8b8e53278c49bf3a65704b0913eaaefc" args="(Bug *tager)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Render::isnotDead </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBug.html">Bug</a> *&#160;</td>
+          <td class="paramname"><em>tager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Test si le pointeur donnée pointe toujours sur un insecte existant. return true si l'insecte existe. </p>
 
 </div>
 </div>

@@ -63,22 +63,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define HATCHERY</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 <span class="preprocessor">#include &lt;QString&gt;</span>
-<a name="l00005"></a>00005 
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;Bug.h&quot;</span>
-<a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="keyword">class </span><a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a>;
-<a name="l00009"></a>00009 
-<a name="l00014"></a><a class="code" href="classHatchery.html">00014</a> <span class="keyword">class </span><a class="code" href="classHatchery.html" title="Classe implémentation du design pattern Factory.">Hatchery</a>
-<a name="l00015"></a>00015 {
-<a name="l00016"></a>00016     <span class="keyword">private</span>:
-<a name="l00017"></a><a class="code" href="classHatchery.html#ae56bf748a2046b42e2b174c17e4caeda">00017</a>         <span class="keywordtype">double</span> <a class="code" href="classHatchery.html#ae56bf748a2046b42e2b174c17e4caeda" title="Abscisse du spawn des insectes.">x</a>; 
-<a name="l00018"></a><a class="code" href="classHatchery.html#a99f0ef4a290d0bc1e65976b5979b29b7">00018</a>         <span class="keywordtype">double</span> <a class="code" href="classHatchery.html#a99f0ef4a290d0bc1e65976b5979b29b7" title="Ordonnée du spawn des insectes.">y</a>; 
-<a name="l00019"></a><a class="code" href="classHatchery.html#a4e56c9314b9a9dfe1718d43e30f3d4d0">00019</a>         <span class="keywordtype">double</span> <a class="code" href="classHatchery.html#a4e56c9314b9a9dfe1718d43e30f3d4d0" title="Angle vers lequel fait face le spawn des insectes.">angle</a>; 
-<a name="l00021"></a>00021     <span class="keyword">public</span>:
-<a name="l00029"></a>00029         <a class="code" href="classHatchery.html#a8e86b7578b70f37fb3f7ed2e69c765b7" title="Constructeur d&#39;Hatchery.">Hatchery</a>(<span class="keywordtype">double</span> start_x, <span class="keywordtype">double</span> start_y, <span class="keywordtype">double</span> start_angle);
-<a name="l00036"></a>00036         <a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * <a class="code" href="classHatchery.html#af90645b2be3e8890829a69347846a934" title="Crée un nouvel insecte de la race et de la taille données.">spawnBug</a>(QString race, <span class="keywordtype">double</span> size);
-<a name="l00037"></a>00037 };
-<a name="l00038"></a>00038 <span class="preprocessor">#endif</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;QPointF&gt;</span>
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;Bug.h&quot;</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="keyword">class </span><a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a>;
+<a name="l00010"></a>00010 
+<a name="l00015"></a><a class="code" href="classHatchery.html">00015</a> <span class="keyword">class </span><a class="code" href="classHatchery.html" title="Classe implémentation du design pattern Factory.">Hatchery</a>
+<a name="l00016"></a>00016 {
+<a name="l00017"></a>00017     <span class="keyword">private</span>:
+<a name="l00018"></a><a class="code" href="classHatchery.html#ae56bf748a2046b42e2b174c17e4caeda">00018</a>         <span class="keywordtype">double</span> <a class="code" href="classHatchery.html#ae56bf748a2046b42e2b174c17e4caeda" title="Abscisse du spawn des insectes.">x</a>; 
+<a name="l00019"></a><a class="code" href="classHatchery.html#a99f0ef4a290d0bc1e65976b5979b29b7">00019</a>         <span class="keywordtype">double</span> <a class="code" href="classHatchery.html#a99f0ef4a290d0bc1e65976b5979b29b7" title="Ordonnée du spawn des insectes.">y</a>; 
+<a name="l00020"></a><a class="code" href="classHatchery.html#a4e56c9314b9a9dfe1718d43e30f3d4d0">00020</a>         <span class="keywordtype">double</span> <a class="code" href="classHatchery.html#a4e56c9314b9a9dfe1718d43e30f3d4d0" title="Angle vers lequel fait face le spawn des insectes.">angle</a>; 
+<a name="l00022"></a>00022     <span class="keyword">public</span>:
+<a name="l00030"></a>00030         <a class="code" href="classHatchery.html#a8e86b7578b70f37fb3f7ed2e69c765b7" title="Constructeur d&#39;Hatchery.">Hatchery</a>(<span class="keywordtype">double</span> start_x, <span class="keywordtype">double</span> start_y, <span class="keywordtype">double</span> start_angle);
+<a name="l00037"></a>00037         <a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * <a class="code" href="classHatchery.html#af90645b2be3e8890829a69347846a934" title="Crée un nouvel insecte de la race et de la taille données.">spawnBug</a>(QString race, <span class="keywordtype">double</span> size);
+<a name="l00046"></a>00046         <a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * <a class="code" href="classHatchery.html#af90645b2be3e8890829a69347846a934" title="Crée un nouvel insecte de la race et de la taille données.">spawnBug</a>(QString race, <span class="keywordtype">double</span> size, QPointF pos, <span class="keywordtype">double</span> spawn_angle);
+<a name="l00047"></a>00047 };
+<a name="l00048"></a>00048 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->

@@ -69,31 +69,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;Bug.h&quot;</span>
 <a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="keyword">class </span><a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a>;
-<a name="l00012"></a>00012 
-<a name="l00017"></a><a class="code" href="classProjectile.html">00017</a> <span class="keyword">class </span><a class="code" href="classProjectile.html" title="Classe représentant les projectiles des tours.">Projectile</a> : <span class="keyword">public</span> QGraphicsObject
-<a name="l00018"></a>00018 {
-<a name="l00019"></a>00019     Q_OBJECT
-<a name="l00020"></a>00020 
-<a name="l00021"></a>00021     <span class="keyword">protected</span>:
-<a name="l00026"></a>00026         <span class="keywordtype">void</span> <a class="code" href="classProjectile.html#a8e3b4bae49558a0febfce8c1accea72d" title="Surcharge de la méthode virtuelle pure héritée de QGraphicsObject.">advance</a>(<span class="keywordtype">int</span> step);
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028     <span class="keyword">private</span>:
-<a name="l00029"></a><a class="code" href="classProjectile.html#a15091a3a02fbfac2dd4fb44ac9cbceab">00029</a>         QPointF <a class="code" href="classProjectile.html#a15091a3a02fbfac2dd4fb44ac9cbceab" title="La destination du projectile.">dest</a>;     
-<a name="l00030"></a><a class="code" href="classProjectile.html#ae5273bd2c6550b94f38310b69859b093">00030</a>         <a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * <a class="code" href="classProjectile.html#ae5273bd2c6550b94f38310b69859b093" title="L&#39;insecte ciblée par le projectile.">target</a>;     
-<a name="l00031"></a><a class="code" href="classProjectile.html#aae1f5d683c71d152b6a12d922ec4714f">00031</a>         <span class="keywordtype">double</span> <a class="code" href="classProjectile.html#aae1f5d683c71d152b6a12d922ec4714f" title="La vitesse en case par seconde du projectile.">speed</a>;     
-<a name="l00032"></a><a class="code" href="classProjectile.html#ac94938ed5b3d3e01217bf72f80ad2e3d">00032</a>         <span class="keywordtype">double</span> <a class="code" href="classProjectile.html#ac94938ed5b3d3e01217bf72f80ad2e3d" title="Les dégats infligé à l&#39;impact par le projectile.">dmg</a>;       
-<a name="l00033"></a><a class="code" href="classProjectile.html#a019db4c89ccf3eb291b06ba7b55f0754">00033</a>         <span class="keywordtype">double</span> <a class="code" href="classProjectile.html#a019db4c89ccf3eb291b06ba7b55f0754" title="La portée maximale du projectile (s&#39;il n&#39;atteint personne avant d&#39;arriver à se portée max...">maxrange</a>;  
-<a name="l00034"></a><a class="code" href="classProjectile.html#a0fc0c0258f36a9347f45d1edb8b767e5">00034</a>         <span class="keywordtype">double</span> <a class="code" href="classProjectile.html#a0fc0c0258f36a9347f45d1edb8b767e5" title="La distance parcourue par le projectile.">travelled</a>; 
-<a name="l00036"></a>00036     <span class="keyword">public</span>:
-<a name="l00045"></a>00045         <a class="code" href="classProjectile.html#adb1e35e75922feb87c3391f549d3274f" title="Constructeur de Projectile Initialise les caractéristiques du projectile.">Projectile</a>(QPointF start, <a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * trgt, <span class="keywordtype">double</span> init_speed, <span class="keywordtype">double</span> damage);
-<a name="l00051"></a>00051         QRectF <a class="code" href="classProjectile.html#a0e0b18909c9c154404384707c6515802" title="Surcharge de la methode virtuelle pure boundingRect() héritée de QGraphicsObject.">boundingRect</a>() <span class="keyword">const</span>;
-<a name="l00056"></a>00056         <span class="keywordtype">void</span> <a class="code" href="classProjectile.html#aef0d6ffcea7620988cf5446d0c1133fa" title="Surcharge de la méthode virtuelle pure paint() héritée de QGraphicsObject.">paint</a>(QPainter *painter, QColor color);
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058     signals:
-<a name="l00064"></a>00064         <span class="keywordtype">void</span> <a class="code" href="classProjectile.html#a18d1fccd74f92b54f239c13c74cbc00c" title="Signal d&#39;explosion du projectile.">explode</a>(<a class="code" href="classProjectile.html" title="Classe représentant les projectiles des tours.">Projectile</a> * missile);
-<a name="l00065"></a>00065 };
-<a name="l00066"></a>00066 <span class="preprocessor">#endif</span>
+<a name="l00011"></a>00011 <span class="keyword">class </span><a class="code" href="classRender.html" title="Classe gérant le rendu graphique du jeu.">Render</a>;
+<a name="l00012"></a>00012 <span class="keyword">class </span><a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a>;
+<a name="l00013"></a>00013 
+<a name="l00018"></a><a class="code" href="classProjectile.html">00018</a> <span class="keyword">class </span><a class="code" href="classProjectile.html" title="Classe représentant les projectiles des tours.">Projectile</a> : <span class="keyword">public</span> QGraphicsObject
+<a name="l00019"></a>00019 {
+<a name="l00020"></a>00020     Q_OBJECT
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022     <span class="keyword">protected</span>:
+<a name="l00027"></a>00027         <span class="keywordtype">void</span> <a class="code" href="classProjectile.html#a8e3b4bae49558a0febfce8c1accea72d" title="Surcharge de la méthode virtuelle pure héritée de QGraphicsObject.">advance</a>(<span class="keywordtype">int</span> step);
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029     <span class="keyword">private</span>:
+<a name="l00030"></a><a class="code" href="classProjectile.html#a15091a3a02fbfac2dd4fb44ac9cbceab">00030</a>         QPointF <a class="code" href="classProjectile.html#a15091a3a02fbfac2dd4fb44ac9cbceab" title="La destination du projectile.">dest</a>;     
+<a name="l00031"></a><a class="code" href="classProjectile.html#ae5273bd2c6550b94f38310b69859b093">00031</a>         <a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * <a class="code" href="classProjectile.html#ae5273bd2c6550b94f38310b69859b093" title="L&#39;insecte ciblée par le projectile.">target</a>;     
+<a name="l00032"></a><a class="code" href="classProjectile.html#aae1f5d683c71d152b6a12d922ec4714f">00032</a>         <span class="keywordtype">double</span> <a class="code" href="classProjectile.html#aae1f5d683c71d152b6a12d922ec4714f" title="La vitesse en case par seconde du projectile.">speed</a>;     
+<a name="l00033"></a><a class="code" href="classProjectile.html#ac94938ed5b3d3e01217bf72f80ad2e3d">00033</a>         <span class="keywordtype">double</span> <a class="code" href="classProjectile.html#ac94938ed5b3d3e01217bf72f80ad2e3d" title="Les dégats infligé à l&#39;impact par le projectile.">dmg</a>;       
+<a name="l00034"></a><a class="code" href="classProjectile.html#a019db4c89ccf3eb291b06ba7b55f0754">00034</a>         <span class="keywordtype">double</span> <a class="code" href="classProjectile.html#a019db4c89ccf3eb291b06ba7b55f0754" title="La portée maximale du projectile (s&#39;il n&#39;atteint personne avant d&#39;arriver à se portée max...">maxrange</a>;  
+<a name="l00035"></a><a class="code" href="classProjectile.html#a0fc0c0258f36a9347f45d1edb8b767e5">00035</a>         <span class="keywordtype">double</span> <a class="code" href="classProjectile.html#a0fc0c0258f36a9347f45d1edb8b767e5" title="La distance parcourue par le projectile.">travelled</a>; 
+<a name="l00037"></a>00037     <span class="keyword">public</span>:
+<a name="l00038"></a><a class="code" href="classProjectile.html#a04924a3bccf3393aaa0f57d9384f617d">00038</a>         <a class="code" href="classRender.html" title="Classe gérant le rendu graphique du jeu.">Render</a> * <a class="code" href="classProjectile.html#a04924a3bccf3393aaa0f57d9384f617d" title="La scene parente du projectile.">parent</a>;  
+<a name="l00047"></a>00047         <a class="code" href="classProjectile.html#adb1e35e75922feb87c3391f549d3274f" title="Constructeur de Projectile Initialise les caractéristiques du projectile.">Projectile</a>(QPointF start, <a class="code" href="classBug.html" title="Classe abstraite dont héritent les ennemis.">Bug</a> * trgt, <span class="keywordtype">double</span> init_speed, <span class="keywordtype">double</span> damage);
+<a name="l00053"></a>00053         QRectF <a class="code" href="classProjectile.html#a0e0b18909c9c154404384707c6515802" title="Surcharge de la methode virtuelle pure boundingRect() héritée de QGraphicsObject.">boundingRect</a>() <span class="keyword">const</span>;
+<a name="l00058"></a>00058         <span class="keywordtype">void</span> <a class="code" href="classProjectile.html#aef0d6ffcea7620988cf5446d0c1133fa" title="Surcharge de la méthode virtuelle pure paint() héritée de QGraphicsObject.">paint</a>(QPainter *painter, QColor color);
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060     signals:
+<a name="l00066"></a>00066         <span class="keywordtype">void</span> <a class="code" href="classProjectile.html#a18d1fccd74f92b54f239c13c74cbc00c" title="Signal d&#39;explosion du projectile.">explode</a>(<a class="code" href="classProjectile.html" title="Classe représentant les projectiles des tours.">Projectile</a> * missile);
+<a name="l00067"></a>00067 };
+<a name="l00068"></a>00068 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->

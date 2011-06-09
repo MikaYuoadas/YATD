@@ -40,10 +40,21 @@ QPainterPath \hyperlink{classBug_a587a36d3145c2b4dba6c689af22c65ac}{shape} () co
 void \hyperlink{classBug_a63402c05b5ba3fb034e41f1ced0e4b9f}{hit} (double dmg)
 \begin{DoxyCompactList}\small\item\em Infliger des dégats à l'insecte. \end{DoxyCompactList}\item 
 short int \hyperlink{classBug_aced471cedcfa855baddf4c827003e755}{getMoveType} ()
-\begin{DoxyCompactList}\small\item\em Permet d'accéder à la valeur moveType de l'insecte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Permet d'accéder à la valeur moveType de l'insecte. \end{DoxyCompactList}\item 
+double \hyperlink{classBug_ae29490347059f21518ff7162d0fbe9e5}{getSize} ()
+\begin{DoxyCompactList}\small\item\em Assesseur. \end{DoxyCompactList}\item 
+QPointF \hyperlink{classBug_a1c6d7743b87e9c4a85a58ea510c18526}{getPos} ()
+\begin{DoxyCompactList}\small\item\em Assesseur. \end{DoxyCompactList}\item 
+double \hyperlink{classBug_abd2246d752d1088b35e01d57d176ce5f}{getAngle} ()
+\begin{DoxyCompactList}\small\item\em Assesseur. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Champs de données}
 \begin{DoxyCompactItemize}
 \item 
+\hypertarget{classBug_a749053e5ac7cc0f6f43c39d99f7b99f8}{
+QString \hyperlink{classBug_a749053e5ac7cc0f6f43c39d99f7b99f8}{race}}
+\label{classBug_a749053e5ac7cc0f6f43c39d99f7b99f8}
+
+\begin{DoxyCompactList}\small\item\em type de l'insecte \end{DoxyCompactList}\item 
 \hyperlink{classRender}{Render} $\ast$ \hyperlink{classBug_a7a93aae4e4b7a215c94ff85d0bd6e26d}{parent}
 \begin{DoxyCompactList}\small\item\em L'objet \hyperlink{classRender}{Render} parent de l'insecte. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Fonctions membres protégées}
@@ -135,6 +146,18 @@ Signal émit lorsque l'insecte est tué.
 {\em bug} & Un pointeur vers l'insecte qui vient de mourir. \\
 \hline
 \end{DoxyParams}
+\hypertarget{classBug_abd2246d752d1088b35e01d57d176ce5f}{
+\index{Roach@{Roach}!getAngle@{getAngle}}
+\index{getAngle@{getAngle}!Roach@{Roach}}
+\subsubsection[{getAngle}]{\setlength{\rightskip}{0pt plus 5cm}double Bug::getAngle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inherited\mbox{]}}}}
+\label{classBug_abd2246d752d1088b35e01d57d176ce5f}
+Assesseur vers angle. \begin{DoxyReturn}{Renvoie}
+L'ange de l'insecte. 
+\end{DoxyReturn}
 \hypertarget{classBug_aced471cedcfa855baddf4c827003e755}{
 \index{Roach@{Roach}!getMoveType@{getMoveType}}
 \index{getMoveType@{getMoveType}!Roach@{Roach}}
@@ -146,6 +169,30 @@ Signal émit lorsque l'insecte est tué.
 \label{classBug_aced471cedcfa855baddf4c827003e755}
 \begin{DoxyReturn}{Renvoie}
 la valeur prédéfinie FLY ou CRAWL. 
+\end{DoxyReturn}
+\hypertarget{classBug_a1c6d7743b87e9c4a85a58ea510c18526}{
+\index{Roach@{Roach}!getPos@{getPos}}
+\index{getPos@{getPos}!Roach@{Roach}}
+\subsubsection[{getPos}]{\setlength{\rightskip}{0pt plus 5cm}QPointF Bug::getPos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inherited\mbox{]}}}}
+\label{classBug_a1c6d7743b87e9c4a85a58ea510c18526}
+Assesseur vers pos. \begin{DoxyReturn}{Renvoie}
+La position de l'insecte dans la scène. 
+\end{DoxyReturn}
+\hypertarget{classBug_ae29490347059f21518ff7162d0fbe9e5}{
+\index{Roach@{Roach}!getSize@{getSize}}
+\index{getSize@{getSize}!Roach@{Roach}}
+\subsubsection[{getSize}]{\setlength{\rightskip}{0pt plus 5cm}double Bug::getSize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inherited\mbox{]}}}}
+\label{classBug_ae29490347059f21518ff7162d0fbe9e5}
+Assesseur vers size. \begin{DoxyReturn}{Renvoie}
+La taille de l'insecte. 
 \end{DoxyReturn}
 \hypertarget{classBug_a33f90dffa55e1dce80dc2416c75a53c8}{
 \index{Roach@{Roach}!goalReached@{goalReached}}
