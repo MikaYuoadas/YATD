@@ -4,7 +4,7 @@
 #include "define.h"
 
 Projectile::Projectile(QPointF start, Bug * trgt, double init_speed, double damage) :
-    dest(trgt->pos()), target(trgt), speed(init_speed), dmg(damage), travelled(0)
+    dest(trgt->pos()), target(trgt), speed(init_speed), dmg(damage), travelled(0), parent(NULL)
 {
     maxrange = sqrt(pow(dest.x() - start.x(), 2) + pow(dest.y() - start.y(), 2));
     setPos(start);
@@ -20,7 +20,8 @@ void Projectile::advance(int step)
     travelled += rspeed;
     if (travelled > maxrange) {
         setPos(dest);
-        target->hit(dmg);
+        if (parent->isnotDead(target))
+            target->hit(dmg);
         emit explode(this);
     }
 }

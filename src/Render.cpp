@@ -261,6 +261,7 @@ void Render::towerBought(QString type)
 
 void Render::addProjectile(Projectile * missile)
 {
+    missile->parent = this;
     QObject::connect(missile, SIGNAL(explode(Projectile *)), this, SLOT(explodingProjectile(Projectile *)));
     addItem(missile);
 }
@@ -302,4 +303,14 @@ void Render::stop()
 void Render::restart()
 {
     emit unpause();
+}
+
+bool Render::isnotDead(Bug * target)
+{
+    bool result = false;
+    for (int i=0; i < bugs.size(); i++) {
+        if (bugs.at(i) == target)
+            result = true;
+    }
+    return result;
 }

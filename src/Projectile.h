@@ -8,6 +8,7 @@
 
 #include "Bug.h"
 
+class Render;
 class Bug;
 
 /**
@@ -34,6 +35,7 @@ class Projectile : public QGraphicsObject
         double travelled; /**< La distance parcourue par le projectile.*/
 
     public:
+        Render * parent;  /**< La scene parente du projectile.*/
         /**
          * Constructeur de Projectile
          * Initialise les caractéristiques du projectile.

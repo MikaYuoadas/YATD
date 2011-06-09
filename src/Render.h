@@ -99,6 +99,12 @@ class Render : public QGraphicsScene
          * @return L'insecte à abattre.
          */
         Bug * getTarget(QPointF pos, double range, short int targetType);
+        /**
+         * Indique si l'insecte exite toujours.
+         * Test si le pointeur donnée pointe toujours sur un insecte existant.
+         * return true si l'insecte existe.
+         */
+        bool isnotDead(Bug * tager);
 
     public slots:
         /**
