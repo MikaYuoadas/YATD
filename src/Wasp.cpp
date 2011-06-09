@@ -2,7 +2,7 @@
 #include "define.h"
 
 Wasp::Wasp(double x, double y, double s, double start_angle) :
-    Bug(x, y, s, 7 * s * s, 4 * s * s, start_angle, 3, FLY)
+    Bug(x, y, s, 7 * s * s, 4 * s * s, start_angle, 3, FLY, "wasp")
 {
     QImage tmp[2];
     tmp[0] = QImage("./sprites/insects/guepe1.png");

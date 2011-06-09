@@ -213,6 +213,17 @@ void Render::bugFinish(Bug * bug)
 
 void Render::bugKilled(Bug * bug)
 {
+    if (bug->race == "roach")
+        if (bug->getSize() >= 2) {
+            Bug * newbug = b1->spawnBug("cafard", bug->getSize() - 1, bug->getPos(), bug->getAngle());
+            addBug(newbug);
+            QObject::connect(newbug, SIGNAL(goalReached(Bug*)), this, SLOT(bugFinish(Bug*)));
+            QObject::connect(newbug, SIGNAL(dead(Bug*)), this, SLOT(bugKilled(Bug*)));
+            newbug = b1->spawnBug("cafard", bug->getSize() - 1, bug->getPos(), bug->getAngle());
+            addBug(newbug);
+            QObject::connect(newbug, SIGNAL(goalReached(Bug*)), this, SLOT(bugFinish(Bug*)));
+            QObject::connect(newbug, SIGNAL(dead(Bug*)), this, SLOT(bugKilled(Bug*)));
+        }
     bugs.removeAll(bug);
     bug->disconnect();
     emit getCred();

@@ -2,6 +2,7 @@
 #define HATCHERY
 
 #include <QString>
+#include <QPointF>
 
 #include "Bug.h"
 
@@ -34,5 +35,14 @@ class Hatchery
          * @return Un pointeur vers l'insecte créé.
          */
         Bug * spawnBug(QString race, double size);
+        /**
+         * Crée un nouvel insecte de la race et de la taille données.
+         * @param race Un QString donnant la race de l'insecte a créer.
+         * @param size Un double donnant la taille de l'insecte.
+         * @param pos La position où mettre le nouvel insecte.
+         * @param spawn_angle L'angle de départ de l'insecte.
+         * @return Un pointeur vers l'insecte créé.
+         */
+        Bug * spawnBug(QString race, double size, QPointF pos, double spawn_angle);
 };
 #endif

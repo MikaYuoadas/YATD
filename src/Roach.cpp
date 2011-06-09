@@ -2,7 +2,7 @@
 #include "define.h"
 
 Roach::Roach(double x, double y, double s, double start_angle) :
-    Bug(x, y, s, 10 * s * s, 5 * s * s, start_angle, 2, CRAWL)
+    Bug(x, y, s, 10/*10 * s * s*/, 5 * s * s, start_angle, 2, CRAWL, "roach")
 {
     QImage tmp[3];
     tmp[0] = QImage("./sprites/insects/cafard1.png");

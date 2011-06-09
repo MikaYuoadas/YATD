@@ -2,7 +2,7 @@
 #include "define.h"
 
 Mosquito::Mosquito(double x, double y, double s, double start_angle) :
-    Bug(x, y, s, 7 * s * s, 4 * s * s, start_angle, 3, FLY)
+    Bug(x, y, s, 7 * s * s, 4 * s * s, start_angle, 3, FLY, "mosquito")
 {
     QImage temp[2];
     temp[0] = QImage("./sprites/insects/moustiquevolant1.png");

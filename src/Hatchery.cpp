@@ -21,3 +21,10 @@ Bug * Hatchery::spawnBug(QString race, double size)
         bug = new Mosquito(x, y, size, angle);
     return bug;
 }
+
+Bug * Hatchery::spawnBug(QString race, double size, QPointF pos, double spawn_angle)
+{
+    Bug * bug = NULL;
+    bug = new Roach(pos.x(), pos.y(), size, spawn_angle);
+    return bug;
+}

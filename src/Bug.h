@@ -4,6 +4,7 @@
 #include <QGraphicsObject>
 #include <QPainterPath>
 #include <QPoint>
+#include <QPointF>
 
 #include "define.h"
 #include "Render.h"
@@ -36,6 +37,7 @@ class Bug : public QGraphicsObject
         QPoint lastSquare;      /**< Case d'origine. Dernière case visité par l'insecte. Elle est utilisé dans la détection de changement de case.*/
 
     public:
+        QString race;           /**< type de l'insecte*/
         Render * parent;        /**< L'objet Render parent de l'insecte. Quand on ajoute un insecte à l'objet Render par la méthode addBug(), cet attribut est automatiquement initialisé.*/
         /**
          * Constructeur de Bug.
@@ -48,8 +50,9 @@ class Bug : public QGraphicsObject
          * @param start_angle L'angle vers lequel fait face le départ des insectes.
          * @param init_speed La vitesse initiale de l'insecte.
          * @param type Prends une des valeurs prédéfinies FLY ou CRAWL correspondant au type de déplacement de l'insecte.
+         * @param raceBug La race de l'insecte.
          */
-        Bug(double x, double y, double s, double health, double res, double start_angle, double init_speed, short int type);
+        Bug(double x, double y, double s, double health, double res, double start_angle, double init_speed, short int type, QString raceBug);
         /**
          * Surcharge de la fonction boudingRect() héritée de QGraphicsObject.
          * Fonction appelé automatiquement par QT pour savoir s'il doit ou non réafficher l'insecte.
@@ -73,6 +76,21 @@ class Bug : public QGraphicsObject
          * @return la valeur prédéfinie FLY ou CRAWL.
          */
         short int getMoveType();
+        /**
+         * Assesseur. Assesseur vers size.
+         * @return La taille de l'insecte.
+         */
+        double getSize();
+        /**
+         * Assesseur. Assesseur vers pos.
+         * @return La position de l'insecte dans la scène.
+         */
+        QPointF getPos();
+        /**
+         * Assesseur. Assesseur vers angle.
+         * @return L'ange de l'insecte.
+         */
+        double getAngle();
 
     signals:
         /**
