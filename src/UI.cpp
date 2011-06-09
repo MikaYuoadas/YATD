@@ -8,19 +8,19 @@ UI::UI(QWidget * parent) : QWidget(parent), selected(NULL), pauseVar(false)
     tower = new QGroupBox("Créer une défense", this);
     tower->setGeometry(0, 120, UI_WIDTH, 180);
     stats = new QGroupBox("Stats", this);
-    stats->setGeometry(0, 310, UI_WIDTH, 180);
+    stats->setGeometry(0, 310, UI_WIDTH, 170);
 
-    pauseBtn = new QPushButton("Lancer la vague suivante", this);
-    pauseBtn->setGeometry(10, 50, 180, 25);
+    pauseBtn = new QPushButton("Pause", this);
+    pauseBtn->setGeometry(10, 485, 180, 25);
     QObject::connect(pauseBtn, SIGNAL(clicked()), this, SLOT(togglePause()));
     start = new QPushButton("Lancer la vague suivante", this);
     start->setGeometry(10, 30, 180, 25);
     QObject::connect(start, SIGNAL(clicked()), this, SLOT(startWave()));
     upg = new QPushButton("Améliorer", stats);
-    upg->setGeometry(20, 150, 75, 20);
+    upg->setGeometry(20, 140, 75, 20);
     QObject::connect(upg, SIGNAL(clicked()), this, SLOT(upgradeSelectedTower()));
     sell = new QPushButton("Vendre", stats);
-    sell->setGeometry(105, 150, 75, 20);
+    sell->setGeometry(105, 140, 75, 20);
     QObject::connect(sell, SIGNAL(clicked()), this, SLOT(sellSelectedTower()));
 
     // Tower shop
